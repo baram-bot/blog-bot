@@ -150,12 +150,17 @@ def pick_link(topic, state):
 
 # ---------------------------------------------------------------- Gemini
 
-def choose_model(api_key):
+def choose_models(api_key):
+    """쓸 수 있는 Gemini 모델 목록(좋은 순서). 무료 사용량이 없는 모델은 실행 중에 건너뛴다."""
     forced = os.environ.get("GEMINI_MODEL", "").strip()
     if forced:
-        return forced
-    data = http_json(f"{GEMINI_BASE}/models?pageSize=200&key={api_key}", timeout=30)
-    candidates = []
+        return [forced]
+    try:
+        data = http_json(f"{GEMINI_BASE}/models?pageSize=200&key={api_key}", timeout=30)
+    except Exception as e:  # noqa: BLE001
+        print(f"[Gemini] 모델 목록 조회 실패: {e}")
+        data = {}
+    main, lite = [], []
     for m in data.get("models", []):
         name = m.get("name", "").replace("models/", "")
         methods = m.get("supportedGenerationMethods", [])
@@ -164,16 +169,19 @@ def choose_model(api_key):
         low = name.lower()
         if "flash" not in low:
             continue
-        if any(bad in low for bad in ("lite", "image", "tts", "audio", "live", "embedding", "thinking-exp")):
+        if any(bad in low for bad in ("image", "tts", "audio", "live", "embedding", "thinking-exp")):
             continue
         nums = re.findall(r"\d+(?:\.\d+)?", low)
         version = float(nums[0]) if nums else 0.0
         preview = ("preview" in low) or ("exp" in low)
-        candidates.append((not preview, version, name))
-    if not candidates:
-        return "gemini-2.5-flash"
-    candidates.sort(reverse=True)
-    return candidates[0][2]
+        (lite if "lite" in low else main).append((not preview, version, name))
+    main.sort(reverse=True)
+    lite.sort(reverse=True)
+    models = [n for _, _, n in main] + [n for _, _, n in lite]
+    for fallback in ("gemini-2.5-flash", "gemini-2.5-flash-lite"):
+        if fallback not in models:
+            models.append(fallback)
+    return models
 
 
 def gemini_generate(api_key, model, prompt, use_search=True):
@@ -269,27 +277,31 @@ def check_article(article):
 
 def write_article(topic, today):
     api_key = env("GEMINI_API_KEY")
-    model = choose_model(api_key)
-    print(f"[Gemini] 모델: {model}")
+    models = choose_models(api_key)
+    print(f"[Gemini] 후보 모델: {', '.join(models[:6])}")
     prompt = build_prompt(topic, today)
     last_error = None
-    for attempt in range(3):
-        use_search = attempt < 2  # 마지막 시도는 검색 없이(검색 기능 오류 대비)
-        try:
-            text = gemini_generate(api_key, model, prompt, use_search=use_search)
-            article = parse_article(text)
-            article["html"] = sanitize_html(article["html"])
-            problems = check_article(article)
-            if problems:
-                raise ValueError(", ".join(problems))
-            article["model"] = model
-            article["searched"] = use_search
-            return article
-        except Exception as e:  # noqa: BLE001
-            last_error = e
-            print(f"[Gemini] {attempt + 1}번째 시도 실패: {e}")
-            time.sleep(10 * (attempt + 1))
-    raise RuntimeError(f"글 작성 실패: {last_error}")
+    for model in models[:6]:
+        for use_search in (True, False):  # 검색 사용 → 실패하면 검색 없이 한 번 더
+            try:
+                text = gemini_generate(api_key, model, prompt, use_search=use_search)
+                article = parse_article(text)
+                article["html"] = sanitize_html(article["html"])
+                problems = check_article(article)
+                if problems:
+                    raise ValueError(", ".join(problems))
+                article["model"] = model
+                article["searched"] = use_search
+                print(f"[Gemini] 사용 모델: {model} (검색 {'사용' if use_search else '안 함'})")
+                return article
+            except Exception as e:  # noqa: BLE001
+                last_error = e
+                short = str(e).split("\n")[0][:200]
+                print(f"[Gemini] {model} 실패: {short}")
+                if "HTTP 429" in str(e) or "HTTP 404" in str(e):
+                    break  # 이 모델은 무료 사용량이 없거나 없는 모델 → 다음 모델로
+                time.sleep(5)
+    raise RuntimeError(f"글 작성 실패: {str(last_error)[:300]}")
 
 
 # ---------------------------------------------------------------- 사진(위키미디어 공용)
