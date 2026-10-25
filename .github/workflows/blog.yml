@@ -36,13 +36,12 @@ jobs:
           BLOGGER_BLOG_ID: ${{ secrets.BLOGGER_BLOG_ID }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python blog_bot.py
+        run: python -u blog_bot.py
 
       - name: 발행 기록 저장
         if: always()
         run: |
           git config user.name "blog-bot"
           git config user.email "blog-bot@users.noreply.github.com"
-          git add data/posted.json
-          git diff --cached --quiet || git commit -m "발행 기록 업데이트"
-          git push
+          if [ -f data/posted.json ]; then git add data/posted.json; fi
+          git diff --cached --quiet || (git commit -m "발행 기록 업데이트" && git push)
