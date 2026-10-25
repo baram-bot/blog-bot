@@ -413,10 +413,92 @@ def notify(message):
 
 # ---------------------------------------------------------------- 실행
 
+POSTS_DIR = os.path.join(ROOT, "posts")
+
+
+def next_queued_post(state):
+    """posts/ 폴더에서 아직 안 올린 글(json) 중 이름순으로 가장 앞의 것."""
+    if not os.path.isdir(POSTS_DIR):
+        return None, None
+    done = {p.get("file") for p in state["posted"] if p.get("file")}
+    for name in sorted(os.listdir(POSTS_DIR)):
+        if not name.endswith(".json") or name in done:
+            continue
+        path = os.path.join(POSTS_DIR, name)
+        try:
+            with open(path, encoding="utf-8") as f:
+                obj = json.load(f)
+            for key in ("title", "html"):
+                if not str(obj.get(key, "")).strip():
+                    raise ValueError(f"{key} 비어 있음")
+        except Exception as e:  # noqa: BLE001
+            print(f"[대기 글] {name} 읽기 실패, 건너뜀: {e}")
+            state["posted"].append({"file": name, "skipped": str(e)[:200]})
+            continue
+        return name, obj
+    return None, None
+
+
+def publish_queued(state, today, dry_run):
+    name, obj = next_queued_post(state)
+    if not name:
+        return None
+    print(f"[대기 글] {name}: {obj['title']}")
+    article = {
+        "title": str(obj["title"]).strip(),
+        "html": sanitize_html(obj["html"]),
+        "labels": [str(x).strip() for x in obj.get("labels", []) if str(x).strip()][:6],
+    }
+    problems = [p for p in check_article(article) if "너무 짧음" in p]
+    if problems:
+        print(f"[대기 글] 경고: {', '.join(problems)}")
+    photo = find_photo(obj.get("photo") or article["title"])
+    link = pick_link({"category": obj.get("category", "")}, state)
+    content = assemble(article, photo, link)
+    if dry_run:
+        with open(os.path.join(ROOT, "preview.html"), "w", encoding="utf-8") as f:
+            f.write(f"<h1>{html.escape(article['title'])}</h1>\n{content}")
+        print("[시험] preview.html 저장")
+        return 0
+    try:
+        post_url, post_id = publish(article, content)
+    except Exception as e:  # noqa: BLE001
+        msg = f"[블로그] 발행 실패\n글: {article['title']}\n원인: {str(e)[:300]}"
+        print(msg)
+        notify(msg)
+        return 1
+    state["posted"].append({
+        "file": name, "title": article["title"], "url": post_url, "post_id": post_id,
+        "at": today.strftime("%Y-%m-%d %H:%M"), "model": "claude", "link": link["url"] if link else "",
+    })
+    if link:
+        used = [u for u in state.get("used_links", []) if u != link["url"]]
+        used.append(link["url"])
+        state["used_links"] = used
+    save_state(state)
+    left = sum(1 for n in os.listdir(POSTS_DIR) if n.endswith(".json")) - len(
+        [p for p in state["posted"] if p.get("file")])
+    msg = f"[블로그] 새 글 발행\n{article['title']}\n{post_url}\n남은 대기 글: {max(left, 0)}편"
+    print(msg)
+    notify(msg)
+    return 0
+
+
 def main():
     dry_run = "--dry-run" in sys.argv
     today = dt.datetime.now(KST)
     state = load_state()
+
+    # 1순위: Claude가 미리 써 둔 대기 글(posts/)
+    result = publish_queued(state, today, dry_run)
+    if result is not None:
+        return result
+
+    # 2순위: Gemini로 직접 쓰기 (USE_GEMINI=1 일 때만)
+    if os.environ.get("USE_GEMINI", "").strip() != "1":
+        msg = "[블로그] 올릴 대기 글이 없어 이번 회차는 건너뜁니다."
+        print(msg)
+        return 0
 
     topic = pick_topic(state)
     if not topic:
