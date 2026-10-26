@@ -340,7 +340,11 @@ def find_photo(query):
 
 # ---------------------------------------------------------------- 글 조립
 
-def assemble(article, photo, link):
+TRAVEL_NOTICE = "운영시간·요금·행사 일정은 바뀔 수 있으니 방문 전 공식 안내를 꼭 확인해 주세요."
+NO_LINK_CATEGORIES = ("없음", "정책자금")
+
+
+def assemble(article, photo, link, notice=None):
     parts = []
     if link:
         parts.append(f'<p style="font-size:13px;color:#777">{html.escape(DISCLOSURE)}</p>')
@@ -361,7 +365,7 @@ def assemble(article, photo, link):
             f'<p style="margin:0"><a href="{html.escape(link["url"])}" rel="sponsored nofollow noopener" target="_blank">쿠팡에서 보기 &rarr;</a></p>'
             "</div>"
         )
-    parts.append('<p style="font-size:13px;color:#888">운영시간·요금·행사 일정은 바뀔 수 있으니 방문 전 공식 안내를 꼭 확인해 주세요.</p>')
+    parts.append(f'<p style="font-size:13px;color:#888">{html.escape(notice or TRAVEL_NOTICE)}</p>')
     return "\n".join(parts)
 
 
@@ -452,9 +456,11 @@ def publish_queued(state, today, dry_run):
     problems = [p for p in check_article(article) if "너무 짧음" in p]
     if problems:
         print(f"[대기 글] 경고: {', '.join(problems)}")
-    photo = find_photo(obj.get("photo") or article["title"])
-    link = pick_link({"category": obj.get("category", "")}, state)
-    content = assemble(article, photo, link)
+    photo_query = str(obj.get("photo", "")).strip()
+    photo = None if photo_query == "없음" else find_photo(photo_query or article["title"])
+    category = str(obj.get("category", "")).strip()
+    link = None if category in NO_LINK_CATEGORIES else pick_link({"category": category}, state)
+    content = assemble(article, photo, link, notice=str(obj.get("notice", "")).strip() or None)
     if dry_run:
         with open(os.path.join(ROOT, "preview.html"), "w", encoding="utf-8") as f:
             f.write(f"<h1>{html.escape(article['title'])}</h1>\n{content}")
