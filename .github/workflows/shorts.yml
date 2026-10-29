@@ -1,0 +1,51 @@
+name: shorts-make
+
+on:
+  push:
+    branches: [main]
+    paths: ["shorts/queue/**"]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: shorts-make
+  cancel-in-progress: false
+
+jobs:
+  make:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 도구 설치 (무료)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-noto-cjk fonts-noto-cjk-extra > /dev/null
+          pip install -q edge-tts requests pillow
+      - name: 쇼츠 영상 만들기 + 텔레그램 전송
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python -u shorts/make_short.py
+      - name: 영상 보관 (7일)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: shorts-videos
+          path: shorts/_out/*.mp4
+          retention-days: 7
+          if-no-files-found: ignore
+      - name: 처리한 대본 기록
+        if: always()
+        run: |
+          git config user.name "shorts-bot"
+          git config user.email "shorts-bot@users.noreply.github.com"
+          git add -A shorts/queue shorts/done
+          git diff --cached --quiet && exit 0
+          git commit -m "쇼츠 제작 완료 기록"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push -q && break; sleep 5; done
