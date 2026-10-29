@@ -1,0 +1,23 @@
+name: img-test
+on:
+  push:
+    branches: [main]
+    paths: ["shorts/tools/img_test.py"]
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q requests
+      - env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python shorts/tools/img_test.py
+      - uses: actions/upload-artifact@v4
+        with: {name: imgs, path: "shorts/_*", if-no-files-found: ignore}
+      - run: |
+          git config user.name bot; git config user.email bot@users.noreply.github.com
+          git add data/img_test.txt; git commit -qm "이미지 테스트 결과" && for i in 1 2 3; do git pull --rebase -q && git push -q && break; done
