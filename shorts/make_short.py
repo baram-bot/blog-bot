@@ -116,13 +116,16 @@ def _save_if_image(content, path):
 def openverse_image(query, path, seed):
     """Openverse 무료 사진(CC0·퍼블릭 도메인만 — 출처 표기 의무 없음)."""
     words = [w for w in query.replace(",", " ").split() if len(w) > 2][:6]
-    for q in (" ".join(words), " ".join(words[:3]), " ".join(words[:2])):
+    started = time.time()
+    for q in (" ".join(words[:4]), " ".join(words[:2])):
+        if time.time() - started > 25:
+            break
         if not q:
             continue
         try:
             r = requests.get("https://api.openverse.org/v1/images/",
                              params={"q": q, "license": "cc0,pdm", "page_size": 20, "mature": "false"},
-                             headers={"User-Agent": "shorts-bot/1.0"}, timeout=40)
+                             headers={"User-Agent": "shorts-bot/1.0"}, timeout=15)
             results = r.json().get("results", []) if r.ok else []
         except Exception as e:  # noqa: BLE001
             print(f"[이미지] Openverse 오류: {e}")
@@ -131,14 +134,16 @@ def openverse_image(query, path, seed):
         results.sort(key=lambda x: (-(x.get("height") or 0) / max(1, (x.get("width") or 1)),
                                     -(x.get("width") or 0)))
         rnd = random.Random(seed)
-        pool = results[:8]
+        pool = results[:6]
         rnd.shuffle(pool)
-        for item in pool:
+        for item in pool[:3]:
+            if time.time() - started > 25:
+                break
             url = item.get("url")
             if not url or (item.get("width") or 0) < 600:
                 continue
             try:
-                img = requests.get(url, timeout=40, headers={"User-Agent": "shorts-bot/1.0"})
+                img = requests.get(url, timeout=12, headers={"User-Agent": "shorts-bot/1.0"})
                 if img.ok and _save_if_image(img.content, path):
                     print(f"[이미지] Openverse: {q} ({item.get('license')})")
                     return True
@@ -147,18 +152,26 @@ def openverse_image(query, path, seed):
     return False
 
 
+_POLLI_OK = [True]
+
+
 def fetch_image(prompt, path, seed):
-    # 1순위: Pollinations AI 이미지 (무료가 막히면 바로 건너뜀)
+    # 1순위: Pollinations AI 이미지 (한 번 막히면 이번 영상에선 다시 시도하지 않음)
+    if not _POLLI_OK[0]:
+        return openverse_image(prompt, path, seed)
     url = ("https://image.pollinations.ai/prompt/" + urllib.parse.quote(f"{prompt}, {STYLE}")
            + f"?width={W}&height={H}&nologo=true&seed={seed}")
     try:
-        r = requests.get(url, timeout=90)
+        r = requests.get(url, timeout=45)
         if r.status_code == 200 and _save_if_image(r.content, path):
             print("[이미지] Pollinations AI")
             return True
         print(f"[이미지] Pollinations 응답 {r.status_code} → 무료 사진으로 대체")
+        if r.status_code in (401, 402, 403, 429):
+            _POLLI_OK[0] = False
     except Exception as e:  # noqa: BLE001
         print(f"[이미지] Pollinations 오류: {e}")
+        _POLLI_OK[0] = False
     # 2순위: Openverse 무료 사진
     return openverse_image(prompt, path, seed)
 
