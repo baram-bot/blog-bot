@@ -20,11 +20,11 @@ UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
 
 
-def get(url, timeout=20):
+def get(url, timeout=20, encoding=None):
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "ko-KR,ko;q=0.9"})
     with urllib.request.urlopen(req, timeout=timeout) as r:
         raw = r.read()
-        charset = r.headers.get_content_charset() or "utf-8"
+        charset = encoding or r.headers.get_content_charset() or "utf-8"
     return raw.decode(charset, errors="replace")
 
 
@@ -81,7 +81,7 @@ def naver_news_ranking():
 
 def nate_live_keywords():
     """네이트 실시간 이슈 키워드."""
-    raw = get("https://www.nate.com/js/data/jsonLiveKeywordDataV1.js")
+    raw = get("https://www.nate.com/js/data/jsonLiveKeywordDataV1.js", encoding="euc-kr")
     data = json.loads(raw[raw.find("["): raw.rfind("]") + 1])
     out = []
     for i, row in enumerate(data[:10], 1):
