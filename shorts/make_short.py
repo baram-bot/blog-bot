@@ -450,8 +450,8 @@ def yt_access_token():
     if not rt:
         return ""
     r = requests.post("https://oauth2.googleapis.com/token", data={
-        "client_id": os.environ.get("GOOGLE_CLIENT_ID", ""),
-        "client_secret": os.environ.get("GOOGLE_CLIENT_SECRET", ""),
+        "client_id": os.environ.get("YT_CLIENT_ID", "").strip() or os.environ.get("GOOGLE_CLIENT_ID", ""),
+        "client_secret": os.environ.get("YT_CLIENT_SECRET", "").strip() or os.environ.get("GOOGLE_CLIENT_SECRET", ""),
         "refresh_token": rt, "grant_type": "refresh_token"}, timeout=30)
     tok = r.json().get("access_token")
     if not tok:
