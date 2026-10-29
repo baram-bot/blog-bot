@@ -313,6 +313,36 @@ def tg(method, data=None, files=None):
     return r.json()
 
 
+COUPANG_FILE = os.path.join(os.path.dirname(ROOT), "data", "shorts_coupang.txt")
+DISCLOSURE = "이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다."
+
+
+def pick_coupang(script):
+    """대본의 coupang.keywords 와 가장 잘 맞는 쿠팡 파트너스 링크 1개를 고른다.
+    data/shorts_coupang.txt 형식: 단축링크 | 상품명 | 키워드1,키워드2,..."""
+    want = script.get("coupang") or {}
+    keys = [k.strip() for k in want.get("keywords", []) if k.strip()]
+    if not os.path.exists(COUPANG_FILE):
+        return None, want
+    rows = []
+    for line in open(COUPANG_FILE, encoding="utf-8"):
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        parts = [x.strip() for x in line.split("|")]
+        if len(parts) >= 2 and parts[0].startswith("http"):
+            rows.append((parts[0], parts[1], parts[2] if len(parts) > 2 else ""))
+    if not rows:
+        return None, want
+    def score(row):
+        hay = row[1] + " " + row[2]
+        return sum(3 if k in row[2] else 1 for k in keys if k in hay)
+    best = max(rows, key=score)
+    if score(best) == 0:
+        best = random.choice(rows)
+    return best, want
+
+
 def send(script, video, secs):
     chat = chat_id()
     tags = " ".join(script.get("tags", []))
@@ -321,11 +351,22 @@ def send(script, video, secs):
     with open(video, "rb") as f:
         tg("sendVideo", data={"chat_id": chat, "caption": caption[:1000], "supports_streaming": "true"},
            files={"video": (os.path.basename(video), f, "video/mp4")})
-    text = f"[제목]\n{script['title']}\n\n[설명]\n{script.get('description', '')}\n\n[태그]\n{tags}"
+    product, want = pick_coupang(script)
+    desc = script.get("description", "")
+    if product:
+        desc = f"{DISCLOSURE}\n\n{desc}\n\n🛒 {product[1]}\n{product[0]}"
+    text = f"[제목]\n{script['title']}\n\n[설명]\n{desc}\n\n[태그]\n{tags}"
     if script.get("pinned_comment"):
         text += f"\n\n[고정 댓글]\n{script['pinned_comment']}"
+    if product:
+        text += f"\n\n[쿠팡 상품]\n🛒 {product[1]}\n{product[0]}"
+        if want.get("reason"):
+            text += f"\n(고른 이유: {want['reason']})"
+    elif want.get("keywords"):
+        text += f"\n\n[쿠팡 추천 검색어]\n{', '.join(want['keywords'])} (링크 목록이 비어 있어 검색어만 보내요)"
     text += ("\n\n[업로드 체크]\n✅ 유튜브 앱 → + → 동영상 업로드 → 이 영상 선택\n"
-             "✅ '변경되거나 합성된 콘텐츠' 질문: 사실적인 AI 이미지가 들어갔다면 '예'")
+             "✅ 쿠팡 링크를 넣었다면: 설정에서 '유료 프로모션 포함'에 체크\n"
+             "✅ '관련 동영상'에 추천템 롱폼을 연결하면 링크로 넘어가요 (쇼츠 설명란 링크는 눌리지 않아요)")
     tg("sendMessage", data={"chat_id": chat, "text": text[:4000]})
 
 
