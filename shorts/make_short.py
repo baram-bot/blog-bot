@@ -591,6 +591,8 @@ def build_texts(script):
         blog_lines.append("📖 노후·연금·상속 정보 블로그: https://dundeun-nohu.blogspot.com")
     if "baram-salim" not in desc:
         blog_lines.append("💰 생활·경제·지원금 블로그: https://baram-salim.blogspot.com")
+    if "threads" not in desc:
+        blog_lines.append("🧵 스레드에서 매일 생활 꿀팁·꿀템 받기: https://www.threads.net/@baek.gk")
     if blog_lines:
         desc += "\n\n" + "\n".join(blog_lines)
     if product:
