@@ -26,7 +26,7 @@ import urllib.request
 ROOT = os.path.dirname(os.path.abspath(__file__))
 TOPICS_FILE = os.path.join(ROOT, "topics.txt")
 LINKS_FILE = os.path.join(ROOT, "data", "coupang_links.txt")
-STATE_FILE = os.path.join(ROOT, "data", "posted.json")
+STATE_FILE = os.path.join(ROOT, "data", os.environ.get("BLOG_STATE", "posted.json"))
 
 KST = dt.timezone(dt.timedelta(hours=9))
 DISCLOSURE = "이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다."
@@ -417,7 +417,7 @@ def notify(message):
 
 # ---------------------------------------------------------------- 실행
 
-POSTS_DIR = os.path.join(ROOT, "posts")
+POSTS_DIR = os.path.join(ROOT, os.environ.get("BLOG_POSTS_DIR", "posts"))
 
 
 def next_queued_post(state):
