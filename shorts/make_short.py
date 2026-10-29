@@ -219,7 +219,7 @@ def cloudflare_image(prompt, path, seed):
         r = requests.post(
             f"https://api.cloudflare.com/client/v4/accounts/{acc}/ai/run/@cf/black-forest-labs/flux-1-schnell",
             headers={"Authorization": f"Bearer {tok}"},
-            json={"prompt": prompt, "steps": 6},
+            json={"prompt": prompt, "steps": 4},
             timeout=90)
         img = (r.json().get("result") or {}).get("image") if r.ok else None
         if img:
