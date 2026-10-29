@@ -231,8 +231,36 @@ def build_video(script, out_path):
 
 # ---------------------------------------------------------------- 텔레그램
 
+CHAT_FILE = os.path.join(os.path.dirname(ROOT), "data", "shorts_chat_id.txt")
+
+
+def bot_token():
+    return (os.environ.get("SHORTS_BOT_TOKEN") or os.environ.get("TELEGRAM_BOT_TOKEN") or "").strip()
+
+
+def chat_id():
+    """채팅방 번호: 비밀값 → 저장된 파일 → 봇에게 온 최근 메시지 순서로 찾는다."""
+    cid = (os.environ.get("TELEGRAM_CHAT_ID") or "").strip()
+    if cid:
+        return cid
+    if os.path.exists(CHAT_FILE):
+        cid = open(CHAT_FILE).read().strip()
+        if cid:
+            return cid
+    res = tg("getUpdates", data={"limit": 100})
+    for upd in reversed(res.get("result", [])):
+        msg = upd.get("message") or upd.get("my_chat_member") or {}
+        chat = msg.get("chat") or {}
+        if chat.get("type") == "private" and chat.get("id"):
+            cid = str(chat["id"])
+            os.makedirs(os.path.dirname(CHAT_FILE), exist_ok=True)
+            open(CHAT_FILE, "w").write(cid + "\n")
+            return cid
+    raise RuntimeError("텔레그램 채팅방을 못 찾음: 쇼츠 봇에게 /start 메시지를 먼저 보내 주세요")
+
+
 def tg(method, data=None, files=None):
-    token = os.environ["TELEGRAM_BOT_TOKEN"].strip()
+    token = bot_token()
     r = requests.post(f"https://api.telegram.org/bot{token}/{method}", data=data, files=files, timeout=300)
     if not r.ok:
         raise RuntimeError(f"텔레그램 실패 {r.status_code}: {r.text[:300]}")
@@ -240,7 +268,7 @@ def tg(method, data=None, files=None):
 
 
 def send(script, video, secs):
-    chat = os.environ["TELEGRAM_CHAT_ID"].strip()
+    chat = chat_id()
     tags = " ".join(script.get("tags", []))
     caption = (f"🎬 오늘의 쇼츠 ({secs:.0f}초)\n\n📌 제목\n{script['title']}\n\n"
                "👇 아래 메시지의 설명·태그를 복사해서 유튜브 앱으로 올려 주세요.")
@@ -270,15 +298,16 @@ def main():
             video = os.path.join(OUT, f"{name}.mp4")
             secs = build_video(script, video)
             print(f"[완성] {name}: {secs:.1f}초")
-            if os.environ.get("TELEGRAM_BOT_TOKEN"):
-                send(script, video, secs)
-                print("[텔레그램] 전송 완료")
+            if not bot_token():
+                raise RuntimeError("텔레그램 봇 토큰(SHORTS_BOT_TOKEN)이 GitHub 비밀값에 없음 — 영상은 Actions 보관함에만 있음")
+            send(script, video, secs)
+            print("[텔레그램] 전송 완료")
             shutil.move(path, os.path.join(DONE, os.path.basename(path)))
         except Exception as e:  # noqa: BLE001
             failed += 1
             print(f"[실패] {name}: {e}")
             try:
-                tg("sendMessage", data={"chat_id": os.environ["TELEGRAM_CHAT_ID"].strip(),
+                tg("sendMessage", data={"chat_id": chat_id(),
                                         "text": f"[쇼츠] 제작 실패: {name}\n{str(e)[:500]}"})
             except Exception:  # noqa: BLE001
                 pass
