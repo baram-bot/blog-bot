@@ -365,6 +365,13 @@ def assemble(article, photo, link, notice=None):
             f'<p style="margin:0"><a href="{html.escape(link["url"])}" rel="sponsored nofollow noopener" target="_blank">쿠팡에서 보기 &rarr;</a></p>'
             "</div>"
         )
+    parts.append(
+        '<div style="border:1px solid #f0d9c4;border-radius:12px;padding:16px;margin:28px 0;background:#fff8f0">'
+        '<p style="margin:0 0 6px;font-weight:bold">🎬 유튜브 \'바람따라구름따라\'에서도 만나요</p>'
+        '<p style="margin:0 0 10px">시니어 사연과 생활·연금 정보를 짧은 쇼츠로 매일 전해 드려요.</p>'
+        '<p style="margin:0"><a href="https://www.youtube.com/channel/UC8cXzSmEf7T9AdDB-4vBktQ?sub_confirmation=1" target="_blank" rel="noopener">▶ 채널 구경하고 구독하기</a></p>'
+        "</div>"
+    )
     parts.append(f'<p style="font-size:13px;color:#888">{html.escape(notice or TRAVEL_NOTICE)}</p>')
     return "\n".join(parts)
 

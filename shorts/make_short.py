@@ -582,6 +582,13 @@ def build_texts(script):
     desc = script.get("description", "")
     if CREDITS:
         desc += "\n\n📷 사진 출처(위키미디어 공용):\n" + "\n".join(f"- {c}" for c in CREDITS[:8])
+    blog_lines = []
+    if "dundeun-nohu" not in desc:
+        blog_lines.append("📖 노후·연금·상속 정보 블로그: https://dundeun-nohu.blogspot.com")
+    if "baram-salim" not in desc:
+        blog_lines.append("💰 생활·경제·지원금 블로그: https://baram-salim.blogspot.com")
+    if blog_lines:
+        desc += "\n\n" + "\n".join(blog_lines)
     if product:
         desc = f"{DISCLOSURE}\n\n{desc}\n\n🛒 {product[1]}\n{product[0]}"
     return desc, product, want
