@@ -409,32 +409,125 @@ def pick_coupang(script):
     return best, want
 
 
-def send(script, video, secs):
-    chat = chat_id()
-    tags = " ".join(script.get("tags", []))
-    caption = (f"🎬 오늘의 쇼츠 ({secs:.0f}초)\n\n📌 제목\n{script['title']}\n\n"
-               "👇 아래 메시지의 설명·태그를 복사해서 유튜브 앱으로 올려 주세요.")
+YT_TITLE_MAX = 100
+
+
+def yt_clean(text):
+    return (text or "").replace("<", "〈").replace(">", "〉")
+
+
+def yt_access_token():
+    rt = os.environ.get("YOUTUBE_REFRESH_TOKEN", "").strip()
+    if not rt:
+        return ""
+    r = requests.post("https://oauth2.googleapis.com/token", data={
+        "client_id": os.environ.get("GOOGLE_CLIENT_ID", ""),
+        "client_secret": os.environ.get("GOOGLE_CLIENT_SECRET", ""),
+        "refresh_token": rt, "grant_type": "refresh_token"}, timeout=30)
+    tok = r.json().get("access_token")
+    if not tok:
+        raise RuntimeError(f"유튜브 연결 토큰 오류: {r.text[:300]}")
+    return tok
+
+
+def yt_upload(video, title, desc, tags):
+    """유튜브에 바로 올림. 구글 심사 전에는 유튜브가 자동으로 비공개 처리함."""
+    tok = yt_access_token()
+    if not tok:
+        return None
+    title = yt_clean(title)
+    if "#shorts" not in title.lower() and len(title) + 8 <= YT_TITLE_MAX:
+        title += " #shorts"
+    clean_tags, total = [], 0
+    for t in tags:
+        t = yt_clean(t.lstrip("#")).strip()
+        if t and total + len(t) + 2 < 450:
+            clean_tags.append(t)
+            total += len(t) + 2
+    meta = {
+        "snippet": {"title": title[:YT_TITLE_MAX], "description": yt_clean(desc)[:4900],
+                    "tags": clean_tags, "categoryId": "22",
+                    "defaultLanguage": "ko", "defaultAudioLanguage": "ko"},
+        "status": {"privacyStatus": os.environ.get("YT_PRIVACY", "public"),
+                   "selfDeclaredMadeForKids": False},
+    }
+    size = os.path.getsize(video)
+    r = requests.post(
+        "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status",
+        headers={"Authorization": f"Bearer {tok}", "Content-Type": "application/json; charset=UTF-8",
+                 "X-Upload-Content-Type": "video/mp4", "X-Upload-Content-Length": str(size)},
+        data=json.dumps(meta), timeout=60)
+    if r.status_code >= 300 or "Location" not in r.headers:
+        raise RuntimeError(f"유튜브 업로드 시작 실패 {r.status_code}: {r.text[:300]}")
     with open(video, "rb") as f:
-        tg("sendVideo", data={"chat_id": chat, "caption": caption[:1000], "supports_streaming": "true"},
-           files={"video": (os.path.basename(video), f, "video/mp4")})
+        up = requests.put(r.headers["Location"], data=f,
+                          headers={"Authorization": f"Bearer {tok}", "Content-Type": "video/mp4"},
+                          timeout=600)
+    if up.status_code >= 300:
+        raise RuntimeError(f"유튜브 업로드 실패 {up.status_code}: {up.text[:300]}")
+    info = up.json()
+    return info.get("id"), info.get("status", {}).get("privacyStatus", "")
+
+
+def build_texts(script):
     product, want = pick_coupang(script)
     desc = script.get("description", "")
     if CREDITS:
         desc += "\n\n📷 사진 출처(위키미디어 공용):\n" + "\n".join(f"- {c}" for c in CREDITS[:8])
     if product:
         desc = f"{DISCLOSURE}\n\n{desc}\n\n🛒 {product[1]}\n{product[0]}"
+    return desc, product, want
+
+
+def send(script, video, secs):
+    chat = chat_id()
+    tags = " ".join(script.get("tags", []))
+    desc, product, want = build_texts(script)
+
+    yt, yt_err = None, ""
+    try:
+        yt = yt_upload(video, script["title"], desc, script.get("tags", []))
+    except Exception as e:  # noqa: BLE001
+        yt_err = str(e)[:300]
+        print(f"[유튜브] {yt_err}")
+
+    markup = None
+    if yt:
+        vid, privacy = yt
+        studio = f"https://studio.youtube.com/video/{vid}/edit"
+        if privacy == "public":
+            head = "✅ 유튜브 쇼츠에 공개로 올라갔어요!"
+            buttons = [[{"text": "▶ 쇼츠 보기", "url": f"https://youtube.com/shorts/{vid}"}],
+                       [{"text": "✏️ 스튜디오에서 수정", "url": studio}]]
+        else:
+            head = ("✅ 유튜브에 올려 두었어요 (지금은 비공개)\n"
+                    "👇 [게시하기] → 공개 상태 → '공개' → 저장 하면 끝!")
+            buttons = [[{"text": "📤 게시하기 (공개로 바꾸기)", "url": studio}],
+                       [{"text": "▶ 미리 보기", "url": f"https://youtube.com/shorts/{vid}"}]]
+        markup = json.dumps({"inline_keyboard": buttons})
+    elif yt_err:
+        head = f"⚠️ 유튜브 자동 업로드 실패 — 직접 올려 주세요\n({yt_err[:150]})"
+    else:
+        head = "👇 아래 메시지의 설명·태그를 복사해서 유튜브 앱으로 올려 주세요."
+    caption = f"🎬 오늘의 쇼츠 ({secs:.0f}초)\n\n📌 {script['title']}\n\n{head}"
+    data = {"chat_id": chat, "caption": caption[:1000], "supports_streaming": "true"}
+    if markup:
+        data["reply_markup"] = markup
+    with open(video, "rb") as f:
+        tg("sendVideo", data=data, files={"video": (os.path.basename(video), f, "video/mp4")})
+
     text = f"[제목]\n{script['title']}\n\n[설명]\n{desc}\n\n[태그]\n{tags}"
     if script.get("pinned_comment"):
-        text += f"\n\n[고정 댓글]\n{script['pinned_comment']}"
+        text += f"\n\n[고정 댓글] (공개 후 댓글로 달고 고정해 주세요)\n{script['pinned_comment']}"
     if product:
         text += f"\n\n[쿠팡 상품]\n🛒 {product[1]}\n{product[0]}"
         if want.get("reason"):
             text += f"\n(고른 이유: {want['reason']})"
     elif want.get("keywords"):
-        text += f"\n\n[쿠팡 추천 검색어]\n{', '.join(want['keywords'])} (링크 목록이 비어 있어 검색어만 보내요)"
-    text += ("\n\n[업로드 체크]\n✅ 유튜브 앱 → + → 동영상 업로드 → 이 영상 선택\n"
-             "✅ 쿠팡 링크를 넣었다면: 설정에서 '유료 프로모션 포함'에 체크\n"
-             "✅ '관련 동영상'에 추천템 롱폼을 연결하면 링크로 넘어가요 (쇼츠 설명란 링크는 눌리지 않아요)")
+        text += f"\n\n[쿠팡 추천 검색어]\n{', '.join(want['keywords'])}"
+    if not yt:
+        text += ("\n\n[업로드 체크]\n✅ 유튜브 앱 → + → 동영상 업로드 → 이 영상 선택\n"
+                 "✅ 쿠팡 링크를 넣었다면: 설정에서 '유료 프로모션 포함'에 체크")
     tg("sendMessage", data={"chat_id": chat, "text": text[:4000]})
 
 

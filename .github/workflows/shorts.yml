@@ -27,11 +27,14 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg fonts-noto-cjk fonts-noto-cjk-extra > /dev/null
           pip install -q edge-tts requests pillow
-      - name: 쇼츠 영상 만들기 + 텔레그램 전송
+      - name: 쇼츠 영상 만들기 + 유튜브 업로드 + 텔레그램 전송
         env:
           SHORTS_BOT_TOKEN: ${{ secrets.SHORTS_BOT_TOKEN }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
         run: python -u shorts/make_short.py
       - name: 영상 보관 (7일)
         if: always()
