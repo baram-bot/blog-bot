@@ -299,7 +299,7 @@ def wrap_ko(text, width):
     return lines
 
 
-def overlay_png(hook, subtitle, path):
+def overlay_png(hook, subtitle, path, outro=False):
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
     # 위·아래 어둡게(글씨가 잘 보이도록)
@@ -330,6 +330,16 @@ def overlay_png(hook, subtitle, path):
         d.text(((W - tw) / 2, y), line, font=f_sub, fill=(255, 255, 255),
                stroke_width=4, stroke_fill=(0, 0, 0))
         y += 100
+    if outro:
+        f_b = font(70)
+        for k, (label, color) in enumerate([("👍 좋아요", (255, 255, 255)), ("🔔 구독", (255, 255, 255))]):
+            label = label.split(" ", 1)[1]
+            bx = W // 2 - 400 + k * 420
+            by = H // 2 - 120
+            d.rounded_rectangle([bx, by, bx + 380, by + 140], radius=70,
+                                fill=(230, 30, 40, 235) if k == 1 else (40, 40, 40, 220))
+            tw = d.textlength(label, font=f_b)
+            d.text((bx + (380 - tw) / 2, by + 28), label, font=f_b, fill=color)
     img.save(path)
 
 
@@ -382,11 +392,13 @@ def make_scene(i, scene, voice, hook, base_seed, script=None):
     clip = os.path.join(WORK, f"c{i:02d}.mp4")
     tts(scene["text"], voice, audio)
     scenery = scene.get("bg") or pick_scenery(script or {}, i, base_seed)
-    if not fetch_image(f"{scenery}, {NO_PEOPLE}", raw, base_seed + i, commons_query=scenery):
+    if os.path.exists(raw):
+        pass  # 미리 받아 둔 사진
+    elif not fetch_image(f"{scenery}, {NO_PEOPLE}", raw, base_seed + i, commons_query=scenery):
         print(f"[이미지] 장면 {i}: 그라데이션 배경으로 대체")
         gradient_bg(raw, base_seed + i)
     prepare_image(raw, bg)
-    overlay_png(hook, scene["text"], ov)
+    overlay_png(hook, scene["text"], ov, outro=scene.get("outro", False))
     dur = duration(audio) + 0.35
     frames = int(dur * FPS) + 1
     zoom_in = i % 2 == 0
@@ -409,7 +421,24 @@ def build_video(script, out_path):
     voice = script.get("voice") or "ko-KR-SunHiNeural"
     hook = clean_title(script["title"]) or script.get("hook", "")
     seed = random.randint(1, 10_000_000)
-    clips = [make_scene(i, s, voice, hook, seed, script) for i, s in enumerate(script["scenes"])]
+    scenes = list(script["scenes"])
+    # 마지막에 구독·좋아요 인사 장면
+    outro = script.get("outro") or "오늘 이야기가 마음에 닿으셨다면, 구독과 좋아요 꼭 부탁드려요."
+    scenes.append({"text": outro, "bg": "warm sunset sky with soft clouds over calm hills", "outro": True})
+    # 사진을 한꺼번에 미리 받아 두기(빠르게)
+    from concurrent.futures import ThreadPoolExecutor
+
+    def _pre(i_s):
+        i, sc = i_s
+        scenery = sc.get("bg") or pick_scenery(script, i, seed)
+        raw = os.path.join(WORK, f"raw{i}.jpg")
+        try:
+            fetch_image(f"{scenery}, {NO_PEOPLE}", raw, seed + i, commons_query=scenery)
+        except Exception as e:  # noqa: BLE001
+            print(f"[이미지] 미리받기 실패 {i}: {e}")
+    with ThreadPoolExecutor(max_workers=4) as ex:
+        list(ex.map(_pre, enumerate(scenes)))
+    clips = [make_scene(i, s, voice, hook, seed, script) for i, s in enumerate(scenes)]
     listfile = os.path.join(WORK, "list.txt")
     with open(listfile, "w") as f:
         f.writelines(f"file '{c}'\n" for c in clips)
