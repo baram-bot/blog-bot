@@ -1,0 +1,27 @@
+name: yt-check
+on:
+  push:
+    branches: [main]
+    paths: ["data/yt_check_request.txt"]
+permissions:
+  contents: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          python3 - <<'PY'
+          import urllib.request, re, html
+          x = urllib.request.urlopen("https://www.youtube.com/feeds/videos.xml?channel_id=UC8cXzSmEf7T9AdDB-4vBktQ", timeout=30).read().decode()
+          out = []
+          for e in re.findall(r"<entry>(.*?)</entry>", x, re.S)[:15]:
+              t = html.unescape(re.search(r"<title>(.*?)</title>", e).group(1))
+              p = re.search(r"<published>(.*?)</published>", e).group(1)
+              v = re.search(r"<yt:videoId>(.*?)</yt:videoId>", e).group(1)
+              out.append(f"{p} | {v} | {t}")
+          open("data/yt_feed.txt", "w").write("\n".join(out))
+          PY
+          git config user.name bot; git config user.email bot@users.noreply.github.com
+          git add data/yt_feed.txt; git commit -qm "유튜브 공개 영상 목록" && for i in 1 2 3; do git pull --rebase -q && git push -q && break; done
