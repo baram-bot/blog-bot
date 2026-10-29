@@ -37,7 +37,7 @@ jobs:
           YT_CLIENT_ID: "247650144997-6bqc20isrbqi12fcsani6joed6jrvff5.apps.googleusercontent.com"
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
-          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_ACCOUNT_ID: "4f8474c742bb6437d092782e2a9fd5be"
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
         run: python -u shorts/make_short.py
       - name: 영상 보관 (7일)
