@@ -24,6 +24,7 @@ import glob
 import json
 import os
 import random
+import re
 import shutil
 import subprocess
 import sys
@@ -113,6 +114,57 @@ def _save_if_image(content, path):
         return False
 
 
+CREDITS = []
+UA = {"User-Agent": "BaramShortsBot/1.0 (https://baram-salim.blogspot.com; shorts maker)"}
+OK_LICENSE = ("public domain", "pd", "cc0", "cc by", "cc-by")
+
+
+def commons_image(query, path, seed):
+    """위키미디어 공용 무료 사진 (퍼블릭 도메인/CC0 우선, CC BY 계열은 출처를 설명란에 표기)."""
+    words = [w for w in query.replace(",", " ").split() if len(w) > 2]
+    started = time.time()
+    for q in (" ".join(words[:3]), " ".join(words[:2]), words[0] if words else ""):
+        if not q or time.time() - started > 30:
+            continue
+        try:
+            r = requests.get("https://commons.wikimedia.org/w/api.php", headers=UA, timeout=15, params={
+                "action": "query", "format": "json", "generator": "search",
+                "gsrsearch": f"filetype:bitmap {q}", "gsrnamespace": 6, "gsrlimit": 20,
+                "prop": "imageinfo", "iiprop": "url|size|extmetadata", "iiurlwidth": 1200})
+            pages = list((r.json().get("query") or {}).get("pages", {}).values()) if r.ok else []
+        except Exception as e:  # noqa: BLE001
+            print(f"[이미지] Commons 오류: {e}")
+            continue
+        cands = []
+        for pg in pages:
+            ii = (pg.get("imageinfo") or [{}])[0]
+            meta = ii.get("extmetadata") or {}
+            lic = (meta.get("LicenseShortName", {}).get("value") or "").lower()
+            if not any(k in lic for k in OK_LICENSE) or "nc" in lic or "nd" in lic:
+                continue
+            if (ii.get("width") or 0) < 800 or not ii.get("thumburl"):
+                continue
+            artist = re.sub(r"<[^>]+>", "", meta.get("Artist", {}).get("value") or "").strip()[:60]
+            pd_first = 0 if ("public" in lic or "cc0" in lic or lic == "pd") else 1
+            tall = -(ii.get("height") or 1) / max(1, ii.get("width") or 1)
+            cands.append((pd_first, tall, ii["thumburl"], lic, artist, pg.get("title", "")))
+        cands.sort()
+        rnd = random.Random(seed)
+        top = cands[:5]
+        rnd.shuffle(top)
+        for _, _, url, lic, artist, title in top[:3]:
+            try:
+                img = requests.get(url, headers=UA, timeout=15)
+                if img.ok and _save_if_image(img.content, path):
+                    print(f"[이미지] Commons: {q} ({lic})")
+                    if "public" not in lic and "cc0" not in lic and lic != "pd":
+                        CREDITS.append(f"{title.replace('File:', '')} / {artist or 'Wikimedia Commons'} / {lic.upper()}")
+                    return True
+            except Exception:  # noqa: BLE001
+                continue
+    return False
+
+
 def openverse_image(query, path, seed):
     """Openverse 무료 사진(CC0·퍼블릭 도메인만 — 출처 표기 의무 없음)."""
     words = [w for w in query.replace(",", " ").split() if len(w) > 2][:6]
@@ -125,7 +177,7 @@ def openverse_image(query, path, seed):
         try:
             r = requests.get("https://api.openverse.org/v1/images/",
                              params={"q": q, "license": "cc0,pdm", "page_size": 20, "mature": "false"},
-                             headers={"User-Agent": "shorts-bot/1.0"}, timeout=15)
+                             headers={"User-Agent": "shorts-bot/1.0"}, timeout=6)
             results = r.json().get("results", []) if r.ok else []
         except Exception as e:  # noqa: BLE001
             print(f"[이미지] Openverse 오류: {e}")
@@ -158,7 +210,7 @@ _POLLI_OK = [True]
 def fetch_image(prompt, path, seed):
     # 1순위: Pollinations AI 이미지 (한 번 막히면 이번 영상에선 다시 시도하지 않음)
     if not _POLLI_OK[0]:
-        return openverse_image(prompt, path, seed)
+        return commons_image(prompt, path, seed) or openverse_image(prompt, path, seed)
     url = ("https://image.pollinations.ai/prompt/" + urllib.parse.quote(f"{prompt}, {STYLE}")
            + f"?width={W}&height={H}&nologo=true&seed={seed}")
     try:
@@ -172,8 +224,8 @@ def fetch_image(prompt, path, seed):
     except Exception as e:  # noqa: BLE001
         print(f"[이미지] Pollinations 오류: {e}")
         _POLLI_OK[0] = False
-    # 2순위: Openverse 무료 사진
-    return openverse_image(prompt, path, seed)
+    # 2순위: 위키미디어 공용 무료 사진, 3순위: Openverse
+    return commons_image(prompt, path, seed) or openverse_image(prompt, path, seed)
 
 
 def gradient_bg(path, seed):
@@ -219,7 +271,7 @@ def overlay_png(hook, subtitle, path):
     for y in range(0, 420):
         d.line([(0, y), (W, y)], fill=(0, 0, 0, int(170 * (1 - y / 420))))
     for y in range(H - 900, H):
-        d.line([(0, y), (W, y)], fill=(0, 0, 0, int(190 * (y - (H - 900)) / 900)))
+        d.line([(0, y), (W, y)], fill=(0, 0, 0, int(160 * (y - (H - 900)) / 900)))
     # 상단 제목(고정)
     f_hook = font(76)
     lines = wrap_ko(hook, 13)[:2]
@@ -272,6 +324,7 @@ def make_scene(i, scene, voice, hook, base_seed):
 
 
 def build_video(script, out_path):
+    CREDITS.clear()
     shutil.rmtree(WORK, ignore_errors=True)
     os.makedirs(WORK, exist_ok=True)
     voice = script.get("voice") or "ko-KR-SunHiNeural"
@@ -366,6 +419,8 @@ def send(script, video, secs):
            files={"video": (os.path.basename(video), f, "video/mp4")})
     product, want = pick_coupang(script)
     desc = script.get("description", "")
+    if CREDITS:
+        desc += "\n\n📷 사진 출처(위키미디어 공용):\n" + "\n".join(f"- {c}" for c in CREDITS[:8])
     if product:
         desc = f"{DISCLOSURE}\n\n{desc}\n\n🛒 {product[1]}\n{product[0]}"
     text = f"[제목]\n{script['title']}\n\n[설명]\n{desc}\n\n[태그]\n{tags}"
