@@ -207,7 +207,36 @@ def openverse_image(query, path, seed):
 _POLLI_OK = [True]
 
 
+def cloudflare_image(prompt, path, seed):
+    """Cloudflare Workers AI (무료 하루 1만 뉴런 ≈ 사진 150장) — 장면에 딱 맞는 AI 사진."""
+    acc = os.environ.get("CF_ACCOUNT_ID", "").strip()
+    tok = os.environ.get("CF_API_TOKEN", "").strip()
+    if not (acc and tok):
+        return False
+    try:
+        r = requests.post(
+            f"https://api.cloudflare.com/client/v4/accounts/{acc}/ai/run/@cf/black-forest-labs/flux-1-schnell",
+            headers={"Authorization": f"Bearer {tok}"},
+            json={"prompt": f"{prompt}, {STYLE}, subject in the center", "steps": 6, "seed": seed % 2147483647},
+            timeout=90)
+        img = (r.json().get("result") or {}).get("image") if r.ok else None
+        if img:
+            import base64
+            with open(path, "wb") as f:
+                f.write(base64.b64decode(img))
+            Image.open(path).verify()
+            print("[이미지] Cloudflare AI")
+            return True
+        print(f"[이미지] Cloudflare 응답 {r.status_code}: {r.text[:200]}")
+    except Exception as e:  # noqa: BLE001
+        print(f"[이미지] Cloudflare 오류: {e}")
+    return False
+
+
 def fetch_image(prompt, path, seed):
+    # 0순위: Cloudflare AI (키가 있을 때)
+    if cloudflare_image(prompt, path, seed):
+        return True
     # 1순위: Pollinations AI 이미지 (한 번 막히면 이번 영상에선 다시 시도하지 않음)
     if not _POLLI_OK[0]:
         return commons_image(prompt, path, seed) or openverse_image(prompt, path, seed)
