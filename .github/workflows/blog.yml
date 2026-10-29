@@ -1,7 +1,12 @@
 name: blog-auto-post
 
 on:
+  # Claude가 posts/ 에 새 글을 올리면 바로 발행 (2시간마다 실시간 이슈 글)
+  push:
+    branches: [main]
+    paths: ["posts/**"]
   schedule:
+    # 예비: 대기 글이 남아 있을 때만 발행됨
     # 한국시간 오전 8:13, 오후 1:13, 저녁 7:13 (하루 3편)
     - cron: "13 23 * * *"
     - cron: "13 4 * * *"
