@@ -542,13 +542,13 @@ def yt_access_token():
     return tok
 
 
-def yt_upload(video, title, desc, tags, privacy=None):
+def yt_upload(video, title, desc, tags, privacy=None, shorts=True):
     """유튜브에 바로 올림. 구글 심사 전에는 유튜브가 자동으로 비공개 처리함."""
     tok = yt_access_token()
     if not tok:
         return None
     title = yt_clean(title)
-    if "#shorts" not in title.lower() and len(title) + 8 <= YT_TITLE_MAX:
+    if shorts and "#shorts" not in title.lower() and len(title) + 8 <= YT_TITLE_MAX:
         title += " #shorts"
     clean_tags, total = [], 0
     for t in tags:

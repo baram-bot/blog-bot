@@ -1,0 +1,61 @@
+name: longform-make
+
+on:
+  push:
+    branches: [main]
+    paths: ["longform/queue/**"]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: longform-make
+  cancel-in-progress: false
+
+jobs:
+  make:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 도구 설치 (무료)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-noto-cjk fonts-noto-cjk-extra > /dev/null
+          pip install -q edge-tts requests pillow
+      - name: 롱폼 영상 만들기 + 유튜브 업로드 + 텔레그램 알림
+        env:
+          SHORTS_BOT_TOKEN: ${{ secrets.SHORTS_BOT_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          YT_CLIENT_ID: "247650144997-6bqc20isrbqi12fcsani6joed6jrvff5.apps.googleusercontent.com"
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          CF_ACCOUNT_ID: "4f8474c742bb6437d092782e2a9fd5be"
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        run: python -u longform/make_long.py
+      - name: 영상 보관 (7일)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: longform-videos
+          path: |
+            longform/_out/*.mp4
+            longform/_out/*.jpg
+          retention-days: 7
+          if-no-files-found: ignore
+      - name: 처리한 대본 기록
+        if: always()
+        run: |
+          git config user.name "longform-bot"
+          git config user.email "longform-bot@users.noreply.github.com"
+          git add -A longform/queue longform/done
+          git diff --cached --quiet && exit 0
+          git commit -m "롱폼 제작 완료 기록"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push -q && break; sleep 5; done
