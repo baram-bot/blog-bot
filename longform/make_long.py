@@ -52,7 +52,7 @@ async def _tts_v(text, voice, rate, pitch, path):
 
 def tts_v(text, who, narrator, path):
     import asyncio
-    voice, rate, pitch, _ = VOICE_PRESETS.get(who) or (narrator, "+4%", "+0Hz", "")
+    voice, rate, pitch, _ = VOICE_PRESETS.get(who) or (narrator, "+8%", "+0Hz", "")
     for attempt in range(3):
         try:
             asyncio.run(_tts_v(text, voice, rate, pitch, path))
