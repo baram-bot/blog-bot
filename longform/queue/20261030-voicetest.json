@@ -1,0 +1,66 @@
+{
+ "title": "[목소리 시험] 인물별 목소리",
+ "voice": "ko-KR-InJoonNeural",
+ "privacy": "private",
+ "thumbnail_text": "목소리 시험",
+ "chapters": [
+  {
+   "title": "1장. 목소리 시험",
+   "scenes": [
+    {
+     "bg": "old traditional Korean house with tiled roof at dusk",
+     "lines": [
+      {
+       "who": "narrator",
+       "text": "그날 저녁, 할머니가 저를 조용히 부르셨습니다."
+      },
+      {
+       "who": "grandma",
+       "text": "얘야, 이리 좀 와 보거라. 할미가 너한테 줄 게 있단다."
+      },
+      {
+       "who": "grandpa",
+       "text": "허허, 그걸 이제야 꺼내는구먼."
+      }
+     ]
+    },
+    {
+     "bg": "rain drops on a window at night",
+     "lines": [
+      {
+       "who": "young_man",
+       "text": "할머니, 이게 뭐예요? 처음 보는 통장인데요."
+      },
+      {
+       "who": "young_woman",
+       "text": "오빠, 나도 좀 보여 줘."
+      },
+      {
+       "who": "child",
+       "text": "나도! 나도 볼래요!"
+      },
+      {
+       "who": "mother",
+       "text": "얘들아, 할머니 말씀 먼저 들어 보자."
+      },
+      {
+       "who": "father",
+       "text": "어머니, 이 돈은 대체 언제부터 모으신 겁니까?"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "description": "목소리 시험",
+ "tags": [
+  "시험"
+ ],
+ "coupang": {
+  "url": "https://link.coupang.com/a/ifaQwxm6Ee",
+  "keywords": [
+   "통장"
+  ],
+  "reason": "시험"
+ }
+}

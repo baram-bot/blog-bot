@@ -30,6 +30,54 @@ OUT = os.path.join(HERE, "_out")
 NO_PEOPLE = "beautiful landscape scenery, no people, no person, no text, cinematic, soft warm light, high detail, wide shot"
 
 
+# 인물별 목소리(무료 edge-tts 음성 + 높낮이·속도 조절)
+VOICE_PRESETS = {
+    "grandma": ("ko-KR-SunHiNeural", "-14%", "-20Hz", "할머니"),
+    "grandpa": ("ko-KR-InJoonNeural", "-14%", "-16Hz", "할아버지"),
+    "mother": ("ko-KR-SunHiNeural", "-5%", "-8Hz", "어머니"),
+    "father": ("ko-KR-InJoonNeural", "-6%", "-9Hz", "아버지"),
+    "young_man": ("ko-KR-HyunsuMultilingualNeural", "+6%", "+0Hz", "청년"),
+    "young_woman": ("ko-KR-SunHiNeural", "+6%", "+10Hz", "젊은 여자"),
+    "child": ("ko-KR-SunHiNeural", "+8%", "+32Hz", "아이"),
+    "man": ("ko-KR-InJoonNeural", "+0%", "+0Hz", "남자"),
+    "woman": ("ko-KR-SunHiNeural", "+0%", "+0Hz", "여자"),
+}
+FALLBACK = {"ko-KR-HyunsuMultilingualNeural": "ko-KR-InJoonNeural"}
+
+
+async def _tts_v(text, voice, rate, pitch, path):
+    import edge_tts
+    await edge_tts.Communicate(text, voice, rate=rate, pitch=pitch).save(path)
+
+
+def tts_v(text, who, narrator, path):
+    import asyncio
+    voice, rate, pitch, _ = VOICE_PRESETS.get(who) or (narrator, "+4%", "+0Hz", "")
+    for attempt in range(3):
+        try:
+            asyncio.run(_tts_v(text, voice, rate, pitch, path))
+            if os.path.getsize(path) > 1000:
+                return
+        except Exception as e:  # noqa: BLE001
+            print(f"[음성] {who} 재시도 {attempt + 1}: {e}")
+            voice = FALLBACK.get(voice, voice)
+    raise RuntimeError("음성 생성 실패")
+
+
+def scene_lines(scene):
+    """(누가, 문장) 목록. lines 가 있으면 인물별, 없으면 해설자."""
+    out = []
+    if scene.get("lines"):
+        for ln in scene["lines"]:
+            who = ln.get("who", "narrator")
+            for s in sentences(ln.get("text", "")):
+                out.append((who, s))
+    else:
+        for s in sentences(scene.get("text", "")):
+            out.append(("narrator", s))
+    return out
+
+
 def sentences(text):
     parts = re.split(r"(?<=[.!?…])\s+", text.strip())
     out = []
@@ -44,7 +92,7 @@ def sentences(text):
     return out
 
 
-def overlay(chapter, sub, path, channel="바람따라구름따라"):
+def overlay(chapter, sub, path, channel="바람따라구름따라", speaker=""):
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
     for y in range(H - 380, H):
@@ -61,10 +109,17 @@ def overlay(chapter, sub, path, channel="바람따라구름따라"):
     top = H - 110 - total
     width = max(d.textlength(l, font=f) for l in lines) if lines else 0
     d.rounded_rectangle([(W - width) / 2 - 40, top - 26, (W + width) / 2 + 40, top + total + 14], radius=28, fill=(0, 0, 0, 170))
+    color = (255, 255, 255)
+    if speaker:
+        color = (255, 236, 170)
+        f_sp = ms.font(40)
+        sw = d.textlength(speaker, font=f_sp)
+        d.rounded_rectangle([(W - sw) / 2 - 24, top - 92, (W + sw) / 2 + 24, top - 40], radius=24, fill=(150, 90, 40, 210))
+        d.text(((W - sw) / 2, top - 88), speaker, font=f_sp, fill=(255, 255, 255))
     y = top
     for l in lines:
         lw = d.textlength(l, font=f)
-        d.text(((W - lw) / 2, y), l, font=f, fill=(255, 255, 255), stroke_width=3, stroke_fill=(0, 0, 0))
+        d.text(((W - lw) / 2, y), l, font=f, fill=color, stroke_width=3, stroke_fill=(0, 0, 0))
         y += 84
     img.save(path)
 
@@ -77,13 +132,14 @@ def make_scene(idx, chapter, scene, voice, seed):
                               commons_query=scene.get("bg")):
             ms.gradient_bg(raw, seed + idx)
     ms.prepare_image(raw, bg)
-    sents = sentences(scene["text"])
+    sents = scene_lines(scene)
     auds, ovs, durs = [], [], []
-    for j, s in enumerate(sents):
+    for j, (who, s) in enumerate(sents):
         a = os.path.join(WORK, f"a{idx}_{j}.mp3")
-        ms.tts(s, voice, a)
+        tts_v(s, who, voice, a)
         o = os.path.join(WORK, f"o{idx}_{j}.png")
-        overlay(chapter, s, o)
+        label = (VOICE_PRESETS.get(who) or ("", "", "", ""))[3]
+        overlay(chapter, s, o, speaker=label)
         auds.append(a); ovs.append(o); durs.append(ms.duration(a) + 0.25)
     # 문장 음성 합치기
     lst = os.path.join(WORK, f"al{idx}.txt")
