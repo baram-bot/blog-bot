@@ -459,7 +459,7 @@ def yt_access_token():
     return tok
 
 
-def yt_upload(video, title, desc, tags):
+def yt_upload(video, title, desc, tags, privacy=None):
     """유튜브에 바로 올림. 구글 심사 전에는 유튜브가 자동으로 비공개 처리함."""
     tok = yt_access_token()
     if not tok:
@@ -477,7 +477,7 @@ def yt_upload(video, title, desc, tags):
         "snippet": {"title": title[:YT_TITLE_MAX], "description": yt_clean(desc)[:4900],
                     "tags": clean_tags, "categoryId": "22",
                     "defaultLanguage": "ko", "defaultAudioLanguage": "ko"},
-        "status": {"privacyStatus": os.environ.get("YT_PRIVACY", "public"),
+        "status": {"privacyStatus": privacy or os.environ.get("YT_PRIVACY", "public"),
                    "selfDeclaredMadeForKids": False},
     }
     size = os.path.getsize(video)
@@ -515,7 +515,7 @@ def send(script, video, secs):
 
     yt, yt_err = None, ""
     try:
-        yt = yt_upload(video, script["title"], desc, script.get("tags", []))
+        yt = yt_upload(video, script["title"], desc, script.get("tags", []), script.get("privacy"))
     except Exception as e:  # noqa: BLE001
         yt_err = str(e)[:300]
         print(f"[유튜브] {yt_err}")
