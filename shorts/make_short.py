@@ -115,6 +115,7 @@ def _save_if_image(content, path):
 
 
 CREDITS = []
+IMG_LOG = []
 UA = {"User-Agent": "BaramShortsBot/1.0 (https://baram-salim.blogspot.com; shorts maker)"}
 OK_LICENSE = ("public domain", "pd", "cc0", "cc by", "cc-by")
 
@@ -212,6 +213,7 @@ def cloudflare_image(prompt, path, seed):
     acc = os.environ.get("CF_ACCOUNT_ID", "").strip()
     tok = os.environ.get("CF_API_TOKEN", "").strip()
     if not (acc and tok):
+        IMG_LOG.append(f"CF키없음 acc={bool(acc)} tok={bool(tok)}")
         return False
     try:
         r = requests.post(
@@ -226,10 +228,13 @@ def cloudflare_image(prompt, path, seed):
                 f.write(base64.b64decode(img))
             Image.open(path).verify()
             print("[이미지] Cloudflare AI")
+            IMG_LOG.append("AI")
             return True
         print(f"[이미지] Cloudflare 응답 {r.status_code}: {r.text[:200]}")
+        IMG_LOG.append(f"CF실패 {r.status_code}: {r.text[:300]}")
     except Exception as e:  # noqa: BLE001
         print(f"[이미지] Cloudflare 오류: {e}")
+        IMG_LOG.append(f"CF오류: {e}")
     return False
 
 
@@ -538,7 +543,13 @@ def send(script, video, secs):
         head = f"⚠️ 유튜브 자동 업로드 실패 — 직접 올려 주세요\n({yt_err[:150]})"
     else:
         head = "👇 아래 메시지의 설명·태그를 복사해서 유튜브 앱으로 올려 주세요."
-    caption = f"🎬 오늘의 쇼츠 ({secs:.0f}초)\n\n📌 {script['title']}\n\n{head}"
+    ai_n = sum(1 for x in IMG_LOG if x == "AI")
+    caption = f"🎬 오늘의 쇼츠 ({secs:.0f}초) · AI사진 {ai_n}장\n\n📌 {script['title']}\n\n{head}"
+    try:
+        with open(os.path.join(os.path.dirname(ROOT), "data", "shorts_img_log.txt"), "w", encoding="utf-8") as f:
+            f.write("\n".join(IMG_LOG))
+    except Exception:  # noqa: BLE001
+        pass
     data = {"chat_id": chat, "caption": caption[:1000], "supports_streaming": "true"}
     if markup:
         data["reply_markup"] = markup
