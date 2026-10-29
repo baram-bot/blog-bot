@@ -1,0 +1,37 @@
+name: trends-collect
+
+on:
+  schedule:
+    # 매시간 :20 (UTC 기준, 한국시간도 매시 :20) — 글 작업(:41) 전에 최신 데이터 준비
+    - cron: "20 * * * *"
+  push:
+    branches: [main]
+    paths: ["trends_bot.py", ".github/workflows/trends.yml"]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trends-collect
+  cancel-in-progress: true
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 실시간 검색·화제 데이터 수집
+        run: python -u trends_bot.py
+      - name: 저장
+        run: |
+          git config user.name "trends-bot"
+          git config user.email "trends-bot@users.noreply.github.com"
+          git add data/trends.json
+          git diff --cached --quiet && exit 0
+          git commit -m "실시간 트렌드 업데이트"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push -q && break; sleep 5; done

@@ -50,4 +50,4 @@ jobs:
           git config user.name "blog-bot"
           git config user.email "blog-bot@users.noreply.github.com"
           if [ -f data/posted.json ]; then git add data/posted.json; fi
-          git diff --cached --quiet || (git commit -m "발행 기록 업데이트" && git push)
+          git diff --cached --quiet || (git commit -m "발행 기록 업데이트" && for i in 1 2 3; do git pull --rebase -q origin main && git push -q && break; sleep 5; done)
