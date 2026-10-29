@@ -219,7 +219,7 @@ def cloudflare_image(prompt, path, seed):
         r = requests.post(
             f"https://api.cloudflare.com/client/v4/accounts/{acc}/ai/run/@cf/black-forest-labs/flux-1-schnell",
             headers={"Authorization": f"Bearer {tok}"},
-            json={"prompt": f"{prompt}, {STYLE}, subject in the center", "steps": 6, "seed": seed % 2147483647},
+            json={"prompt": prompt, "steps": 6, "seed": seed % 2147483647},
             timeout=90)
         img = (r.json().get("result") or {}).get("image") if r.ok else None
         if img:
@@ -238,14 +238,14 @@ def cloudflare_image(prompt, path, seed):
     return False
 
 
-def fetch_image(prompt, path, seed):
+def fetch_image(prompt, path, seed, commons_query=None):
     # 0순위: Cloudflare AI (키가 있을 때)
     if cloudflare_image(prompt, path, seed):
         return True
     # 1순위: Pollinations AI 이미지 (한 번 막히면 이번 영상에선 다시 시도하지 않음)
     if not _POLLI_OK[0]:
-        return commons_image(prompt, path, seed) or openverse_image(prompt, path, seed)
-    url = ("https://image.pollinations.ai/prompt/" + urllib.parse.quote(f"{prompt}, {STYLE}")
+        return commons_image(commons_query or prompt, path, seed) or openverse_image(commons_query or prompt, path, seed)
+    url = ("https://image.pollinations.ai/prompt/" + urllib.parse.quote(prompt)
            + f"?width={W}&height={H}&nologo=true&seed={seed}")
     try:
         r = requests.get(url, timeout=45)
@@ -259,7 +259,8 @@ def fetch_image(prompt, path, seed):
         print(f"[이미지] Pollinations 오류: {e}")
         _POLLI_OK[0] = False
     # 2순위: 위키미디어 공용 무료 사진, 3순위: Openverse
-    return commons_image(prompt, path, seed) or openverse_image(prompt, path, seed)
+    q = commons_query or prompt
+    return commons_image(q, path, seed) or openverse_image(q, path, seed)
 
 
 def gradient_bg(path, seed):
@@ -306,38 +307,82 @@ def overlay_png(hook, subtitle, path):
         d.line([(0, y), (W, y)], fill=(0, 0, 0, int(170 * (1 - y / 420))))
     for y in range(H - 900, H):
         d.line([(0, y), (W, y)], fill=(0, 0, 0, int(160 * (y - (H - 900)) / 900)))
-    # 상단 제목(고정)
-    f_hook = font(76)
-    lines = wrap_ko(hook, 13)[:2]
-    y = 170
+    # 상단 제목(영상 내내 고정)
+    f_hook = font(80)
+    lines = wrap_ko(hook, 11)[:3]
+    box_h = 70 + len(lines) * 108
+    d.rounded_rectangle([50, 150, W - 50, 150 + box_h], radius=36, fill=(0, 0, 0, 150))
+    y = 185
     for line in lines:
         tw = d.textlength(line, font=f_hook)
-        d.text(((W - tw) / 2, y), line, font=f_hook, fill=(255, 230, 120),
-               stroke_width=6, stroke_fill=(0, 0, 0))
-        y += 100
-    # 하단 자막
-    f_sub = font(68)
-    lines = wrap_ko(subtitle, 14)[:4]
-    total = len(lines) * 92
-    y = H - 560 - total // 2
+        d.text(((W - tw) / 2, y), line, font=f_hook, fill=(255, 226, 110),
+               stroke_width=5, stroke_fill=(0, 0, 0))
+        y += 108
+    # 하단 자막 (반투명 상자 + 굵은 흰 글씨로 또렷하게)
+    f_sub = font(72)
+    lines = wrap_ko(subtitle, 13)[:4]
+    total = len(lines) * 100
+    top = H - 600 - total // 2
+    d.rounded_rectangle([60, top - 40, W - 60, top + total + 30], radius=32, fill=(0, 0, 0, 165))
+    y = top
     for line in lines:
         tw = d.textlength(line, font=f_sub)
         d.text(((W - tw) / 2, y), line, font=f_sub, fill=(255, 255, 255),
-               stroke_width=6, stroke_fill=(0, 0, 0))
-        y += 92
+               stroke_width=4, stroke_fill=(0, 0, 0))
+        y += 100
     img.save(path)
 
 
 # ---------------------------------------------------------------- 영상
 
-def make_scene(i, scene, voice, hook, base_seed):
+SCENERY = [
+    "golden sunset over calm sea", "misty mountains at dawn", "autumn maple leaves path in a park",
+    "quiet countryside rice field at golden hour", "starry night sky over hills", "soft clouds in blue sky",
+    "cherry blossom trees by a river", "snowy pine forest in winter", "calm lake reflection at sunrise",
+    "old stone wall alley with warm street lights at night", "rain drops on a window with blurred city lights",
+    "wildflower meadow under evening sky", "lighthouse by the sea at dusk", "bamboo forest with sunlight",
+]
+MOOD_SCENERY = [
+    (r"아버지|어머니|엄마|아빠|부모|아들|딸|자식|가족|며느리|손주|형제|남편|아내|고향",
+     ["warm sunset over a quiet Korean countryside village", "old traditional Korean house with tiled roof at dusk",
+      "persimmon tree in autumn countryside", "country road lined with autumn trees at golden hour",
+      "old wooden porch with warm lamp light at evening", "rice field at sunset with mountains behind",
+      "falling autumn leaves in an old village alley", "starry night sky over a quiet village"]),
+    (r"돈|통장|연금|저축|월급|재산|상속|노후|은퇴|빚|보험|집값|아파트",
+     ["calm lake reflection at sunrise", "golden wheat field under soft clouds", "quiet city skyline at dawn",
+      "sunrise over the sea horizon", "peaceful garden path in spring", "mountain trail with morning mist"]),
+    (r"건강|병원|약|무릎|허리|혈압|당뇨|치매|잠|운동|음식",
+     ["fresh green forest with morning sunlight", "calm sea waves on a sandy beach", "green tea field on hills",
+      "clear mountain stream in a forest", "flower garden in spring morning", "walking path by a river in spring"]),
+    (r"겨울|눈|추위|연말|설날|크리스마스",
+     ["snowy pine forest in winter", "snow covered traditional village at night", "frosty winter morning field"]),
+    (r"봄|벚꽃|꽃",
+     ["cherry blossom trees by a river", "spring flower field under blue sky"]),
+]
+NO_PEOPLE = "beautiful landscape scenery, no people, no person, no text, cinematic, soft light, high detail, vertical"
+
+
+def pick_scenery(script, i, seed):
+    title = script.get("title", "") + " " + script.get("hook", "")
+    for pat, options in MOOD_SCENERY:
+        if re.search(pat, title):
+            return options[(seed + i) % len(options)]
+    return SCENERY[(seed + i) % len(SCENERY)]
+
+
+def clean_title(t):
+    return re.sub(r"\s*#\S+", "", t or "").strip()
+
+
+def make_scene(i, scene, voice, hook, base_seed, script=None):
     audio = os.path.join(WORK, f"a{i}.mp3")
     raw = os.path.join(WORK, f"raw{i}.jpg")
     bg = os.path.join(WORK, f"bg{i}.jpg")
     ov = os.path.join(WORK, f"ov{i}.png")
     clip = os.path.join(WORK, f"c{i:02d}.mp4")
     tts(scene["text"], voice, audio)
-    if not fetch_image(scene.get("image") or scene["text"], raw, base_seed + i):
+    scenery = scene.get("bg") or pick_scenery(script or {}, i, base_seed)
+    if not fetch_image(f"{scenery}, {NO_PEOPLE}", raw, base_seed + i, commons_query=scenery):
         print(f"[이미지] 장면 {i}: 그라데이션 배경으로 대체")
         gradient_bg(raw, base_seed + i)
     prepare_image(raw, bg)
@@ -351,7 +396,7 @@ def make_scene(i, scene, voice, hook, base_seed):
           f"[bg][1:v]overlay=0:0,format=yuv420p[v]")
     run(["ffmpeg", "-y", "-loop", "1", "-i", bg, "-i", ov, "-i", audio,
          "-filter_complex", vf, "-map", "[v]", "-map", "2:a",
-         "-c:v", "libx264", "-preset", "veryfast", "-crf", "22",
+         "-c:v", "libx264", "-preset", "veryfast", "-crf", "19",
          "-c:a", "aac", "-b:a", "160k", "-ar", "44100", "-ac", "2",
          "-t", f"{dur:.2f}", "-r", str(FPS), clip])
     return clip
@@ -362,9 +407,9 @@ def build_video(script, out_path):
     shutil.rmtree(WORK, ignore_errors=True)
     os.makedirs(WORK, exist_ok=True)
     voice = script.get("voice") or "ko-KR-SunHiNeural"
-    hook = script.get("hook") or script["title"][:14]
+    hook = clean_title(script["title"]) or script.get("hook", "")
     seed = random.randint(1, 10_000_000)
-    clips = [make_scene(i, s, voice, hook, seed) for i, s in enumerate(script["scenes"])]
+    clips = [make_scene(i, s, voice, hook, seed, script) for i, s in enumerate(script["scenes"])]
     listfile = os.path.join(WORK, "list.txt")
     with open(listfile, "w") as f:
         f.writelines(f"file '{c}'\n" for c in clips)
