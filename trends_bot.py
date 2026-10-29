@@ -67,10 +67,26 @@ def naver_news_ranking():
     """네이버 뉴스 언론사별 많이 본 뉴스."""
     page = get("https://news.naver.com/main/ranking/popularDay.naver")
     out = []
-    for box in re.findall(r'<div class="rankingnews_box">(.*?)</ul>', page, re.S):
-        press = clean((re.search(r'<strong class="rankingnews_name">(.*?)</strong>', box, re.S) or [None, ""])[1])
-        for rank, (url, title) in enumerate(re.findall(r'<a href="([^"]+)" class="list_title[^"]*">(.*?)</a>', box, re.S), 1):
+    parts = re.split(r'class="rankingnews_name[^"]*"', page)
+    for part in parts[1:]:
+        press = clean(part[part.find(">") + 1: part.find("<")])
+        block = part.split("rankingnews_name")[0]
+        links = re.findall(r'<a href="([^"]+)"[^>]*class="list_title[^"]*"[^>]*>(.*?)</a>', block, re.S)
+        if not links:
+            links = re.findall(r'class="list_title[^"]*"[^>]*href="([^"]+)"[^>]*>(.*?)</a>', block, re.S)
+        for rank, (url, title) in enumerate(links[:5], 1):
             out.append({"press": press, "rank": rank, "title": clean(title), "url": url})
+    return out
+
+
+def nate_live_keywords():
+    """네이트 실시간 이슈 키워드."""
+    raw = get("https://www.nate.com/js/data/jsonLiveKeywordDataV1.js")
+    data = json.loads(raw[raw.find("["): raw.rfind("]") + 1])
+    out = []
+    for i, row in enumerate(data[:10], 1):
+        kw = row[1] if isinstance(row, list) and len(row) > 1 else row
+        out.append({"rank": i, "keyword": clean(str(kw))})
     return out
 
 
@@ -113,7 +129,7 @@ def main():
         "naver_economy": lambda: naver_section(101, "경제"),
         "naver_life": lambda: naver_section(103, "생활/문화"),
         "naver_society": lambda: naver_section(102, "사회"),
-        "daum_most_viewed": daum_ranking,
+        "nate_live_keywords": nate_live_keywords,
         "google_news_business": lambda: google_news("BUSINESS"),
         "google_news_top": lambda: google_news("NATION"),
     }
