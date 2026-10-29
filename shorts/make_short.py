@@ -508,6 +508,10 @@ def pick_coupang(script):
             rows.append((parts[0], parts[1], parts[2] if len(parts) > 2 else ""))
     if not rows:
         return None, want
+    exact = (want.get("url") or "").strip()
+    for r in rows:
+        if exact and r[0] == exact:
+            return r, want
     def score(row):
         hay = row[1] + " " + row[2]
         return sum(3 if k in row[2] else 1 for k in keys if k in hay)
