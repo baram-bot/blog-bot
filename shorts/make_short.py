@@ -101,22 +101,66 @@ STYLE = ("cinematic, warm soft light, emotional, photorealistic, Korean people, 
          "vertical composition, high detail, no text, no watermark")
 
 
+def _save_if_image(content, path):
+    if len(content) < 20000:
+        return False
+    with open(path, "wb") as f:
+        f.write(content)
+    try:
+        Image.open(path).verify()
+        return True
+    except Exception:  # noqa: BLE001
+        return False
+
+
+def openverse_image(query, path, seed):
+    """Openverse 무료 사진(CC0·퍼블릭 도메인만 — 출처 표기 의무 없음)."""
+    words = [w for w in query.replace(",", " ").split() if len(w) > 2][:6]
+    for q in (" ".join(words), " ".join(words[:3]), " ".join(words[:2])):
+        if not q:
+            continue
+        try:
+            r = requests.get("https://api.openverse.org/v1/images/",
+                             params={"q": q, "license": "cc0,pdm", "page_size": 20, "mature": "false"},
+                             headers={"User-Agent": "shorts-bot/1.0"}, timeout=40)
+            results = r.json().get("results", []) if r.ok else []
+        except Exception as e:  # noqa: BLE001
+            print(f"[이미지] Openverse 오류: {e}")
+            results = []
+        # 세로로 긴 사진·큰 사진을 우선
+        results.sort(key=lambda x: (-(x.get("height") or 0) / max(1, (x.get("width") or 1)),
+                                    -(x.get("width") or 0)))
+        rnd = random.Random(seed)
+        pool = results[:8]
+        rnd.shuffle(pool)
+        for item in pool:
+            url = item.get("url")
+            if not url or (item.get("width") or 0) < 600:
+                continue
+            try:
+                img = requests.get(url, timeout=40, headers={"User-Agent": "shorts-bot/1.0"})
+                if img.ok and _save_if_image(img.content, path):
+                    print(f"[이미지] Openverse: {q} ({item.get('license')})")
+                    return True
+            except Exception:  # noqa: BLE001
+                continue
+    return False
+
+
 def fetch_image(prompt, path, seed):
+    # 1순위: Pollinations AI 이미지 (무료가 막히면 바로 건너뜀)
     url = ("https://image.pollinations.ai/prompt/" + urllib.parse.quote(f"{prompt}, {STYLE}")
            + f"?width={W}&height={H}&nologo=true&seed={seed}")
-    for attempt in range(3):
-        try:
-            r = requests.get(url, timeout=120)
-            if r.status_code == 200 and len(r.content) > 20000:
-                with open(path, "wb") as f:
-                    f.write(r.content)
-                Image.open(path).verify()
-                return True
-            print(f"[이미지] 응답 {r.status_code}, {len(r.content)}바이트")
-        except Exception as e:  # noqa: BLE001
-            print(f"[이미지] 재시도 {attempt + 1}: {e}")
-        time.sleep(5)
-    return False
+    try:
+        r = requests.get(url, timeout=90)
+        if r.status_code == 200 and _save_if_image(r.content, path):
+            print("[이미지] Pollinations AI")
+            return True
+        print(f"[이미지] Pollinations 응답 {r.status_code} → 무료 사진으로 대체")
+    except Exception as e:  # noqa: BLE001
+        print(f"[이미지] Pollinations 오류: {e}")
+    # 2순위: Openverse 무료 사진
+    return openverse_image(prompt, path, seed)
 
 
 def gradient_bg(path, seed):
@@ -247,7 +291,9 @@ def chat_id():
         cid = open(CHAT_FILE).read().strip()
         if cid:
             return cid
-    res = tg("getUpdates", data={"limit": 100})
+    res = tg("getUpdates", data={"limit": 100, "allowed_updates": json.dumps(["message", "my_chat_member"])})
+    me = tg("getMe").get("result", {})
+    print(f"[텔레그램] 봇 @{me.get('username')} / 받은 메시지 {len(res.get('result', []))}개")
     for upd in reversed(res.get("result", [])):
         msg = upd.get("message") or upd.get("my_chat_member") or {}
         chat = msg.get("chat") or {}
