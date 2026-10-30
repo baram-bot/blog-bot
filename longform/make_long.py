@@ -245,6 +245,10 @@ def main():
     failed = 0
     for path in files:
         name = os.path.splitext(os.path.basename(path))[0]
+        if os.path.exists(os.path.join(DONE, os.path.basename(path))):
+            print(f"[건너뜀] {name}: 이미 처리된 대본")
+            os.remove(path)
+            continue
         try:
             script = json.load(open(path, encoding="utf-8"))
             video = os.path.join(OUT, f"{name}.mp4")

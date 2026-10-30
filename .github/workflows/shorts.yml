@@ -19,6 +19,10 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+      - name: 최신 상태로 맞추기 (중복 업로드 방지)
+        run: |
+          git fetch -q --depth=1 origin main
+          git reset -q --hard origin/main
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
