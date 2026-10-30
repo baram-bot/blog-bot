@@ -39,9 +39,9 @@ jobs:
           GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
           GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
           SHORTS_CHANNEL: econ
-          # 경제노트 채널 전용 연결(없으면 시니어 채널과 같은 앱 사용). 토큰이 없으면 텔레그램으로만 영상 전송
-          YT_CLIENT_ID: ${{ secrets.YT_ECON_CLIENT_ID || '247650144997-6bqc20isrbqi12fcsani6joed6jrvff5.apps.googleusercontent.com' }}
-          YT_CLIENT_SECRET: ${{ secrets.YT_ECON_CLIENT_SECRET || secrets.YT_CLIENT_SECRET }}
+          # 경제노트 채널 전용 연결(구글 클라우드 프로젝트 econ-shorts). 토큰이 없으면 텔레그램으로만 영상 전송
+          YT_CLIENT_ID: "480498053335-1t1f61lpgpcne9e895hfs98r7qvickpj.apps.googleusercontent.com"
+          YT_CLIENT_SECRET: ${{ secrets.YT_ECON_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YT_ECON_REFRESH_TOKEN }}
           CF_ACCOUNT_ID: "4f8474c742bb6437d092782e2a9fd5be"
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
