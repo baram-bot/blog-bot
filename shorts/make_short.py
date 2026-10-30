@@ -241,7 +241,16 @@ def cloudflare_image(prompt, path, seed):
     return False
 
 
+# 경제노트 채널: AI 그림을 쓰지 않고(무료 한도는 시니어 사연 영상에 양보) 단조로운 바다 사진만 쓴다
+ECON_SEA = ["calm ocean horizon", "blue sea water waves", "ocean sunrise horizon",
+            "calm sea under blue sky", "turquoise sea water", "ocean sunset horizon",
+            "sea horizon clouds", "gentle ocean waves"]
+
+
 def fetch_image(prompt, path, seed, commons_query=None):
+    if CHANNEL == "econ":
+        q = commons_query or "calm ocean horizon"
+        return openverse_image(q, path, seed) or commons_image(q, path, seed)
     # 0순위: Cloudflare AI (키가 있을 때)
     if cloudflare_image(prompt, path, seed):
         return True
@@ -425,11 +434,14 @@ def build_video(script, out_path):
     hook = clean_title(script["title"]) or script.get("hook", "")
     seed = random.randint(1, 10_000_000)
     scenes = list(script["scenes"])
+    if CHANNEL == "econ":  # 대본의 bg 대신 바다 배경으로 통일
+        scenes = [dict(sc, bg=ECON_SEA[(seed + i) % len(ECON_SEA)]) for i, sc in enumerate(scenes)]
     # 마지막에 구독·좋아요 인사 장면
     outro = script.get("outro") or ("오늘 정보가 도움 되셨다면, 구독과 좋아요 꼭 부탁드려요."
                                      if CHANNEL == "econ" else
                                      "오늘 이야기가 마음에 닿으셨다면, 구독과 좋아요 꼭 부탁드려요.")
-    scenes.append({"text": outro, "bg": "warm sunset sky with soft clouds over calm hills", "outro": True})
+    scenes.append({"text": outro, "bg": ("ocean sunset horizon" if CHANNEL == "econ"
+                                         else "warm sunset sky with soft clouds over calm hills"), "outro": True})
     # 사진을 한꺼번에 미리 받아 두기(빠르게)
     from concurrent.futures import ThreadPoolExecutor
 
