@@ -29,7 +29,7 @@ jobs:
           GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
           BLOGGER_BLOG_ID: "1089607515072453210"
           BLOG_POSTS_DIR: posts_kids
-          KIDS_YT_CHANNEL_ID: ""
+          KIDS_YT_CHANNEL_ID: "UCqtD9qZ2Rrc8G3o05lBkDNQ"
           BLOG_STATE: posted_kids.json
         run: python -u blog_bot.py
       - name: 발행 기록 저장

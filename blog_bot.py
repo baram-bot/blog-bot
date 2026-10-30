@@ -352,7 +352,7 @@ BLOG_YT = {
                    "시니어 사연과 생활·연금 정보를 짧은 쇼츠로 매일 전해 드려요.", "UC8cXzSmEf7T9AdDB-4vBktQ"),
     "posts_kids": ("🧸 유튜브 '구름 위 육아연구소'에서도 만나요",
                    "아이 마음을 읽는 대화법과 생활 습관 이야기를 1분 쇼츠로 전해 드려요.",
-                   os.environ.get("KIDS_YT_CHANNEL_ID", "")),
+                   os.environ.get("KIDS_YT_CHANNEL_ID", "UCqtD9qZ2Rrc8G3o05lBkDNQ")),
 }
 
 
