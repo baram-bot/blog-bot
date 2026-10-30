@@ -40,7 +40,7 @@ jobs:
           GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
           SHORTS_CHANNEL: kids
           # 육아연구소 채널 전용 연결(구글 클라우드 프로젝트 kids-shorts). 토큰이 없으면 텔레그램으로만 영상 전송
-          YT_CLIENT_ID: ${{ secrets.YT_KIDS_CLIENT_ID }}
+          YT_CLIENT_ID: "106566243572-9l2f41lloc7c9nei86hu8rema4n6k0kd.apps.googleusercontent.com"
           YT_CLIENT_SECRET: ${{ secrets.YT_KIDS_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YT_KIDS_REFRESH_TOKEN }}
           CF_ACCOUNT_ID: "4f8474c742bb6437d092782e2a9fd5be"
