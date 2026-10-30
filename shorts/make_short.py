@@ -551,6 +551,7 @@ def yt_upload(video, title, desc, tags, privacy=None, shorts=True):
     """유튜브에 바로 올림. 구글 심사 전에는 유튜브가 자동으로 비공개 처리함."""
     tok = yt_access_token()
     if not tok:
+        print("[유튜브] 연결 토큰(YOUTUBE_REFRESH_TOKEN) 없음 → 업로드 건너뜀, 텔레그램으로만 전송")
         return None
     title = yt_clean(title)
     if shorts and "#shorts" not in title.lower() and len(title) + 8 <= YT_TITLE_MAX:
@@ -618,6 +619,8 @@ def send(script, video, secs):
     yt, yt_err = None, ""
     try:
         yt = yt_upload(video, script["title"], desc, script.get("tags", []), script.get("privacy"))
+        if yt:
+            print(f"[유튜브] 업로드 완료: {yt[0]} ({yt[1]})")
     except Exception as e:  # noqa: BLE001
         yt_err = str(e)[:300]
         print(f"[유튜브] {yt_err}")
