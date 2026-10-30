@@ -344,6 +344,18 @@ TRAVEL_NOTICE = "운영시간·요금·행사 일정은 바뀔 수 있으니 방
 NO_LINK_CATEGORIES = ("없음", "정책자금")
 
 
+# 블로그(글 폴더) → 짝이 되는 유튜브 채널
+BLOG_YT = {
+    "posts": ("📈 유튜브 '구름 위 경제노트'에서도 만나요",
+              "블로그 글의 핵심을 1분 쇼츠로 매일 쉽게 정리해 드려요.", "UCq1B6icyca4xWc_qXkKt_cw"),
+    "posts_nohu": ("🎬 유튜브 '바람따라구름따라'에서도 만나요",
+                   "시니어 사연과 생활·연금 정보를 짧은 쇼츠로 매일 전해 드려요.", "UC8cXzSmEf7T9AdDB-4vBktQ"),
+    "posts_kids": ("🧸 유튜브 '구름 위 육아연구소'에서도 만나요",
+                   "아이 마음을 읽는 대화법과 생활 습관 이야기를 1분 쇼츠로 전해 드려요.",
+                   os.environ.get("KIDS_YT_CHANNEL_ID", "")),
+}
+
+
 def assemble(article, photo, link, notice=None):
     parts = []
     if link:
@@ -365,21 +377,14 @@ def assemble(article, photo, link, notice=None):
             f'<p style="margin:0"><a href="{html.escape(link["url"])}" rel="sponsored nofollow noopener" target="_blank">쿠팡에서 보기 &rarr;</a></p>'
             "</div>"
         )
-    if os.environ.get("BLOG_POSTS_DIR", "posts") == "posts":
-        # 구름 위 경제노트 블로그 → 경제노트 유튜브 채널
-        yt_title, yt_desc, yt_id = ("📈 유튜브 '구름 위 경제노트'에서도 만나요",
-                                    "블로그 글의 핵심을 1분 쇼츠로 매일 쉽게 정리해 드려요.",
-                                    "UCq1B6icyca4xWc_qXkKt_cw")
-    else:
-        # 든든한 노후 소식 블로그 → 시니어 채널 바람따라구름따라
-        yt_title, yt_desc, yt_id = ("🎬 유튜브 '바람따라구름따라'에서도 만나요",
-                                    "시니어 사연과 생활·연금 정보를 짧은 쇼츠로 매일 전해 드려요.",
-                                    "UC8cXzSmEf7T9AdDB-4vBktQ")
+    yt_title, yt_desc, yt_id = BLOG_YT.get(os.environ.get("BLOG_POSTS_DIR", "posts"), BLOG_YT["posts_nohu"])
+    yt_url = (f"https://www.youtube.com/channel/{yt_id}?sub_confirmation=1" if yt_id
+              else "https://www.youtube.com/results?search_query=" + urllib.parse.quote(yt_title.split("'")[1]))
     parts.append(
         '<div style="border:1px solid #f0d9c4;border-radius:12px;padding:16px;margin:28px 0;background:#fff8f0">'
         f'<p style="margin:0 0 6px;font-weight:bold">{yt_title}</p>'
         f'<p style="margin:0 0 10px">{yt_desc}</p>'
-        f'<p style="margin:0"><a href="https://www.youtube.com/channel/{yt_id}?sub_confirmation=1" target="_blank" rel="noopener">▶ 채널 구경하고 구독하기</a>'
+        f'<p style="margin:0"><a href="{yt_url}" target="_blank" rel="noopener">▶ 채널 구경하고 구독하기</a>'
         ' &nbsp;·&nbsp; <a href="https://www.threads.net/@baek.gk" target="_blank" rel="noopener">🧵 스레드에서 생활 꿀템 소식 받기</a></p>'
         "</div>"
     )

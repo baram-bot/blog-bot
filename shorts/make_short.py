@@ -38,7 +38,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 # 채널 구분: SHORTS_CHANNEL=econ 이면 '구름 위 경제노트' 채널(shorts_econ/ 폴더), 아니면 시니어 사연 채널(shorts/)
 CHANNEL = os.environ.get("SHORTS_CHANNEL", "senior").strip() or "senior"
 ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-                    "shorts_econ" if CHANNEL == "econ" else "shorts")
+                    {"econ": "shorts_econ", "kids": "shorts_kids"}.get(CHANNEL, "shorts"))
 QUEUE = os.path.join(ROOT, "queue")
 DONE = os.path.join(ROOT, "done")
 WORK = os.path.join(ROOT, "_work")
@@ -247,8 +247,14 @@ ECON_SEA = ["calm ocean horizon", "blue sea water waves", "ocean sunrise horizon
             "sea horizon clouds", "gentle ocean waves"]
 
 
+# 육아연구소 채널: AI 그림 없이 밝고 포근한 자연 사진(꽃밭·초원·하늘)
+KIDS_BG = ["flower meadow in spring sunlight", "green meadow under blue sky", "soft white clouds blue sky",
+           "field of daisies", "sunflower field summer", "pastel sunset sky clouds",
+           "green forest path sunlight", "colorful tulip field"]
+
+
 def fetch_image(prompt, path, seed, commons_query=None):
-    if CHANNEL == "econ":
+    if CHANNEL in ("econ", "kids"):
         q = commons_query or "calm ocean horizon"
         return openverse_image(q, path, seed) or commons_image(q, path, seed)
     # 0순위: Cloudflare AI (키가 있을 때)
@@ -434,14 +440,16 @@ def build_video(script, out_path):
     hook = clean_title(script["title"]) or script.get("hook", "")
     seed = random.randint(1, 10_000_000)
     scenes = list(script["scenes"])
-    if CHANNEL == "econ":  # 대본의 bg 대신 바다 배경으로 통일
-        scenes = [dict(sc, bg=ECON_SEA[(seed + i) % len(ECON_SEA)]) for i, sc in enumerate(scenes)]
+    if CHANNEL in ("econ", "kids"):  # 대본의 bg 대신 채널 배경으로 통일(경제=바다, 육아=꽃밭·하늘)
+        pool = ECON_SEA if CHANNEL == "econ" else KIDS_BG
+        scenes = [dict(sc, bg=pool[(seed + i) % len(pool)]) for i, sc in enumerate(scenes)]
     # 마지막에 구독·좋아요 인사 장면
-    outro = script.get("outro") or ("오늘 정보가 도움 되셨다면, 구독과 좋아요 꼭 부탁드려요."
-                                     if CHANNEL == "econ" else
-                                     "오늘 이야기가 마음에 닿으셨다면, 구독과 좋아요 꼭 부탁드려요.")
-    scenes.append({"text": outro, "bg": ("ocean sunset horizon" if CHANNEL == "econ"
-                                         else "warm sunset sky with soft clouds over calm hills"), "outro": True})
+    outro = script.get("outro") or {
+        "econ": "오늘 정보가 도움 되셨다면, 구독과 좋아요 꼭 부탁드려요.",
+        "kids": "우리 아이 이야기, 구독과 좋아요로 함께 나눠요.",
+    }.get(CHANNEL, "오늘 이야기가 마음에 닿으셨다면, 구독과 좋아요 꼭 부탁드려요.")
+    scenes.append({"text": outro, "bg": {"econ": "ocean sunset horizon", "kids": "pastel sunset sky clouds"}.get(
+        CHANNEL, "warm sunset sky with soft clouds over calm hills"), "outro": True})
     # 사진을 한꺼번에 미리 받아 두기(빠르게)
     from concurrent.futures import ThreadPoolExecutor
 
@@ -504,7 +512,9 @@ def tg(method, data=None, files=None):
     return r.json()
 
 
-COUPANG_FILE = os.path.join(os.path.dirname(ROOT), "data", "shorts_coupang.txt")
+# 육아 채널은 육아용품 목록만 쓴다(없으면 쿠팡 링크 없이 올림)
+COUPANG_FILE = os.path.join(os.path.dirname(ROOT), "data",
+                            "kids_coupang.txt" if CHANNEL == "kids" else "shorts_coupang.txt")
 DISCLOSURE = "이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다."
 
 
@@ -609,6 +619,9 @@ def build_texts(script):
     if CHANNEL == "econ":
         if "baram-salim" not in desc:
             blog_lines.append("📖 이 내용 자세히 보기 — 구름 위 경제노트 블로그: https://baram-salim.blogspot.com")
+    elif CHANNEL == "kids":
+        if "gureum-yuga-lab" not in desc:
+            blog_lines.append("📖 더 자세한 육아 이야기 — 구름 위 육아연구소 블로그: https://gureum-yuga-lab.blogspot.com")
     elif "dundeun-nohu" not in desc:
         blog_lines.append("📖 노후·연금·상속 정보 블로그: https://dundeun-nohu.blogspot.com")
     if "threads" not in desc:
@@ -653,7 +666,7 @@ def send(script, video, secs):
     else:
         head = "👇 아래 메시지의 설명·태그를 복사해서 유튜브 앱으로 올려 주세요."
     ai_n = sum(1 for x in IMG_LOG if x == "AI")
-    label = "💰 경제노트 쇼츠" if CHANNEL == "econ" else "🎬 오늘의 쇼츠"
+    label = {"econ": "💰 경제노트 쇼츠", "kids": "🧸 육아연구소 쇼츠"}.get(CHANNEL, "🎬 오늘의 쇼츠")
     caption = f"{label} ({secs:.0f}초) · AI사진 {ai_n}장\n\n📌 {script['title']}\n\n{head}"
     try:
         with open(os.path.join(os.path.dirname(ROOT), "data", "shorts_img_log.txt"), "w", encoding="utf-8") as f:
