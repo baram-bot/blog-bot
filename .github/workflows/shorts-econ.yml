@@ -1,0 +1,65 @@
+name: shorts-econ-make
+
+on:
+  push:
+    branches: [main]
+    paths: ["shorts_econ/queue/**"]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: shorts-econ-make
+  cancel-in-progress: false
+
+jobs:
+  make:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: 최신 상태로 맞추기 (중복 업로드 방지)
+        run: |
+          git fetch -q --depth=1 origin main
+          git reset -q --hard origin/main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 도구 설치 (무료)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-noto-cjk fonts-noto-cjk-extra > /dev/null
+          pip install -q edge-tts requests pillow
+      - name: 경제노트 쇼츠 만들기 + 유튜브(구름 위 경제노트 채널) 업로드 + 텔레그램 전송
+        env:
+          SHORTS_BOT_TOKEN: ${{ secrets.SHORTS_BOT_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          SHORTS_CHANNEL: econ
+          # 경제노트 채널 전용 연결(없으면 시니어 채널과 같은 앱 사용). 토큰이 없으면 텔레그램으로만 영상 전송
+          YT_CLIENT_ID: ${{ secrets.YT_ECON_CLIENT_ID || '247650144997-6bqc20isrbqi12fcsani6joed6jrvff5.apps.googleusercontent.com' }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_ECON_CLIENT_SECRET || secrets.YT_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YT_ECON_REFRESH_TOKEN }}
+          CF_ACCOUNT_ID: "4f8474c742bb6437d092782e2a9fd5be"
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        run: python -u shorts/make_short.py
+      - name: 영상 보관 (7일)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: shorts-econ-videos
+          path: shorts_econ/_out/*.mp4
+          retention-days: 7
+          if-no-files-found: ignore
+      - name: 처리한 대본 기록
+        if: always()
+        run: |
+          git config user.name "shorts-bot"
+          git config user.email "shorts-bot@users.noreply.github.com"
+          git add -A shorts_econ/queue shorts_econ/done
+          git diff --cached --quiet && exit 0
+          git commit -m "경제노트 쇼츠 제작 완료 기록"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push -q && break; sleep 5; done

@@ -35,7 +35,10 @@ import urllib.parse
 import requests
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
-ROOT = os.path.dirname(os.path.abspath(__file__))
+# 채널 구분: SHORTS_CHANNEL=econ 이면 '구름 위 경제노트' 채널(shorts_econ/ 폴더), 아니면 시니어 사연 채널(shorts/)
+CHANNEL = os.environ.get("SHORTS_CHANNEL", "senior").strip() or "senior"
+ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                    "shorts_econ" if CHANNEL == "econ" else "shorts")
 QUEUE = os.path.join(ROOT, "queue")
 DONE = os.path.join(ROOT, "done")
 WORK = os.path.join(ROOT, "_work")
@@ -423,7 +426,9 @@ def build_video(script, out_path):
     seed = random.randint(1, 10_000_000)
     scenes = list(script["scenes"])
     # 마지막에 구독·좋아요 인사 장면
-    outro = script.get("outro") or "오늘 이야기가 마음에 닿으셨다면, 구독과 좋아요 꼭 부탁드려요."
+    outro = script.get("outro") or ("오늘 정보가 도움 되셨다면, 구독과 좋아요 꼭 부탁드려요."
+                                     if CHANNEL == "econ" else
+                                     "오늘 이야기가 마음에 닿으셨다면, 구독과 좋아요 꼭 부탁드려요.")
     scenes.append({"text": outro, "bg": "warm sunset sky with soft clouds over calm hills", "outro": True})
     # 사진을 한꺼번에 미리 받아 두기(빠르게)
     from concurrent.futures import ThreadPoolExecutor
@@ -587,9 +592,14 @@ def build_texts(script):
     if CREDITS:
         desc += "\n\n📷 사진 출처(위키미디어 공용):\n" + "\n".join(f"- {c}" for c in CREDITS[:8])
     blog_lines = []
-    if "dundeun-nohu" not in desc:
+    if CHANNEL == "econ":
+        if "baram-salim" not in desc:
+            blog_lines.append("📖 이 내용 자세히 보기 — 구름 위 경제노트 블로그: https://baram-salim.blogspot.com")
+        if "dundeun-nohu" not in desc:
+            blog_lines.append("🏡 노후·연금·상속 정보: https://dundeun-nohu.blogspot.com")
+    elif "dundeun-nohu" not in desc:
         blog_lines.append("📖 노후·연금·상속 정보 블로그: https://dundeun-nohu.blogspot.com")
-    if "baram-salim" not in desc:
+    if "baram-salim" not in desc + "".join(blog_lines):
         blog_lines.append("💰 생활·경제·지원금 블로그: https://baram-salim.blogspot.com")
     if "threads" not in desc:
         blog_lines.append("🧵 스레드에서 매일 생활 꿀팁·꿀템 받기: https://www.threads.net/@baek.gk")
@@ -631,7 +641,8 @@ def send(script, video, secs):
     else:
         head = "👇 아래 메시지의 설명·태그를 복사해서 유튜브 앱으로 올려 주세요."
     ai_n = sum(1 for x in IMG_LOG if x == "AI")
-    caption = f"🎬 오늘의 쇼츠 ({secs:.0f}초) · AI사진 {ai_n}장\n\n📌 {script['title']}\n\n{head}"
+    label = "💰 경제노트 쇼츠" if CHANNEL == "econ" else "🎬 오늘의 쇼츠"
+    caption = f"{label} ({secs:.0f}초) · AI사진 {ai_n}장\n\n📌 {script['title']}\n\n{head}"
     try:
         with open(os.path.join(os.path.dirname(ROOT), "data", "shorts_img_log.txt"), "w", encoding="utf-8") as f:
             f.write("\n".join(IMG_LOG))
