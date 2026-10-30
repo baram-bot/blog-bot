@@ -605,15 +605,12 @@ def build_texts(script):
     if CREDITS:
         desc += "\n\n📷 사진 출처(위키미디어 공용):\n" + "\n".join(f"- {c}" for c in CREDITS[:8])
     blog_lines = []
+    # 채널별로 짝이 되는 블로그만 연결 (경제노트 ↔ 경제노트 블로그, 시니어 ↔ 노후 블로그)
     if CHANNEL == "econ":
         if "baram-salim" not in desc:
             blog_lines.append("📖 이 내용 자세히 보기 — 구름 위 경제노트 블로그: https://baram-salim.blogspot.com")
-        if "dundeun-nohu" not in desc:
-            blog_lines.append("🏡 노후·연금·상속 정보: https://dundeun-nohu.blogspot.com")
     elif "dundeun-nohu" not in desc:
         blog_lines.append("📖 노후·연금·상속 정보 블로그: https://dundeun-nohu.blogspot.com")
-    if "baram-salim" not in desc + "".join(blog_lines):
-        blog_lines.append("💰 생활·경제·지원금 블로그: https://baram-salim.blogspot.com")
     if "threads" not in desc:
         blog_lines.append("🧵 스레드에서 매일 생활 꿀팁·꿀템 받기: https://www.threads.net/@baek.gk")
     if blog_lines:
