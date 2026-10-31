@@ -97,6 +97,11 @@ def _main():
         print("유튜브 토큰 없음")
         print("::error::유튜브 토큰 없음")
         return 1
+    try:
+        sc = requests.get("https://oauth2.googleapis.com/tokeninfo", params={"access_token": tok}, timeout=30).json().get("scope", "")
+        print(f"::notice::유튜브 연결 권한: {sc}")
+    except Exception:  # noqa: BLE001
+        pass
     today = datetime.now(timezone(timedelta(hours=9))).strftime("%Y-%m-%d")
     ok, fail = [], []
     for sid, (lid, title) in todo.items():
@@ -110,7 +115,7 @@ def _main():
         except Exception as e:  # noqa: BLE001
             fail.append(f"{sid}: {e}")
             print(f"[실패] {sid}: {e}")
-            print(f"::error::댓글 실패 {sid}: {str(e)[:300]}")
+            print(f"::error::댓글 실패 {sid}: {' '.join(str(e).split())[:400]}")
     msg = ""
     if ok:
         msg += "💬 쇼츠에 롱폼 링크 댓글을 달았어요\n" + "\n".join(f"· {t}" for t in ok)
