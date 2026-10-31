@@ -1,0 +1,54 @@
+name: short-longform-comment
+
+# 쇼츠에 같은 사연 롱폼 링크 댓글 달기 (컴퓨터 꺼져 있어도 클라우드에서 실행)
+on:
+  workflow_run:
+    workflows: ["longform-make"]
+    types: [completed]
+  schedule:
+    - cron: "17 1,13 * * *"   # 한국시간 10:17, 22:17 (놓친 짝 보충)
+  push:
+    branches: [main]
+    paths: ["longform/link_comment.py", ".github/workflows/link-comment.yml", "data/related_linked.txt"]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: short-longform-comment
+  cancel-in-progress: false
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: 최신 상태로 맞추기
+        run: |
+          git fetch -q --depth=1 origin main
+          git reset -q --hard origin/main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q requests pillow
+      - name: 쇼츠에 롱폼 링크 댓글
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          YT_CLIENT_ID: "247650144997-6bqc20isrbqi12fcsani6joed6jrvff5.apps.googleusercontent.com"
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: python -u longform/link_comment.py
+      - name: 댓글 기록 저장
+        if: always()
+        run: |
+          git config user.name "comment-bot"
+          git config user.email "comment-bot@users.noreply.github.com"
+          git add data/short_comments.txt 2>/dev/null || exit 0
+          git diff --cached --quiet && exit 0
+          git commit -m "쇼츠 롱폼 링크 댓글 기록"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push -q && break; sleep 5; done
