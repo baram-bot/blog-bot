@@ -80,6 +80,14 @@ def comment(tok, sid, lid, title):
 
 
 def main():
+    try:
+        return _main()
+    except Exception as e:  # noqa: BLE001
+        print(f"::error::{type(e).__name__}: {str(e)[:300]}")
+        raise
+
+
+def _main():
     todo = {s: v for s, v in pairs().items() if s not in done_ids()}
     if not todo:
         print("댓글 달 짝 없음")
@@ -87,6 +95,7 @@ def main():
     tok = ms.yt_access_token()
     if not tok:
         print("유튜브 토큰 없음")
+        print("::error::유튜브 토큰 없음")
         return 1
     today = datetime.now(timezone(timedelta(hours=9))).strftime("%Y-%m-%d")
     ok, fail = [], []
@@ -101,6 +110,7 @@ def main():
         except Exception as e:  # noqa: BLE001
             fail.append(f"{sid}: {e}")
             print(f"[실패] {sid}: {e}")
+            print(f"::error::댓글 실패 {sid}: {str(e)[:300]}")
     msg = ""
     if ok:
         msg += "💬 쇼츠에 롱폼 링크 댓글을 달았어요\n" + "\n".join(f"· {t}" for t in ok)
