@@ -692,6 +692,7 @@ def send(script, video, secs):
         text += ("\n\n[업로드 체크]\n✅ 유튜브 앱 → + → 동영상 업로드 → 이 영상 선택\n"
                  "✅ 쿠팡 링크를 넣었다면: 설정에서 '유료 프로모션 포함'에 체크")
     tg("sendMessage", data={"chat_id": chat, "text": text[:4000]})
+    return yt[0] if yt else None
 
 
 def main():
@@ -715,8 +716,12 @@ def main():
             print(f"[완성] {name}: {secs:.1f}초")
             if not bot_token():
                 raise RuntimeError("텔레그램 봇 토큰(SHORTS_BOT_TOKEN)이 GitHub 비밀값에 없음 — 영상은 Actions 보관함에만 있음")
-            send(script, video, secs)
+            vid = send(script, video, secs)
             print("[텔레그램] 전송 완료")
+            if vid:  # 롱폼과 짝지을 때 쓰도록 영상 ID 기록
+                script["yt_id"] = vid
+                with open(path, "w", encoding="utf-8") as fh:
+                    json.dump(script, fh, ensure_ascii=False, indent=2)
             shutil.move(path, os.path.join(DONE, os.path.basename(path)))
         except Exception as e:  # noqa: BLE001
             failed += 1

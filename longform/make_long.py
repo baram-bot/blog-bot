@@ -258,6 +258,18 @@ def main():
             # 챕터 목차(타임스탬프 없이 장 제목만)
             toc = "\n".join(f"· {c['title']}" for c in script["chapters"])
             desc = desc.replace(script.get("description", ""), script.get("description", "") + "\n\n📖 목차\n" + toc, 1)
+            # 같은 사연의 쇼츠와 짝짓기
+            pair = None
+            fs = (script.get("from_short") or "").strip()
+            if fs:
+                fp = fs if os.path.isabs(fs) else os.path.join(os.path.dirname(HERE), fs)
+                try:
+                    pair = json.load(open(fp, encoding="utf-8"))
+                except Exception as e:  # noqa: BLE001
+                    print(f"[짝 쇼츠] 읽기 실패: {fs} ({e})")
+            if pair and pair.get("yt_id"):
+                desc = desc.replace(script.get("description", ""), script.get("description", "")
+                                    + f"\n\n🎬 1분 요약 쇼츠: https://youtube.com/shorts/{pair['yt_id']}", 1)
             yt = ms.yt_upload(video, script["title"], desc, script.get("tags", []), script.get("privacy"), shorts=False)
             thumb = os.path.join(OUT, f"{name}.jpg")
             thumbnail(script, thumb)
@@ -278,6 +290,24 @@ def main():
                 data["reply_markup"] = markup
             with open(thumb, "rb") as fh:
                 ms.tg("sendPhoto", data=data, files={"photo": ("thumb.jpg", fh, "image/jpeg")})
+            if yt and pair and pair.get("yt_id"):
+                sid = pair["yt_id"]
+                note = ("🔗 쇼츠 → 롱폼 연결 (10초)\n\n"
+                        f"쇼츠: {ms.clean_title(pair.get('title', ''))}\n"
+                        f"롱폼: {script['title']}\n\n"
+                        "아래 [쇼츠 수정 열기] → '관련 동영상' 칸에서 이 롱폼을 골라 저장해 주세요.\n"
+                        "쇼츠 화면 아래에 롱폼 바로가기가 생겨서 시청 시간이 쌓여요.\n\n"
+                        f"롱폼 주소: https://youtu.be/{yt[0]}")
+                kb = json.dumps({"inline_keyboard": [[{"text": "✏️ 쇼츠 수정 열기", "url": f"https://studio.youtube.com/video/{sid}/edit"}],
+                                                      [{"text": "▶ 롱폼 보기", "url": f"https://youtu.be/{yt[0]}"}]]})
+                try:
+                    ms.tg("sendMessage", data={"chat_id": ms.chat_id(), "text": note, "reply_markup": kb})
+                except Exception as e:  # noqa: BLE001
+                    print(f"[짝 알림] {e}")
+            if yt:
+                script["yt_id"] = yt[0]
+                with open(path, "w", encoding="utf-8") as fh:
+                    json.dump(script, fh, ensure_ascii=False, indent=2)
             shutil.move(path, os.path.join(DONE, os.path.basename(path)))
         except Exception as e:  # noqa: BLE001
             failed += 1
