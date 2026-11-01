@@ -259,19 +259,15 @@ def radio_base(title, path):
     f_b = ms.font(78)
     tw = d.textlength(CHANNEL_BAND, font=f_b)
     d.text(((W - tw) / 2, 38), CHANNEL_BAND, font=f_b, fill=GOLD)
-    # 제목: 라디오 위 가운데, 최대 2줄
+    # 제목: 라디오 위 가운데, 한 줄로(길면 글씨를 줄여서 한 줄에 맞춤)
     t = ms.clean_title(title)
-    size = 104
-    while True:
+    size = 112
+    while size > 44:
         f_t = ms.font(size)
-        lines = ms.wrap_ko(t, max(8, int(1700 / (size * 0.95))))[:2]
-        if all(d.textlength(l, font=f_t) <= 1760 for l in lines) or size <= 64:
+        if d.textlength(t, font=f_t) <= 1780:
             break
-        size -= 6
-    lh = int(size * 1.18)
-    top = 300 - (len(lines) * lh) // 2
-    for i, l in enumerate(lines):
-        _center(d, l, f_t, top + i * lh, CREAM, stroke=6)
+        size -= 4
+    _center(d, t, f_t, 300 - int(size * 0.62), CREAM, stroke=max(3, size // 17))
     img.save(path)
     return path
 
