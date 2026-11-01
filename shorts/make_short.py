@@ -367,6 +367,17 @@ def overlay_png(hook, subtitle, path, outro=False):
                                 fill=(230, 30, 40, 235) if k == 1 else (40, 40, 40, 220))
             tw = d.textlength(label, font=f_b)
             d.text((bx + (380 - tw) / 2, by + 28), label, font=f_b, fill=color)
+        if CHANNEL == "senior":  # 끝 장면: 화면 아래 '관련 동영상'(뒷이야기)을 가리키는 화살표
+            cx, ay = W // 2, top + total + 70
+            f_a = font(58)
+            msg = "아래 글씨를 누르세요"
+            tw = d.textlength(msg, font=f_a)
+            d.rounded_rectangle([cx - tw / 2 - 36, ay, cx + tw / 2 + 36, ay + 90], radius=45, fill=(255, 210, 60, 240))
+            d.text((cx - tw / 2, ay + 12), msg, font=f_a, fill=(30, 20, 10))
+            for k in range(2):  # 겹친 아래 화살표 두 개
+                y0 = ay + 110 + k * 70
+                d.polygon([(cx - 90, y0), (cx + 90, y0), (cx, y0 + 80)], fill=(255, 210, 60, 245),
+                          outline=(0, 0, 0), width=4)
     img.save(path)
 
 
