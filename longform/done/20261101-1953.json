@@ -2,7 +2,6 @@
   "title": "아버지 달력의 빨간 동그라미 서른여섯 개, 25일마다 숨긴 900만 원",
   "voice": "ko-KR-SunHiNeural",
   "thumbnail_text": "동그라미 36개의 비밀",
-  "from_short": "shorts/done/20261101-0721.json",
   "chapters": [
     {
       "title": "1장. 동그라미 서른여섯 개",
@@ -402,5 +401,7 @@
     ],
     "reason": "아버지의 동그라미 달력이 사연의 핵심이고, 딸이 글씨가 작아 보기 힘들어하시던 어머니께 큰글씨 벽걸이 달력을 사 드려 아버지 달력 옆에 걸어 드리는 장면이 나와 자연스럽게 연결됨"
   },
-  "yt_id": "xdezqJWfV9g"
+  "yt_id": "xdezqJWfV9g",
+  "from_short_old": "shorts/done/20261101-0721.json",
+  "replaced_by": "20261101-2110-r7.json"
 }
