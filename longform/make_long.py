@@ -1,5 +1,10 @@
 # -*- coding: utf-8 -*-
-"""롱폼(가로 16:9, 8~12분) 사연 영상 자동 제작 + 유튜브 업로드.
+"""롱폼(가로 16:9) 사연 영상 자동 제작 + 유튜브 업로드.
+
+기본은 '시니어 라디오' 화면: assets/radio_bg.png(앤티크 라디오) 위에 제목과 자막만 바뀐다.
+장면마다 풍경 사진을 쓰려면 대본에 "style": "scenery" 를 넣는다.
+인물별 목소리: 장면에 "lines": [{"who": "narrator|grandpa|grandma|...", "text": "..."}] 를 쓰면
+줄마다 다른 목소리로 읽는다(lines 가 없으면 text 를 해설자 목소리로).
 
 longform/queue/*.json 대본:
 {"title": "...", "voice": "ko-KR-InJoonNeural",
@@ -27,6 +32,8 @@ QUEUE = os.path.join(HERE, "queue")
 DONE = os.path.join(HERE, "done")
 WORK = os.path.join(HERE, "_work")
 OUT = os.path.join(HERE, "_out")
+RADIO_BG = os.path.join(os.path.dirname(HERE), "assets", "radio_bg.png")
+RADIO_FPS = 15
 NO_PEOPLE = "beautiful landscape scenery, no people, no person, no text, cinematic, soft warm light, high detail, wide shot"
 
 
@@ -41,7 +48,24 @@ VOICE_PRESETS = {
     "child": ("ko-KR-SunHiNeural", "+8%", "+32Hz", "아이"),
     "man": ("ko-KR-InJoonNeural", "+0%", "+0Hz", "남자"),
     "woman": ("ko-KR-SunHiNeural", "+0%", "+0Hz", "여자"),
+    "son": ("ko-KR-InJoonNeural", "+2%", "-3Hz", "아들"),
+    "daughter": ("ko-KR-SunHiNeural", "+3%", "+4Hz", "딸"),
+    "daughter_in_law": ("ko-KR-SunHiNeural", "+5%", "+7Hz", "며느리"),
+    "son_in_law": ("ko-KR-HyunsuMultilingualNeural", "+3%", "-2Hz", "사위"),
+    "grandchild": ("ko-KR-SunHiNeural", "+8%", "+32Hz", "손주"),
 }
+WHO_ALIAS = {
+    "해설": "narrator", "나레이션": "narrator", "내레이션": "narrator", "narration": "narrator",
+    "할머니": "grandma", "할아버지": "grandpa", "어머니": "mother", "엄마": "mother",
+    "아버지": "father", "아빠": "father", "아들": "son", "딸": "daughter", "며느리": "daughter_in_law",
+    "사위": "son_in_law", "아이": "child", "손주": "grandchild", "손자": "grandchild", "손녀": "grandchild",
+    "청년": "young_man", "젊은 여자": "young_woman", "남자": "man", "여자": "woman",
+}
+
+
+def norm_who(who):
+    w = (who or "narrator").strip().strip("[]")
+    return WHO_ALIAS.get(w, w.lower())
 FALLBACK = {"ko-KR-HyunsuMultilingualNeural": "ko-KR-InJoonNeural"}
 
 
@@ -52,7 +76,8 @@ async def _tts_v(text, voice, rate, pitch, path):
 
 def tts_v(text, who, narrator, path):
     import asyncio
-    voice, rate, pitch, _ = VOICE_PRESETS.get(who) or (narrator, "+8%", "+0Hz", "")
+    who = norm_who(who)
+    voice, rate, pitch, _ = VOICE_PRESETS.get(who) or (narrator, "+4%", "+0Hz", "")
     for attempt in range(3):
         try:
             asyncio.run(_tts_v(text, voice, rate, pitch, path))
@@ -61,6 +86,7 @@ def tts_v(text, who, narrator, path):
         except Exception as e:  # noqa: BLE001
             print(f"[음성] {who} 재시도 {attempt + 1}: {e}")
             voice = FALLBACK.get(voice, voice)
+            ms.time.sleep(2 + attempt * 3)
     raise RuntimeError("음성 생성 실패")
 
 
@@ -69,7 +95,7 @@ def scene_lines(scene):
     out = []
     if scene.get("lines"):
         for ln in scene["lines"]:
-            who = ln.get("who", "narrator")
+            who = norm_who(ln.get("who"))
             for s in sentences(ln.get("text", "")):
                 out.append((who, s))
     else:
@@ -206,6 +232,158 @@ def set_thumbnail(vid, path):
         return False
 
 
+# ---------------------------------------------------------------- 시니어 라디오 화면
+
+CHANNEL_BAND = "바람따라구름따라 · 시니어 오디오북"
+CREAM, GOLD, DARK = (249, 242, 216), (255, 230, 168), (40, 22, 10)
+
+
+def _center(d, text, f, y, fill, stroke=4):
+    tw = d.textlength(text, font=f)
+    d.text(((W - tw) / 2, y), text, font=f, fill=fill, stroke_width=stroke, stroke_fill=DARK)
+
+
+def radio_base(title, path):
+    """라디오 배경 + 위 채널 띠 + 가운데 제목(영상 내내 고정)."""
+    if os.path.exists(RADIO_BG):
+        img = Image.open(RADIO_BG).convert("RGB").resize((W, H), Image.LANCZOS)
+    else:  # 배경 파일이 없을 때: 따뜻한 갈색 그라데이션
+        img = Image.new("RGB", (W, H))
+        dd = ImageDraw.Draw(img)
+        for y in range(H):
+            t = y / H
+            dd.line([(0, y), (W, y)], fill=(int(120 - 70 * t), int(84 - 54 * t), int(46 - 32 * t)))
+    d = ImageDraw.Draw(img, "RGBA")
+    # 위 채널 띠를 또렷하게 다시 그림
+    d.rounded_rectangle([70, 14, W - 70, 154], radius=68, fill=(58, 36, 20, 255))
+    f_b = ms.font(78)
+    tw = d.textlength(CHANNEL_BAND, font=f_b)
+    d.text(((W - tw) / 2, 38), CHANNEL_BAND, font=f_b, fill=GOLD)
+    # 제목: 라디오 위 가운데, 최대 2줄
+    t = ms.clean_title(title)
+    size = 104
+    while True:
+        f_t = ms.font(size)
+        lines = ms.wrap_ko(t, max(8, int(1700 / (size * 0.95))))[:2]
+        if all(d.textlength(l, font=f_t) <= 1760 for l in lines) or size <= 64:
+            break
+        size -= 6
+    lh = int(size * 1.18)
+    top = 300 - (len(lines) * lh) // 2
+    for i, l in enumerate(lines):
+        _center(d, l, f_t, top + i * lh, CREAM, stroke=6)
+    img.save(path)
+    return path
+
+
+def radio_overlay(chapter, sub, path, speaker=""):
+    """아래 자막 띠(라디오 아래 갈색 칸) + 왼쪽 위 장 제목."""
+    img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    f_ch = ms.font(38)
+    cw = d.textlength(chapter, font=f_ch)
+    d.rounded_rectangle([40, 905, W - 40, H - 22], radius=26, fill=(30, 16, 8, 215))
+    d.rounded_rectangle([W - 70 - cw - 48, 826, W - 70, 892], radius=30, fill=(58, 36, 20, 235))
+    d.text((W - 70 - cw - 24, 836), chapter, font=f_ch, fill=GOLD)
+    if speaker:
+        f_sp = ms.font(42)
+        sw = d.textlength(speaker, font=f_sp)
+        d.rounded_rectangle([70, 822, 70 + sw + 52, 892], radius=32, fill=(150, 90, 40, 245))
+        d.text((96, 830), speaker, font=f_sp, fill=(255, 255, 255))
+    f = ms.font(58)
+    lines = ms.wrap_ko(sub, 30)[:2]
+    lh = 72
+    top = 905 + (H - 22 - 905 - len(lines) * lh) // 2
+    color = (255, 236, 170) if speaker else (255, 255, 255)
+    for i, l in enumerate(lines):
+        lw = d.textlength(l, font=f)
+        d.text(((W - lw) / 2, top + i * lh), l, font=f, fill=color, stroke_width=3, stroke_fill=(0, 0, 0))
+    img.save(path)
+
+
+def radio_scene(idx, chapter, sents, base, voice):
+    """음성은 미리 만들어 둔 a{idx}_{j}.mp3 를 쓴다."""
+    auds, ovs, durs = [], [], []
+    for j, (who, s) in enumerate(sents):
+        a = os.path.join(WORK, f"a{idx}_{j}.mp3")
+        if not os.path.exists(a) or os.path.getsize(a) < 1000:
+            tts_v(s, who, voice, a)
+        o = os.path.join(WORK, f"o{idx}_{j}.png")
+        label = (VOICE_PRESETS.get(who) or ("", "", "", ""))[3]
+        radio_overlay(chapter, s, o, speaker=label)
+        auds.append(a); ovs.append(o); durs.append(ms.duration(a) + 0.3)
+    audio = os.path.join(WORK, f"scene{idx}.m4a")
+    inputs, filt = [], ""
+    for k, a in enumerate(auds):
+        inputs += ["-i", a]
+        filt += f"[{k}:a]apad=pad_dur=0.3,aresample=44100,aformat=channel_layouts=stereo[x{k}];"
+    filt += "".join(f"[x{k}]" for k in range(len(auds))) + f"concat=n={len(auds)}:v=0:a=1[a]"
+    ms.run(["ffmpeg", "-y", *inputs, "-filter_complex", filt, "-map", "[a]", "-c:a", "aac", "-b:a", "160k", audio])
+    total = sum(durs)
+    cmd = ["ffmpeg", "-y", "-loop", "1", "-framerate", str(RADIO_FPS), "-i", base]
+    for o in ovs:
+        cmd += ["-i", o]
+    cmd += ["-i", audio]
+    vf, t = "[0:v]null[v0];", 0.0
+    for k in range(len(ovs)):
+        vf += f"[v{k}][{k+1}:v]overlay=0:0:enable='between(t,{t:.2f},{t+durs[k]:.2f})'[v{k+1}];"
+        t += durs[k]
+    vf += f"[v{len(ovs)}]format=yuv420p[v]"
+    clip = os.path.join(WORK, f"c{idx:03d}.mp4")
+    cmd += ["-filter_complex", vf, "-map", "[v]", "-map", f"{len(ovs)+1}:a",
+            "-c:v", "libx264", "-preset", "veryfast", "-tune", "stillimage", "-crf", "23", "-c:a", "copy",
+            "-t", f"{total:.2f}", "-r", str(RADIO_FPS), clip]
+    ms.run(cmd)
+    return clip
+
+
+def radio_thumbnail(script, base_path, path):
+    img = Image.open(RADIO_BG if os.path.exists(RADIO_BG) else base_path).convert("RGB").resize((1280, 720))
+    d = ImageDraw.Draw(img, "RGBA")
+    d.rectangle([0, 0, 1280, 720], fill=(0, 0, 0, 70))
+    d.rounded_rectangle([46, 9, 1234, 103], radius=46, fill=(58, 36, 20, 255))
+    f_b = ms.font(50)
+    tw = d.textlength(CHANNEL_BAND, font=f_b)
+    d.text(((1280 - tw) / 2, 26), CHANNEL_BAND, font=f_b, fill=GOLD)
+    text = script.get("thumbnail_text") or ms.clean_title(script["title"])
+    f = ms.font(116)
+    lines = ms.wrap_ko(text, 9)[:2]
+    y = 330 - len(lines) * 72
+    for l in lines:
+        lw = d.textlength(l, font=f)
+        d.text(((1280 - lw) / 2, y), l, font=f, fill=(255, 226, 90), stroke_width=9, stroke_fill=(0, 0, 0))
+        y += 144
+    img.save(path, quality=90)
+
+
+def build_radio(script, items, voice, out):
+    base = radio_base(script["title"], os.path.join(WORK, "radio_base.png"))
+    # 음성을 한꺼번에 미리 만든다(4개씩 동시에)
+    jobs = []
+    plan = []
+    for i, (ch, sc) in enumerate(items):
+        sents = scene_lines(sc)
+        plan.append((i, ch, sents))
+        for j, (who, s) in enumerate(sents):
+            jobs.append((s, who, os.path.join(WORK, f"a{i}_{j}.mp3")))
+
+    def _do(job):
+        s, who, a = job
+        try:
+            tts_v(s, who, voice, a)
+        except Exception as e:  # noqa: BLE001
+            print(f"[음성] 미리 만들기 실패(나중에 다시): {e}")
+    with ThreadPoolExecutor(max_workers=4) as ex:
+        list(ex.map(_do, jobs))
+    print(f"[음성] {len(jobs)}문장 완료")
+    clips = [radio_scene(i, ch, sents, base, voice) for i, ch, sents in plan]
+    lst = os.path.join(WORK, "list.txt")
+    with open(lst, "w") as fh:
+        fh.writelines(f"file '{c}'\n" for c in clips)
+    ms.run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", lst, "-c", "copy", "-movflags", "+faststart", out])
+    return ms.duration(out)
+
+
 def build(script, out):
     shutil.rmtree(WORK, ignore_errors=True)
     os.makedirs(WORK, exist_ok=True)
@@ -218,6 +396,8 @@ def build(script, out):
             items.append((ch["title"], sc))
     items.append(("마무리", {"text": script.get("outro") or "오늘 이야기가 마음에 닿으셨다면 구독과 좋아요 부탁드립니다. 다음 이야기에서 또 뵙겠습니다.",
                              "bg": "warm sunset sky with soft clouds over calm hills"}))
+    if script.get("style") != "scenery":
+        return build_radio(script, items, voice, out)
 
     def pre(i_it):
         i, (_, sc) = i_it
@@ -272,7 +452,10 @@ def main():
                                     + f"\n\n🎬 1분 요약 쇼츠: https://youtube.com/shorts/{pair['yt_id']}", 1)
             yt = ms.yt_upload(video, script["title"], desc, script.get("tags", []), script.get("privacy"), shorts=False)
             thumb = os.path.join(OUT, f"{name}.jpg")
-            thumbnail(script, thumb)
+            if script.get("style") != "scenery":
+                radio_thumbnail(script, os.path.join(WORK, "radio_base.png"), thumb)
+            else:
+                thumbnail(script, thumb)
             msg = f"🎞 오늘의 롱폼 ({secs/60:.1f}분) · AI사진 {sum(1 for x in ms.IMG_LOG if x == 'AI')}장\n\n📌 {script['title']}\n"
             markup = None
             if yt:

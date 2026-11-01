@@ -112,6 +112,8 @@ def _save_if_image(content, path):
         f.write(content)
     try:
         Image.open(path).verify()
+        with Image.open(path) as im:
+            im.load()
         return True
     except Exception:  # noqa: BLE001
         return False
@@ -299,7 +301,14 @@ def gradient_bg(path, seed):
 
 
 def prepare_image(src, dst):
-    img = Image.open(src).convert("RGB")
+    try:
+        img = Image.open(src)
+        img.load()  # 덜 받아진(잘린) 그림은 여기서 걸러진다
+        img = img.convert("RGB")
+    except Exception as e:  # noqa: BLE001
+        print(f"[이미지] 깨진 그림이라 다시 만듦: {os.path.basename(src)} ({e})")
+        gradient_bg(src, random.randint(1, 10_000_000))
+        img = Image.open(src).convert("RGB")
     # 세로 9:16 으로 꽉 차게 자르기
     scale = max(W / img.width, H / img.height)
     img = img.resize((int(img.width * scale) + 1, int(img.height * scale) + 1), Image.LANCZOS)
@@ -387,7 +396,7 @@ MOOD_SCENERY = [
     (r"봄|벚꽃|꽃",
      ["cherry blossom trees by a river", "spring flower field under blue sky"]),
 ]
-NO_PEOPLE = "beautiful landscape scenery, no people, no person, no text, cinematic, soft light, high detail, vertical"
+NO_PEOPLE = "no people, no person, no hands, no faces, no text, no watermark, cinematic, soft warm light, high detail, vertical"
 
 
 def pick_scenery(script, i, seed):
@@ -461,8 +470,18 @@ def build_video(script, out_path):
             fetch_image(f"{scenery}, {NO_PEOPLE}", raw, seed + i, commons_query=scenery)
         except Exception as e:  # noqa: BLE001
             print(f"[이미지] 미리받기 실패 {i}: {e}")
+    # 같은 bg 를 쓰는 장면은 사진 한 장을 같이 쓴다(물건 사진 3~4장으로 이어 가기)
+    first = {}
+    for i, sc in enumerate(scenes):
+        first.setdefault((sc.get("bg") or "").strip().lower() or f"#{i}", i)
+    uniq = sorted(set(first.values()))
     with ThreadPoolExecutor(max_workers=4) as ex:
-        list(ex.map(_pre, enumerate(scenes)))
+        list(ex.map(_pre, [(i, scenes[i]) for i in uniq]))
+    for i, sc in enumerate(scenes):
+        j = first[(sc.get("bg") or "").strip().lower() or f"#{i}"]
+        src = os.path.join(WORK, f"raw{j}.jpg")
+        if j != i and os.path.exists(src):
+            shutil.copy(src, os.path.join(WORK, f"raw{i}.jpg"))
     clips = [make_scene(i, s, voice, hook, seed, script) for i, s in enumerate(scenes)]
     listfile = os.path.join(WORK, "list.txt")
     with open(listfile, "w") as f:
