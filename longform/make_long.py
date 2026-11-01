@@ -38,21 +38,21 @@ NO_PEOPLE = "beautiful landscape scenery, no people, no person, no text, cinemat
 
 
 # 인물별 목소리(무료 edge-tts 음성 + 높낮이·속도 조절)
-VOICE_PRESETS = {
-    "grandma": ("ko-KR-SunHiNeural", "-14%", "-20Hz", "할머니"),
-    "grandpa": ("ko-KR-InJoonNeural", "-14%", "-16Hz", "할아버지"),
-    "mother": ("ko-KR-SunHiNeural", "-5%", "-8Hz", "어머니"),
-    "father": ("ko-KR-InJoonNeural", "-6%", "-9Hz", "아버지"),
-    "young_man": ("ko-KR-HyunsuMultilingualNeural", "+6%", "+0Hz", "청년"),
-    "young_woman": ("ko-KR-SunHiNeural", "+6%", "+10Hz", "젊은 여자"),
-    "child": ("ko-KR-SunHiNeural", "+8%", "+32Hz", "아이"),
+VOICE_PRESETS = {  # 높낮이를 크게 바꾸면 소리가 뭉개지므로 ±8Hz 안에서만 조절
+    "grandma": ("ko-KR-SunHiNeural", "-5%", "-6Hz", "할머니"),
+    "grandpa": ("ko-KR-InJoonNeural", "-5%", "-6Hz", "할아버지"),
+    "mother": ("ko-KR-SunHiNeural", "-2%", "-3Hz", "어머니"),
+    "father": ("ko-KR-InJoonNeural", "-2%", "-3Hz", "아버지"),
+    "young_man": ("ko-KR-HyunsuMultilingualNeural", "+0%", "+0Hz", "청년"),
+    "young_woman": ("ko-KR-SunHiNeural", "+3%", "+5Hz", "젊은 여자"),
+    "child": ("ko-KR-SunHiNeural", "+4%", "+8Hz", "아이"),
     "man": ("ko-KR-InJoonNeural", "+0%", "+0Hz", "남자"),
     "woman": ("ko-KR-SunHiNeural", "+0%", "+0Hz", "여자"),
-    "son": ("ko-KR-InJoonNeural", "+2%", "-3Hz", "아들"),
-    "daughter": ("ko-KR-SunHiNeural", "+3%", "+4Hz", "딸"),
-    "daughter_in_law": ("ko-KR-SunHiNeural", "+5%", "+7Hz", "며느리"),
-    "son_in_law": ("ko-KR-HyunsuMultilingualNeural", "+3%", "-2Hz", "사위"),
-    "grandchild": ("ko-KR-SunHiNeural", "+8%", "+32Hz", "손주"),
+    "son": ("ko-KR-HyunsuMultilingualNeural", "+0%", "-2Hz", "아들"),
+    "daughter": ("ko-KR-SunHiNeural", "+2%", "+3Hz", "딸"),
+    "daughter_in_law": ("ko-KR-SunHiNeural", "+3%", "+5Hz", "며느리"),
+    "son_in_law": ("ko-KR-HyunsuMultilingualNeural", "+2%", "+2Hz", "사위"),
+    "grandchild": ("ko-KR-SunHiNeural", "+4%", "+8Hz", "손주"),
 }
 WHO_ALIAS = {
     "해설": "narrator", "나레이션": "narrator", "내레이션": "narrator", "narration": "narrator",
@@ -77,7 +77,7 @@ async def _tts_v(text, voice, rate, pitch, path):
 def tts_v(text, who, narrator, path):
     import asyncio
     who = norm_who(who)
-    voice, rate, pitch, _ = VOICE_PRESETS.get(who) or (narrator, "-8%", "+0Hz", "")
+    voice, rate, pitch, _ = VOICE_PRESETS.get(who) or (narrator, "-6%", "+0Hz", "")
     for attempt in range(3):
         try:
             asyncio.run(_tts_v(text, voice, rate, pitch, path))
