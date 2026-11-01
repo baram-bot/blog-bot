@@ -83,7 +83,7 @@ def duration(path):
 
 async def _tts(text, voice, path):
     import edge_tts
-    com = edge_tts.Communicate(text, voice, rate="+8%")
+    com = edge_tts.Communicate(text, voice, rate="+0%" if CHANNEL == "senior" else "+8%")  # 시니어 사연은 천천히
     await com.save(path)
 
 
