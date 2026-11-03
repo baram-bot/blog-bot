@@ -35,6 +35,9 @@ import urllib.parse
 import requests
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import tts_pro  # noqa: E402
+
 # 채널 구분: SHORTS_CHANNEL=econ 이면 '구름 위 경제노트' 채널(shorts_econ/ 폴더), 아니면 시니어 사연 채널(shorts/)
 CHANNEL = os.environ.get("SHORTS_CHANNEL", "senior").strip() or "senior"
 ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
@@ -88,6 +91,8 @@ async def _tts(text, voice, path):
 
 
 def tts(text, voice, path):
+    if CHANNEL == "senior" and tts_pro.active():  # 시니어 사연 채널은 고품질 음성(타입캐스트 키가 있을 때)
+        return tts_pro.synth(text, tts_pro.narrator_role(voice), path)
     for attempt in range(3):
         try:
             asyncio.run(_tts(text, voice, path))
@@ -453,6 +458,14 @@ def make_scene(i, scene, voice, hook, base_seed, script=None):
 
 
 def build_video(script, out_path):
+    try:
+        return _build_video(script, out_path)
+    except tts_pro.ProFailed:  # 고품질 음성이 도중에 끊기면 목소리가 섞이지 않게 처음부터 무료 음성으로
+        tts_pro.fallback()
+        return _build_video(script, out_path)
+
+
+def _build_video(script, out_path):
     CREDITS.clear()
     shutil.rmtree(WORK, ignore_errors=True)
     os.makedirs(WORK, exist_ok=True)

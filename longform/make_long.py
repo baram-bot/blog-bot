@@ -78,6 +78,9 @@ def tts_v(text, who, narrator, path):
     import asyncio
     who = norm_who(who)
     voice, rate, pitch, _ = VOICE_PRESETS.get(who) or (narrator, "-6%", "+0Hz", "")
+    if ms.tts_pro.active():  # 고품질 음성(타입캐스트 키가 있을 때) — 인물별로 다른 목소리
+        role = who if who in ms.tts_pro.ROLE else ms.tts_pro.narrator_role(narrator)
+        return ms.tts_pro.synth(text, role, path, tempo=1 + int(rate.rstrip("%")) / 100)
     for attempt in range(3):
         try:
             asyncio.run(_tts_v(text, voice, rate, pitch, path))
@@ -367,10 +370,13 @@ def build_radio(script, items, voice, out):
         s, who, a = job
         try:
             tts_v(s, who, voice, a)
+        except ms.tts_pro.ProFailed:
+            pass
         except Exception as e:  # noqa: BLE001
             print(f"[음성] 미리 만들기 실패(나중에 다시): {e}")
     with ThreadPoolExecutor(max_workers=4) as ex:
         list(ex.map(_do, jobs))
+    ms.tts_pro.active()  # 도중에 고품질 음성이 끊겼으면 여기서 ProFailed → 처음부터 다시
     print(f"[음성] {len(jobs)}문장 완료")
     clips = [radio_scene(i, ch, sents, base, voice) for i, ch, sents in plan]
     lst = os.path.join(WORK, "list.txt")
@@ -381,6 +387,14 @@ def build_radio(script, items, voice, out):
 
 
 def build(script, out):
+    try:
+        return _build(script, out)
+    except ms.tts_pro.ProFailed:  # 목소리가 섞이지 않게 처음부터 무료 음성으로
+        ms.tts_pro.fallback()
+        return _build(script, out)
+
+
+def _build(script, out):
     shutil.rmtree(WORK, ignore_errors=True)
     os.makedirs(WORK, exist_ok=True)
     ms.CREDITS.clear(); ms.IMG_LOG.clear()
