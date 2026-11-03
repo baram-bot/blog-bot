@@ -3,7 +3,7 @@ name: short-longform-comment
 # 쇼츠에 같은 사연 롱폼 링크 댓글 달기 (컴퓨터 꺼져 있어도 클라우드에서 실행)
 on:
   workflow_run:
-    workflows: ["longform-make"]
+    workflows: ["longform-make", "shorts-make"]
     types: [completed]
   schedule:
     - cron: "17 1,13 * * *"   # 한국시간 10:17, 22:17 (놓친 짝 보충)

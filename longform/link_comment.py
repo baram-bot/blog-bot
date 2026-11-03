@@ -42,6 +42,15 @@ def pairs():
         s = load(fs if os.path.isabs(fs) else os.path.join(ROOT, fs)) or {}
         if s.get("yt_id"):
             out[s["yt_id"]] = (lid, d.get("title", ""))
+    # 롱폼 먼저 올리고 만든 '미리보기' 쇼츠: 쇼츠 대본의 from_long 이 짝
+    for f in sorted(glob.glob(os.path.join(ROOT, "shorts", "done", "*.json"))):
+        s = load(f) or {}
+        fl = (s.get("from_long") or "").strip()
+        if not s.get("yt_id") or not fl:
+            continue
+        d = load(fl if os.path.isabs(fl) else os.path.join(ROOT, fl)) or {}
+        if d.get("yt_id") and d.get("privacy") != "private":
+            out[s["yt_id"]] = (d["yt_id"], d.get("title", ""))
     if os.path.exists(LINKED):
         for line in open(LINKED, encoding="utf-8"):
             p = [x.strip() for x in line.split("|")]
