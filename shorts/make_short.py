@@ -260,7 +260,14 @@ KIDS_BG = ["flower meadow in spring sunlight", "green meadow under blue sky", "s
            "green forest path sunlight", "colorful tulip field"]
 
 
+AI_PHOTO = [""]
+
+
 def fetch_image(prompt, path, seed, commons_query=None):
+    if AI_PHOTO[0] and commons_query == AI_PHOTO[0]:  # 대표 그림: AI 로 한 장(사람·글자 없이), 안 되면 무료 사진
+        if cloudflare_image(prompt, path, seed):
+            return True
+        return openverse_image(commons_query, path, seed) or commons_image(commons_query, path, seed)
     if CHANNEL in ("econ", "kids"):
         q = commons_query or "calm ocean horizon"
         return openverse_image(q, path, seed) or commons_image(q, path, seed)
@@ -463,7 +470,11 @@ def _build_video(script, out_path):
     hook = clean_title(script["title"]) or script.get("hook", "")
     seed = random.randint(1, 10_000_000)
     scenes = list(script["scenes"])
-    if CHANNEL in ("econ", "kids"):  # 대본의 bg 대신 채널 배경으로 통일(경제=바다, 육아=꽃밭·하늘)
+    one = str(script.get("photo") or "").strip()  # 대표 사진 한 장(경제 AI·미래산업 편): 모든 장면에 같은 그림
+    AI_PHOTO[0] = one if CHANNEL == "econ" else ""
+    if AI_PHOTO[0]:
+        scenes = [dict(sc, bg=one) for sc in scenes]
+    elif CHANNEL in ("econ", "kids"):  # 대본의 bg 대신 채널 배경으로 통일(경제=바다, 육아=꽃밭·하늘)
         pool = ECON_SEA if CHANNEL == "econ" else KIDS_BG
         scenes = [dict(sc, bg=pool[(seed + i) % len(pool)]) for i, sc in enumerate(scenes)]
     # 마지막에 구독·좋아요 인사 장면
@@ -471,7 +482,7 @@ def _build_video(script, out_path):
         "econ": "오늘 정보가 도움 되셨다면, 구독과 좋아요 꼭 부탁드려요.",
         "kids": "우리 아이 이야기, 구독과 좋아요로 함께 나눠요.",
     }.get(CHANNEL, "오늘 이야기가 마음에 닿으셨다면, 구독과 좋아요 꼭 부탁드려요.")
-    scenes.append({"text": outro, "bg": {"econ": "ocean sunset horizon", "kids": "pastel sunset sky clouds"}.get(
+    scenes.append({"text": outro, "bg": AI_PHOTO[0] or {"econ": "ocean sunset horizon", "kids": "pastel sunset sky clouds"}.get(
         CHANNEL, "warm sunset sky with soft clouds over calm hills"), "outro": True})
     # 사진을 한꺼번에 미리 받아 두기(빠르게)
     from concurrent.futures import ThreadPoolExecutor

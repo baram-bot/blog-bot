@@ -1,0 +1,40 @@
+name: blog-relabel
+# 두 블로그(경제노트·노후)의 기존 글 전체에 분야 라벨을 붙이고, '분야별 글 모아보기' 페이지를 만든다
+on:
+  push:
+    branches: [main]
+    paths: ["relabel_posts.py", ".github/workflows/relabel.yml", "pages_econ/**"]
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: blog-auto-post
+  cancel-in-progress: false
+jobs:
+  relabel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+      GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+      GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+      BLOGGER_BLOG_ID: ${{ secrets.BLOGGER_BLOG_ID }}
+      DRY_RUN: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 경제노트 글 분야 정리
+        run: RELABEL_BLOG=econ python -u relabel_posts.py
+      - name: 노후 블로그 글 분야 정리
+        run: RELABEL_BLOG=nohu python -u relabel_posts.py
+      - name: 경제노트 '분야별 글 모아보기' 페이지
+        if: env.DRY_RUN != '1'
+        run: PAGES_DIR=pages_econ PAGES_BLOG_ID="$BLOGGER_BLOG_ID" python -u pages_bot.py
+      - name: 기록
+        run: |
+          git config user.name "blog-bot"; git config user.email "blog-bot@users.noreply.github.com"
+          git add data/pages_econ.json 2>/dev/null; git diff --cached --quiet && exit 0
+          git commit -qm "분야별 페이지 기록 [skip ci]"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push -q && break; sleep 5; done
