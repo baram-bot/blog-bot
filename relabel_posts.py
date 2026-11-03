@@ -52,11 +52,11 @@ def pick(kind, title, labels):
     for lab in labels:  # 이미 새 분야 이름이 붙어 있으면 그대로
         if lab in names:
             return lab
-    for lab in labels[:1]:  # 예전 첫 라벨(분야)
-        for name, olds, _ in cats:
-            if lab in olds:
-                return name
-    if kind == "econ" and any(h in " ".join(labels) + title for h in TRAVEL_HINT):
+    for name, olds, _ in cats:  # 예전 분야 라벨(블로거는 라벨을 가나다순으로 돌려줘서 위치 대신 이름으로 찾는다)
+        if any(lab in olds for lab in labels):
+            return name
+    if kind == "econ" and any(h in " ".join(labels) + title for h in TRAVEL_HINT) \
+            and not any(w in title for w in ("지원금", "기본소득", "신청", "청년")):
         return "여행·나들이"
     text = title + " " + " ".join(labels)
     best, score = None, 0
