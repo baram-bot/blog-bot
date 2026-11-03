@@ -387,11 +387,12 @@ def build_radio(script, items, voice, out):
 
 
 def build(script, out):
-    try:
-        return _build(script, out)
-    except ms.tts_pro.ProFailed:  # 목소리가 섞이지 않게 처음부터 무료 음성으로
-        ms.tts_pro.fallback()
-        return _build(script, out)
+    for _ in range(3):  # 도중에 유료 음성이 끊기면 목소리가 섞이지 않게 처음부터 다시(다음 서비스→무료 음성)
+        try:
+            return _build(script, out)
+        except ms.tts_pro.ProFailed:
+            ms.tts_pro.fallback()
+    return _build(script, out)
 
 
 def _build(script, out):

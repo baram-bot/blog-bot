@@ -458,11 +458,12 @@ def make_scene(i, scene, voice, hook, base_seed, script=None):
 
 
 def build_video(script, out_path):
-    try:
-        return _build_video(script, out_path)
-    except tts_pro.ProFailed:  # 고품질 음성이 도중에 끊기면 목소리가 섞이지 않게 처음부터 무료 음성으로
-        tts_pro.fallback()
-        return _build_video(script, out_path)
+    for _ in range(3):  # 도중에 유료 음성이 끊기면 목소리가 섞이지 않게 처음부터 다시(다음 서비스→무료 음성)
+        try:
+            return _build_video(script, out_path)
+        except tts_pro.ProFailed:
+            tts_pro.fallback()
+    return _build_video(script, out_path)
 
 
 def _build_video(script, out_path):

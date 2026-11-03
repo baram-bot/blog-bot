@@ -1,13 +1,15 @@
 # -*- coding: utf-8 -*-
-"""고품질 AI 음성(타입캐스트) — 시니어 사연 채널(쇼츠·롱폼) 전용.
-
-깃허브 비밀값 TYPECAST_API_KEY 가 있으면 타입캐스트로 읽고, 없으면 기존 무료 음성(edge-tts)을 쓴다.
+"""고품질 AI 음성 — 시니어 사연 채널(쇼츠·롱폼) 전용. 섞어 쓰기:
+- 해설(narrator)  → 구글 Chirp 3 HD (깃허브 비밀값 GOOGLE_TTS_API_KEY, 월 100만 자 무료)
+- 인물 대사        → 타입캐스트 (비밀값 TYPECAST_API_KEY) — 할머니·할아버지·아이 목소리
+한쪽 키만 있으면 그 서비스가 해설·대사를 다 맡는다(구글은 인물마다 다른 성인 목소리). 둘 다 없으면 무료 음성(edge-tts).
 영상 한 편 안에서 목소리가 섞이지 않도록, 도중에 타입캐스트가 실패하면(크레딧 소진 등)
 ProFailed 를 던지고 → 만드는 쪽에서 그 영상을 처음부터 무료 음성으로 다시 만든다.
 
 인물별 목소리는 타입캐스트 목소리 목록에서 성별·나이로 자동으로 고른다.
 직접 고르고 싶으면 data/typecast_voices.json 에 {"grandma": "tc_...", "narrator_male": "tc_..."} 처럼 적는다.
 """
+import base64
 import json
 import os
 import threading
@@ -17,6 +19,16 @@ import requests
 API = "https://api.typecast.ai"
 MODEL = os.environ.get("TYPECAST_MODEL", "ssfm-v31")
 KEY = os.environ.get("TYPECAST_API_KEY", "").strip()
+GKEY = os.environ.get("GOOGLE_TTS_API_KEY", "").strip()
+GAPI = "https://texttospeech.googleapis.com/v1/text:synthesize"
+# 구글 Chirp 3 HD 목소리(사람처럼 자연스러운 성인 목소리). 타입캐스트가 없을 때 인물별로도 나눠 쓴다.
+GVOICE = {
+    "narrator_male": "Charon", "narrator_female": "Sulafat",
+    "grandpa": "Algenib", "grandma": "Gacrux", "father": "Iapetus", "mother": "Vindemiatrix",
+    "man": "Orus", "woman": "Kore", "son": "Puck", "daughter": "Leda", "son_in_law": "Fenrir",
+    "daughter_in_law": "Zephyr", "young_man": "Enceladus", "young_woman": "Aoede",
+    "child": "Laomedeia", "grandchild": "Achird",
+}
 UA = "typecast-direct/1 python-requests typecast-integration/1 (source=api-docs; generated_by=claude-code)"
 OVERRIDE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "typecast_voices.json")
 
@@ -33,11 +45,13 @@ ROLE = {
 }
 FEMALE_EDGE = ("SunHi", "JiMin", "SeoHyeon", "SoonBok", "YuJin")
 
-_state = "off" if not KEY else "on"   # on → 타입캐스트, failed → 이번 영상 다시 만들기 필요, off → 무료 음성
+_on = {"typecast": bool(KEY), "google": bool(GKEY)}   # 켜진 서비스
+_failed = None   # 도중에 실패한 서비스 → 이번 영상을 처음부터 다시 만들기
 _lock = threading.Lock()
 _voices = {}
 _pools = {}
 _used = 0
+_used_g = 0
 
 
 class ProFailed(RuntimeError):
@@ -45,24 +59,28 @@ class ProFailed(RuntimeError):
 
 
 def active():
-    if _state == "failed":
-        raise ProFailed("타입캐스트 실패 — 이 영상은 무료 음성으로 다시 만든다")
-    return _state == "on"
+    if _failed:
+        raise ProFailed(f"{_failed} 실패 — 이 영상은 처음부터 다시 만든다")
+    return _on["typecast"] or _on["google"]
 
 
 def fallback():
-    """build 쪽에서 ProFailed 를 잡은 뒤 부른다: 이번 실행의 나머지는 무료 음성."""
-    global _state
-    _state = "off"
-    print("[음성] 타입캐스트를 끄고 무료 음성으로 진행")
+    """build 쪽에서 ProFailed 를 잡은 뒤 부른다: 실패한 서비스를 끄고(이번 실행 동안) 다시 만든다."""
+    global _failed
+    if _failed:
+        _on[_failed] = False
+        print(f"[음성] {_failed} 끄고 다시 만듦 (남은 서비스: {[k for k, v in _on.items() if v] or '무료 음성'})")
+    else:  # 원인 모를 때는 전부 끈다
+        _on.update(typecast=False, google=False)
+    _failed = None
 
 
-def _fail(msg):
-    global _state
+def _fail(msg, who="typecast"):
+    global _failed
     with _lock:
-        if _state == "on":
-            _state = "failed"
-    print(f"[음성] 타입캐스트 실패: {msg}")
+        if _on.get(who) and not _failed:
+            _failed = who
+    print(f"[음성] {who} 실패: {msg}")
     raise ProFailed(msg)
 
 
@@ -123,8 +141,51 @@ def narrator_role(edge_voice):
     return "narrator_female" if any(n in (edge_voice or "") for n in FEMALE_EDGE) else "narrator_male"
 
 
+def is_narrator(role):
+    return role.startswith("narrator")
+
+
 def synth(text, role, path, tempo=1.0, prev_text=None, next_text=None):
-    """타입캐스트로 mp3 를 만든다. 실패하면 ProFailed."""
+    """해설은 구글, 인물 대사는 타입캐스트(없으면 서로 대신). 실패하면 ProFailed."""
+    if is_narrator(role):
+        use = "google" if _on["google"] else "typecast"
+    else:
+        use = "typecast" if _on["typecast"] else "google"
+    if use == "google":
+        return _google(text, role, path, tempo)
+    return _typecast(text, role, path, tempo, prev_text, next_text)
+
+
+def _google(text, role, path, tempo=1.0):
+    global _used_g
+    name = f"ko-KR-Chirp3-HD-{GVOICE.get(role, GVOICE['narrator_male'])}"
+    body = {"input": {"text": text}, "voice": {"languageCode": "ko-KR", "name": name},
+            "audioConfig": {"audioEncoding": "MP3", "speakingRate": round(max(0.5, min(2.0, tempo)), 2)}}
+    last = ""
+    for attempt in range(3):
+        try:
+            r = requests.post(GAPI, params={"key": GKEY}, json=body, timeout=60)
+        except Exception as e:  # noqa: BLE001
+            last = str(e)
+            continue
+        if r.status_code == 200:
+            audio = base64.b64decode(r.json().get("audioContent", ""))
+            if len(audio) > 1000:
+                with open(path, "wb") as fh:
+                    fh.write(audio)
+                with _lock:
+                    _used_g += len(text)
+                return
+        last = f"{r.status_code} {r.text[:200]}"
+        if r.status_code in (400, 401, 403):
+            if r.status_code == 400 and "speakingRate" in r.text and "speakingRate" in body["audioConfig"]:
+                body["audioConfig"].pop("speakingRate")  # 속도 조절을 안 받는 목소리면 기본 속도로
+                continue
+            break
+    _fail(last, "google")
+
+
+def _typecast(text, role, path, tempo=1.0, prev_text=None, next_text=None):
     global _used
     vid = voice_for(role)
     body = {"model": MODEL, "voice_id": vid, "text": text, "language": "kor",
@@ -150,8 +211,8 @@ def synth(text, role, path, tempo=1.0, prev_text=None, next_text=None):
             break
         if body.get("prompt") and r.status_code == 422:
             body.pop("prompt", None)
-    _fail(last)
+    _fail(last, "typecast")
 
 
 def used():
-    return _used
+    return {"typecast": _used, "google": _used_g}
