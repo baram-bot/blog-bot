@@ -48,6 +48,7 @@ FEMALE_EDGE = ("SunHi", "JiMin", "SeoHyeon", "SoonBok", "YuJin")
 _on = {"typecast": bool(KEY), "google": bool(GKEY)}   # 켜진 서비스
 _failed = None   # 도중에 실패한 서비스 → 이번 영상을 처음부터 다시 만들기
 _lock = threading.Lock()
+_tc_slots = threading.Semaphore(int(os.environ.get("TYPECAST_CONCURRENCY", "3")))  # 라이트 요금제 동시 호출 한도 5
 _voices = {}
 _pools = {}
 _used = 0
@@ -193,12 +194,18 @@ def _typecast(text, role, path, tempo=1.0, prev_text=None, next_text=None):
     if prev_text or next_text:
         body["prompt"] = {"emotion_type": "smart", "previous_text": prev_text or "", "next_text": next_text or ""}
     last = ""
-    for attempt in range(3):
+    for attempt in range(6):
         try:
-            r = requests.post(f"{API}/v1/text-to-speech", headers={**_h(), "Content-Type": "application/json"},
-                              json=body, timeout=90)
+            with _tc_slots:
+                r = requests.post(f"{API}/v1/text-to-speech", headers={**_h(), "Content-Type": "application/json"},
+                                  json=body, timeout=90)
         except Exception as e:  # noqa: BLE001
             last = str(e)
+            continue
+        if r.status_code == 429:  # 너무 빨리 부름 → 잠깐 쉬고 다시
+            last = "429 rate limit"
+            import time
+            time.sleep(3 * (attempt + 1))
             continue
         if r.status_code == 200 and len(r.content) > 1000:
             with open(path, "wb") as fh:
