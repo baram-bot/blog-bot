@@ -5,10 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          for a in elder middle_age; do
-            echo "== male $a"
-            curl -s -H "X-API-KEY: $K" "https://api.typecast.ai/v3/voices?model=ssfm-v31&gender=male&age=$a"
+          for g in male female; do for a in elder middle_age child teenager; do
+            echo "== $g $a"
+            curl -s -H "X-API-KEY: $K" "https://api.typecast.ai/v3/voices?model=ssfm-v31&gender=$g&age=$a"
             echo
-          done
+          done; done
         env:
           K: ${{ secrets.TYPECAST_API_KEY }}
