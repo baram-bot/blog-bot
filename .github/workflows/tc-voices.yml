@@ -1,0 +1,14 @@
+name: tc-voices
+on: workflow_dispatch
+jobs:
+  list:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          for a in elder middle_age; do
+            echo "== male $a"
+            curl -s -H "X-API-KEY: $K" "https://api.typecast.ai/v3/voices?model=ssfm-v31&gender=male&age=$a"
+            echo
+          done
+        env:
+          K: ${{ secrets.TYPECAST_API_KEY }}
