@@ -69,6 +69,23 @@ def git(*args):
     subprocess.run(["git", *args], cwd=ROOT, check=True)
 
 
+FOLLOW = "🙏 더 좋은 정보, 계속 받아보시려면 팔로우 부탁드려요! @gureum_happy_story"
+
+
+def with_follow(text):
+    """캡션 끝(해시태그 앞)에 팔로우 부탁 한 줄을 넣는다."""
+    text = (text or "").strip()
+    if "팔로우" in text:
+        return text[:2100]
+    lines = text.split("\n")
+    i = len(lines)
+    while i > 0 and lines[i - 1].strip().startswith("#"):
+        i -= 1
+    head, tags = "\n".join(lines[:i]).rstrip(), "\n".join(lines[i:]).strip()
+    out = (head + "\n\n" + FOLLOW + ("\n\n" + tags if tags else "")).strip()
+    return out[:2100]
+
+
 def publish_carousel(host, urls, caption):
     kids = []
     for u in urls:
@@ -139,7 +156,7 @@ def main():
     sha = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
     urls = [f"https://raw.githubusercontent.com/{REPO}/{sha}/instagram/media/{name}/{os.path.basename(p)}" for p in paths]
     time.sleep(10)
-    caption = spec.get("caption", "")[:2100]
+    caption = with_follow(spec.get("caption", ""))
     media_id = publish_carousel(host, urls, caption)
     link = ""
     try:
@@ -150,8 +167,8 @@ def main():
     if reel_path:
         try:
             rurl = f"https://raw.githubusercontent.com/{REPO}/{sha}/instagram/media/{name}/reel.mp4"
-            rcap = spec.get("reel_caption") or caption
-            rid = publish_reel(host, rurl, rcap[:2100])
+            rcap = with_follow(spec["reel_caption"]) if spec.get("reel_caption") else caption
+            rid = publish_reel(host, rurl, rcap)
             rlink = call("GET", rid, host, fields="permalink").get("permalink", "")
             spec.update({"reel_media_id": rid, "reel_permalink": rlink})
             link = (link + "\n🎬 릴스: " + rlink).strip()

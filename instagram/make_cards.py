@@ -152,6 +152,14 @@ def cta(text, n, bgc, acc, fg, total, corner, handle):
         d.ellipse([74, y + 20, 96, y + 42], fill=(255, 255, 255))
         d.text((120, y), t, font=font("bold", 44), fill=(255, 255, 255))
         y += 84
+    # 맨 아래 팔로우 부탁 상자(흰 바탕 + 강조색 글씨)
+    by = H - 330
+    d.rounded_rectangle([60, by, W - 60, by + 200], radius=36, fill=(255, 255, 255))
+    f1, f2 = font("black", 50), font("bold", 40)
+    t1 = "더 좋은 정보, 계속 받아보시려면"
+    t2 = f"팔로우 부탁드려요  {handle}"
+    d.text(((W - d.textlength(t1, font=f1)) / 2, by + 34), t1, font=f1, fill=acc)
+    d.text(((W - d.textlength(t2, font=f2)) / 2, by + 116), t2, font=f2, fill=(40, 40, 40))
     return img
 
 
