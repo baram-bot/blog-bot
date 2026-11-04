@@ -1,0 +1,40 @@
+name: instagram-post
+on:
+  push:
+    branches: [main]
+    paths: ["instagram/queue/**"]
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: instagram-post
+  cancel-in-progress: false
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y fonts-noto-cjk fonts-noto-cjk-extra >/dev/null
+          pip install -q requests pillow
+      - name: 인스타 카드뉴스 게시
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: "17841436214071273"
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python -u instagram/post_ig.py
+      - name: 기록
+        if: always()
+        run: |
+          git config user.name "blog-bot"; git config user.email "blog-bot@users.noreply.github.com"
+          git add -A instagram/queue instagram/done
+          git diff --cached --quiet && exit 0
+          git commit -qm "인스타 게시 기록 [skip ci]"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && break; sleep 5; done
