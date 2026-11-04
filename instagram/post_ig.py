@@ -106,7 +106,7 @@ def publish_carousel(host, urls, caption):
 
 
 def publish_reel(host, url, caption):
-    js = call("POST", f"{IG_ID}/media", host, media_type="REELS", video_url=url, caption=caption, share_to_feed="true")
+    js = call("POST", f"{IG_ID}/media", host, media_type="REELS", video_url=url, caption=caption, share_to_feed="false")
     cid = js["id"]
     wait_ready(host, cid, timeout=600)
     for attempt in range(4):
