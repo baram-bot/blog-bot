@@ -355,6 +355,58 @@ def radio_thumbnail(script, base_path, path):
     img.save(path, quality=90)
 
 
+def drama_thumbnail(script, path):
+    """자극적인 드라마형 썸네일: AI 인물·장면 사진 + 큰 두 줄 글씨(흰색/노랑) + 빨간 띠.
+    대본에 thumbnail_prompt(영어)가 있을 때만 쓰고, 사진을 못 만들면 False(라디오 썸네일로 대체)."""
+    prompt = (script.get("thumbnail_prompt") or "").strip()
+    if not prompt:
+        return False
+    raw = os.path.join(WORK, "thumb_ai.jpg")
+    full = (prompt + ", cinematic dramatic lighting, photorealistic, korean drama still, emotional, "
+            "high contrast, no text, no letters, no watermark")
+    if not ms.cloudflare_image(full, raw, 7):
+        return False
+    img = Image.open(raw).convert("RGB")
+    w, h = img.size
+    th = int(w * 9 / 16)
+    top = max(0, (h - th) // 3)
+    img = img.crop((0, top, w, top + th)).resize((1280, 720))
+    # 왼쪽을 어둡게(글씨 자리), 오른쪽 인물은 살린다
+    shade = Image.new("L", (1280, 720), 0)
+    sd = ImageDraw.Draw(shade)
+    for x in range(1280):
+        a = int(max(0, 215 - x * 0.24))
+        sd.line([(x, 0), (x, 720)], fill=a)
+    img.paste(Image.new("RGB", (1280, 720), (0, 0, 0)), (0, 0), shade)
+    d = ImageDraw.Draw(img, "RGBA")
+    d.rectangle([0, 640, 1280, 720], fill=(0, 0, 0, 150))
+    # 위 빨간 띠: 짧은 궁금증 한 줄
+    sub = (script.get("thumbnail_sub") or "").strip()
+    if sub:
+        fs = ms.font(52)
+        sw = d.textlength(sub, font=fs)
+        d.rectangle([40, 50, 40 + sw + 50, 128], fill=(214, 30, 30, 255))
+        d.text((65, 58), sub, font=fs, fill=(255, 255, 255))
+    text = script.get("thumbnail_text") or ms.clean_title(script["title"])
+    lines = ms.wrap_ko(text, 7)[:2]
+    f = ms.font(128)
+    y = 190 if sub else 170
+    for i, l in enumerate(lines):
+        col = (255, 255, 255) if i == 0 and len(lines) > 1 else (255, 222, 40)
+        size = 128
+        while d.textlength(l, font=f) > 760 and size > 80:
+            size -= 6
+            f = ms.font(size)
+        d.text((50, y), l, font=f, fill=col, stroke_width=10, stroke_fill=(0, 0, 0))
+        y += size + 34
+        f = ms.font(128)
+    fb = ms.font(40)
+    d.text((50, 660), "1시간 오디오북 · 바람따라구름따라", font=fb, fill=(255, 226, 120))
+    img.save(path, quality=92)
+    print("[썸네일] 드라마형 AI 썸네일")
+    return True
+
+
 def build_radio(script, items, voice, out):
     base = radio_base(script["title"], os.path.join(WORK, "radio_base.png"))
     # 음성을 한꺼번에 미리 만든다(4개씩 동시에)
@@ -464,7 +516,8 @@ def main():
             yt = ms.yt_upload(video, script["title"], desc, script.get("tags", []), script.get("privacy"), shorts=False)
             thumb = os.path.join(OUT, f"{name}.jpg")
             if script.get("style") != "scenery":
-                radio_thumbnail(script, os.path.join(WORK, "radio_base.png"), thumb)
+                if not drama_thumbnail(script, thumb):
+                    radio_thumbnail(script, os.path.join(WORK, "radio_base.png"), thumb)
             else:
                 thumbnail(script, thumb)
             msg = f"🎞 오늘의 롱폼 ({secs/60:.1f}분) · AI사진 {sum(1 for x in ms.IMG_LOG if x == 'AI')}장\n\n📌 {script['title']}\n"
