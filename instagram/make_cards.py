@@ -20,6 +20,8 @@ THEMES = {  # 코너별 색(배경, 강조, 글씨)
     "📻": ((245, 239, 228), (166, 98, 52), (44, 34, 26)),
     "🏠": ((236, 248, 240), (34, 150, 96), (22, 40, 30)),
     "🤖": ((236, 236, 250), (96, 72, 220), (24, 22, 48)),
+    "🔥": ((22, 22, 30), (255, 70, 70), (250, 250, 252)),   # 오늘의 핫이슈: 어두운 바탕 + 빨강
+    "🎬": ((22, 20, 32), (255, 190, 30), (250, 250, 252)),  # 연예 소식: 어두운 바탕 + 노랑
 }
 
 
@@ -139,7 +141,7 @@ def slide(spec, i, bgc, acc, fg, total, corner, handle):
     return img
 
 
-def cta(text, n, bgc, acc, fg, total, corner, handle):
+def cta(text, n, bgc, acc, fg, total, corner, handle, points=None):
     img, d = base(acc, (255, 255, 255), n, total, corner, handle)  # 마지막 장: 강조색 바탕
     d = ImageDraw.Draw(img)
     ft = font("black", 80)
@@ -148,7 +150,7 @@ def cta(text, n, bgc, acc, fg, total, corner, handle):
         d.text((70, y), ln, font=ft, fill=(255, 255, 255))
         y += 104
     y += 60
-    for t in ("저장해 두고 필요할 때 꺼내 보세요", "자세한 내용은 프로필 링크 블로그에", "궁금한 건 댓글로 물어봐 주세요"):
+    for t in (points or ("저장해 두고 필요할 때 꺼내 보세요", "자세한 내용은 프로필 링크 블로그에", "궁금한 건 댓글로 물어봐 주세요"))[:3]:
         d.ellipse([74, y + 20, 96, y + 42], fill=(255, 255, 255))
         d.text((120, y), t, font=font("bold", 44), fill=(255, 255, 255))
         y += 84
@@ -170,7 +172,8 @@ def build(spec, outdir, handle="@gureum_happy_story"):
     total = len(spec["slides"]) + 2
     pages = [cover(spec["cover"], bgc, acc, fg, total, corner, handle, spec.get("bg"))]
     pages += [slide(s, i + 2, bgc, acc, fg, total, corner, handle) for i, s in enumerate(spec["slides"])]
-    pages.append(cta(spec.get("cta", "오늘 정보, 도움 되셨나요?"), total, bgc, acc, fg, total, corner, handle))
+    pages.append(cta(spec.get("cta", "오늘 정보, 도움 되셨나요?"), total, bgc, acc, fg, total, corner, handle,
+                     [noemo(x) for x in spec.get("cta_lines", [])] or None))
     paths = []
     for i, p in enumerate(pages, 1):
         path = os.path.join(outdir, f"card{i}.png")
