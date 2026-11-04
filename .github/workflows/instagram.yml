@@ -12,7 +12,7 @@ concurrency:
 jobs:
   post:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
         with:
@@ -21,8 +21,8 @@ jobs:
         with:
           python-version: "3.12"
       - run: |
-          sudo apt-get -qq update && sudo apt-get -qq install -y fonts-noto-cjk fonts-noto-cjk-extra >/dev/null
-          pip install -q requests pillow
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg fonts-noto-cjk fonts-noto-cjk-extra >/dev/null
+          pip install -q requests pillow edge-tts
       - name: 인스타 카드뉴스 게시
         env:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}

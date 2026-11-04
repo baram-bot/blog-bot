@@ -13,6 +13,7 @@ import requests
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import make_cards  # noqa: E402
+import make_reel  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 Q = os.path.join(ROOT, "instagram", "queue")
@@ -87,6 +88,19 @@ def publish_carousel(host, urls, caption):
             time.sleep(10)
 
 
+def publish_reel(host, url, caption):
+    js = call("POST", f"{IG_ID}/media", host, media_type="REELS", video_url=url, caption=caption, share_to_feed="true")
+    cid = js["id"]
+    wait_ready(host, cid, timeout=600)
+    for attempt in range(4):
+        try:
+            return call("POST", f"{IG_ID}/media_publish", host, creation_id=cid)["id"]
+        except IGError:
+            if attempt == 3:
+                raise
+            time.sleep(15)
+
+
 def main():
     files = sorted(glob.glob(os.path.join(Q, "*.json")))
     if not files:
@@ -104,6 +118,15 @@ def main():
     # 이미지를 공개 저장소에 올려 주소 만들기(인스타가 가져갈 수 있게)
     git("config", "user.name", "blog-bot")
     git("config", "user.email", "blog-bot@users.noreply.github.com")
+    reel_path = None
+    if spec.get("reel"):
+        try:
+            reel_path = os.path.join(outdir, "reel.mp4")
+            sec = make_reel.build(spec, paths, os.path.join("/tmp", "reel_" + name), reel_path)
+            print(f"[인스타] 릴스 영상 {sec:.0f}초")
+        except Exception as e:  # noqa: BLE001
+            print(f"[인스타] 릴스 만들기 실패(카드뉴스만 올림): {e}")
+            reel_path = None
     git("add", outdir)
     git("commit", "-qm", f"인스타 카드 이미지 {name} [skip ci]")
     for i in range(3):
@@ -124,6 +147,17 @@ def main():
     except IGError:
         pass
     spec.update({"ig_media_id": media_id, "permalink": link, "posted_at": time.strftime("%Y-%m-%d %H:%M")})
+    if reel_path:
+        try:
+            rurl = f"https://raw.githubusercontent.com/{REPO}/{sha}/instagram/media/{name}/reel.mp4"
+            rcap = spec.get("reel_caption") or caption
+            rid = publish_reel(host, rurl, rcap[:2100])
+            rlink = call("GET", rid, host, fields="permalink").get("permalink", "")
+            spec.update({"reel_media_id": rid, "reel_permalink": rlink})
+            link = (link + "\n🎬 릴스: " + rlink).strip()
+            print(f"[인스타] 릴스 게시 완료: {rlink}")
+        except Exception as e:  # noqa: BLE001
+            print(f"[인스타] 릴스 게시 실패: {e}")
     os.makedirs(DONE, exist_ok=True)
     json.dump(spec, open(os.path.join(DONE, name + ".json"), "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     os.remove(f)
