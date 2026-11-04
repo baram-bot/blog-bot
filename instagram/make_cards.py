@@ -155,7 +155,7 @@ def cta(text, n, bgc, acc, fg, total, corner, handle):
     return img
 
 
-def build(spec, outdir, handle="@baek.gk"):
+def build(spec, outdir, handle="@gureum_happy_story"):
     os.makedirs(outdir, exist_ok=True)
     corner = spec.get("corner", "💼 자영업자의 경제노트")
     bgc, acc, fg = theme(corner)
