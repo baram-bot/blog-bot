@@ -37,7 +37,9 @@ def scripts(spec):
     out = [mc.noemo(f"{c.get('kicker', '')}. {c['title']}. {c.get('sub', '')}")]
     for s in spec["slides"]:
         out.append(mc.noemo(s["head"] + ". " + " ".join(s.get("lines", []))))
-    out.append(mc.noemo(spec.get("cta", "") + ". 저장해 두고, 자세한 내용은 프로필 링크에서 확인하세요. 더 좋은 정보, 계속 받아보시려면 팔로우 부탁드려요."))
+    mid = ("댓글로 여러분 생각을 남겨 주세요." if spec.get("cta_lines")
+           else "저장해 두고, 자세한 내용은 프로필 링크에서 확인하세요.")
+    out.append(mc.noemo(spec.get("cta", "") + ". " + mid + " 더 좋은 정보, 계속 받아보시려면 팔로우 부탁드려요."))
     return out
 
 
