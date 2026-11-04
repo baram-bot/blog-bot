@@ -359,7 +359,9 @@ BLOG_YT = {
 def assemble(article, photo, link, notice=None):
     parts = []
     if link:
-        parts.append(f'<p style="font-size:13px;color:#777">{html.escape(DISCLOSURE)}</p>')
+        parts.append('<p style="font-size:16px;font-weight:bold;color:#c0392b;background:#fff3f0;'
+                     'border:1px solid #f5c6bd;border-radius:8px;padding:10px 14px;margin:0 0 18px">'
+                     f'📢 [광고] {html.escape(DISCLOSURE)}</p>')
     if photo:
         alt = html.escape(article["title"])
         parts.append(

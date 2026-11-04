@@ -673,7 +673,7 @@ def build_texts(script):
     if blog_lines:
         desc += "\n\n" + "\n".join(blog_lines)
     if product:
-        desc = f"{DISCLOSURE}\n\n{desc}\n\n🛒 {product[1]}\n{product[0]}"
+        desc = f"📢 [광고] {DISCLOSURE}\n\n{desc}\n\n🛒 {product[1]}\n{product[0]}"
     return desc, product, want
 
 
