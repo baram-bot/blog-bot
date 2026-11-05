@@ -1,6 +1,6 @@
 """쇼츠 → 롱폼 연결 댓글 봇 (컴퓨터 없이 클라우드에서 실행)
 
-같은 사연의 쇼츠에 "30분 전체 이야기" 롱폼 링크를 댓글로 단다.
+같은 사연의 쇼츠에 "1시간 전체 이야기" 롱폼 링크를 댓글로 단다.
 짝 찾기:
   1) longform/done/*.json 중 yt_id 와 from_short 가 있는 것 → from_short 쇼츠의 yt_id
   2) data/related_linked.txt 에 적힌 짝 ("쇼츠ID | 롱폼ID | 날짜")
@@ -74,7 +74,7 @@ def long_title(tok, lid):
 
 
 def comment(tok, sid, lid, title):
-    text = ("📺 이 사연의 30분 전체 이야기는 여기서 보실 수 있어요 👇\n"
+    text = ("📺 이 사연의 뒷이야기, 1시간 전체 이야기는 여기서 보실 수 있어요 👇\n"
             f"https://youtu.be/{lid}")
     if title:
         text += f"\n\n「{title}」"
