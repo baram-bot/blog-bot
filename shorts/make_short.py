@@ -347,18 +347,18 @@ def overlay_png(hook, subtitle, path, outro=False):
     for y in range(H - 900, H):
         d.line([(0, y), (W, y)], fill=(0, 0, 0, int(160 * (y - (H - 900)) / 900)))
     # 상단 제목(영상 내내 고정) — 썸네일처럼 크고 밝게: 채널색 상자 + 노랑/흰 굵은 글씨
-    f_hook = font(98)
-    lines = wrap_ko(hook, 10)[:3]
-    box_h = 60 + len(lines) * 122
+    f_hook = font(124)
+    lines = wrap_ko(hook, 8)[:3]
+    box_h = 60 + len(lines) * 148
     box = {"econ": (28, 92, 210, 225), "kids": (240, 118, 40, 225)}.get(CHANNEL, (214, 28, 38, 228))
     d.rounded_rectangle([40, 140, W - 40, 140 + box_h], radius=40, fill=box)
     d.rounded_rectangle([40, 140, W - 40, 140 + box_h], radius=40, outline=(255, 255, 255, 230), width=6)
     y = 168
     for k, line in enumerate(lines):
         tw = d.textlength(line, font=f_hook)
-        col = (255, 236, 0) if k == len(lines) - 1 else (255, 255, 255)
-        d.text(((W - tw) / 2, y), line, font=f_hook, fill=col, stroke_width=7, stroke_fill=(0, 0, 0))
-        y += 122
+        col = (255, 240, 0) if k == len(lines) - 1 else (255, 255, 255)
+        d.text(((W - tw) / 2, y), line, font=f_hook, fill=col, stroke_width=9, stroke_fill=(0, 0, 0))
+        y += 148
     # 하단 자막 (반투명 상자 + 굵은 흰 글씨로 또렷하게)
     f_sub = font(72)
     lines = wrap_ko(subtitle, 13)[:4]
@@ -423,6 +423,20 @@ def pick_scenery(script, i, seed):
     return SCENERY[(seed + i) % len(SCENERY)]
 
 
+# 수익화(광고 적합성) 안전장치: 대본에 혹시 섞인 위험한 말을 순화한다
+SAFE_WORDS = {"성관계": "관계", "잠자리": "만남", "섹스": "관계", "알몸": "모습", "자살": "극단적인 선택",
+              "살해": "사건", "살인": "사건", "피투성이": "다친 채", "죽여": "가만두지 않아",
+              "씨발": "", "개새끼": "", "미친년": "그 사람", "미친놈": "그 사람", "년아": "", "놈아": ""}
+
+
+def safe_text(t):
+    for k, v in SAFE_WORDS.items():
+        if k in (t or ""):
+            print(f"[안전] '{k}' 순화")
+            t = t.replace(k, v)
+    return re.sub(r"\s{2,}", " ", t or "").strip()
+
+
 def clean_title(t):
     return re.sub(r"\s*#\S+", "", t or "").strip()
 
@@ -471,9 +485,9 @@ def _build_video(script, out_path):
     shutil.rmtree(WORK, ignore_errors=True)
     os.makedirs(WORK, exist_ok=True)
     voice = script.get("voice") or "ko-KR-SunHiNeural"
-    hook = clean_title(script["title"]) or script.get("hook", "")
+    hook = safe_text(clean_title(script["title"]) or script.get("hook", ""))
     seed = random.randint(1, 10_000_000)
-    scenes = list(script["scenes"])
+    scenes = [dict(sc, text=safe_text(sc.get("text", ""))) for sc in script["scenes"]]
     one = str(script.get("photo") or "").strip()  # 대표 사진 한 장(경제 AI·미래산업 편): 모든 장면에 같은 그림
     AI_PHOTO[0] = one if CHANNEL == "econ" else ""
     if AI_PHOTO[0]:
