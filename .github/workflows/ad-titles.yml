@@ -14,10 +14,16 @@ jobs:
         include:
           - ch: senior
             secret: YOUTUBE_REFRESH_TOKEN
+            cid: "247650144997-6bqc20isrbqi12fcsani6joed6jrvff5.apps.googleusercontent.com"
+            csec: YT_CLIENT_SECRET
           - ch: econ
             secret: YT_ECON_REFRESH_TOKEN
+            cid: "480498053335-1t1f61lpgpcne9e895hfs98r7qvickpj.apps.googleusercontent.com"
+            csec: YT_ECON_CLIENT_SECRET
           - ch: kids
             secret: YT_KIDS_REFRESH_TOKEN
+            cid: "106566243572-9l2f41lloc7c9nei86hu8rema4n6k0kd.apps.googleusercontent.com"
+            csec: YT_KIDS_CLIENT_SECRET
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -30,7 +36,7 @@ jobs:
           DRY_RUN: ${{ github.event.inputs.dry }}
           GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
           GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
-          YT_CLIENT_ID: "247650144997-6bqc20isrbqi12fcsani6joed6jrvff5.apps.googleusercontent.com"
-          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_CLIENT_ID: ${{ matrix.cid }}
+          YT_CLIENT_SECRET: ${{ secrets[matrix.csec] }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets[matrix.secret] }}
         run: python -u tools/yt_ad_titles.py
