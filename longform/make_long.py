@@ -271,6 +271,8 @@ def radio_base(title, path):
             break
         size -= 4
     _center(d, t, f_t, 300 - int(size * 0.62), CREAM, stroke=max(3, size // 17))
+    if ms.AD_BADGE[0]:  # 쿠팡 링크가 붙는 영상: 화면 내내 '유료광고 포함'(쿠팡 파트너스 규정)
+        ms.ad_badge(d, x=40, y=170, size=52)
     img.save(path)
     return path
 
@@ -408,6 +410,7 @@ def drama_thumbnail(script, path):
 
 
 def build_radio(script, items, voice, out):
+    ms.AD_BADGE[0] = bool(ms.pick_coupang(script)[0])
     base = radio_base(script["title"], os.path.join(WORK, "radio_base.png"))
     # 음성을 한꺼번에 미리 만든다(4개씩 동시에)
     jobs = []

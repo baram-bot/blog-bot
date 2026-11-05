@@ -338,6 +338,18 @@ def wrap_ko(text, width):
     return lines
 
 
+AD_BADGE = [False]  # 쿠팡 링크가 붙는 영상이면 화면 내내 '유료광고 포함' 표시(쿠팡 파트너스 규정)
+
+
+def ad_badge(d, x=36, y=34, size=40):
+    f = font(size)
+    t = "유료광고 포함"
+    tw = d.textlength(t, font=f)
+    d.rounded_rectangle([x, y, x + tw + 40, y + size + 26], radius=12, fill=(0, 0, 0, 200),
+                        outline=(255, 255, 255, 230), width=3)
+    d.text((x + 20, y + 10), t, font=f, fill=(255, 255, 255))
+
+
 def overlay_png(hook, subtitle, path, outro=False):
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
@@ -372,6 +384,8 @@ def overlay_png(hook, subtitle, path, outro=False):
         d.text(((W - tw) / 2, y), line, font=f_sub, fill=(255, 255, 255),
                stroke_width=4, stroke_fill=(0, 0, 0))
         y += 88
+    if AD_BADGE[0]:
+        ad_badge(d)
     if outro:
         f_b = font(70)
         for k, (label, color) in enumerate([("👍 좋아요", (255, 255, 255)), ("🔔 구독", (255, 255, 255))]):
@@ -487,6 +501,7 @@ def _build_video(script, out_path):
     os.makedirs(WORK, exist_ok=True)
     voice = script.get("voice") or "ko-KR-SunHiNeural"
     hook = safe_text(clean_title(script["title"]) or script.get("hook", ""))
+    AD_BADGE[0] = bool(pick_coupang(script)[0])
     seed = random.randint(1, 10_000_000)
     scenes = [dict(sc, text=safe_text(sc.get("text", ""))) for sc in script["scenes"]]
     one = str(script.get("photo") or "").strip()  # 대표 사진 한 장(경제 AI·미래산업 편): 모든 장면에 같은 그림
