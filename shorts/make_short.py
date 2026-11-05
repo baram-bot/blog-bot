@@ -341,36 +341,37 @@ def wrap_ko(text, width):
 def overlay_png(hook, subtitle, path, outro=False):
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
-    # 위·아래 어둡게(글씨가 잘 보이도록)
-    for y in range(0, 420):
-        d.line([(0, y), (W, y)], fill=(0, 0, 0, int(170 * (1 - y / 420))))
-    for y in range(H - 900, H):
-        d.line([(0, y), (W, y)], fill=(0, 0, 0, int(160 * (y - (H - 900)) / 900)))
-    # 상단 제목(영상 내내 고정) — 썸네일처럼 크고 밝게: 채널색 상자 + 노랑/흰 굵은 글씨
-    f_hook = font(124)
-    lines = wrap_ko(hook, 8)[:3]
-    box_h = 60 + len(lines) * 148
-    box = {"econ": (28, 92, 210, 225), "kids": (240, 118, 40, 225)}.get(CHANNEL, (214, 28, 38, 228))
-    d.rounded_rectangle([40, 140, W - 40, 140 + box_h], radius=40, fill=box)
-    d.rounded_rectangle([40, 140, W - 40, 140 + box_h], radius=40, outline=(255, 255, 255, 230), width=6)
-    y = 168
+    # 위·아래만 살짝 어둡게(가운데 사진은 그대로 보이게)
+    for y in range(0, 330):
+        d.line([(0, y), (W, y)], fill=(0, 0, 0, int(120 * (1 - y / 330))))
+    for y in range(H - 620, H):
+        d.line([(0, y), (W, y)], fill=(0, 0, 0, int(130 * (y - (H - 620)) / 620)))
+    # 상단 제목: 크게, 하지만 2줄까지만·글자 크기만큼의 띠로(사진을 가리지 않게)
+    f_hook = font(104)
+    lines = wrap_ko(hook, 10)[:2]
+    band = {"econ": (28, 92, 210, 235), "kids": (240, 118, 40, 235)}.get(CHANNEL, (214, 28, 38, 235))
+    y = 120
     for k, line in enumerate(lines):
+        last = k == len(lines) - 1
         tw = d.textlength(line, font=f_hook)
-        col = (255, 240, 0) if k == len(lines) - 1 else (255, 255, 255)
-        d.text(((W - tw) / 2, y), line, font=f_hook, fill=col, stroke_width=9, stroke_fill=(0, 0, 0))
-        y += 148
-    # 하단 자막 (반투명 상자 + 굵은 흰 글씨로 또렷하게)
-    f_sub = font(72)
-    lines = wrap_ko(subtitle, 13)[:4]
-    total = len(lines) * 100
-    top = H - 600 - total // 2
-    d.rounded_rectangle([60, top - 40, W - 60, top + total + 30], radius=32, fill=(0, 0, 0, 165))
+        x = (W - tw) / 2
+        d.rounded_rectangle([x - 30, y - 6, x + tw + 30, y + 128], radius=26,
+                            fill=band if last else (0, 0, 0, 170))
+        d.text((x, y), line, font=f_hook, fill=(255, 240, 0) if last else (255, 255, 255),
+               stroke_width=7, stroke_fill=(0, 0, 0))
+        y += 146
+    # 하단 자막: 화면 아래쪽에 작게 붙여서 사진 가운데는 비워 둔다
+    f_sub = font(64)
+    lines = wrap_ko(subtitle, 14)[:3]
+    total = len(lines) * 88
+    top = H - 330 - total
+    d.rounded_rectangle([60, top - 30, W - 60, top + total + 20], radius=28, fill=(0, 0, 0, 140))
     y = top
     for line in lines:
         tw = d.textlength(line, font=f_sub)
         d.text(((W - tw) / 2, y), line, font=f_sub, fill=(255, 255, 255),
                stroke_width=4, stroke_fill=(0, 0, 0))
-        y += 100
+        y += 88
     if outro:
         f_b = font(70)
         for k, (label, color) in enumerate([("👍 좋아요", (255, 255, 255)), ("🔔 구독", (255, 255, 255))]):

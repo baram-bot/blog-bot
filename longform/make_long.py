@@ -375,11 +375,11 @@ def drama_thumbnail(script, path):
     shade = Image.new("L", (1280, 720), 0)
     sd = ImageDraw.Draw(shade)
     for x in range(1280):
-        a = int(max(0, 215 - x * 0.24))
+        a = int(max(0, 190 - x * 0.28))
         sd.line([(x, 0), (x, 720)], fill=a)
     img.paste(Image.new("RGB", (1280, 720), (0, 0, 0)), (0, 0), shade)
     d = ImageDraw.Draw(img, "RGBA")
-    d.rectangle([0, 640, 1280, 720], fill=(0, 0, 0, 150))
+    d.rectangle([0, 650, 700, 720], fill=(0, 0, 0, 140))
     # 위 빨간 띠: 짧은 궁금증 한 줄
     sub = (script.get("thumbnail_sub") or "").strip()
     if sub:
@@ -394,7 +394,7 @@ def drama_thumbnail(script, path):
     for i, l in enumerate(lines):
         col = (255, 255, 255) if i == 0 and len(lines) > 1 else (255, 222, 40)
         size = 128
-        while d.textlength(l, font=f) > 760 and size > 80:
+        while d.textlength(l, font=f) > 660 and size > 80:
             size -= 6
             f = ms.font(size)
         d.text((50, y), l, font=f, fill=col, stroke_width=10, stroke_fill=(0, 0, 0))
