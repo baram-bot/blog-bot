@@ -346,17 +346,19 @@ def overlay_png(hook, subtitle, path, outro=False):
         d.line([(0, y), (W, y)], fill=(0, 0, 0, int(170 * (1 - y / 420))))
     for y in range(H - 900, H):
         d.line([(0, y), (W, y)], fill=(0, 0, 0, int(160 * (y - (H - 900)) / 900)))
-    # 상단 제목(영상 내내 고정)
-    f_hook = font(80)
-    lines = wrap_ko(hook, 11)[:3]
-    box_h = 70 + len(lines) * 108
-    d.rounded_rectangle([50, 150, W - 50, 150 + box_h], radius=36, fill=(0, 0, 0, 150))
-    y = 185
-    for line in lines:
+    # 상단 제목(영상 내내 고정) — 썸네일처럼 크고 밝게: 채널색 상자 + 노랑/흰 굵은 글씨
+    f_hook = font(98)
+    lines = wrap_ko(hook, 10)[:3]
+    box_h = 60 + len(lines) * 122
+    box = {"econ": (28, 92, 210, 225), "kids": (240, 118, 40, 225)}.get(CHANNEL, (214, 28, 38, 228))
+    d.rounded_rectangle([40, 140, W - 40, 140 + box_h], radius=40, fill=box)
+    d.rounded_rectangle([40, 140, W - 40, 140 + box_h], radius=40, outline=(255, 255, 255, 230), width=6)
+    y = 168
+    for k, line in enumerate(lines):
         tw = d.textlength(line, font=f_hook)
-        d.text(((W - tw) / 2, y), line, font=f_hook, fill=(255, 226, 110),
-               stroke_width=5, stroke_fill=(0, 0, 0))
-        y += 108
+        col = (255, 236, 0) if k == len(lines) - 1 else (255, 255, 255)
+        d.text(((W - tw) / 2, y), line, font=f_hook, fill=col, stroke_width=7, stroke_fill=(0, 0, 0))
+        y += 122
     # 하단 자막 (반투명 상자 + 굵은 흰 글씨로 또렷하게)
     f_sub = font(72)
     lines = wrap_ko(subtitle, 13)[:4]
@@ -408,6 +410,8 @@ MOOD_SCENERY = [
     (r"봄|벚꽃|꽃",
      ["cherry blossom trees by a river", "spring flower field under blue sky"]),
 ]
+PEOPLE_OK = ("photorealistic korean drama still, emotional facial expression, cinematic dramatic lighting, "
+             "no text, no letters, no watermark, vertical")
 NO_PEOPLE = "no people, no person, no hands, no faces, no text, no watermark, cinematic, soft warm light, high detail, vertical"
 
 
@@ -477,6 +481,16 @@ def _build_video(script, out_path):
     elif CHANNEL in ("econ", "kids"):  # 대본의 bg 대신 채널 배경으로 통일(경제=바다, 육아=꽃밭·하늘)
         pool = ECON_SEA if CHANNEL == "econ" else KIDS_BG
         scenes = [dict(sc, bg=pool[(seed + i) % len(pool)]) for i, sc in enumerate(scenes)]
+    # 시니어 사연: 첫 장면(=쇼츠 썸네일로 보이는 화면)은 제목과 딱 맞는 인물·드라마 장면 사진
+    cover = str(script.get("cover_bg") or "").strip()
+    if not cover and script.get("from_long"):  # 짝 롱폼 썸네일과 같은 장면을 쇼츠 첫 화면으로
+        try:
+            lp = os.path.join(os.path.dirname(ROOT), script["from_long"])
+            cover = str(json.load(open(lp, encoding="utf-8")).get("thumbnail_prompt") or "").strip()
+        except Exception as e:  # noqa: BLE001
+            print(f"[표지] 롱폼 썸네일 장면 읽기 실패: {e}")
+    if cover and CHANNEL == "senior" and scenes:
+        scenes[0] = dict(scenes[0], bg=cover, people=True)
     # 마지막에 구독·좋아요 인사 장면
     outro = script.get("outro") or {
         "econ": "오늘 정보가 도움 되셨다면, 구독과 좋아요 꼭 부탁드려요.",
@@ -492,7 +506,7 @@ def _build_video(script, out_path):
         scenery = sc.get("bg") or pick_scenery(script, i, seed)
         raw = os.path.join(WORK, f"raw{i}.jpg")
         try:
-            fetch_image(f"{scenery}, {NO_PEOPLE}", raw, seed + i, commons_query=scenery)
+            fetch_image(f"{scenery}, {PEOPLE_OK if sc.get('people') else NO_PEOPLE}", raw, seed + i, commons_query=scenery)
         except Exception as e:  # noqa: BLE001
             print(f"[이미지] 미리받기 실패 {i}: {e}")
     # 같은 bg 를 쓰는 장면은 사진 한 장을 같이 쓴다(물건 사진 3~4장으로 이어 가기)
