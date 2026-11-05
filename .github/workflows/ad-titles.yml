@@ -1,0 +1,36 @@
+name: ad-titles
+on:
+  workflow_dispatch:
+    inputs:
+      dry:
+        description: "1 이면 목록만"
+        default: "1"
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - ch: senior
+            secret: YOUTUBE_REFRESH_TOKEN
+          - ch: econ
+            secret: YT_ECON_REFRESH_TOKEN
+          - ch: kids
+            secret: YT_KIDS_REFRESH_TOKEN
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: 제목에 [광고] 붙이기
+        env:
+          CH_NAME: ${{ matrix.ch }}
+          DRY_RUN: ${{ github.event.inputs.dry }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          YT_CLIENT_ID: "247650144997-6bqc20isrbqi12fcsani6joed6jrvff5.apps.googleusercontent.com"
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets[matrix.secret] }}
+        run: python -u tools/yt_ad_titles.py
