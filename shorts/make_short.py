@@ -694,6 +694,16 @@ def yt_upload(video, title, desc, tags, privacy=None, shorts=True):
     if up.status_code >= 300:
         raise RuntimeError(f"유튜브 업로드 실패 {up.status_code}: {up.text[:300]}")
     info = up.json()
+    if "link.coupang.com" in desc and info.get("id"):  # 유튜브 '유료 광고 포함' 표시 켜기(실패해도 업로드는 유지)
+        try:
+            pr = requests.put("https://www.googleapis.com/youtube/v3/videos",
+                              params={"part": "paidProductPlacementDetails"},
+                              headers={"Authorization": f"Bearer {tok}"},
+                              json={"id": info["id"], "paidProductPlacementDetails": {"hasPaidProductPlacement": True}},
+                              timeout=30)
+            print(f"[유튜브] 유료 광고 표시 {'켬' if pr.ok else '실패 ' + str(pr.status_code) + ' ' + pr.text[:150]}")
+        except Exception as e:  # noqa: BLE001
+            print(f"[유튜브] 유료 광고 표시 실패: {e}")
     return info.get("id"), info.get("status", {}).get("privacyStatus", "")
 
 

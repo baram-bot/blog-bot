@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 """쿠팡 파트너스 규정: 이미 올라간 영상 중 설명란에 쿠팡 링크가 있는 영상의 제목 앞에 [광고]를 붙인다.
 토큰 권한(youtube 또는 youtube.force-ssl)이 없으면 무엇이 필요한지만 알려 주고 끝낸다.
-DRY_RUN=1 이면 바꾸지 않고 목록만 출력."""
+DRY_RUN=1 이면 바꾸지 않고 목록만 출력.
+MODE=remove 이면 반대로: 제목 앞 [광고]를 떼고, 대신 유튜브 '유료 광고 포함' 표시(paidProductPlacementDetails)를 켠다."""
 import os
 import sys
 
@@ -45,24 +46,41 @@ def main():
         if not page:
             break
     dry = os.environ.get("DRY_RUN") == "1"
+    remove = os.environ.get("MODE") == "remove"
     n = 0
     for i in range(0, len(ids), 50):
-        js = requests.get(f"{API}/videos", params={"part": "snippet", "id": ",".join(ids[i:i + 50])}, headers=h, timeout=30).json()
+        js = requests.get(f"{API}/videos", params={"part": "snippet,paidProductPlacementDetails", "id": ",".join(ids[i:i + 50])},
+                          headers=h, timeout=30).json()
         for v in js.get("items", []):
             sn = v["snippet"]
-            if "link.coupang.com" not in sn.get("description", "") or sn["title"].startswith("[광고]"):
-                continue
-            new = ("[광고] " + sn["title"])[:100]
+            has_link = "link.coupang.com" in sn.get("description", "")
+            if remove:
+                titled = sn["title"].startswith("[광고]")
+                paid = (v.get("paidProductPlacementDetails") or {}).get("hasPaidProductPlacement")
+                if not titled and (paid or not has_link):
+                    continue
+                new = sn["title"][len("[광고]"):].strip() if titled else sn["title"]
+            else:
+                if not has_link or sn["title"].startswith("[광고]"):
+                    continue
+                new = ("[광고] " + sn["title"])[:100]
             print(f"  {v['id']}: {sn['title']} → {new}")
             n += 1
             if dry:
                 continue
-            body = {"id": v["id"], "snippet": {"title": new, "description": sn["description"],
-                                                "categoryId": sn.get("categoryId", "22"), "tags": sn.get("tags", []),
-                                                "defaultLanguage": sn.get("defaultLanguage", "ko")}}
-            r = requests.put(f"{API}/videos", params={"part": "snippet"}, headers=h, json=body, timeout=30)
-            if not r.ok:
-                print(f"    ! 실패 {r.status_code}: {r.text[:200]}")
+            if new != sn["title"]:
+                body = {"id": v["id"], "snippet": {"title": new, "description": sn["description"],
+                                                    "categoryId": sn.get("categoryId", "22"), "tags": sn.get("tags", []),
+                                                    "defaultLanguage": sn.get("defaultLanguage", "ko")}}
+                r = requests.put(f"{API}/videos", params={"part": "snippet"}, headers=h, json=body, timeout=30)
+                if not r.ok:
+                    print(f"    ! 제목 실패 {r.status_code}: {r.text[:200]}")
+            if remove and has_link:
+                r = requests.put(f"{API}/videos", params={"part": "paidProductPlacementDetails"}, headers=h,
+                                 json={"id": v["id"], "paidProductPlacementDetails": {"hasPaidProductPlacement": True}},
+                                 timeout=30)
+                if not r.ok:
+                    print(f"    ! 유료 광고 표시 실패 {r.status_code}: {r.text[:200]}")
     print(f"[{name}] 대상 {n}편")
     return 0
 
