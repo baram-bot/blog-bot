@@ -619,7 +619,15 @@ def pick_coupang(script):
         script["coupang"] = want
         try:
             import coupang_api
-            hit = coupang_api.find(([want["search"]] if want.get("search") else []) + keys)
+            terms = [want["search"]] if want.get("search") else []
+            exact = (want.get("url") or "").strip()
+            if exact and os.path.exists(COUPANG_FILE):  # 작가가 고른 목록 상품의 이름(브랜드 뺀 뒤쪽 낱말)도 검색어 후보로
+                for line in open(COUPANG_FILE, encoding="utf-8"):
+                    parts = [x.strip() for x in line.split("|")]
+                    if len(parts) >= 2 and parts[0] == exact:
+                        terms.append(" ".join(parts[1].split()[-2:]))
+                        break
+            hit = coupang_api.find(terms + keys)
         except Exception as e:  # noqa: BLE001
             print(f"[쿠팡 API] 건너뜀: {e}")
             hit = None
