@@ -30,7 +30,7 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg fonts-noto-cjk fonts-noto-cjk-extra > /dev/null
-          pip install -q edge-tts requests pillow
+          for i in 1 2 3; do timeout 300 pip install -q --timeout 30 --retries 3 edge-tts requests pillow && break; sleep 10; done
       - name: 쇼츠 영상 만들기 + 유튜브 업로드 + 텔레그램 전송
         env:
           SHORTS_BOT_TOKEN: ${{ secrets.SHORTS_BOT_TOKEN }}
