@@ -611,6 +611,21 @@ def pick_coupang(script):
     data/shorts_coupang.txt 형식: 단축링크 | 상품명 | 키워드1,키워드2,..."""
     want = script.get("coupang") or {}
     keys = [k.strip() for k in want.get("keywords", []) if k.strip()]
+    # 쿠팡 API 키가 있으면: 영상 주제 키워드로 실제 상품을 검색해 링크를 만든다(한 번만, 결과는 대본에 기록)
+    if want.get("api_url"):
+        return (want["api_url"], want.get("api_name", ""), ",".join(keys)), want
+    if keys and not want.get("api_tried"):
+        want["api_tried"] = True
+        script["coupang"] = want
+        try:
+            import coupang_api
+            hit = coupang_api.find(([want["search"]] if want.get("search") else []) + keys)
+        except Exception as e:  # noqa: BLE001
+            print(f"[쿠팡 API] 건너뜀: {e}")
+            hit = None
+        if hit:
+            want.update(api_url=hit[0], api_name=hit[1], url=hit[0])
+            return (hit[0], hit[1], ",".join(keys)), want
     if not os.path.exists(COUPANG_FILE):
         return None, want
     rows = []
