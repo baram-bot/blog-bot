@@ -1,0 +1,18 @@
+name: coupang-test
+on:
+  workflow_dispatch:
+    inputs:
+      q:
+        description: "검색어"
+        default: "미니 금고"
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q requests
+      - env:
+          COUPANG_ACCESS_KEY: ${{ secrets.COUPANG_ACCESS_KEY }}
+          COUPANG_SECRET_KEY: ${{ secrets.COUPANG_SECRET_KEY }}
+          Q: ${{ github.event.inputs.q }}
+        run: cd shorts && python -c "import os,coupang_api as c; print('키 있음' if c.enabled() else '키 없음'); print(c.find([os.environ['Q']]))"
