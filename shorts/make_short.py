@@ -746,7 +746,7 @@ def build_texts(script):
     elif "dundeun-nohu" not in desc:
         blog_lines.append("📖 노후·연금·상속 정보 블로그: https://dundeun-nohu.blogspot.com")
     if CHANNEL not in ("econ", "kids"):  # 시니어: 1시간 사연 이어 듣기 재생목록(시청 시간↑)
-        pf = os.path.join(os.path.dirname(HERE), "data", "playlist_senior.txt")
+        pf = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "playlist_senior.txt")
         if os.path.exists(pf) and "playlist?list=" not in desc:
             blog_lines.insert(0, "🎧 1시간 사연 이어 듣기(틀어 두면 계속 이어져요): https://www.youtube.com/playlist?list="
                               + open(pf).read().strip())
