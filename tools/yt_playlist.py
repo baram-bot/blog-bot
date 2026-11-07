@@ -17,6 +17,14 @@ r = requests.post("https://oauth2.googleapis.com/token", data={
 h = {"Authorization": "Bearer " + r.json()["access_token"]}
 
 pid = open(IDF).read().strip() if os.path.exists(IDF) else ""
+if not pid:  # 이미 같은 이름의 재생목록이 있으면 그것을 쓴다(중복 생성 방지)
+    js = requests.get(f"{API}/playlists", params={"part": "snippet", "mine": "true", "maxResults": 50}, headers=h, timeout=30).json()
+    for p_ in js.get("items", []):
+        if p_["snippet"]["title"] == TITLE:
+            pid = p_["id"]
+            open(IDF, "w").write(pid + "\n")
+            print("기존 재생목록 사용", pid)
+            break
 if not pid:
     js = requests.post(f"{API}/playlists", params={"part": "snippet,status"}, headers=h, json={
         "snippet": {"title": TITLE, "description": DESC, "defaultLanguage": "ko"},
