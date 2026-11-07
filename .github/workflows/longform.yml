@@ -48,6 +48,14 @@ jobs:
           CF_ACCOUNT_ID: "4f8474c742bb6437d092782e2a9fd5be"
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
         run: python -u longform/make_long.py
+      - name: 롱폼을 이어 듣기 재생목록에 넣기
+        if: always()
+        continue-on-error: true
+        env:
+          YT_CLIENT_ID: "247650144997-6bqc20isrbqi12fcsani6joed6jrvff5.apps.googleusercontent.com"
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: python -u tools/yt_playlist.py
       - name: 영상 보관 (7일)
         if: always()
         uses: actions/upload-artifact@v4
@@ -63,7 +71,7 @@ jobs:
         run: |
           git config user.name "longform-bot"
           git config user.email "longform-bot@users.noreply.github.com"
-          git add -A longform/queue longform/done
+          git add -A longform/queue longform/done data/playlist_senior.txt
           git diff --cached --quiet && exit 0
           git commit -m "롱폼 제작 완료 기록"
           for i in 1 2 3; do git pull --rebase -q origin main && git push -q && break; sleep 5; done

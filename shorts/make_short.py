@@ -745,6 +745,11 @@ def build_texts(script):
             blog_lines.append("📖 더 자세한 육아 이야기 — 구름 위 육아연구소 블로그: https://gureum-yuga-lab.blogspot.com")
     elif "dundeun-nohu" not in desc:
         blog_lines.append("📖 노후·연금·상속 정보 블로그: https://dundeun-nohu.blogspot.com")
+    if CHANNEL not in ("econ", "kids"):  # 시니어: 1시간 사연 이어 듣기 재생목록(시청 시간↑)
+        pf = os.path.join(os.path.dirname(HERE), "data", "playlist_senior.txt")
+        if os.path.exists(pf) and "playlist?list=" not in desc:
+            blog_lines.insert(0, "🎧 1시간 사연 이어 듣기(틀어 두면 계속 이어져요): https://www.youtube.com/playlist?list="
+                              + open(pf).read().strip())
     if "threads" not in desc:
         blog_lines.append("🧵 스레드에서 매일 생활 꿀팁·꿀템 받기: https://www.threads.net/@baek.gk")
     if blog_lines:
