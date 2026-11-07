@@ -1,0 +1,28 @@
+name: daily-stats
+on:
+  schedule:
+    - cron: "17 4 * * *"   # 한국시간 13:17 (오후 2시 보고 전) — 공개 조회수만 저장
+  workflow_dispatch:
+jobs:
+  s:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q requests
+      - name: 유튜브 세 채널 조회수(공개 숫자)
+        env:
+          S1: ${{ secrets.YT_CLIENT_SECRET }}
+          T1: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          S2: ${{ secrets.YT_ECON_CLIENT_SECRET }}
+          T2: ${{ secrets.YT_ECON_REFRESH_TOKEN }}
+          S3: ${{ secrets.YT_KIDS_CLIENT_SECRET }}
+          T3: ${{ secrets.YT_KIDS_REFRESH_TOKEN }}
+        run: |
+          mkdir -p data/stats
+          YT_CLIENT_ID=247650144997-6bqc20isrbqi12fcsani6joed6jrvff5.apps.googleusercontent.com YT_CLIENT_SECRET="$S1" YOUTUBE_REFRESH_TOKEN="$T1" OUT=data/stats/yt_senior.txt python tools/yt_stats.py || true
+          YT_CLIENT_ID=480498053335-1t1f61lpgpcne9e895hfs98r7qvickpj.apps.googleusercontent.com YT_CLIENT_SECRET="$S2" YOUTUBE_REFRESH_TOKEN="$T2" OUT=data/stats/yt_econ.txt python tools/yt_stats.py || true
+          YT_CLIENT_ID=106566243572-9l2f41lloc7c9nei86hu8rema4n6k0kd.apps.googleusercontent.com YT_CLIENT_SECRET="$S3" YOUTUBE_REFRESH_TOKEN="$T3" OUT=data/stats/yt_kids.txt python tools/yt_stats.py || true
+          date -u -d '+9 hours' '+%Y-%m-%d %H:%M KST' > data/stats/updated.txt
+          git config user.name "stats-bot"; git config user.email "stats-bot@users.noreply.github.com"
+          git add data/stats; git diff --cached --quiet && exit 0
+          git commit -m "유튜브 조회수 모음 [skip ci]"; for i in 1 2 3; do git pull --rebase -q origin main && git push -q && break; sleep 5; done
