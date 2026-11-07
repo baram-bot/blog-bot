@@ -15,4 +15,5 @@ jobs:
           COUPANG_ACCESS_KEY: ${{ secrets.COUPANG_ACCESS_KEY }}
           COUPANG_SECRET_KEY: ${{ secrets.COUPANG_SECRET_KEY }}
           Q: ${{ github.event.inputs.q }}
-        run: cd shorts && python -c "import os,coupang_api as c; print('키 있음' if c.enabled() else '키 없음'); print(c.find([os.environ['Q']]))"
+        run: |
+          python -u tools/coupang_report.py
