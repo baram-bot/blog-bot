@@ -3,11 +3,27 @@ on: workflow_dispatch
 jobs:
   s:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - ch: senior
+            cid: "247650144997-6bqc20isrbqi12fcsani6joed6jrvff5.apps.googleusercontent.com"
+            csec: YT_CLIENT_SECRET
+            tok: YOUTUBE_REFRESH_TOKEN
+          - ch: econ
+            cid: "480498053335-1t1f61lpgpcne9e895hfs98r7qvickpj.apps.googleusercontent.com"
+            csec: YT_ECON_CLIENT_SECRET
+            tok: YT_ECON_REFRESH_TOKEN
+          - ch: kids
+            cid: "106566243572-9l2f41lloc7c9nei86hu8rema4n6k0kd.apps.googleusercontent.com"
+            csec: YT_KIDS_CLIENT_SECRET
+            tok: YT_KIDS_REFRESH_TOKEN
     steps:
       - uses: actions/checkout@v4
       - run: pip install -q requests
       - env:
-          YT_CLIENT_ID: "247650144997-6bqc20isrbqi12fcsani6joed6jrvff5.apps.googleusercontent.com"
-          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
-          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YT_CLIENT_ID: ${{ matrix.cid }}
+          YT_CLIENT_SECRET: ${{ secrets[matrix.csec] }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets[matrix.tok] }}
         run: python -u tools/yt_stats.py
