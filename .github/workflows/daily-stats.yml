@@ -3,6 +3,8 @@ on:
   schedule:
     - cron: "17 4 * * *"   # 한국시간 13:17 (오후 2시 보고 전) — 공개 조회수만 저장
   workflow_dispatch:
+permissions:
+  contents: write
 jobs:
   s:
     runs-on: ubuntu-latest
