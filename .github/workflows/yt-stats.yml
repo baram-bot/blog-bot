@@ -1,0 +1,13 @@
+name: yt-stats
+on: workflow_dispatch
+jobs:
+  s:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q requests
+      - env:
+          YT_CLIENT_ID: "247650144997-6bqc20isrbqi12fcsani6joed6jrvff5.apps.googleusercontent.com"
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: python -u tools/yt_stats.py
