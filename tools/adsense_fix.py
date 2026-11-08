@@ -30,3 +30,17 @@ for p in travel:
             print("   → 초안으로 전환", r.get("status"))
         except Exception as e:
             print("   ! 실패", e)
+
+if mode == "pages":  # 내용이 거의 없는 페이지에 실제 글 내용을 채운다
+    new = json.load(open(os.path.join(ROOT, "data", "adsense_pages.json"), encoding="utf-8"))
+    for p in pages:
+        if p["title"] == "분야별 글 모아보기":
+            body = new["category"]
+        elif p["title"] == "문의하기":
+            if "답변 안내" in p.get("content", ""):
+                continue
+            body = new["contact_prefix"] + p.get("content", "")  # 기존 문의 양식은 그대로 아래에 둔다
+        else:
+            continue
+        r = call("PATCH", f"{API}/blogs/{blog}/pages/{p['id']}", {"content": body})
+        print("   → 페이지 보강", p["title"], len(r.get("content", "")))
