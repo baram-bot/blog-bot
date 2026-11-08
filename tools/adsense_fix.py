@@ -21,7 +21,7 @@ for p in pages:
     txt = re.sub(r"<[^>]+>", "", p.get("content", ""))
     print(f"[페이지] {p['id']} {p['title']} 글자수 {len(txt)}")
 posted = json.load(open(os.path.join(ROOT, "data", "posted.json"), encoding="utf-8"))["posted"]
-travel = [p for p in posted if p["file"].startswith(("20261026-", "20261027-")) and p.get("post_id")]
+travel = [] if os.environ.get("WHICH", "econ") != "econ" else [p for p in posted if p["file"].startswith(("20261026-", "20261027-")) and p.get("post_id")]
 for p in travel:
     print(f"[여행 글] {p['post_id']} {p['title'][:30]}")
     if mode == "revert":
@@ -32,7 +32,8 @@ for p in travel:
             print("   ! 실패", e)
 
 if mode == "pages":  # 내용이 거의 없는 페이지에 실제 글 내용을 채운다
-    new = json.load(open(os.path.join(ROOT, "data", "adsense_pages.json"), encoding="utf-8"))
+    w = os.environ.get("WHICH", "econ")
+    new = json.load(open(os.path.join(ROOT, "data", "adsense_pages.json" if w == "econ" else f"adsense_pages_{w}.json"), encoding="utf-8"))
     for p in pages:
         if p["title"] == "분야별 글 모아보기":
             body = new["category"]
