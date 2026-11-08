@@ -36,6 +36,8 @@ if mode == "pages":  # 내용이 거의 없는 페이지에 실제 글 내용을
     new = json.load(open(os.path.join(ROOT, "data", "adsense_pages.json" if w == "econ" else f"adsense_pages_{w}.json"), encoding="utf-8"))
     for p in pages:
         if p["title"] == "분야별 글 모아보기":
+            if not new.get("category"):
+                continue
             body = new["category"]
         elif p["title"] == "문의하기":
             if "답변 안내" in p.get("content", ""):
