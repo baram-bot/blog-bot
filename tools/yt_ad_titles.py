@@ -4,6 +4,7 @@
 DRY_RUN=1 이면 바꾸지 않고 목록만 출력.
 MODE=remove 이면 반대로: 제목 앞 [광고]를 떼고, 대신 유튜브 '유료 광고 포함' 표시(paidProductPlacementDetails)를 켠다."""
 import os
+import re
 import sys
 
 import requests
@@ -47,6 +48,7 @@ def main():
             break
     dry = os.environ.get("DRY_RUN") == "1"
     remove = os.environ.get("MODE") == "remove"
+    strip = os.environ.get("MODE") == "strip"  # 쿠팡 링크·광고 문구·유료 광고 표시를 모두 지움
     n = 0
     for i in range(0, len(ids), 50):
         js = requests.get(f"{API}/videos", params={"part": "snippet,paidProductPlacementDetails", "id": ",".join(ids[i:i + 50])},
@@ -54,6 +56,32 @@ def main():
         for v in js.get("items", []):
             sn = v["snippet"]
             has_link = "link.coupang.com" in sn.get("description", "")
+            if strip:
+                paid = (v.get("paidProductPlacementDetails") or {}).get("hasPaidProductPlacement")
+                old = sn.get("description", "")
+                keep = [l for l in old.split("\n") if not re.search(r"coupang|쿠팡|\[광고\]|^\s*🛒", l)]
+                desc = re.sub(r"\n{3,}", "\n\n", "\n".join(keep)).strip()
+                title = sn["title"][len("[광고]"):].strip() if sn["title"].startswith("[광고]") else sn["title"]
+                if desc == old.strip() and title == sn["title"] and not paid:
+                    continue
+                print(f"  {v['id']}: {sn['title'][:30]} (설명 {len(old)}→{len(desc)}자, 표시 {'켬→끔' if paid else '없음'})")
+                n += 1
+                if dry:
+                    continue
+                if desc != old.strip() or title != sn["title"]:
+                    body = {"id": v["id"], "snippet": {"title": title, "description": desc,
+                                                        "categoryId": sn.get("categoryId", "22"), "tags": sn.get("tags", []),
+                                                        "defaultLanguage": sn.get("defaultLanguage", "ko")}}
+                    r = requests.put(f"{API}/videos", params={"part": "snippet"}, headers=h, json=body, timeout=30)
+                    if not r.ok:
+                        print(f"    ! 설명 실패 {r.status_code}: {r.text[:200]}")
+                if paid:
+                    r = requests.put(f"{API}/videos", params={"part": "paidProductPlacementDetails"}, headers=h,
+                                     json={"id": v["id"], "paidProductPlacementDetails": {"hasPaidProductPlacement": False}},
+                                     timeout=30)
+                    if not r.ok:
+                        print(f"    ! 표시 끄기 실패 {r.status_code}: {r.text[:200]}")
+                continue
             if remove:
                 titled = sn["title"].startswith("[광고]")
                 paid = (v.get("paidProductPlacementDetails") or {}).get("hasPaidProductPlacement")

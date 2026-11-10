@@ -6,7 +6,7 @@ on:
         description: "1 이면 목록만"
         default: "1"
       mode:
-        description: "add=제목에 [광고] 붙이기, remove=[광고] 떼고 유료 광고 표시 켜기"
+        description: "add=제목에 [광고] 붙이기, remove=[광고] 떼고 유료 광고 표시 켜기, strip=쿠팡 링크·광고 문구·표시 모두 지우기"
         default: "add"
 jobs:
   fix:
