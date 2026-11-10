@@ -1,5 +1,7 @@
 name: ad-titles
 on:
+  schedule:
+    - cron: "30 8 * * *"   # 한국 17:30 (할당량 초기화 뒤) — 남은 영상 쿠팡 링크·광고 표시 지우기, 다 끝나면 0편
   workflow_dispatch:
     inputs:
       dry:
@@ -39,9 +41,9 @@ jobs:
       - name: 제목에 [광고] 붙이기
         env:
           CH_NAME: ${{ matrix.ch }}
-          DRY_RUN: ${{ github.event.inputs.dry }}
-          MODE: ${{ github.event.inputs.mode }}
-          LIMIT: ${{ github.event.inputs.limit }}
+          DRY_RUN: ${{ github.event.inputs.dry || '0' }}
+          MODE: ${{ github.event.inputs.mode || 'strip' }}
+          LIMIT: ${{ github.event.inputs.limit || '40' }}
           GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
           GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
           YT_CLIENT_ID: ${{ matrix.cid }}
