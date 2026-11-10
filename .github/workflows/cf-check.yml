@@ -1,0 +1,15 @@
+name: cf-check
+on: workflow_dispatch
+jobs:
+  c:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          T: ${{ secrets.CF_API_TOKEN }}
+        run: |
+          A=4f8474c742bb6437d092782e2a9fd5be
+          echo "verify:"; curl -s -H "Authorization: Bearer $T" https://api.cloudflare.com/client/v4/user/tokens/verify | head -c 300; echo
+          echo "workers:"; curl -s -H "Authorization: Bearer $T" https://api.cloudflare.com/client/v4/accounts/$A/workers/scripts | head -c 300; echo
+          echo "kv:"; curl -s -H "Authorization: Bearer $T" https://api.cloudflare.com/client/v4/accounts/$A/storage/kv/namespaces | head -c 300; echo
+          echo "d1:"; curl -s -H "Authorization: Bearer $T" https://api.cloudflare.com/client/v4/accounts/$A/d1/database | head -c 300; echo
+          echo "subdomain:"; curl -s -H "Authorization: Bearer $T" https://api.cloudflare.com/client/v4/accounts/$A/workers/subdomain | head -c 300; echo
