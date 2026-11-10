@@ -610,6 +610,8 @@ def pick_coupang(script):
     """대본의 coupang.keywords 와 가장 잘 맞는 쿠팡 파트너스 링크 1개를 고른다.
     data/shorts_coupang.txt 형식: 단축링크 | 상품명 | 키워드1,키워드2,..."""
     want = script.get("coupang") or {}
+    if os.getenv("NO_COUPANG"):  # 쇼츠 노출 시험: 쿠팡 링크·광고 표시 없이 올림
+        return None, want
     keys = [k.strip() for k in want.get("keywords", []) if k.strip()]
     # 쿠팡 API 키가 있으면: 영상 주제 키워드로 실제 상품을 검색해 링크를 만든다(한 번만, 결과는 대본에 기록)
     if want.get("api_url"):
@@ -754,6 +756,8 @@ def build_texts(script):
         blog_lines.append("🧵 스레드에서 매일 생활 꿀팁·꿀템 받기: https://www.threads.net/@baek.gk")
     if blog_lines:
         desc += "\n\n" + "\n".join(blog_lines)
+    if os.getenv("NO_COUPANG"):
+        desc = "\n".join(l for l in desc.split("\n") if "coupang" not in l and "쿠팡" not in l and "[광고]" not in l)
     if product:
         desc = f"📢 [광고] {DISCLOSURE}\n\n{desc}\n\n🛒 {product[1]}\n{product[0]}"
     return desc, product, want

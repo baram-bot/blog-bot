@@ -40,6 +40,7 @@ jobs:
           GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
           YT_CLIENT_ID: "247650144997-6bqc20isrbqi12fcsani6joed6jrvff5.apps.googleusercontent.com"
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          NO_COUPANG: "1"   # 쇼츠 노출 시험(11/11~): 쿠팡 링크·광고 표시 끔
           COUPANG_ACCESS_KEY: ${{ secrets.COUPANG_ACCESS_KEY }}
           COUPANG_SECRET_KEY: ${{ secrets.COUPANG_SECRET_KEY }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
