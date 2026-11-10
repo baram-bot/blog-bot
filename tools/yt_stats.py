@@ -16,11 +16,11 @@ ch = requests.get(f"{API}/channels", params={"part": "contentDetails,statistics,
 print("채널", ch["snippet"]["title"], "구독", ch["statistics"].get("subscriberCount"), "총조회", ch["statistics"].get("viewCount"))
 up = ch["contentDetails"]["relatedPlaylists"]["uploads"]
 ids = [i["contentDetails"]["videoId"] for i in requests.get(f"{API}/playlistItems", params={"part": "contentDetails", "playlistId": up, "maxResults": 50}, headers=h).json()["items"]]
-vs = requests.get(f"{API}/videos", params={"part": "snippet,statistics,contentDetails", "id": ",".join(ids)}, headers=h).json()["items"]
+vs = requests.get(f"{API}/videos", params={"part": "snippet,statistics,contentDetails,status,paidProductPlacementDetails", "id": ",".join(ids)}, headers=h).json()["items"]
 for v in vs:
     d = v["contentDetails"]["duration"]; m = re.findall(r"(\d+)([HMS])", d); sec = sum(int(n) * {"H": 3600, "M": 60, "S": 1}[u] for n, u in m)
     s = v["statistics"]
-    print(f"{v['snippet']['publishedAt'][:16]}\t{sec}s\t{s.get('viewCount',0)}\t{s.get('likeCount',0)}\t{s.get('commentCount',0)}\t{v['id']}\t{v['snippet']['title'][:40]}")
+    print(f"{v['snippet']['publishedAt'][:16]}\t{sec}s\t{s.get('viewCount',0)}\t{s.get('likeCount',0)}\t{s.get('commentCount',0)}\t{v['id']}\t{v['snippet']['title'][:40]}" + (f"\t[{v['status'].get('privacyStatus')}/{v['status'].get('uploadStatus')}{'/'+v['status'].get('rejectionReason','') if v['status'].get('rejectionReason') else ''}{'/kids' if v['status'].get('madeForKids') else ''}{'/광고' if (v.get('paidProductPlacementDetails') or {}).get('hasPaidProductPlacement') else ''}]" if os.environ.get("DIAG") else ""))
 
 if OUT:
     open(OUT, "w", encoding="utf-8").write("\n".join(_lines) + "\n")

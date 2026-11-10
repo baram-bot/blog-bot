@@ -26,4 +26,5 @@ jobs:
           YT_CLIENT_ID: ${{ matrix.cid }}
           YT_CLIENT_SECRET: ${{ secrets[matrix.csec] }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets[matrix.tok] }}
+          DIAG: "1"
         run: python -u tools/yt_stats.py
