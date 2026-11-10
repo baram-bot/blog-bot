@@ -5,6 +5,9 @@ on:
       dry:
         description: "1 이면 목록만"
         default: "1"
+      limit:
+        description: "채널당 최대 몇 편 (할당량 보호)"
+        default: "30"
       mode:
         description: "add=제목에 [광고] 붙이기, remove=[광고] 떼고 유료 광고 표시 켜기, strip=쿠팡 링크·광고 문구·표시 모두 지우기"
         default: "add"
@@ -38,6 +41,7 @@ jobs:
           CH_NAME: ${{ matrix.ch }}
           DRY_RUN: ${{ github.event.inputs.dry }}
           MODE: ${{ github.event.inputs.mode }}
+          LIMIT: ${{ github.event.inputs.limit }}
           GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
           GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
           YT_CLIENT_ID: ${{ matrix.cid }}

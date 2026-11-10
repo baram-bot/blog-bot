@@ -68,6 +68,9 @@ def main():
                 n += 1
                 if dry:
                     continue
+                if n > int(os.environ.get("LIMIT") or 999):  # 유튜브 하루 할당량 보호(업로드 몫 남기기)
+                    print("    (오늘 한도 — 다음 실행에)")
+                    continue
                 if desc != old.strip() or title != sn["title"]:
                     body = {"id": v["id"], "snippet": {"title": title, "description": desc,
                                                         "categoryId": sn.get("categoryId", "22"), "tags": sn.get("tags", []),
