@@ -158,7 +158,8 @@ def main():
             print(f"[인스타] 릴스 만들기 실패(카드뉴스만 올림): {e}")
             reel_path = None
     git("add", outdir)
-    git("commit", "-qm", f"인스타 카드 이미지 {name} [skip ci]")
+    if subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=ROOT).returncode:  # 재시도 땐 이미 올라가 있음
+        git("commit", "-qm", f"인스타 카드 이미지 {name} [skip ci]")
     for i in range(3):
         try:
             git("pull", "--rebase", "-q", "origin", "main")
