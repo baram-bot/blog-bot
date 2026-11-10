@@ -65,6 +65,19 @@ def wait_ready(host, cid, timeout=180):
     raise IGError("컨테이너 준비 시간 초과")
 
 
+def already_posted(host, caption):
+    """최근 글 중 캡션 앞부분이 같은 게 있으면 그 id (중복 게시 방지)."""
+    try:
+        js = call("GET", f"{IG_ID}/media", host, fields="id,caption", limit="6")
+        head = caption[:60]
+        for m in js.get("data", []):
+            if (m.get("caption") or "")[:60] == head:
+                return m["id"]
+    except IGError:
+        pass
+    return None
+
+
 def git(*args):
     subprocess.run(["git", *args], cwd=ROOT, check=True)
 
@@ -157,7 +170,17 @@ def main():
     urls = [f"https://raw.githubusercontent.com/{REPO}/{sha}/instagram/media/{name}/{os.path.basename(p)}" for p in paths]
     time.sleep(10)
     caption = with_follow(spec.get("caption", ""))
-    media_id = publish_carousel(host, urls, caption)
+    media_id = already_posted(host, caption)
+    if media_id:
+        print("[인스타] 이미 올라간 글이라 다시 올리지 않음")
+    else:
+        try:
+            media_id = publish_carousel(host, urls, caption)
+        except IGError as e:
+            # 'Fatal' 같은 일시 오류: 잠시 쉬고 처음부터 한 번 더 (올라갔는지 먼저 확인)
+            print(f"[인스타] 1차 실패({e}) → 60초 뒤 재시도")
+            time.sleep(60)
+            media_id = already_posted(host, caption) or publish_carousel(host, urls, caption)
     link = ""
     try:
         link = call("GET", media_id, host, fields="permalink").get("permalink", "")
