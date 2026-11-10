@@ -15,6 +15,17 @@ def call(method, url, body=None):
     with urllib.request.urlopen(req, timeout=30) as r:
         return json.loads(r.read() or b"{}")
 mode = os.environ.get("MODE", "list")
+if mode == "stats":  # 블로그 조회수(전체·30일·7일) + 최근 글 목록
+    for rg in ("7DAYS", "30DAYS", "all"):
+        try:
+            c = call("GET", f"{API}/blogs/{blog}/pageviews?range={rg}").get("counts", [])
+            print(f"[조회수] {rg}: {c[0]['count'] if c else 0}")
+        except Exception as e:
+            print(f"[조회수] {rg}: 실패 {e}")
+    ps = call("GET", f"{API}/blogs/{blog}/posts?maxResults=12&fetchBodies=false&status=live").get("items", [])
+    for q in ps:
+        print(f"[글] {q['published'][:16]} {q['title'][:40]}")
+    sys.exit(0)
 pages = call("GET", f"{API}/blogs/{blog}/pages?fetchBodies=true").get("items", [])
 for p in pages:
     import re
