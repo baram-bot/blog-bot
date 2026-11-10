@@ -25,6 +25,19 @@ jobs:
           YT_CLIENT_ID=480498053335-1t1f61lpgpcne9e895hfs98r7qvickpj.apps.googleusercontent.com YT_CLIENT_SECRET="$S2" YOUTUBE_REFRESH_TOKEN="$T2" OUT=data/stats/yt_econ.txt python tools/yt_stats.py || true
           YT_CLIENT_ID=106566243572-9l2f41lloc7c9nei86hu8rema4n6k0kd.apps.googleusercontent.com YT_CLIENT_SECRET="$S3" YOUTUBE_REFRESH_TOKEN="$T3" OUT=data/stats/yt_kids.txt python tools/yt_stats.py || true
           date -u -d '+9 hours' '+%Y-%m-%d %H:%M KST' > data/stats/updated.txt
+      - name: 블로그 세 곳 조회수(7일·30일) — 날짜별로 쌓기
+        env:
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+          ECON_ID: ${{ secrets.BLOGGER_BLOG_ID }}
+        run: |
+          d=$(date -u -d '+9 hours' '+%m-%d')
+          for w in econ nohu kids; do
+            case "$w" in nohu) id=8885340922893837263;; kids) id=1089607515072453210;; *) id="$ECON_ID";; esac
+            v=$(BLOGGER_BLOG_ID="$id" WHICH=$w MODE=stats python tools/adsense_fix.py 2>/dev/null | grep "^\[조회수\]" | sed 's/\[조회수\] //' | tr '\n' ' ')
+            echo "$d $w $v" >> data/stats/blog_views.txt
+          done
           git config user.name "stats-bot"; git config user.email "stats-bot@users.noreply.github.com"
           git add data/stats; git diff --cached --quiet && exit 0
           git commit -m "유튜브 조회수 모음 [skip ci]"; for i in 1 2 3; do git pull --rebase -q origin main && git push -q && break; sleep 5; done
