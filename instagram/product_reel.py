@@ -206,9 +206,19 @@ def stock_url(query):
     """무료 영상 주소 하나: Pixabay(키 있으면) → Pexels 순."""
     if PIXABAY:
         try:
-            js = requests.get("https://pixabay.com/api/videos/", params={"key": PIXABAY, "q": query, "safesearch": "true",
-                                                                         "per_page": 10, "video_type": "film"}, timeout=30).json()
-            for h in js.get("hits", []):
+            words = [w for w in query.lower().split() if len(w) > 2]
+            hits = []
+            for q in (query, " ".join(words[:2])):  # 전체 검색어 → 앞 두 낱말
+                js = requests.get("https://pixabay.com/api/videos/", params={"key": PIXABAY, "q": q, "safesearch": "true",
+                                                                             "per_page": 30, "video_type": "film"}, timeout=30).json()
+                hits += js.get("hits", [])
+            # 태그가 검색어와 많이 겹치는 영상만(엉뚱한 장면 방지): 낱말 절반 이상 일치
+            def score(h):
+                tags = (h.get("tags") or "").lower()
+                return sum(1 for w in words if w in tags or w.rstrip("s") in tags)
+            need = max(1, (len(words) + 1) // 2)
+            hits = sorted([h for h in hits if score(h) >= need], key=score, reverse=True)
+            for h in hits:
                 v = h.get("videos", {})
                 for k in ("medium", "large", "small"):
                     if (v.get(k) or {}).get("url") and (v[k].get("height") or 0) >= 720:
