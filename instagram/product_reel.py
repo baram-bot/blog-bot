@@ -67,7 +67,7 @@ def pick(search, used):
         if not ok:
             print(f"[꿀템] '{kw}' 맞는 상품 없음")
             continue
-        ok.sort(key=lambda p: (not p.get("isRocket"), not (5000 <= (p.get("productPrice") or 0) <= 60000), p.get("rank", 99)))
+        ok.sort(key=lambda p: (not (5000 <= (p.get("productPrice") or 0) <= 80000), not p.get("isRocket"), p.get("rank", 99)))
         p = ok[0]
         link = p["productUrl"]
         try:
