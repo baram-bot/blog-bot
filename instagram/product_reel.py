@@ -188,6 +188,30 @@ def frame_cta(photo, closing):
 
 
 PEXELS = os.environ.get("PEXELS_API_KEY", "").strip()
+PIXABAY = os.environ.get("PIXABAY_API_KEY", "").strip()
+
+
+def stock_url(query):
+    """무료 영상 주소 하나: Pixabay(키 있으면) → Pexels 순."""
+    if PIXABAY:
+        try:
+            js = requests.get("https://pixabay.com/api/videos/", params={"key": PIXABAY, "q": query, "safesearch": "true",
+                                                                         "per_page": 10, "video_type": "film"}, timeout=30).json()
+            for h in js.get("hits", []):
+                v = h.get("videos", {})
+                for k in ("medium", "large", "small"):
+                    if (v.get(k) or {}).get("url") and (v[k].get("height") or 0) >= 720:
+                        return v[k]["url"]
+        except Exception as e:  # noqa: BLE001
+            print(f"[꿀템] Pixabay 실패: {e}")
+    if PEXELS:
+        js = requests.get("https://api.pexels.com/videos/search", headers={"Authorization": PEXELS},
+                          params={"query": query, "orientation": "portrait", "size": "medium", "per_page": 8}, timeout=30).json()
+        for v in js.get("videos", []):
+            for vf in sorted(v.get("video_files", []), key=lambda x: x.get("height") or 0):
+                if vf.get("file_type") == "video/mp4" and (vf.get("height") or 0) >= 1280:
+                    return vf["link"]
+    return None
 
 
 def tts_fast(text, path):
@@ -218,25 +242,15 @@ def overlay_png(text, path):
 
 def stock_clip(query, text, work, idx):
     """Pexels 무료 영상(세로) 한 컷 + 큰 자막 + 음성. 키가 없거나 실패하면 None."""
-    if not PEXELS:
+    if not (PEXELS or PIXABAY):
         return None
     try:
-        js = requests.get("https://api.pexels.com/videos/search", headers={"Authorization": PEXELS},
-                          params={"query": query, "orientation": "portrait", "size": "medium", "per_page": 8},
-                          timeout=30).json()
-        best = None
-        for v in js.get("videos", []):
-            for vf in v.get("video_files", []):
-                if vf.get("file_type") == "video/mp4" and (vf.get("height") or 0) >= 1280 and (vf.get("width") or 9) < (vf.get("height") or 0):
-                    if not best or vf["height"] < best["height"]:
-                        best = vf
-            if best:
-                break
-        if not best:
+        link = stock_url(query)
+        if not link:
             print(f"[꿀템] 무료 영상 없음: {query}")
             return None
         raw = os.path.join(work, f"s{idx}.mp4")
-        open(raw, "wb").write(requests.get(best["link"], timeout=60).content)
+        open(raw, "wb").write(requests.get(link, timeout=60).content)
         ov = os.path.join(work, f"s{idx}.png")
         overlay_png(text, ov)
         a = os.path.join(work, f"s{idx}.mp3")
