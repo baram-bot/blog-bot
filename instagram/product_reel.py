@@ -385,6 +385,9 @@ def main():
     name = os.path.splitext(os.path.basename(f))[0]
     spec = json.load(open(f, encoding="utf-8"))
     log = load_log()
+    if not dry and any(x.get("date") == kst().strftime("%m/%d") for x in log["items"]):
+        print("[꿀템] 오늘은 이미 올림 — 내일 올림")
+        return 0
     prod = pick(spec["search"], {x["id"] for x in log["items"]})
     if not prod:
         raise RuntimeError("검색어로 맞는 상품을 못 찾음")

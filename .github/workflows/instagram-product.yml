@@ -3,6 +3,8 @@ on:
   push:
     branches: [main]
     paths: ["instagram/products/queue/**"]
+  schedule:
+    - cron: "13 11 * * *"   # 한국 20:13 — 대기 대본이 있으면 하루 1편 게시
   workflow_dispatch:
     inputs:
       dry:
