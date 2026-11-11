@@ -307,7 +307,9 @@ def main():
     print(f"[꿀템] 영상 {secs:.1f}초")
     cap = caption(spec, prod, no)
     if dry:
-        shutil.copy(out, os.path.join("/tmp", "preview.mp4"))
+        prev = os.path.join(ROOT, "instagram", "media", "products", "preview.mp4")
+        shutil.copy(out, prev)
+        push("인스타 꿀템 미리보기 영상 [skip ci]", prev)
         print("[꿀템] 시험 실행 — 게시 안 함\n" + cap)
         return 0
     item = {"no": no, "id": prod["id"], "name": prod["name"], "link": prod["link"], "image": prod["image"],
