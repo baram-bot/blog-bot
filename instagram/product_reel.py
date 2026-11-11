@@ -6,7 +6,8 @@ instagram/products/queue/*.json 대본(검색어·첫 문장·고르는 법 3가
 3) 링크 모음 페이지(docs/index.html)에 번호를 붙여 올린 뒤
 4) 인스타 릴스로 게시한다. DRY=1 이면 영상만 만들고 게시하지 않는다.
 대본 형식: {"search": ["온수매트", "전기요"], "hook": "...", "points": ["...", "...", "..."],
-          "clips": [{"query": "pexels 영어 검색어", "text": "짤 위 큰 자막"}] (선택, 최대 2개 — 앞부분 공감·웃음 짤),
+          "clips": [{"query": "영어 검색어", "text": "짤 위 큰 자막"}] (선택, 최대 3개 — 앞부분 고민·공감 짤),
+          "bridge": "그래서 준비했다!" (짤 다음 상품으로 넘어가는 한마디, 선택),
           "closing": "...", "caption": "...", "tags": ["#..."]}"""
 import datetime as dt
 import glob
@@ -173,6 +174,16 @@ def frame_product(photo, prod, no):
     return badge(img)
 
 
+def frame_bridge(photo, text):
+    """짤(고민) → 상품(해결)을 잇는 장면: '그래서 준비했다!' + 상품이 크게 등장."""
+    img = Image.new("RGB", (W, H), ACC)
+    d = ImageDraw.Draw(img)
+    y = centered(d, text, mc.font("black", 120), 260, (255, 255, 255))
+    card, mask = product_card(photo, 820)
+    img.paste(card, ((W - 820) // 2, max(y + 60, 700)), mask)
+    return badge(img)
+
+
 def frame_cta(photo, closing):
     img = Image.new("RGB", (W, H), ACC)
     d = ImageDraw.Draw(img)
@@ -255,7 +266,7 @@ def stock_clip(query, text, work, idx):
         overlay_png(text, ov)
         a = os.path.join(work, f"s{idx}.mp3")
         tts_fast(mc.noemo(text), a)
-        dur = min(4.0, max(2.2, mr.dur(a) + 0.25))
+        dur = min(5.5, max(3.5, mr.dur(a) + 0.6))
         c = os.path.join(work, f"sc{idx}.mp4")
         mr.run(["ffmpeg", "-y", "-i", raw, "-i", ov, "-i", a, "-filter_complex",
                 f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps=30,setsar=1[v];[v][1:v]overlay=0:0,format=yuv420p[o]",
@@ -280,12 +291,13 @@ def build_video(spec, prod, no, work, out):
     frames.append((frame_product(photo, prod, no), say))
     frames.append((frame_cta(photo, spec.get("closing")), (spec.get("closing") or "") + " 저장해 두시고, 팔로우도 부탁드려요."))
     clips = []
-    for j, sc in enumerate((spec.get("clips") or [])[:2]):  # 앞부분: 공감·웃음 짤
+    for j, sc in enumerate((spec.get("clips") or [])[:3]):  # 앞부분: 고민·공감 짤(이야기처럼 이어서)
         c = stock_clip(sc.get("query", ""), sc.get("text", ""), work, j)
         if c:
             clips.append(c)
-    if clips:  # 짤이 들어가면 첫 문장 화면은 빼고 바로 해결템으로(짧고 빠르게)
-        frames = frames[1:]
+    if clips:  # 짤(고민) 다음 '그래서 준비했다!'로 상품 장면에 이어 붙인다
+        bridge = spec.get("bridge") or "그래서 준비했다!"
+        frames = [(frame_bridge(photo, bridge), bridge)] + frames[1:]
     for i, (im, text) in enumerate(frames):
         f = os.path.join(work, f"f{i}.png")
         im.save(f)
