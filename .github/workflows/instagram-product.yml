@@ -1,0 +1,45 @@
+name: instagram-product
+on:
+  push:
+    branches: [main]
+    paths: ["instagram/products/queue/**"]
+  workflow_dispatch:
+    inputs:
+      dry:
+        description: "1 이면 영상만 만들고 게시 안 함"
+        default: "0"
+permissions:
+  contents: write
+concurrency:
+  group: instagram-post
+  cancel-in-progress: false
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg fonts-noto-cjk fonts-noto-cjk-extra >/dev/null
+          pip install -q requests pillow edge-tts
+      - name: 생활 꿀템 릴스
+        env:
+          DRY: ${{ github.event.inputs.dry || '0' }}
+          COUPANG_ACCESS_KEY: ${{ secrets.COUPANG_ACCESS_KEY }}
+          COUPANG_SECRET_KEY: ${{ secrets.COUPANG_SECRET_KEY }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: "17841436214071273"
+        run: python -u instagram/product_reel.py
+      - name: 미리보기 영상 보관
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: product-reel
+          path: instagram/media/products/*.mp4
+          retention-days: 7
+          if-no-files-found: ignore

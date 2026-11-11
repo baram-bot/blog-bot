@@ -66,9 +66,3 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m "쇼츠 제작 완료 기록"
           for i in 1 2 3; do git pull --rebase -q origin main && git push -q && break; sleep 5; done
-      - name: 인스타 릴스 (사연 쇼츠 하루 1편)
-        if: always()
-        env:
-          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
-          IG_USER_ID: "17841436214071273"
-        run: python -u instagram/post_reel.py
