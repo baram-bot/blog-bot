@@ -6,6 +6,7 @@ instagram/products/queue/*.json 대본(검색어·첫 문장·고르는 법 3가
 3) 링크 모음 페이지(docs/index.html)에 번호를 붙여 올린 뒤
 4) 인스타 릴스로 게시한다. DRY=1 이면 영상만 만들고 게시하지 않는다.
 대본 형식: {"search": ["온수매트", "전기요"], "hook": "...", "points": ["...", "...", "..."],
+          "clips": [{"query": "pexels 영어 검색어", "text": "짤 위 큰 자막"}] (선택, 최대 2개 — 앞부분 공감·웃음 짤),
           "closing": "...", "caption": "...", "tags": ["#..."]}"""
 import datetime as dt
 import glob
@@ -186,6 +187,73 @@ def frame_cta(photo, closing):
     return badge(img)
 
 
+PEXELS = os.environ.get("PEXELS_API_KEY", "").strip()
+
+
+def tts_fast(text, path):
+    import asyncio
+    import edge_tts
+    asyncio.run(edge_tts.Communicate(text, mr.VOICE, rate="+15%").save(path))
+
+
+def overlay_png(text, path):
+    """무료 영상 위에 얹을 투명 글자판(가운데 위쪽 큰 자막 + 광고 표시)."""
+    img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    f = mc.font("black", 92)
+    lines = mc.wrap(d, mc.noemo(text), f, W - 160)
+    y = 360
+    for ln in lines:
+        tw = d.textlength(ln, font=f)
+        x = (W - tw) / 2
+        d.rounded_rectangle([x - 28, y - 10, x + tw + 28, y + f.size + 26], radius=26, fill=(0, 0, 0, 170))
+        d.text((x, y), ln, font=f, fill=(255, 230, 80))
+        y += int(f.size * 1.35)
+    fb = mc.font("bold", 30)
+    tw = d.textlength(AD, font=fb)
+    d.rounded_rectangle([40, 70, 40 + tw + 44, 126], radius=28, fill=(0, 0, 0, 220))
+    d.text((62, 78), AD, font=fb, fill=(255, 255, 255))
+    img.save(path)
+
+
+def stock_clip(query, text, work, idx):
+    """Pexels 무료 영상(세로) 한 컷 + 큰 자막 + 음성. 키가 없거나 실패하면 None."""
+    if not PEXELS:
+        return None
+    try:
+        js = requests.get("https://api.pexels.com/videos/search", headers={"Authorization": PEXELS},
+                          params={"query": query, "orientation": "portrait", "size": "medium", "per_page": 8},
+                          timeout=30).json()
+        best = None
+        for v in js.get("videos", []):
+            for vf in v.get("video_files", []):
+                if vf.get("file_type") == "video/mp4" and (vf.get("height") or 0) >= 1280 and (vf.get("width") or 9) < (vf.get("height") or 0):
+                    if not best or vf["height"] < best["height"]:
+                        best = vf
+            if best:
+                break
+        if not best:
+            print(f"[꿀템] 무료 영상 없음: {query}")
+            return None
+        raw = os.path.join(work, f"s{idx}.mp4")
+        open(raw, "wb").write(requests.get(best["link"], timeout=60).content)
+        ov = os.path.join(work, f"s{idx}.png")
+        overlay_png(text, ov)
+        a = os.path.join(work, f"s{idx}.mp3")
+        tts_fast(mc.noemo(text), a)
+        dur = min(4.0, max(2.2, mr.dur(a) + 0.25))
+        c = os.path.join(work, f"sc{idx}.mp4")
+        mr.run(["ffmpeg", "-y", "-i", raw, "-i", ov, "-i", a, "-filter_complex",
+                f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps=30,setsar=1[v];[v][1:v]overlay=0:0,format=yuv420p[o]",
+                "-map", "[o]", "-map", "2:a", "-af", "apad", "-t", f"{dur:.2f}", "-c:v", "libx264", "-preset", "veryfast",
+                "-crf", "23", "-c:a", "aac", "-b:a", "128k", "-ar", "44100", c])
+        print(f"[꿀템] 무료 영상 컷: {query} ({dur:.1f}초)")
+        return c
+    except Exception as e:  # noqa: BLE001
+        print(f"[꿀템] 무료 영상 실패({query}): {e}")
+        return None
+
+
 def build_video(spec, prod, no, work, out):
     os.makedirs(work, exist_ok=True)
     photo = Image.open(io.BytesIO(requests.get(prod["image"], timeout=30).content)).convert("RGB")
@@ -198,16 +266,22 @@ def build_video(spec, prod, no, work, out):
     frames.append((frame_product(photo, prod, no), say))
     frames.append((frame_cta(photo, spec.get("closing")), (spec.get("closing") or "") + " 저장해 두시고, 팔로우도 부탁드려요."))
     clips = []
+    for j, sc in enumerate((spec.get("clips") or [])[:2]):  # 앞부분: 공감·웃음 짤
+        c = stock_clip(sc.get("query", ""), sc.get("text", ""), work, j)
+        if c:
+            clips.append(c)
+    if clips:  # 짤이 들어가면 첫 문장 화면은 빼고 바로 해결템으로(짧고 빠르게)
+        frames = frames[1:]
     for i, (im, text) in enumerate(frames):
         f = os.path.join(work, f"f{i}.png")
         im.save(f)
         a = os.path.join(work, f"a{i}.mp3")
-        mr.tts(mc.noemo(text), a)
-        dur = max(2.2, mr.dur(a) + 0.35)
+        tts_fast(mc.noemo(text), a)
+        dur = max(2.0, mr.dur(a) + 0.25)
         n = int(dur * 30)
         c = os.path.join(work, f"c{i}.mp4")
         mr.run(["ffmpeg", "-y", "-loop", "1", "-i", f, "-i", a,
-                "-vf", f"scale=2160:-1,zoompan=z='min(zoom+0.0005,1.05)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={n}:s={W}x{H}:fps=30,format=yuv420p",
+                "-vf", f"scale=2160:-1,zoompan=z='min(zoom+0.0012,1.10)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={n}:s={W}x{H}:fps=30,format=yuv420p",
                 "-af", "apad", "-t", f"{dur:.2f}", "-c:v", "libx264", "-preset", "veryfast", "-crf", "23",
                 "-c:a", "aac", "-b:a", "128k", "-ar", "44100", c])
         clips.append(c)
