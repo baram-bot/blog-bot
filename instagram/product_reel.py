@@ -57,7 +57,7 @@ def load_log():
 # ── 상품 고르기 ─────────────────────────────
 def pick(search, used):
     for kw in search[:2]:
-        q = urllib.parse.urlencode({"keyword": kw, "limit": 20, "subId": ca.SUB})
+        q = urllib.parse.urlencode({"keyword": kw, "limit": 10, "subId": ca.SUB})
         items = (ca._call("GET", f"{ca.BASE}/products/search?{q}") or {}).get("productData", [])
         ok = [p for p in items if p.get("productImage") and p.get("productUrl")
               and str(p.get("productId")) not in used
