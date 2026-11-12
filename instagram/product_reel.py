@@ -421,10 +421,16 @@ def main():
     name = os.path.splitext(os.path.basename(f))[0]
     spec = json.load(open(f, encoding="utf-8"))
     log = load_log()
-    if not dry and any(x.get("date") == kst().strftime("%m/%d") for x in log["items"]):
-        print("[꿀템] 오늘은 이미 올림 — 내일 올림")
+    per_day = int(os.environ.get("MAX_PER_DAY") or 2)
+    if not dry and sum(x.get("date") == kst().strftime("%m/%d") for x in log["items"]) >= per_day:
+        print(f"[꿀템] 오늘 {per_day}편 다 올림 — 다음에 올림")
         return 0
-    prod = pick(spec["search"], {x["id"] for x in log["items"]})
+    if spec.get("product"):  # 링크 페이지 추천 상품을 그대로 소개(이미 고른 상품)
+        prod = dict(spec["product"])
+        prod.setdefault("rocket", False)
+        prod.setdefault("kw", (spec.get("search") or [""])[0])
+    else:
+        prod = pick(spec["search"], {x["id"] for x in log["items"]})
     if not prod:
         raise RuntimeError("검색어로 맞는 상품을 못 찾음")
     no = max([x["no"] for x in log["items"]] or [0]) + 1
