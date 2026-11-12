@@ -328,7 +328,18 @@ def build_video(spec, prod, no, work, out):
 
 
 # ── 링크 모음 페이지 ─────────────────────────
+EXTRA = os.path.join(ROOT, "data", "ig_links_extra.json")
+
+
 def write_page(items):
+    extra = json.load(open(EXTRA, encoding="utf-8")) if os.path.exists(EXTRA) else {"title": "", "items": []}
+    erows = "".join(
+        f'<a class="it" href="{html.escape(x["link"])}" rel="nofollow sponsored noopener" target="_blank">'
+        f'<span class="no" style="font-size:20px">★</span><img src="{html.escape(x["image"])}" alt="" loading="lazy">'
+        f'<span class="nm">{html.escape(short_name(x["name"], 40))}<small>{html.escape(x.get("kw", ""))}</small></span></a>'
+        for x in extra.get("items", []))
+    if erows:
+        erows = f'<h2 style="font-size:19px;margin:26px 0 10px">{html.escape(extra.get("title") or "추천 꿀템")}</h2>' + erows
     rows = "".join(
         f'<a class="it" href="{html.escape(x["link"])}" rel="nofollow sponsored noopener" target="_blank">'
         f'<span class="no">{x["no"]}</span><img src="{html.escape(x["image"])}" alt="" loading="lazy">'
@@ -347,7 +358,7 @@ main{{max-width:560px;margin:0 auto;padding:20px 16px 40px}}h1{{font-size:24px;m
 .nm{{font-weight:700;display:flex;flex-direction:column}}.nm small{{color:var(--sub);font-weight:400}}
 </style></head><body><main><h1>🛒 생활 꿀템 모음</h1>
 <p style="color:var(--sub);margin:0">영상에서 본 번호를 눌러 주세요 · {HANDLE}</p>
-<div class="ad">{html.escape(DISCLOSURE)} 가격·재고는 바뀔 수 있어요.</div>{rows}</main></body></html>"""
+<div class="ad">{html.escape(DISCLOSURE)} 가격·재고는 바뀔 수 있어요.</div>{rows}{erows}</main></body></html>"""
     os.makedirs(os.path.dirname(PAGE), exist_ok=True)
     open(PAGE, "w", encoding="utf-8").write(page)
 

@@ -1,0 +1,27 @@
+name: ig-links
+on:
+  workflow_dispatch:
+    inputs:
+      keywords:
+        description: "쉼표로 구분한 쿠팡 검색어"
+        required: true
+      title:
+        description: "구역 제목"
+        default: "추천 꿀템"
+permissions:
+  contents: write
+jobs:
+  fill:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q requests pillow
+      - env:
+          KEYWORDS: ${{ github.event.inputs.keywords }}
+          TITLE: ${{ github.event.inputs.title }}
+          COUPANG_ACCESS_KEY: ${{ secrets.COUPANG_ACCESS_KEY }}
+          COUPANG_SECRET_KEY: ${{ secrets.COUPANG_SECRET_KEY }}
+        run: python -u tools/ig_links_fill.py
