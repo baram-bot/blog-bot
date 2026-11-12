@@ -1,10 +1,120 @@
 {
- "collected_at_kst": "2026-11-12 16:42",
+ "collected_at_kst": "2026-11-12 18:21",
  "errors": {},
  "google_trends_kr": [
   {
-   "keyword": "근로장려금",
+   "keyword": "이부진",
    "approx_traffic": "200+",
+   "pubDate": "Wed, 11 Nov 2026 23:40:00 -0800",
+   "news": [
+    {
+     "title": "이부진은 ‘3년 전 그 재킷’, 지수는 ‘레이디 디올’… 디올 패션도 화제",
+     "source": "Chosunbiz",
+     "url": "https://biz.chosun.com/distribution/fashion-beauty/2026/11/12/JIUSC4EBL5CRHDZDBBHLYNCH7Y/"
+    },
+    {
+     "title": "이부진, 3년 전과 같은 ‘디올’ 재킷 입고…손하트 날렸다",
+     "source": "동아일보",
+     "url": "https://www.donga.com/news/Economy/article/all/20261112/135016357/2"
+    },
+    {
+     "title": "이화여대 찾은 정의선 회장",
+     "source": "뉴시스",
+     "url": "https://www.newsis.com/view/NISI20261112_0021530398"
+    }
+   ]
+  },
+  {
+   "keyword": "남대문 스카프 아저씨!",
+   "approx_traffic": "1000+",
+   "pubDate": "Wed, 11 Nov 2026 23:20:00 -0800",
+   "news": [
+    {
+     "title": "경찰 출동에 경호원까지…‘남대문 임영웅’ 뭐길래, 유명 여배우도 찾아갔다",
+     "source": "매일경제",
+     "url": "https://www.mk.co.kr/news/hot-issues/12204120"
+    },
+    {
+     "title": "남대문 스카프 아저씨, 또 일냈다…온라인몰에 16만 명 몰리고 품절",
+     "source": "동아일보",
+     "url": "https://www.donga.com/news/Society/article/all/20261112/135014534/2"
+    },
+    {
+     "title": "남대문 스카프 아저씨, 또 대박…온라인몰 열자마자 ‘품절 대란’",
+     "source": "JTBC",
+     "url": "https://news.jtbc.co.kr/article/NB12327749"
+    }
+   ]
+  },
+  {
+   "keyword": "김승우",
+   "approx_traffic": "200+",
+   "pubDate": "Wed, 11 Nov 2026 23:20:00 -0800",
+   "news": [
+    {
+     "title": "배우 김승우 2200만원 절도 혐의로 고소당해...경찰 수사 중",
+     "source": "조선일보",
+     "url": "https://www.chosun.com/national/national_general/2026/11/12/J4R4ZLVOVFGRLLGUVLXBLJIHFA/"
+    },
+    {
+     "title": "[단독] 술자리 중 지갑에서 쓱? 배우 김승우 ‘절도 혐의’ 피소",
+     "source": "일요신문",
+     "url": "https://www.ilyo.co.kr/?ac=article_view&entry_id=513574"
+    },
+    {
+     "title": "김승우, 지인 현금 2200만원 절도 혐의 피소…\"장난으로 가져갔지만 돌려줘\"",
+     "source": "뉴스1",
+     "url": "https://www.news1.kr/entertain/celebrity-topic/6352081"
+    }
+   ]
+  },
+  {
+   "keyword": "아르헨티나",
+   "approx_traffic": "200+",
+   "pubDate": "Wed, 11 Nov 2026 23:20:00 -0800",
+   "news": [
+    {
+     "title": "두 개의 아르헨티나: 유전 대박과 실직한 가장들[딥다이브]",
+     "source": "동아일보",
+     "url": "https://www.donga.com/news/Economy/article/all/20261111/135005560/1"
+    },
+    {
+     "title": "모르간스탠리, 아르헨티나 국채 매도세는 과도하다… 2027년 대선 이후 전망의 명암 : 남미동아뉴스 ; Paraguay Times",
+     "source": "뉴스케이",
+     "url": "https://newsk.net/py/?idx=175597117&bmode=view"
+    },
+    {
+     "title": "“성범죄자 56명 형기 줄이겠습니다”…우파 대통령, 역풍 제대로 맞았다",
+     "source": "매일경제",
+     "url": "https://www.mk.co.kr/news/world/12203274"
+    }
+   ]
+  },
+  {
+   "keyword": "방화",
+   "approx_traffic": "1000+",
+   "pubDate": "Wed, 11 Nov 2026 23:00:00 -0800",
+   "news": [
+    {
+     "title": "'인천 송도 영어유치원 앞 방화' 60대, 구속심사 출석",
+     "source": "연합뉴스",
+     "url": "https://www.yna.co.kr/view/AKR20261112106200065"
+    },
+    {
+     "title": "인천 송도 영어유치원 방화 60대 남성 영장심사…구속 갈림길",
+     "source": "연합뉴스TV",
+     "url": "https://www.yonhapnewstv.co.kr/news/AKR20261112154618qE0"
+    },
+    {
+     "title": "“동업 해지에 불만”…송도 어린이집에 불 지른 60대 구속영장",
+     "source": "경향신문",
+     "url": "https://www.khan.co.kr/article/202611111009011"
+    }
+   ]
+  },
+  {
+   "keyword": "근로장려금",
+   "approx_traffic": "1000+",
    "pubDate": "Wed, 11 Nov 2026 22:30:00 -0800",
    "news": [
     {
@@ -25,30 +135,8 @@
    ]
   },
   {
-   "keyword": "에버랜드",
-   "approx_traffic": "100+",
-   "pubDate": "Wed, 11 Nov 2026 22:30:00 -0800",
-   "news": [
-    {
-     "title": "[속보] \"이재명 아들 군 면제\" 허위글 이수정, 2심도 피선거권 박탈형",
-     "source": "JTBC",
-     "url": "https://news.jtbc.co.kr/article/NB12327771"
-    },
-    {
-     "title": "[단독]\"12년 만의 우승에 가전 할인\"…삼성스토어, 13일부터 할인",
-     "source": "뉴스1",
-     "url": "https://www.news1.kr/industry/general-industry/6352149"
-    },
-    {
-     "title": "“우승만 하면 된다면서요”…다년 계약 불발 구자욱·원태인, FA로 붙잡으려면 얼마?",
-     "source": "경향신문",
-     "url": "https://www.khan.co.kr/article/202611101656001"
-    }
-   ]
-  },
-  {
    "keyword": "박희승",
-   "approx_traffic": "100+",
+   "approx_traffic": "200+",
    "pubDate": "Wed, 11 Nov 2026 22:30:00 -0800",
    "news": [
     {
@@ -65,6 +153,28 @@
      "title": "[돌직구 인터뷰] 신장식 “민주당 개혁 후퇴…적대적 M&A식 합당은 거부”",
      "source": "에너지경제신문",
      "url": "https://m.ekn.kr/view.php?key=20261111020588296"
+    }
+   ]
+  },
+  {
+   "keyword": "에버랜드",
+   "approx_traffic": "200+",
+   "pubDate": "Wed, 11 Nov 2026 22:30:00 -0800",
+   "news": [
+    {
+     "title": "[속보] \"이재명 아들 군 면제\" 허위글 이수정, 2심도 피선거권 박탈형",
+     "source": "JTBC",
+     "url": "https://news.jtbc.co.kr/article/NB12327771"
+    },
+    {
+     "title": "[단독]\"12년 만의 우승에 가전 할인\"…삼성스토어, 13일부터 할인",
+     "source": "뉴스1",
+     "url": "https://www.news1.kr/industry/general-industry/6352149"
+    },
+    {
+     "title": "“우승만 하면 된다면서요”…다년 계약 불발 구자욱·원태인, FA로 붙잡으려면 얼마?",
+     "source": "경향신문",
+     "url": "https://www.khan.co.kr/article/202611101656001"
     }
    ]
   },
@@ -96,129 +206,19 @@
    "pubDate": "Wed, 11 Nov 2026 21:50:00 -0800",
    "news": [
     {
-     "title": "토스뱅크, 1000원 펀드투자 출시…이자도 자동 투자 By EBN",
-     "source": "Investing.com 한국어",
-     "url": "https://kr.investing.com/news/stock-market-news/article-2171979"
+     "title": "토스뱅크, 펀드 서비스 출시…국내외 주식·채권 등 17종 구성",
+     "source": "연합뉴스",
+     "url": "https://www.yna.co.kr/view/AKR20261112118800002"
+    },
+    {
+     "title": "토스뱅크, 통장 이자로 투자 가능한 ‘펀드 서비스’ 출시",
+     "source": "경향신문",
+     "url": "https://www.khan.co.kr/article/202611121657041"
     },
     {
      "title": "토스뱅크, 펀드 서비스 출시…“통장 이자로 펀드 모은다”",
      "source": "동아일보",
      "url": "https://www.donga.com/news/Economy/article/all/20261112/135014163/1"
-    },
-    {
-     "title": "토스뱅크, 펀드 서비스 출시…국내외 주식·채권 등 17종 구성",
-     "source": "매일경제 마켓",
-     "url": "https://stock.mk.co.kr/news/view/1196934"
-    }
-   ]
-  },
-  {
-   "keyword": "혜리",
-   "approx_traffic": "200+",
-   "pubDate": "Wed, 11 Nov 2026 21:30:00 -0800",
-   "news": [
-    {
-     "title": "[주간! 대중문화] 혜리 첫 MC 도전…베스티 ‘역주행’",
-     "source": "KBS 뉴스",
-     "url": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8709483"
-    },
-    {
-     "title": "혜리 맞아? 하루 만에 딴 사람..아방가르드 패션→고혹적 시스루 '패알못' 불명예 탈출 [핫피플]",
-     "source": "Chosunbiz",
-     "url": "https://biz.chosun.com/entertainment/enter_general/2026/11/11/GI2TAYZYG5SGCYZQGBRDONLDMU/"
-    },
-    {
-     "title": "혜리, 단발 파격 변신…미모에 카리스마까지 [N샷]",
-     "source": "뉴스1",
-     "url": "https://www.news1.kr/entertain/celebrity-topic/6350369"
-    }
-   ]
-  },
-  {
-   "keyword": "김현석",
-   "approx_traffic": "100+",
-   "pubDate": "Wed, 11 Nov 2026 21:30:00 -0800",
-   "news": [
-    {
-     "title": "K리그1 울산, 김현석 감독과 계약 연장 안 해‥시즌 끝으로 결별",
-     "source": "MBC 뉴스",
-     "url": "https://imnews.imbc.com/news/2026/sports/article/6865085_36946.html"
-    },
-    {
-     "title": "프로축구 울산, 김현석 감독과 한 시즌 만에 결별",
-     "source": "KBS 뉴스",
-     "url": "https://news.kbs.co.kr/news/view.do?ncd=8710829"
-    },
-    {
-     "title": "[오피셜] 울산 2위까지 끌어올렸는데... '미스터 울산' 김현석 감독, 올 시즌 끝으로 지휘봉 놓는다 \"예전의 영광 완전히 되찾기를\" - 머니투데이",
-     "source": "머니투데이",
-     "url": "https://www.mt.co.kr/sports/2026/11/12/2026111210254758136"
-    }
-   ]
-  },
-  {
-   "keyword": "천궁",
-   "approx_traffic": "10000+",
-   "pubDate": "Wed, 11 Nov 2026 21:00:00 -0800",
-   "news": [
-    {
-     "title": "“한국에 ‘천궁-Ⅱ 값’ 3조원 얼른 줘라”…이라크, 다급히 돈 마련한 이유 [밀리터리+]",
-     "source": "나우뉴스",
-     "url": "https://nownews.seoul.co.kr/news/newsView.php?id=20261111601017"
-    },
-    {
-     "title": "이라크 천궁Ⅱ 수출 탄력..논란이던 대금지급 해결",
-     "source": "파이낸셜뉴스",
-     "url": "https://www.fnnews.com/news/202611111614111177"
-    },
-    {
-     "title": "파기 위기 넘긴 천궁-2 계약…이라크 자금 지시로 정상 궤도",
-     "source": "글로벌이코노믹",
-     "url": "https://www.g-enews.com/article/Global-Biz/2026/11/202611110618593400fbbec65dfb_1"
-    }
-   ]
-  },
-  {
-   "keyword": "현대엔지니어링",
-   "approx_traffic": "200+",
-   "pubDate": "Wed, 11 Nov 2026 21:00:00 -0800",
-   "news": [
-    {
-     "title": "현대ENG 조경 특화 상품 2종, 디자인 어워드 잇단 수상",
-     "source": "뉴시스",
-     "url": "https://www.newsis.com/view/NISX20261112_0003865313"
-    },
-    {
-     "title": "오른디자인·더한크리에이티브·에코피스, 우수디자인 국내·외 '호평'",
-     "source": "전자신문",
-     "url": "https://www.etnews.com/20261111000199"
-    },
-    {
-     "title": "현대엔지니어링, K-디자인 어워드·대한민국색채대상 수상",
-     "source": "뉴스1",
-     "url": "https://www.news1.kr/realestate/general/6351746"
-    }
-   ]
-  },
-  {
-   "keyword": "sk쉴더스",
-   "approx_traffic": "200+",
-   "pubDate": "Wed, 11 Nov 2026 20:30:00 -0800",
-   "news": [
-    {
-     "title": "SK쉴더스, 희망퇴직 실시…조직·인력 재정비",
-     "source": "뉴시스",
-     "url": "https://www.newsis.com/view/NISX20261111_0003864432"
-    },
-    {
-     "title": "SK쉴더스 희망퇴직 실시…영업·출동·사이버보안 직군 제외",
-     "source": "디지털데일리",
-     "url": "https://www.ddaily.co.kr/page/view/2026111114433387778"
-    },
-    {
-     "title": "SK쉴더스, 조직·인력 재정비 착수…희망퇴직 실시",
-     "source": "블로터",
-     "url": "https://www.bloter.net/news/articleView.html?idxno=678366"
     }
    ]
   }
@@ -227,324 +227,84 @@
   {
    "rank": 1,
    "keyword": "한전 3분기 실적",
-   "state": "n"
+   "state": "+"
   },
   {
    "rank": 2,
-   "keyword": "김승우, 2200만원 절도 혐의 피소",
+   "keyword": "김승우, 절도 피소 변제",
    "state": "n"
   },
   {
    "rank": 3,
-   "keyword": "젠슨 황 해임 위기",
+   "keyword": "젠슨 황 해임 위기 및 스캔들",
    "state": "n"
   },
   {
    "rank": 4,
-   "keyword": "에이티즈 산 꿈 같은 나날 보내고 있다",
+   "keyword": "충청권 메가프로젝트 추가 투자",
    "state": "n"
   },
   {
    "rank": 5,
-   "keyword": "외국인 2천만명 돌파",
+   "keyword": "폭설 김윤석 구교환 연기 짜릿해",
    "state": "n"
   },
   {
    "rank": 6,
-   "keyword": "스마트글래스",
-   "state": "-"
+   "keyword": "이부진",
+   "state": "n"
   },
   {
    "rank": 7,
-   "keyword": "조현 장관 방중 회담",
-   "state": "-"
+   "keyword": "고려아연 주총 결의 취소",
+   "state": "n"
   },
   {
    "rank": 8,
-   "keyword": "한국 야구, APBC서 호주에 패배",
+   "keyword": "건보공단 특사경 반대",
    "state": "n"
   },
   {
    "rank": 9,
-   "keyword": "투자신탁",
+   "keyword": "남대문 스카프 아저씨!",
    "state": "-"
   },
   {
    "rank": 10,
-   "keyword": "CPTPP 농업 협의체",
+   "keyword": "한국, APBC 첫 경기서 호주에 패배",
    "state": "n"
   }
  ],
  "naver_most_viewed": [
   {
-   "press": "중앙일보",
+   "press": "KBS",
    "rank": 1,
-   "title": "“모두가 조롱”…‘젠슨 황 불륜’ 반년 전 경고한 31세 투자자 정체",
-   "url": "https://n.news.naver.com/article/025/0003564661?ntype=RANKING"
+   "title": "경기 오산시 원룸서 비닐에 싸인 시신 발견…경찰 수사 중",
+   "url": "https://n.news.naver.com/article/056/0012292601?ntype=RANKING"
   },
   {
-   "press": "중앙일보",
+   "press": "KBS",
    "rank": 2,
-   "title": "“이재명 아들 군 면제” 허위글 이수정, 2심도 피선거권 박탈형",
-   "url": "https://n.news.naver.com/article/025/0003564755?ntype=RANKING"
+   "title": "젠슨 황 후계자로 애플 스루지 거론…CFO가 임시수장 맡을 듯",
+   "url": "https://n.news.naver.com/article/056/0012292514?ntype=RANKING"
   },
   {
-   "press": "중앙일보",
+   "press": "KBS",
    "rank": 3,
-   "title": "아내에 ‘김치 싸대기’ 맞은 젠슨황…‘굴욕 영상’ 더 뼈아픈 이유",
-   "url": "https://n.news.naver.com/article/025/0003564709?ntype=RANKING"
+   "title": "서울 충정로역 주변에서 택시 인도 돌진…보행자 등 6명 경상",
+   "url": "https://n.news.naver.com/article/056/0012292629?ntype=RANKING"
   },
   {
-   "press": "중앙일보",
+   "press": "KBS",
    "rank": 4,
-   "title": "“尹, 듣도보도 못한 욕 쏟아냈다”…뒤끝 폭발한 유승민 사건",
-   "url": "https://n.news.naver.com/article/025/0003564747?ntype=RANKING"
+   "title": "“이재명 아들 군면제” 허위글 이수정 2심도 벌금 300만 원",
+   "url": "https://n.news.naver.com/article/056/0012292630?ntype=RANKING"
   },
   {
-   "press": "중앙일보",
+   "press": "KBS",
    "rank": 5,
-   "title": "李대통령·이재용 빵 터졌다…착공식 웃음바다 만든 대학생 한마디",
-   "url": "https://n.news.naver.com/article/025/0003564752?ntype=RANKING"
-  },
-  {
-   "press": "한국일보",
-   "rank": 1,
-   "title": "'이재명 아들 군 면제' 허위 글 이수정, 2심도 벌금형… 확정 시 5년 출마 불가",
-   "url": "https://n.news.naver.com/article/469/0000965217?ntype=RANKING"
-  },
-  {
-   "press": "한국일보",
-   "rank": 2,
-   "title": "[단독] \"타운하우스 살며 고급차 수시로 바뀌어\"… 성북구 살인 피의자 가족의 수상한 생활",
-   "url": "https://n.news.naver.com/article/469/0000965165?ntype=RANKING"
-  },
-  {
-   "press": "한국일보",
-   "rank": 3,
-   "title": "[속보] 시흥 아파트서 40대 어머니와 10대 두 아들 숨진 채 발견… \"흉기 상처\"",
-   "url": "https://n.news.naver.com/article/469/0000965144?ntype=RANKING"
-  },
-  {
-   "press": "한국일보",
-   "rank": 4,
-   "title": "\"北동영 장관\" 한마디에 아수라장… '탈북민' 명칭 두고 조롱 오간 국회 외통위",
-   "url": "https://n.news.naver.com/article/469/0000965191?ntype=RANKING"
-  },
-  {
-   "press": "한국일보",
-   "rank": 5,
-   "title": "\"트럼프, 한국보다 북한 더 존중\"… 한국계 美 당선자 직격",
-   "url": "https://n.news.naver.com/article/469/0000965115?ntype=RANKING"
-  },
-  {
-   "press": "연합뉴스TV",
-   "rank": 1,
-   "title": "\"강아지 옷 벗겨달라 말 못하겠더라\"…'오배송 택배' 감동 사연",
-   "url": "https://n.news.naver.com/article/422/0000925492?ntype=RANKING"
-  },
-  {
-   "press": "연합뉴스TV",
-   "rank": 2,
-   "title": "'남대문 스카프 아저씨', 온라인 매장도 품절…\"이게 뭔 일이여\"",
-   "url": "https://n.news.naver.com/article/422/0000925416?ntype=RANKING"
-  },
-  {
-   "press": "연합뉴스TV",
-   "rank": 3,
-   "title": "84년 아닌 77년생?…'앨리스 황 추정' 사진·지인 진술 확산",
-   "url": "https://n.news.naver.com/article/422/0000925484?ntype=RANKING"
-  },
-  {
-   "press": "연합뉴스TV",
-   "rank": 4,
-   "title": "젠슨황 후임에 애플 스루지 거론…임시수장은 CFO가 맡을 듯",
-   "url": "https://n.news.naver.com/article/422/0000925485?ntype=RANKING"
-  },
-  {
-   "press": "연합뉴스TV",
-   "rank": 5,
-   "title": "화장실 전등 커버 속 웬 휴대전화?…몰카 우체국 사무장 '해임 정당'",
-   "url": "https://n.news.naver.com/article/422/0000925365?ntype=RANKING"
-  },
-  {
-   "press": "JTBC",
-   "rank": 1,
-   "title": "\"이재명 두 아들 군 면제\" 허위글...이수정 2심도 '피선거권 박탈형'",
-   "url": "https://n.news.naver.com/article/437/0000520423?ntype=RANKING"
-  },
-  {
-   "press": "JTBC",
-   "rank": 2,
-   "title": "\"윗집이 쿵쿵쿵\" 112 신고, 현장 가보니…'층간소음'이 사람 살렸다",
-   "url": "https://n.news.naver.com/article/437/0000520256?ntype=RANKING"
-  },
-  {
-   "press": "JTBC",
-   "rank": 3,
-   "title": "머스크까지 나서 젠슨 황 옹호…\"미국에게 재앙, 중국에는 선물될 것\"",
-   "url": "https://n.news.naver.com/article/437/0000520404?ntype=RANKING"
-  },
-  {
-   "press": "JTBC",
-   "rank": 4,
-   "title": "사라진 젠슨 황 불륜 상대 앨리스 황…\"중국 인지 하에 베이징에 있다\"",
-   "url": "https://n.news.naver.com/article/437/0000520387?ntype=RANKING"
-  },
-  {
-   "press": "JTBC",
-   "rank": 5,
-   "title": "코에 떨어진 새똥, 알고 보니 5억짜리 행운이었다",
-   "url": "https://n.news.naver.com/article/437/0000520414?ntype=RANKING"
-  },
-  {
-   "press": "이데일리",
-   "rank": 1,
-   "title": "5억 팔찌·코트 740만원...젠슨황의 불륜녀 '명품' 옷장 떠들썩",
-   "url": "https://n.news.naver.com/article/018/0006408594?ntype=RANKING"
-  },
-  {
-   "press": "이데일리",
-   "rank": 2,
-   "title": "“옥수동 래미안 한 달도 안 돼 4.8억 낮게 팔렸다”…기흥·영통은 급등",
-   "url": "https://n.news.naver.com/article/018/0006408884?ntype=RANKING"
-  },
-  {
-   "press": "이데일리",
-   "rank": 3,
-   "title": "“7억 영끌로 산 아파트에 한숨 쉬더니”…판교 부부, 4년 뒤 반전?",
-   "url": "https://n.news.naver.com/article/018/0006408839?ntype=RANKING"
-  },
-  {
-   "press": "이데일리",
-   "rank": 4,
-   "title": "\"공매도, 또 너냐?\"…'반토막' 삼전닉스 반등 확률 90% 까닭",
-   "url": "https://n.news.naver.com/article/018/0006408593?ntype=RANKING"
-  },
-  {
-   "press": "이데일리",
-   "rank": 5,
-   "title": "“이게 뭔 일이여”…남대문 스카프 아저씨, 온라인몰 열자 벌어진 일",
-   "url": "https://n.news.naver.com/article/018/0006408864?ntype=RANKING"
-  },
-  {
-   "press": "SBS",
-   "rank": 1,
-   "title": "\"이재명 아들 군 면제\" 허위글 이수정 교수, 2심도 벌금 300만 원",
-   "url": "https://n.news.naver.com/article/055/0001402549?ntype=RANKING"
-  },
-  {
-   "press": "SBS",
-   "rank": 2,
-   "title": "숨진 채 발견된 10대…집 안엔 어머니·동생 숨져 있었다",
-   "url": "https://n.news.naver.com/article/055/0001402478?ntype=RANKING"
-  },
-  {
-   "press": "SBS",
-   "rank": 3,
-   "title": "아동학대 경찰 신고까지…민속촌 '귀신 참교육' 종료한다",
-   "url": "https://n.news.naver.com/article/055/0001402509?ntype=RANKING"
-  },
-  {
-   "press": "SBS",
-   "rank": 4,
-   "title": "\"젠슨 황 불륜\" 경고했다 '조롱'…31살 투자자 반년 뒤 반전",
-   "url": "https://n.news.naver.com/article/055/0001402472?ntype=RANKING"
-  },
-  {
-   "press": "SBS",
-   "rank": 5,
-   "title": "머스크, '해임 위기' 젠슨 황 영입 요청에 \"영광일 것\"",
-   "url": "https://n.news.naver.com/article/055/0001402507?ntype=RANKING"
-  },
-  {
-   "press": "한겨레21",
-   "rank": 1,
-   "title": "무책임이 망가뜨린 공론장",
-   "url": "https://n.news.naver.com/article/036/0000054442?ntype=RANKING"
-  },
-  {
-   "press": "한겨레21",
-   "rank": 2,
-   "title": "이 대통령의 위험한 말, 전략도 섬세함도 사라졌다",
-   "url": "https://n.news.naver.com/article/036/0000054437?ntype=RANKING"
-  },
-  {
-   "press": "한겨레21",
-   "rank": 3,
-   "title": "최초가 꼭 각별해야 하는 건 아니다",
-   "url": "https://n.news.naver.com/article/036/0000054441?ntype=RANKING"
-  },
-  {
-   "press": "한겨레21",
-   "rank": 4,
-   "title": "경찰 부실 수사, 무엇으로 견제할 것인가",
-   "url": "https://n.news.naver.com/article/036/0000054440?ntype=RANKING"
-  },
-  {
-   "press": "한겨레21",
-   "rank": 5,
-   "title": "끊임없이 구분하고 배제… 그들을 위한 나라는 없다",
-   "url": "https://n.news.naver.com/article/036/0000054439?ntype=RANKING"
-  },
-  {
-   "press": "한국경제",
-   "rank": 1,
-   "title": "이부진, 3년 전 '그 옷' 또 입었다…지수와 나란히 등장",
-   "url": "https://n.news.naver.com/article/015/0005353143?ntype=RANKING"
-  },
-  {
-   "press": "한국경제",
-   "rank": 2,
-   "title": "남대문 스카프 아저씨, 또 일냈다…온라인몰 열자마자 '품절'",
-   "url": "https://n.news.naver.com/article/015/0005353118?ntype=RANKING"
-  },
-  {
-   "press": "한국경제",
-   "rank": 3,
-   "title": "자고 일어났더니 돈방석…\"50년 만에 대박날 줄은 몰랐다\"",
-   "url": "https://n.news.naver.com/article/015/0005353120?ntype=RANKING"
-  },
-  {
-   "press": "한국경제",
-   "rank": 4,
-   "title": "\"머스크 보고 있나\"…4억짜리 하늘 나는 車, 7000명 몰렸다 [차이나 워치]",
-   "url": "https://n.news.naver.com/article/015/0005353176?ntype=RANKING"
-  },
-  {
-   "press": "한국경제",
-   "rank": 5,
-   "title": "\"매일 기름 앞에서 고생하면 뭐하나\"…치킨집 사장님 '분통' [이슈+]",
-   "url": "https://n.news.naver.com/article/015/0005353122?ntype=RANKING"
-  },
-  {
-   "press": "한겨레",
-   "rank": 1,
-   "title": "“앨리스 황, 지금 베이징에 있다…중국 당국도 인지”…블룸버그 보도",
-   "url": "https://n.news.naver.com/article/028/0002831875?ntype=RANKING"
-  },
-  {
-   "press": "한겨레",
-   "rank": 2,
-   "title": "“가던 길 가세요” 정청래에…박지원 “싸우자는 거냐”",
-   "url": "https://n.news.naver.com/article/028/0002831847?ntype=RANKING"
-  },
-  {
-   "press": "한겨레",
-   "rank": 3,
-   "title": "우원식 “조희대, ‘구속기간 만료’로 한덕수 석방된다면 반드시 책임져야”",
-   "url": "https://n.news.naver.com/article/028/0002831883?ntype=RANKING"
-  },
-  {
-   "press": "한겨레",
-   "rank": 4,
-   "title": "구조 넉 달 만에…강릉 돌고래 ‘안목이’ 제주 바다로 돌아갔다",
-   "url": "https://n.news.naver.com/article/028/0002831865?ntype=RANKING"
-  },
-  {
-   "press": "한겨레",
-   "rank": 5,
-   "title": "미 ‘경제 투톱’ 잰슨황 스캔들 충돌…“AI칩 수출 제재 왜 안 했냐”",
-   "url": "https://n.news.naver.com/article/028/0002831867?ntype=RANKING"
+   "title": "충청권 메가프로젝트 첫 삽…이 대통령 “실행 중요” 이재용 “책임감”",
+   "url": "https://n.news.naver.com/article/056/0012292636?ntype=RANKING"
   },
   {
    "press": "국민일보",
@@ -561,860 +321,20 @@
   {
    "press": "국민일보",
    "rank": 3,
+   "title": "‘젠슨황 불륜’ 6개월 전부터 경고…“불편할 정도로 가까워”",
+   "url": "https://n.news.naver.com/article/005/0001884773?ntype=RANKING"
+  },
+  {
+   "press": "국민일보",
+   "rank": 4,
    "title": "‘젠슨 황 사내 불륜설’ 킴벌리 파월 누구?…‘기혼’ ‘자녀 2명’ ‘부사장’",
    "url": "https://n.news.naver.com/article/005/0001884744?ntype=RANKING"
   },
   {
    "press": "국민일보",
-   "rank": 4,
-   "title": "젠슨 황, 사내 임원과도 불륜 의혹…엔비디아 이사회, 해임 회의 소집",
-   "url": "https://n.news.naver.com/article/005/0001884670?ntype=RANKING"
-  },
-  {
-   "press": "국민일보",
    "rank": 5,
-   "title": "“미친 대출 규제”…‘빚내서 집 사라’던 최경환, 李정부 부동산 정책 맹비판",
-   "url": "https://n.news.naver.com/article/005/0001884568?ntype=RANKING"
-  },
-  {
-   "press": "뉴스1",
-   "rank": 1,
-   "title": "\"평균 30점인데 100점\"…너무 잘 본 세무사 수석에 'AI 안경' 의혹 제기",
-   "url": "https://n.news.naver.com/article/421/0009285462?ntype=RANKING"
-  },
-  {
-   "press": "뉴스1",
-   "rank": 2,
-   "title": "젠슨황 후임은…예측시장 '벅 부사장' 1위, 이사회 '크레스 CFO' 거론",
-   "url": "https://n.news.naver.com/article/421/0009285874?ntype=RANKING"
-  },
-  {
-   "press": "뉴스1",
-   "rank": 3,
-   "title": "이부진·블핑 지수, 디올 CEO 학위수여식서 '우정 패션' 눈길",
-   "url": "https://n.news.naver.com/article/421/0009285589?ntype=RANKING"
-  },
-  {
-   "press": "뉴스1",
-   "rank": 4,
-   "title": "'1800조짜리 스캔들'…젠슨 황 퇴진시 엔비디아 기업가치 추락 계산",
-   "url": "https://n.news.naver.com/article/421/0009285731?ntype=RANKING"
-  },
-  {
-   "press": "뉴스1",
-   "rank": 5,
-   "title": "日 항공·숙박 합쳐 60만원 vs 韓 약값만 90만원…'스시자로' 쇼핑 뜬다",
-   "url": "https://n.news.naver.com/article/421/0009285350?ntype=RANKING"
-  },
-  {
-   "press": "KBS",
-   "rank": 1,
-   "title": "젠슨 황 후계자로 애플 스루지 거론…CFO가 임시수장 맡을 듯",
-   "url": "https://n.news.naver.com/article/056/0012292514?ntype=RANKING"
-  },
-  {
-   "press": "KBS",
-   "rank": 2,
-   "title": "9월까지 나라살림 적자 32조, 8년만 최소…“반도체 호황 덕”",
-   "url": "https://n.news.naver.com/article/056/0012292523?ntype=RANKING"
-  },
-  {
-   "press": "KBS",
-   "rank": 3,
-   "title": "충청권 메가프로젝트 첫 삽…이 대통령 “지역·국민 삶 바꾸는 모두의 성장”",
-   "url": "https://n.news.naver.com/article/056/0012292460?ntype=RANKING"
-  },
-  {
-   "press": "KBS",
-   "rank": 4,
-   "title": "아기들 얼굴 텀블러로 가격…어린이집서 “50일 간 530번 넘게 학대”",
-   "url": "https://n.news.naver.com/article/056/0012292204?ntype=RANKING"
-  },
-  {
-   "press": "KBS",
-   "rank": 5,
-   "title": "사생활 새나가는 홈캠…10대 중 3대 해킹 무방비",
-   "url": "https://n.news.naver.com/article/056/0012292465?ntype=RANKING"
-  },
-  {
-   "press": "동아일보",
-   "rank": 1,
-   "title": "“행방묘연 젠슨 황 불륜女, 베이징 거주…中보안당국 소재 파악”",
-   "url": "https://n.news.naver.com/article/020/0003761993?ntype=RANKING"
-  },
-  {
-   "press": "동아일보",
-   "rank": 2,
-   "title": "아파트 단지엔 10대 아들, 집안선 엄마-동생 숨진채 발견",
-   "url": "https://n.news.naver.com/article/020/0003761968?ntype=RANKING"
-  },
-  {
-   "press": "동아일보",
-   "rank": 3,
-   "title": "“윗집서 쿵쿵” 신고에 출동…화장실 갇힌 80대 SOS 신호였다",
-   "url": "https://n.news.naver.com/article/020/0003762004?ntype=RANKING"
-  },
-  {
-   "press": "동아일보",
-   "rank": 4,
-   "title": "李대통령·이재용도 빵 터진…여대생의 ‘한마디’",
-   "url": "https://n.news.naver.com/article/020/0003762026?ntype=RANKING"
-  },
-  {
-   "press": "동아일보",
-   "rank": 5,
-   "title": "아들의 성폭행 피해자 여중생 살해한 부친",
-   "url": "https://n.news.naver.com/article/020/0003761916?ntype=RANKING"
-  },
-  {
-   "press": "헬스조선",
-   "rank": 1,
-   "title": "“아침마다 누룽지 끓여 먹었더니”… 당뇨병 환자 깜짝 놀랄 ‘혈당지수 72’의 반전",
-   "url": "https://n.news.naver.com/article/346/0000118768?ntype=RANKING"
-  },
-  {
-   "press": "헬스조선",
-   "rank": 2,
-   "title": "“무조건 살 빠진다” 31kg 감량 김빈우, 9년째 공복에 꼭 한 것… 뭐야?",
-   "url": "https://n.news.naver.com/article/346/0000118782?ntype=RANKING"
-  },
-  {
-   "press": "헬스조선",
-   "rank": 3,
-   "title": "“식후혈당 덜 오른다” 윤현숙이 빵보다 먼저 먹는 음식, 뭘까?",
-   "url": "https://n.news.naver.com/article/346/0000118789?ntype=RANKING"
-  },
-  {
-   "press": "헬스조선",
-   "rank": 4,
-   "title": "“탄 것 발라내고 살만 먹어라”… ‘숯덩이 고등어’ 내놓은 식당, 이게 맞나?",
-   "url": "https://n.news.naver.com/article/346/0000118794?ntype=RANKING"
-  },
-  {
-   "press": "헬스조선",
-   "rank": 5,
-   "title": "“3000원으로 지키는 췌장 건강”… ‘설포라판’ 풍부해 암 막아주는 브로콜리",
-   "url": "https://n.news.naver.com/article/346/0000118769?ntype=RANKING"
-  },
-  {
-   "press": "헤럴드경제",
-   "rank": 1,
-   "title": "“딸 둘의 아빠, 44세…사람 빼고 다 팔았다” 남대문 스카프 아저씨 라이브 켰다",
-   "url": "https://n.news.naver.com/article/016/0002722682?ntype=RANKING"
-  },
-  {
-   "press": "헤럴드경제",
-   "rank": 2,
-   "title": "[단독] 삼성전자 퇴사 3일 전 공용 PC로 국가핵심전략기술 빼돌렸다…산학협력까지 덮친 기술유출 [세상&]",
-   "url": "https://n.news.naver.com/article/016/0002722461?ntype=RANKING"
-  },
-  {
-   "press": "헤럴드경제",
-   "rank": 3,
-   "title": "“‘불닭’ 팔아 해외서만 6600억 벌더니 결국”…삼양식품, 2200억 들여 베트남 진출",
-   "url": "https://n.news.naver.com/article/016/0002722352?ntype=RANKING"
-  },
-  {
-   "press": "헤럴드경제",
-   "rank": 4,
-   "title": "젠슨 황 후계자로 애플 스루지 거론…임시수장은 CFO가 유력 거론",
-   "url": "https://n.news.naver.com/article/016/0002722692?ntype=RANKING"
-  },
-  {
-   "press": "헤럴드경제",
-   "rank": 5,
-   "title": "[단독] 장윤기가 부른 강제 순환근무 경정급부터 전면 시행…100억 월세 지원 예산 확대 추진 [세상&]",
-   "url": "https://n.news.naver.com/article/016/0002722698?ntype=RANKING"
-  },
-  {
-   "press": "YTN",
-   "rank": 1,
-   "title": "[단독] \"엄마, 난 아직 17번의 여름도 보지 못했어\"...소녀의 마지막 편지",
-   "url": "https://n.news.naver.com/article/052/0002431896?ntype=RANKING"
-  },
-  {
-   "press": "YTN",
-   "rank": 2,
-   "title": "'70명 부상' 출근길 분당 버스 사고...기사 입건 예정",
-   "url": "https://n.news.naver.com/article/052/0002431850?ntype=RANKING"
-  },
-  {
-   "press": "YTN",
-   "rank": 3,
-   "title": "횡성 전기차 돌진 운전자 \"페달 오조작\" 인정...과실치사상 혐의 적용",
-   "url": "https://n.news.naver.com/article/052/0002431830?ntype=RANKING"
-  },
-  {
-   "press": "YTN",
-   "rank": 4,
-   "title": "'해임 위기' 젠슨 황 감싸는 머스크...\"영입한다면 영광\"",
-   "url": "https://n.news.naver.com/article/052/0002431859?ntype=RANKING"
-  },
-  {
-   "press": "YTN",
-   "rank": 5,
-   "title": "'李대통령 아들 병역면제' 허위글 쓴 이수정 2심도 벌금 300만원",
-   "url": "https://n.news.naver.com/article/052/0002431912?ntype=RANKING"
-  },
-  {
-   "press": "매일경제",
-   "rank": 1,
-   "title": "‘국대 미녀’ 김태희, ‘살쪘다’는 외모 악플에 한 행동",
-   "url": "https://n.news.naver.com/article/009/0005762492?ntype=RANKING"
-  },
-  {
-   "press": "매일경제",
-   "rank": 2,
-   "title": "‘삼성전자 후광’도 무색…평택 고덕신도시, 대규모 청약 미달",
-   "url": "https://n.news.naver.com/article/009/0005762616?ntype=RANKING"
-  },
-  {
-   "press": "매일경제",
-   "rank": 3,
-   "title": "[속보] “이재명 아들 군 면제” 허위글 이수정, 2심도 피선거권 박탈형",
-   "url": "https://n.news.naver.com/article/009/0005762766?ntype=RANKING"
-  },
-  {
-   "press": "매일경제",
-   "rank": 4,
-   "title": "[속보] 서울 집값 92주째 상승…강남3구 하락세, 성동·강동으로 번졌다",
-   "url": "https://n.news.naver.com/article/009/0005762732?ntype=RANKING"
-  },
-  {
-   "press": "매일경제",
-   "rank": 5,
-   "title": "[단독] 대한항공 ‘알짜’ 기내식 사업 결국 복수체제로...‘30년 계약’에 발묶여",
-   "url": "https://n.news.naver.com/article/009/0005762702?ntype=RANKING"
-  },
-  {
-   "press": "MBC",
-   "rank": 1,
-   "title": "'사내 불륜' 추가 폭로‥오늘 해임 가능성",
-   "url": "https://n.news.naver.com/article/214/0001535141?ntype=RANKING"
-  },
-  {
-   "press": "MBC",
-   "rank": 2,
-   "title": "나경원 \"당나라 군대냐\" 지적에 강신철 \"말씀 취소하라\" 반발",
-   "url": "https://n.news.naver.com/article/214/0001535080?ntype=RANKING"
-  },
-  {
-   "press": "MBC",
-   "rank": 3,
-   "title": "\"양평고속도로 관련 인수위 연락 없었다\" 진술 번복",
-   "url": "https://n.news.naver.com/article/214/0001535175?ntype=RANKING"
-  },
-  {
-   "press": "MBC",
-   "rank": 4,
-   "title": "\"배터리!\" 외친 순간 '대폭발' 화재 전 과정 '홈캠 공개' 미국도 난리",
-   "url": "https://n.news.naver.com/article/214/0001535165?ntype=RANKING"
-  },
-  {
-   "press": "MBC",
-   "rank": 5,
-   "title": "박충권, 정동영 향해 \"북동영\" 부르자 與 \"탈충권\" 맞불",
-   "url": "https://n.news.naver.com/article/214/0001535163?ntype=RANKING"
-  },
-  {
-   "press": "노컷뉴스",
-   "rank": 1,
-   "title": "[속보] 210L 봉투 안에서 일용직노동자 숨진 채 발견…경찰 수사",
-   "url": "https://n.news.naver.com/article/079/0004209179?ntype=RANKING"
-  },
-  {
-   "press": "노컷뉴스",
-   "rank": 2,
-   "title": "앞뒤 바퀴 잘못 장착한 BYD, 민원 쏟아지자 뒤늦게 사과",
-   "url": "https://n.news.naver.com/article/079/0004209068?ntype=RANKING"
-  },
-  {
-   "press": "노컷뉴스",
-   "rank": 3,
-   "title": "[단독] 성북구 10대 살해, 前 연인 범죄 은폐 목적 가능성",
-   "url": "https://n.news.naver.com/article/079/0004208889?ntype=RANKING"
-  },
-  {
-   "press": "노컷뉴스",
-   "rank": 4,
-   "title": "[단독] \"대통령이 대법관 골라선 안 돼\"…국힘, 헌재에 판례 변경 요구",
-   "url": "https://n.news.naver.com/article/079/0004209120?ntype=RANKING"
-  },
-  {
-   "press": "노컷뉴스",
-   "rank": 5,
-   "title": "\"젠슨 황, 엔비디아 직속 임원과도 혼외 관계\" 추가 의혹 나왔다[영상]",
-   "url": "https://n.news.naver.com/article/079/0004208922?ntype=RANKING"
-  },
-  {
-   "press": "연합뉴스",
-   "rank": 1,
-   "title": "'젠슨 황 불륜설' 킴벌리 파월…'CEO 직보' 임원 60명 중 1명",
-   "url": "https://n.news.naver.com/article/001/0016438230?ntype=RANKING"
-  },
-  {
-   "press": "연합뉴스",
-   "rank": 2,
-   "title": "젠슨 황 후계자로 애플 스루지 거론…CFO가 임시수장 맡을 듯",
-   "url": "https://n.news.naver.com/article/001/0016438451?ntype=RANKING"
-  },
-  {
-   "press": "연합뉴스",
-   "rank": 3,
-   "title": "\"인수위 연락없었다\" 양평고속道 핵심진술 뒤집혀…윗선 못밝히나",
-   "url": "https://n.news.naver.com/article/001/0016438319?ntype=RANKING"
-  },
-  {
-   "press": "연합뉴스",
-   "rank": 4,
-   "title": "[속보] \"이재명 아들 군 면제\" 허위글 이수정, 2심도 피선거권 박탈형",
-   "url": "https://n.news.naver.com/article/001/0016438621?ntype=RANKING"
-  },
-  {
-   "press": "연합뉴스",
-   "rank": 5,
-   "title": "금요일부터 주말까지 비…6년 만에 '수능한파' 전망",
-   "url": "https://n.news.naver.com/article/001/0016438153?ntype=RANKING"
-  },
-  {
-   "press": "서울신문",
-   "rank": 1,
-   "title": "태극기 걸고 “대환영” 난리난 日…“잘해줄게요” 한국인 모시기 열풍 [포착]",
-   "url": "https://n.news.naver.com/article/081/0003698710?ntype=RANKING"
-  },
-  {
-   "press": "서울신문",
-   "rank": 2,
-   "title": "[포착] 173㎝ 키도 똑같아…SNS서 발견한 女 20년 전 헤어진 쌍둥이였다",
-   "url": "https://n.news.naver.com/article/081/0003698720?ntype=RANKING"
-  },
-  {
-   "press": "서울신문",
-   "rank": 3,
-   "title": "잘못 배달된 택배, 강아지에 입혀버린 국가유공자 할아버지…따뜻한 결말 [사연잇슈]",
-   "url": "https://n.news.naver.com/article/081/0003698685?ntype=RANKING"
-  },
-  {
-   "press": "서울신문",
-   "rank": 4,
-   "title": "한인 마사지업소서 나체 상태 여성 흉기에 찔려 숨진 채 발견… 50대 흑인 남성, 뉴욕경찰에 체포",
-   "url": "https://n.news.naver.com/article/081/0003698725?ntype=RANKING"
-  },
-  {
-   "press": "서울신문",
-   "rank": 5,
-   "title": "“13억 아파트 7억 영끌” 허덕이던 신혼부부 반전…집값 25% 뛰었다는 ‘이곳’",
-   "url": "https://n.news.naver.com/article/081/0003698731?ntype=RANKING"
-  },
-  {
-   "press": "시사저널",
-   "rank": 1,
-   "title": "AI 황제에서 '불륜의 제왕'으로…젠슨 황, 엔비디아서 쫓겨나나",
-   "url": "https://n.news.naver.com/article/586/0000142107?ntype=RANKING"
-  },
-  {
-   "press": "시사저널",
-   "rank": 2,
-   "title": "'성북구 피살' 15세 청소년, 사건 전 쉼터에서 실종신고 했다",
-   "url": "https://n.news.naver.com/article/586/0000142119?ntype=RANKING"
-  },
-  {
-   "press": "시사저널",
-   "rank": 3,
-   "title": "박충권, 정동영에 \"왜 나를 북향민으로 불러도 되나…북동영 장관\"",
-   "url": "https://n.news.naver.com/article/586/0000142133?ntype=RANKING"
-  },
-  {
-   "press": "시사저널",
-   "rank": 4,
-   "title": "디올 CEO 이대 학위 수여식…이부진·정의선·신동빈 등 총출동",
-   "url": "https://n.news.naver.com/article/586/0000142140?ntype=RANKING"
-  },
-  {
-   "press": "시사저널",
-   "rank": 5,
-   "title": "'오·장 연대' 무산? 장동혁, '한동훈 복당' 꺼낸 오세훈에 \"패륜 정치 받아들이자는 건가\"",
-   "url": "https://n.news.naver.com/article/586/0000142141?ntype=RANKING"
-  },
-  {
-   "press": "대전일보",
-   "rank": 1,
-   "title": "이 대통령 \"국내 자본시장 여전히 저평가… 코스닥 육성 박차\"",
-   "url": "https://n.news.naver.com/article/656/0000192230?ntype=RANKING"
-  },
-  {
-   "press": "대전일보",
-   "rank": 2,
-   "title": "대전 전세사기 피해 4600건 넘었다… 서울·경기 이어 전국 세 번째",
-   "url": "https://n.news.naver.com/article/656/0000192186?ntype=RANKING"
-  },
-  {
-   "press": "대전일보",
-   "rank": 3,
-   "title": "이재용 회장 \"삼성 온양캠퍼스, AI반도체 심장 최첨단 HBM 거점 변모할 것\"",
-   "url": "https://n.news.naver.com/article/656/0000192197?ntype=RANKING"
-  },
-  {
-   "press": "대전일보",
-   "rank": 4,
-   "title": "태안 격렬비열도 해상서 4.3m 밍크고래 잡혀… 3200만 원 낙찰",
-   "url": "https://n.news.naver.com/article/656/0000192207?ntype=RANKING"
-  },
-  {
-   "press": "대전일보",
-   "rank": 5,
-   "title": "李 대통령 \"충청권 메가프로젝트, 112개 기업 23조 원 추가 투자 예정\" 밝혀",
-   "url": "https://n.news.naver.com/article/656/0000192203?ntype=RANKING"
-  },
-  {
-   "press": "MBN",
-   "rank": 1,
-   "title": "이 대통령과 나란히 첫 삽 뜬 이재용…안경 벗은 모습 '눈길'",
-   "url": "https://n.news.naver.com/article/057/0001977878?ntype=RANKING"
-  },
-  {
-   "press": "MBN",
-   "rank": 2,
-   "title": "\"AI 안경 쓴 거 아니냐\"…세무사 수석 '만점'에 현직자들도 '술렁'",
-   "url": "https://n.news.naver.com/article/057/0001977895?ntype=RANKING"
-  },
-  {
-   "press": "MBN",
-   "rank": 3,
-   "title": "20대 미화원 사망에 \"누가 발판 타랬나\"…도의원 발언 논란",
-   "url": "https://n.news.naver.com/article/057/0001977861?ntype=RANKING"
-  },
-  {
-   "press": "MBN",
-   "rank": 4,
-   "title": "'조작기소 특검' 통과 \"잘된 일\" 41%…\"잘못된 일\" 39% [NBS]",
-   "url": "https://n.news.naver.com/article/057/0001977890?ntype=RANKING"
-  },
-  {
-   "press": "MBN",
-   "rank": 5,
-   "title": "머스크, '해임 위기' 젠슨황에 러브콜?…\"그를 영입해줘\" 제안에",
-   "url": "https://n.news.naver.com/article/057/0001977874?ntype=RANKING"
-  },
-  {
-   "press": "경향신문",
-   "rank": 1,
-   "title": "“키 조금 크고 강동원 살짝 닮고”···13년 전 노래가 해체된 걸그룹도 되살렸다",
-   "url": "https://n.news.naver.com/article/032/0003482192?ntype=RANKING"
-  },
-  {
-   "press": "경향신문",
-   "rank": 2,
-   "title": "2년 묵은 젠슨 황 불륜설, 왜 지금 폭발했나···이사회 해임 검토에 AI산업·미중 관계까지 파장 우려",
-   "url": "https://n.news.naver.com/article/032/0003482261?ntype=RANKING"
-  },
-  {
-   "press": "경향신문",
-   "rank": 3,
-   "title": "젠슨 황 불륜 상대 앨리스 황, 베이징 체류…중 보안당국 소재 파악",
-   "url": "https://n.news.naver.com/article/032/0003482241?ntype=RANKING"
-  },
-  {
-   "press": "경향신문",
-   "rank": 4,
-   "title": "“평균 30점 과목이 100점, 이게 된다고?”…세무사 수석 합격자 AI 안경 의혹",
-   "url": "https://n.news.naver.com/article/032/0003482249?ntype=RANKING"
-  },
-  {
-   "press": "경향신문",
-   "rank": 5,
-   "title": "머스크, ‘해임 위기’ 젠슨 황 영입 요청에 보인 뜻밖의 반응 “그렇게 한다면···”",
-   "url": "https://n.news.naver.com/article/032/0003482266?ntype=RANKING"
-  },
-  {
-   "press": "TV조선",
-   "rank": 1,
-   "title": "[속보] '이재명 두 아들 군면제' 허위글 이수정…항소심도 벌금 300만원",
-   "url": "https://n.news.naver.com/article/448/0000650630?ntype=RANKING"
-  },
-  {
-   "press": "TV조선",
-   "rank": 2,
-   "title": "장동혁, '한동훈 복당' 꺼낸 오세훈에 \"패륜·분열 정치 받아들이자는 건가\"",
-   "url": "https://n.news.naver.com/article/448/0000650620?ntype=RANKING"
-  },
-  {
-   "press": "TV조선",
-   "rank": 3,
-   "title": "\"평균 30점인데 홀로 만점?\"…세무사 시험 수석 'AI 안경' 의혹",
-   "url": "https://n.news.naver.com/article/448/0000650606?ntype=RANKING"
-  },
-  {
-   "press": "TV조선",
-   "rank": 4,
-   "title": "'남대문 스카프 아저씨' 또 일냈다…온라인 매장도 품절 대란",
-   "url": "https://n.news.naver.com/article/448/0000650610?ntype=RANKING"
-  },
-  {
-   "press": "TV조선",
-   "rank": 5,
-   "title": "박충권, 정동영에 \"북동영 장관님\"…與 \"그럼 탈충권?\" 맞불",
-   "url": "https://n.news.naver.com/article/448/0000650627?ntype=RANKING"
-  },
-  {
-   "press": "한국경제TV",
-   "rank": 1,
-   "title": "\"이제 1000원으로 못 뗀다\"…400원 인상 확정에 중개사들 '술렁'",
-   "url": "https://n.news.naver.com/article/215/0001272505?ntype=RANKING"
-  },
-  {
-   "press": "한국경제TV",
-   "rank": 2,
-   "title": "젠슨 황 '사내 불륜설' 여성 정체는?…자녀 2명 둔 핵심 임원",
-   "url": "https://n.news.naver.com/article/215/0001272531?ntype=RANKING"
-  },
-  {
-   "press": "한국경제TV",
-   "rank": 3,
-   "title": "엔비디아, 최선호株서 '제외'...젠슨 황 사실상 해임 수순 [딥시그널]",
-   "url": "https://n.news.naver.com/article/215/0001272536?ntype=RANKING"
-  },
-  {
-   "press": "한국경제TV",
-   "rank": 4,
-   "title": "\"과소비 절대 금지\" 남대문 아저씨, 또 대박…온라인몰 열자마자 '품절 대란'",
-   "url": "https://n.news.naver.com/article/215/0001272545?ntype=RANKING"
-  },
-  {
-   "press": "한국경제TV",
-   "rank": 5,
-   "title": "\"물린 주식 끝까지 안 판다\"…개미 3명 중 2명은 '보유하거나 물타기'",
-   "url": "https://n.news.naver.com/article/215/0001272525?ntype=RANKING"
-  },
-  {
-   "press": "부산일보",
-   "rank": 1,
-   "title": "[속보] \"이재명 아들 군 면제\" 허위글 이수정, 2심도 피선거권 박탈형",
-   "url": "https://n.news.naver.com/article/082/0001406881?ntype=RANKING"
-  },
-  {
-   "press": "부산일보",
-   "rank": 2,
-   "title": "젠슨 황 '불륜 스캔들'에 40년 은둔 아내 로리 황에 쏠린 시선",
-   "url": "https://n.news.naver.com/article/082/0001406844?ntype=RANKING"
-  },
-  {
-   "press": "부산일보",
-   "rank": 3,
-   "title": "\"평균 30점인데 혼자 100점\"…세무사 수석합격 'AI 안경' 의혹 제기돼",
-   "url": "https://n.news.naver.com/article/082/0001406898?ntype=RANKING"
-  },
-  {
-   "press": "부산일보",
-   "rank": 4,
-   "title": "'코인상장 뒷돈' 골퍼 안성현, 대법서 무죄 확정",
-   "url": "https://n.news.naver.com/article/082/0001406890?ntype=RANKING"
-  },
-  {
-   "press": "부산일보",
-   "rank": 5,
-   "title": "원장과 금전 문제로 앙심… 영어 유치원에 휘발유로 불지른 60대",
-   "url": "https://n.news.naver.com/article/082/0001406862?ntype=RANKING"
-  },
-  {
-   "press": "경기일보",
-   "rank": 1,
-   "title": "장동혁 “국민 한겨울 계곡에 텐트 치고 살 판…민주, 이제 와 반기”",
-   "url": "https://n.news.naver.com/article/666/0000131793?ntype=RANKING"
-  },
-  {
-   "press": "경기일보",
-   "rank": 2,
-   "title": "젠슨 황 ‘불륜 스캔들’에 불똥 튄 국민연금…엔비디아 4조원 ‘증발’",
-   "url": "https://n.news.naver.com/article/666/0000131755?ntype=RANKING"
-  },
-  {
-   "press": "경기일보",
-   "rank": 3,
-   "title": "“LOVE LOVE LOVE”…젠슨 황이 한국서 적은 세 번의 사랑, 무슨 의미?",
-   "url": "https://n.news.naver.com/article/666/0000131759?ntype=RANKING"
-  },
-  {
-   "press": "경기일보",
-   "rank": 4,
-   "title": "‘평균 30점’ 시험서 혼자 100점 만점?…세무사 수석 합격생 ‘AI 안경’ 의혹",
-   "url": "https://n.news.naver.com/article/666/0000131780?ntype=RANKING"
-  },
-  {
-   "press": "경기일보",
-   "rank": 5,
-   "title": "“이재명 당선 막으려 허위 글 게시”…이수정, 항소심도 당선무효형",
-   "url": "https://n.news.naver.com/article/666/0000131772?ntype=RANKING"
-  },
-  {
-   "press": "문화일보",
-   "rank": 1,
-   "title": "윗집 ‘쿵쿵’, 층간소음이 아니었다…독거노인의 구조 요청 신호",
-   "url": "https://n.news.naver.com/article/021/0002832374?ntype=RANKING"
-  },
-  {
-   "press": "문화일보",
-   "rank": 2,
-   "title": "[속보]시흥 아파트서 40대 어머니와 10대 두 아들 숨진 채 발견…경찰 수사",
-   "url": "https://n.news.naver.com/article/021/0002832258?ntype=RANKING"
-  },
-  {
-   "press": "문화일보",
-   "rank": 3,
-   "title": "“김문기 아무도 안 지켜주더니 대통령은 특검” 이기인의 분노",
-   "url": "https://n.news.naver.com/article/021/0002832389?ntype=RANKING"
-  },
-  {
-   "press": "문화일보",
-   "rank": 4,
-   "title": "평균 30점 시험서 홀로 만점 “혹시 AI 안경?”…세무사 수석합격자 논란",
-   "url": "https://n.news.naver.com/article/021/0002832373?ntype=RANKING"
-  },
-  {
-   "press": "문화일보",
-   "rank": 5,
-   "title": "‘코인상장 뒷돈’ 성유리 남편 안성현 무죄 확정…前 빗썸 대표 유죄",
-   "url": "https://n.news.naver.com/article/021/0002832283?ntype=RANKING"
-  },
-  {
-   "press": "조선일보",
-   "rank": 1,
-   "title": "인텔 CEO 사임, 젠슨 황 위기... 美는 왜 사내 불륜에 엄격한가",
-   "url": "https://n.news.naver.com/article/023/0004009219?ntype=RANKING"
-  },
-  {
-   "press": "조선일보",
-   "rank": 2,
-   "title": "젠슨 황, 사내 불륜도 걸렸다... “엔비디아 이사회서 해임 준비”",
-   "url": "https://n.news.naver.com/article/023/0004009193?ntype=RANKING"
-  },
-  {
-   "press": "조선일보",
-   "rank": 3,
-   "title": "시흥 아파트서 母子 3명 숨진 채 발견… 어머니와 둘째아들 몸엔 자상",
-   "url": "https://n.news.naver.com/article/023/0004009216?ntype=RANKING"
-  },
-  {
-   "press": "조선일보",
-   "rank": 4,
-   "title": "‘인생샷’ 찍으려 차도 점령…외국인 몰린 서울 단풍명소 몸살",
-   "url": "https://n.news.naver.com/article/023/0004009184?ntype=RANKING"
-  },
-  {
-   "press": "조선일보",
-   "rank": 5,
-   "title": "“북동영” “탈충권” 북향민 호칭 변경으로 여야 설전",
-   "url": "https://n.news.naver.com/article/023/0004009251?ntype=RANKING"
-  },
-  {
-   "press": "대구MBC",
-   "rank": 1,
-   "title": "'100리터라더니 1,000리터?' 대구 주유소 경유 유출···관로로 흘러들어",
-   "url": "https://n.news.naver.com/article/657/0000057386?ntype=RANKING"
-  },
-  {
-   "press": "대구MBC",
-   "rank": 2,
-   "title": "\"경북대도 선정해 주세요\" 경북대 총동창회, '서울대 10개 만들기' 추가 선정 국민 동의 청원 나서",
-   "url": "https://n.news.naver.com/article/657/0000057378?ntype=RANKING"
-  },
-  {
-   "press": "대구MBC",
-   "rank": 3,
-   "title": "김민석 \"정청래 만남 노력···중진 권유로 신천지 조사 결과 전면 공개 안 해\"",
-   "url": "https://n.news.naver.com/article/657/0000057377?ntype=RANKING"
-  },
-  {
-   "press": "대구MBC",
-   "rank": 4,
-   "title": "장동혁 \"이재명 재판 재개하라\"···국힘 지도부, 사법부와 법무부 장관 후보자에 강력 비판",
-   "url": "https://n.news.naver.com/article/657/0000057382?ntype=RANKING"
-  },
-  {
-   "press": "대구MBC",
-   "rank": 5,
-   "title": "정청래 \"김민석, 대화 전 사과부터 제대로 해라\"",
-   "url": "https://n.news.naver.com/article/657/0000057383?ntype=RANKING"
-  },
-  {
-   "press": "채널A",
-   "rank": 1,
-   "title": "[속보]“이재명 아들 군 면제” 허위글 이수정, 2심도 피선거권 박탈형",
-   "url": "https://n.news.naver.com/article/449/0000367286?ntype=RANKING"
-  },
-  {
-   "press": "채널A",
-   "rank": 2,
-   "title": "‘아동 학대’ 고소 당한 민속촌 귀신 프로그램, 결국 종료",
-   "url": "https://n.news.naver.com/article/449/0000367220?ntype=RANKING"
-  },
-  {
-   "press": "채널A",
-   "rank": 3,
-   "title": "박충권, 정동영에 “북동영 장관님”하자 “탈충권이라 불러도 되나” 여야 정면 충돌",
-   "url": "https://n.news.naver.com/article/449/0000367276?ntype=RANKING"
-  },
-  {
-   "press": "채널A",
-   "rank": 4,
-   "title": "“왜 아령을 아무데나 놓나요”…아령 때문에 헬스장서 갑자기 난투극 [현장영상]",
-   "url": "https://n.news.naver.com/article/449/0000367275?ntype=RANKING"
-  },
-  {
-   "press": "채널A",
-   "rank": 5,
-   "title": "“한국 감옥에 갇혔다” 러시아 여성, 일방적 영상 촬영 논란 [현장영상]",
-   "url": "https://n.news.naver.com/article/449/0000367247?ntype=RANKING"
-  },
-  {
-   "press": "블로터",
-   "rank": 1,
-   "title": "[현대차 L프로젝트] 정의선 회장이 픽한 '루나', 포티투닷과 다른 길",
-   "url": "https://n.news.naver.com/article/293/0000093130?ntype=RANKING"
-  },
-  {
-   "press": "블로터",
-   "rank": 2,
-   "title": "HMM, 베일 속 '부산 이주 희망자 모집'...파격적 경제보상 담았나",
-   "url": "https://n.news.naver.com/article/293/0000093150?ntype=RANKING"
-  },
-  {
-   "press": "블로터",
-   "rank": 3,
-   "title": "삼성SDI, BMW 수주로 원통형 '3년 로드맵' 확정…양산 본격 준비",
-   "url": "https://n.news.naver.com/article/293/0000093147?ntype=RANKING"
-  },
-  {
-   "press": "블로터",
-   "rank": 4,
-   "title": "지배구조로 번진 오리온 공방…자본배분 이어 '오너 책임론' 부상",
-   "url": "https://n.news.naver.com/article/293/0000093144?ntype=RANKING"
-  },
-  {
-   "press": "블로터",
-   "rank": 5,
-   "title": "[단독] 금감원, 하나증권 판매 홈플러스 전단채 분쟁조정 착수",
-   "url": "https://n.news.naver.com/article/293/0000093141?ntype=RANKING"
-  },
-  {
-   "press": "서울경제",
-   "rank": 1,
-   "title": "어제도 상한가 찍었는데 “하루 만에 24% 폭락”…개미들 비명 터진 ‘이 종목’",
-   "url": "https://n.news.naver.com/article/011/0004681179?ntype=RANKING"
-  },
-  {
-   "press": "서울경제",
-   "rank": 2,
-   "title": "충남대 학생 “삼성전자 면접 봅니다”…함께 웃음 터트린 李대통령-이재용 회장",
-   "url": "https://n.news.naver.com/article/011/0004681454?ntype=RANKING"
-  },
-  {
-   "press": "서울경제",
-   "rank": 3,
-   "title": "추워서 패딩 입고 운전했는데 “당장 벗어라” 경고…사고 나면 ‘치명적’ 왜? [헬시타임]",
-   "url": "https://n.news.naver.com/article/011/0004681357?ntype=RANKING"
-  },
-  {
-   "press": "서울경제",
-   "rank": 4,
-   "title": "115명 죽인 테러범인데 “너무 예쁘다” 청혼 쇄도…김현희는 사형 선고받고도 살아남았다 [오늘의 그날]",
-   "url": "https://n.news.naver.com/article/011/0004681220?ntype=RANKING"
-  },
-  {
-   "press": "서울경제",
-   "rank": 5,
-   "title": "남대문 스카프 아저씨 또 일냈다…“6장에 1만원” 온라인몰 열자마자 대박",
-   "url": "https://n.news.naver.com/article/011/0004681467?ntype=RANKING"
-  },
-  {
-   "press": "머니투데이",
-   "rank": 1,
-   "title": "시흥서 세모자 숨진 채 발견…40대 어머니·10대 아들 '흉기 상처'",
-   "url": "https://n.news.naver.com/article/008/0005440271?ntype=RANKING"
-  },
-  {
-   "press": "머니투데이",
-   "rank": 2,
-   "title": "\"'스카프리오' 보러 교토서 왔는데\" 발동동…중년 여심 흔든 매력 물으니",
-   "url": "https://n.news.naver.com/article/008/0005440204?ntype=RANKING"
-  },
-  {
-   "press": "머니투데이",
-   "rank": 3,
-   "title": "지인에 맡겼던 반려견 '개소주'로 돌아와…\"난 안 먹었어\" 뻔뻔 궤변",
-   "url": "https://n.news.naver.com/article/008/0005440187?ntype=RANKING"
-  },
-  {
-   "press": "머니투데이",
-   "rank": 4,
-   "title": "'아들 성범죄 피해' 10대 살해한 50대, 진술 거부…구속영장 신청",
-   "url": "https://n.news.naver.com/article/008/0005440233?ntype=RANKING"
-  },
-  {
-   "press": "머니투데이",
-   "rank": 5,
-   "title": "\"엔비디아 사라\"던 월가 돌변?…목표가 500→200달러, 최선호주 뺐다",
-   "url": "https://n.news.naver.com/article/008/0005440314?ntype=RANKING"
-  },
-  {
-   "press": "조선비즈",
-   "rank": 1,
-   "title": "이부진은 ‘3년 전 그 재킷’, 지수는 ‘레이디 디올’… 디올 패션도 화제",
-   "url": "https://n.news.naver.com/article/366/0001204328?ntype=RANKING"
-  },
-  {
-   "press": "조선비즈",
-   "rank": 2,
-   "title": "수석 합격자 ‘AI 안경’ 의혹에… 한국세무사회 “철저한 진상조사 촉구”",
-   "url": "https://n.news.naver.com/article/366/0001204357?ntype=RANKING"
-  },
-  {
-   "press": "조선비즈",
-   "rank": 3,
-   "title": "이재용 “온양을 최첨단 HBM 거점으로”…삼성, 56조 투입해 생산능력 확대",
-   "url": "https://n.news.naver.com/article/366/0001204313?ntype=RANKING"
-  },
-  {
-   "press": "조선비즈",
-   "rank": 4,
-   "title": "시흥 아파트서 세 모자 숨진 채 발견… 40대 어머니·10대 아들 ‘흉기 상흔’",
-   "url": "https://n.news.naver.com/article/366/0001204322?ntype=RANKING"
-  },
-  {
-   "press": "조선비즈",
-   "rank": 5,
-   "title": "“진짜 ‘LOVE, LOVE, LOVE’ 였네”… 젠슨 황 또 불륜설에 ‘밈’ 폭발",
-   "url": "https://n.news.naver.com/article/366/0001204264?ntype=RANKING"
-  },
-  {
-   "press": "아시아경제",
-   "rank": 1,
-   "title": "\"제발 고용해줘\"…해임 위기 '젠슨 황' 영입 요청에 머스크 \"영광일 것\"",
-   "url": "https://n.news.naver.com/article/277/0005841836?ntype=RANKING"
-  },
-  {
-   "press": "아시아경제",
-   "rank": 2,
-   "title": "[속보]李대통령 \"국내 자본시장 여전히 저평가…코스닥 육성 박차\"",
-   "url": "https://n.news.naver.com/article/277/0005841875?ntype=RANKING"
-  },
-  {
-   "press": "아시아경제",
-   "rank": 3,
-   "title": "아들과 가깝던 '15세 소녀' 숙박업소서 살해한 50대 男…\"진술 계속 거부\"",
-   "url": "https://n.news.naver.com/article/277/0005841770?ntype=RANKING"
-  },
-  {
-   "press": "아시아경제",
-   "rank": 4,
-   "title": "중국인들 '우르르' 몰려와 다 쓸어가더니…한국 찾은 외국인들 돈 쓰는 곳 달라졌다",
-   "url": "https://n.news.naver.com/article/277/0005841458?ntype=RANKING"
-  },
-  {
-   "press": "아시아경제",
-   "rank": 5,
-   "title": "젠슨 황 볼에 입 맞춘 그날…앨리스 황 수백만원대 '명품 원피스' 화제",
-   "url": "https://n.news.naver.com/article/277/0005841500?ntype=RANKING"
+   "title": "[단독] ‘성북구 살해’ 여중생, 쉼터는 성착취 피해 몰랐다",
+   "url": "https://n.news.naver.com/article/005/0001884765?ntype=RANKING"
   },
   {
    "press": "매일신문",
@@ -1431,20 +351,680 @@
   {
    "press": "매일신문",
    "rank": 3,
-   "title": "젠슨황 스캔들에 국민연금 '휘청'…엔비디아 평가액만 4조 날아갔다?",
-   "url": "https://n.news.naver.com/article/088/0001039905?ntype=RANKING"
+   "title": "\"목숨줄이자 숨구멍\"이라는데…\"李대통령 SNS 좀 줄여라\" 51%",
+   "url": "https://n.news.naver.com/article/088/0001040013?ntype=RANKING"
   },
   {
    "press": "매일신문",
    "rank": 4,
-   "title": "李 지지율 30대 62%→28% '반토막도 붕괴'…20대도 뒤따라, 청년민심에 무슨일이 [NBS]",
-   "url": "https://n.news.naver.com/article/088/0001039899?ntype=RANKING"
+   "title": "\"이재명 두 아들 군 면제\" 허위글 올린 이수정, 2심도' 벌금 300만원'",
+   "url": "https://n.news.naver.com/article/088/0001039968?ntype=RANKING"
   },
   {
    "press": "매일신문",
    "rank": 5,
-   "title": "성유리 \"진실 밝혀질 것\"이라더니…남편 안성현, '코인 사기' 혐의 무죄 확정",
-   "url": "https://n.news.naver.com/article/088/0001039904?ntype=RANKING"
+   "title": "젠슨황 스캔들에 국민연금 '휘청'…엔비디아 평가액만 4조 날아갔다?",
+   "url": "https://n.news.naver.com/article/088/0001039905?ntype=RANKING"
+  },
+  {
+   "press": "서울신문",
+   "rank": 1,
+   "title": "태극기 걸고 “대환영” 난리난 日…“잘해줄게요” 한국인 모시기 열풍 [포착]",
+   "url": "https://n.news.naver.com/article/081/0003698710?ntype=RANKING"
+  },
+  {
+   "press": "서울신문",
+   "rank": 2,
+   "title": "“김건희가 尹에 성상납” 김용민, 징역형 피했다… 벌금 700만원 항소심서 유지",
+   "url": "https://n.news.naver.com/article/081/0003698794?ntype=RANKING"
+  },
+  {
+   "press": "서울신문",
+   "rank": 3,
+   "title": "[포착] 173㎝ 키도 똑같아…SNS서 발견한 女 20년 전 헤어진 쌍둥이였다",
+   "url": "https://n.news.naver.com/article/081/0003698720?ntype=RANKING"
+  },
+  {
+   "press": "서울신문",
+   "rank": 4,
+   "title": "젠슨 황 물러나면 엔비디아 ‘왕좌’ 누가 물려받나…의외로 거론되는 ‘거물’ [이슈픽]",
+   "url": "https://n.news.naver.com/article/081/0003698758?ntype=RANKING"
+  },
+  {
+   "press": "서울신문",
+   "rank": 5,
+   "title": "한인 마사지업소서 나체 상태 여성 흉기에 찔려 숨진 채 발견… 50대 흑인 남성, 뉴욕경찰에 체포",
+   "url": "https://n.news.naver.com/article/081/0003698725?ntype=RANKING"
+  },
+  {
+   "press": "강원일보",
+   "rank": 1,
+   "title": "“이재명 두 아들 모두 군대 면제 받았다” 허위 글 SNS에 올린 이수정 2심도 벌금 300만원",
+   "url": "https://n.news.naver.com/article/087/0001230502?ntype=RANKING"
+  },
+  {
+   "press": "강원일보",
+   "rank": 2,
+   "title": "“젠슨황, 엔비디아 여성 임원과도 혼외관계”…‘사내불륜’ 추가 폭로",
+   "url": "https://n.news.naver.com/article/087/0001230342?ntype=RANKING"
+  },
+  {
+   "press": "강원일보",
+   "rank": 3,
+   "title": "시흥 아파트서 40대 어머니와 10대 두 아들 숨진 채 발견…경찰, 큰아들 범행 가능성 두고 수사",
+   "url": "https://n.news.naver.com/article/087/0001230392?ntype=RANKING"
+  },
+  {
+   "press": "강원일보",
+   "rank": 4,
+   "title": "“테트라포드에 사람 빠졌다” 강릉 심곡리 해안서 50대 남성 심정지",
+   "url": "https://n.news.naver.com/article/087/0001230346?ntype=RANKING"
+  },
+  {
+   "press": "강원일보",
+   "rank": 5,
+   "title": "“아버지 손주들 잘 키울게요. 어머니와 행복하게 계세요. 사랑하고 고맙습니다”…뇌사 판정 후 장기기증으로 3명에 새 삶 선물한 60대 하늘로",
+   "url": "https://n.news.naver.com/article/087/0001230390?ntype=RANKING"
+  },
+  {
+   "press": "SBS",
+   "rank": 1,
+   "title": "\"연락 안 돼\" 사라진 동료…비닐 속 시신으로 발견",
+   "url": "https://n.news.naver.com/article/055/0001402565?ntype=RANKING"
+  },
+  {
+   "press": "SBS",
+   "rank": 2,
+   "title": "[단독] 김종철 경찰청장 후보자 아들, 중학생 때 해외 주식 수익률 73%",
+   "url": "https://n.news.naver.com/article/055/0001402599?ntype=RANKING"
+  },
+  {
+   "press": "SBS",
+   "rank": 3,
+   "title": "[속보] '김승원 청탁 의혹' 브로커 양 모 씨에 징역 4년 구형",
+   "url": "https://n.news.naver.com/article/055/0001402612?ntype=RANKING"
+  },
+  {
+   "press": "SBS",
+   "rank": 4,
+   "title": "아동학대 경찰 신고까지…민속촌 '귀신 참교육' 종료한다",
+   "url": "https://n.news.naver.com/article/055/0001402509?ntype=RANKING"
+  },
+  {
+   "press": "SBS",
+   "rank": 5,
+   "title": "\"젠슨 황에게 앨리스 황을 소개한 사람? 앨리스의 남편\"",
+   "url": "https://n.news.naver.com/article/055/0001402584?ntype=RANKING"
+  },
+  {
+   "press": "연합뉴스TV",
+   "rank": 1,
+   "title": "'젠슨 황 불륜설' 기혼 부사장…엔비디아 18년 근속 핵심 인물",
+   "url": "https://n.news.naver.com/article/422/0000925526?ntype=RANKING"
+  },
+  {
+   "press": "연합뉴스TV",
+   "rank": 2,
+   "title": "\"저 다음주 삼성 면접\"…이 대통령·이재용 웃음 터뜨린 한마디",
+   "url": "https://n.news.naver.com/article/422/0000925541?ntype=RANKING"
+  },
+  {
+   "press": "연합뉴스TV",
+   "rank": 3,
+   "title": "\"강아지 옷 벗겨달라 말 못하겠더라\"…'오배송 택배' 감동 사연",
+   "url": "https://n.news.naver.com/article/422/0000925492?ntype=RANKING"
+  },
+  {
+   "press": "연합뉴스TV",
+   "rank": 4,
+   "title": "산책하다 새똥 맞고 복권 샀더니…5억 원 1등 당첨 '대박'",
+   "url": "https://n.news.naver.com/article/422/0000925512?ntype=RANKING"
+  },
+  {
+   "press": "연합뉴스TV",
+   "rank": 5,
+   "title": "'남대문 스카프 아저씨', 온라인 매장도 품절…\"이게 뭔 일이여\"",
+   "url": "https://n.news.naver.com/article/422/0000925416?ntype=RANKING"
+  },
+  {
+   "press": "경향신문",
+   "rank": 1,
+   "title": "“키 조금 크고 강동원 살짝 닮고”···13년 전 노래가 해체된 걸그룹도 되살렸다",
+   "url": "https://n.news.naver.com/article/032/0003482192?ntype=RANKING"
+  },
+  {
+   "press": "경향신문",
+   "rank": 2,
+   "title": "[단독]‘삼례 나라슈퍼 살인 누명’ 검사, 국가에 3억원 지급해야…법원 “진범 자백도 배척해 잘못”",
+   "url": "https://n.news.naver.com/article/032/0003482323?ntype=RANKING"
+  },
+  {
+   "press": "경향신문",
+   "rank": 3,
+   "title": "[영상]“친구들아, 나도 간다”…‘부캉이’ 이어 치료 끝낸 ‘안목이’도 바다로",
+   "url": "https://n.news.naver.com/article/032/0003482303?ntype=RANKING"
+  },
+  {
+   "press": "경향신문",
+   "rank": 4,
+   "title": "[단독] 이 대통령, 당대표 경험 공유하며 김민석 격려…부동산 공급 대책 논의",
+   "url": "https://n.news.naver.com/article/032/0003482333?ntype=RANKING"
+  },
+  {
+   "press": "경향신문",
+   "rank": 5,
+   "title": "후계자 없는 엔비디아···젠슨 황 ‘이중 불륜’에 해임 급물살, 차기 CEO로 유력한 인물은?",
+   "url": "https://n.news.naver.com/article/032/0003482341?ntype=RANKING"
+  },
+  {
+   "press": "파이낸셜뉴스",
+   "rank": 1,
+   "title": "\"이건희 회장 돌아온줄\"…안경 벗은 이재용, '판박이 외모'에 유전자론 소환",
+   "url": "https://n.news.naver.com/article/014/0005603502?ntype=RANKING"
+  },
+  {
+   "press": "파이낸셜뉴스",
+   "rank": 2,
+   "title": "\"7억 영끌해서 이자만 300만원\"…죽겠다던 '판교부부'의 반전, 13억→25억 됐다",
+   "url": "https://n.news.naver.com/article/014/0005603121?ntype=RANKING"
+  },
+  {
+   "press": "파이낸셜뉴스",
+   "rank": 3,
+   "title": "\"평균 30점 시험에 혼자 100점\"…세무사 수석합격자 'AI 안경 의혹'에 국세청 나섰다",
+   "url": "https://n.news.naver.com/article/014/0005603386?ntype=RANKING"
+  },
+  {
+   "press": "파이낸셜뉴스",
+   "rank": 4,
+   "title": "\"애기 낳고 후덕해졌네\"…김태희, 외모 악플 이후 공개한 영상",
+   "url": "https://n.news.naver.com/article/014/0005603412?ntype=RANKING"
+  },
+  {
+   "press": "파이낸셜뉴스",
+   "rank": 5,
+   "title": "아빠 출근한 뒤...시흥서 '엄마와 두 아들' 숨진 채 발견",
+   "url": "https://n.news.naver.com/article/014/0005603410?ntype=RANKING"
+  },
+  {
+   "press": "동아일보",
+   "rank": 1,
+   "title": "“샴푸만 바꿔도 머리 빨리 마른다”…KAIST 창업기업, 세정형 ‘퀵 드라이 샴푸’ 출시",
+   "url": "https://n.news.naver.com/article/020/0003762071?ntype=RANKING"
+  },
+  {
+   "press": "동아일보",
+   "rank": 2,
+   "title": "잡스 떠난 뒤 애플은 파산 위기…‘젠슨 황 없는 엔비디아’ 버틸까",
+   "url": "https://n.news.naver.com/article/020/0003762085?ntype=RANKING"
+  },
+  {
+   "press": "동아일보",
+   "rank": 3,
+   "title": "심야 비명소리 다음날 母-두 아들 숨진채 발견…곳곳 흉기 상처",
+   "url": "https://n.news.naver.com/article/020/0003762073?ntype=RANKING"
+  },
+  {
+   "press": "동아일보",
+   "rank": 4,
+   "title": "[단독]“여중생 살해범 전처, 동영상 협박해 성매매 강요” 유족 주장",
+   "url": "https://n.news.naver.com/article/020/0003762057?ntype=RANKING"
+  },
+  {
+   "press": "동아일보",
+   "rank": 5,
+   "title": "李대통령·이재용도 빵 터진…여대생의 ‘한마디’",
+   "url": "https://n.news.naver.com/article/020/0003762026?ntype=RANKING"
+  },
+  {
+   "press": "JTBC",
+   "rank": 1,
+   "title": "젠슨 황 불륜, 한국 '불똥'…국민연금 1위 종목 엔비디아 4조원 증발",
+   "url": "https://n.news.naver.com/article/437/0000520440?ntype=RANKING"
+  },
+  {
+   "press": "JTBC",
+   "rank": 2,
+   "title": "[단독] 성북구 여중생 살해범 \"찜질방 말고 에어비앤비로\"…숙소 지목해 예약 부탁",
+   "url": "https://n.news.naver.com/article/437/0000520437?ntype=RANKING"
+  },
+  {
+   "press": "JTBC",
+   "rank": 3,
+   "title": "코에 떨어진 새똥, 알고 보니 5억짜리 행운이었다",
+   "url": "https://n.news.naver.com/article/437/0000520414?ntype=RANKING"
+  },
+  {
+   "press": "JTBC",
+   "rank": 4,
+   "title": "\"이재명 두 아들 군 면제\" 허위글...이수정 2심도 '피선거권 박탈형'",
+   "url": "https://n.news.naver.com/article/437/0000520423?ntype=RANKING"
+  },
+  {
+   "press": "JTBC",
+   "rank": 5,
+   "title": "이 대통령 옆 안경 벗은 이재용 회장…\"메가프로젝트 적극 추진\"",
+   "url": "https://n.news.naver.com/article/437/0000520431?ntype=RANKING"
+  },
+  {
+   "press": "조선일보",
+   "rank": 1,
+   "title": "젠슨 황 해임 ‘1조달러 딜레마’... 엔비디아 시총 충격, 한국은?",
+   "url": "https://n.news.naver.com/article/023/0004009244?ntype=RANKING"
+  },
+  {
+   "press": "조선일보",
+   "rank": 2,
+   "title": "인텔 CEO 사임, 젠슨 황 위기... 美는 왜 사내 불륜에 엄격한가",
+   "url": "https://n.news.naver.com/article/023/0004009219?ntype=RANKING"
+  },
+  {
+   "press": "조선일보",
+   "rank": 3,
+   "title": "“더 쓸 약 없다”던 말기암에서도… 새 약 나온다",
+   "url": "https://n.news.naver.com/article/023/0004009187?ntype=RANKING"
+  },
+  {
+   "press": "조선일보",
+   "rank": 4,
+   "title": "‘인생샷’ 찍으려 차도 점령…외국인 몰린 서울 단풍명소 몸살",
+   "url": "https://n.news.naver.com/article/023/0004009184?ntype=RANKING"
+  },
+  {
+   "press": "조선일보",
+   "rank": 5,
+   "title": "‘150세 장수’ 푸틴 꿈 위해... 오래 사는 원숭이들 피 모은다",
+   "url": "https://n.news.naver.com/article/023/0004009259?ntype=RANKING"
+  },
+  {
+   "press": "한국경제TV",
+   "rank": 1,
+   "title": "\"연락 안 돼\" 사라진 동료…30대男, 230L 봉투에 숨진 채 발견",
+   "url": "https://n.news.naver.com/article/215/0001272567?ntype=RANKING"
+  },
+  {
+   "press": "한국경제TV",
+   "rank": 2,
+   "title": "\"이제 1000원으로 못 뗀다\"…400원 인상 확정에 중개사들 '술렁'",
+   "url": "https://n.news.naver.com/article/215/0001272505?ntype=RANKING"
+  },
+  {
+   "press": "한국경제TV",
+   "rank": 3,
+   "title": "아르노 학위수여식 재계 총수 집결…이부진, 3년 전 '그 재킷' 또 입었다",
+   "url": "https://n.news.naver.com/article/215/0001272551?ntype=RANKING"
+  },
+  {
+   "press": "한국경제TV",
+   "rank": 4,
+   "title": "아파트 단지서 숨진 10대…집 안에선 엄마·동생 시신 발견",
+   "url": "https://n.news.naver.com/article/215/0001272508?ntype=RANKING"
+  },
+  {
+   "press": "한국경제TV",
+   "rank": 5,
+   "title": "젠슨 황 '사내 불륜설' 여성 정체는?…자녀 2명 둔 핵심 임원",
+   "url": "https://n.news.naver.com/article/215/0001272531?ntype=RANKING"
+  },
+  {
+   "press": "오마이뉴스",
+   "rank": 1,
+   "title": "'성소수자 조롱' 논란 교회 목사 \"상처받은 분들께 진심으로 사과\"",
+   "url": "https://n.news.naver.com/article/047/0002535649?ntype=RANKING"
+  },
+  {
+   "press": "오마이뉴스",
+   "rank": 2,
+   "title": "아이가 유치원에서 써 온 편지, 쉽게 버리지 마세요",
+   "url": "https://n.news.naver.com/article/047/0002535582?ntype=RANKING"
+  },
+  {
+   "press": "오마이뉴스",
+   "rank": 3,
+   "title": "얼어붙은 냉동 삼겹살, 비닐을 억지로 뜯었다간...",
+   "url": "https://n.news.naver.com/article/047/0002535641?ntype=RANKING"
+  },
+  {
+   "press": "오마이뉴스",
+   "rank": 4,
+   "title": "장동혁 \"내가 대표인 한 한동훈 복당은 1도 고려 안 해\"",
+   "url": "https://n.news.naver.com/article/047/0002535651?ntype=RANKING"
+  },
+  {
+   "press": "오마이뉴스",
+   "rank": 5,
+   "title": "26세 환경미화원 사망에 \"본인도 책임\" 도의원, 결국 사과",
+   "url": "https://n.news.naver.com/article/047/0002535662?ntype=RANKING"
+  },
+  {
+   "press": "노컷뉴스",
+   "rank": 1,
+   "title": "[속보] 210L 봉투 안에서 일용직노동자 숨진 채 발견…경찰 수사",
+   "url": "https://n.news.naver.com/article/079/0004209179?ntype=RANKING"
+  },
+  {
+   "press": "노컷뉴스",
+   "rank": 2,
+   "title": "배우 김승우 절도 혐의 피소…\"술자리 장난\" 해명",
+   "url": "https://n.news.naver.com/article/079/0004209225?ntype=RANKING"
+  },
+  {
+   "press": "노컷뉴스",
+   "rank": 3,
+   "title": "행방 묘연했던 젠슨 황 내연녀…\"중국 베이징에 있다\"",
+   "url": "https://n.news.naver.com/article/079/0004209156?ntype=RANKING"
+  },
+  {
+   "press": "노컷뉴스",
+   "rank": 4,
+   "title": "[단독] 살해된 15세 소녀, 피의자 前배우자 운영 헬스장서 숙식",
+   "url": "https://n.news.naver.com/article/079/0004209215?ntype=RANKING"
+  },
+  {
+   "press": "노컷뉴스",
+   "rank": 5,
+   "title": "\"다음 주에 삼성전자 면접 봅니다\"…이재용의 반응은?",
+   "url": "https://n.news.naver.com/article/079/0004209238?ntype=RANKING"
+  },
+  {
+   "press": "중앙일보",
+   "rank": 1,
+   "title": "“1시간 45만원 줬는데, 의대 다 떨어졌다”…분노의 1인 시위 왜",
+   "url": "https://n.news.naver.com/article/025/0003564783?ntype=RANKING"
+  },
+  {
+   "press": "중앙일보",
+   "rank": 2,
+   "title": "남대문 스카프리오 또 일냈다…“이게 뭔일이여” 온라인몰 품절 대란",
+   "url": "https://n.news.naver.com/article/025/0003564778?ntype=RANKING"
+  },
+  {
+   "press": "중앙일보",
+   "rank": 3,
+   "title": "이부진, 3년전 그 옷 또 입었다…‘디올공주’ 지수도 등장한 곳",
+   "url": "https://n.news.naver.com/article/025/0003564763?ntype=RANKING"
+  },
+  {
+   "press": "중앙일보",
+   "rank": 4,
+   "title": "“尹, 듣도보도 못한 욕 쏟아냈다”…뒤끝 폭발한 유승민 사건",
+   "url": "https://n.news.naver.com/article/025/0003564747?ntype=RANKING"
+  },
+  {
+   "press": "중앙일보",
+   "rank": 5,
+   "title": "“모두가 조롱”…‘젠슨 황 불륜’ 반년 전 경고한 31세 투자자 정체",
+   "url": "https://n.news.naver.com/article/025/0003564661?ntype=RANKING"
+  },
+  {
+   "press": "서울경제",
+   "rank": 1,
+   "title": "남대문 스카프 아저씨 또 일냈다…“6장에 1만원” 온라인몰 열자마자 대박",
+   "url": "https://n.news.naver.com/article/011/0004681467?ntype=RANKING"
+  },
+  {
+   "press": "서울경제",
+   "rank": 2,
+   "title": "추워서 패딩 입고 운전했는데 “당장 벗어라” 경고…사고 나면 ‘치명적’ 왜? [헬시타임]",
+   "url": "https://n.news.naver.com/article/011/0004681357?ntype=RANKING"
+  },
+  {
+   "press": "서울경제",
+   "rank": 3,
+   "title": "충남대 학생 “삼성전자 면접 봅니다”…함께 웃음 터트린 李대통령-이재용 회장",
+   "url": "https://n.news.naver.com/article/011/0004681454?ntype=RANKING"
+  },
+  {
+   "press": "서울경제",
+   "rank": 4,
+   "title": "불륜녀와 K팝 댄스에 김치 싸대기 ‘철썩’ 맞는 젠슨 황… ‘AI 황제’가 AI에 당했다",
+   "url": "https://n.news.naver.com/article/011/0004681491?ntype=RANKING"
+  },
+  {
+   "press": "서울경제",
+   "rank": 5,
+   "title": "집 안 사고 전세로 버텼는데 “내년엔 집값보다 더 뛸 수도”…전셋값 4.5% 상승 전망",
+   "url": "https://n.news.naver.com/article/011/0004681576?ntype=RANKING"
+  },
+  {
+   "press": "한겨레",
+   "rank": 1,
+   "title": "“윗집서 3시간째 쿵쿵”…화장실 갇힌 80대 간절한 두드림이었다",
+   "url": "https://n.news.naver.com/article/028/0002831937?ntype=RANKING"
+  },
+  {
+   "press": "한겨레",
+   "rank": 2,
+   "title": "“이재명 아들 군면제” 허위 글 이수정, 2심도 피선거권 상실형",
+   "url": "https://n.news.naver.com/article/028/0002831914?ntype=RANKING"
+  },
+  {
+   "press": "한겨레",
+   "rank": 3,
+   "title": "“앨리스 황, 지금 베이징에 있다…중국 당국도 인지” 블룸버그 보도",
+   "url": "https://n.news.naver.com/article/028/0002831875?ntype=RANKING"
+  },
+  {
+   "press": "한겨레",
+   "rank": 4,
+   "title": "나경원 “당나라 군대냐?”…강신철 “말 취소해라” 공방",
+   "url": "https://n.news.naver.com/article/028/0002831898?ntype=RANKING"
+  },
+  {
+   "press": "한겨레",
+   "rank": 5,
+   "title": "젠슨 황 ‘두번째 외도’…CEO 직보하는 헬스케어 임원 킴벌리 파월",
+   "url": "https://n.news.naver.com/article/028/0002831924?ntype=RANKING"
+  },
+  {
+   "press": "연합뉴스",
+   "rank": 1,
+   "title": "\"젠슨 황에게 '中스파이 의혹' 연인 소개한 사람은 남편\"",
+   "url": "https://n.news.naver.com/article/001/0016439062?ntype=RANKING"
+  },
+  {
+   "press": "연합뉴스",
+   "rank": 2,
+   "title": "시흥 일가족 3명 사망…경찰, 큰아들 범행 가능성 두고 수사(종합)",
+   "url": "https://n.news.naver.com/article/001/0016438900?ntype=RANKING"
+  },
+  {
+   "press": "연합뉴스",
+   "rank": 3,
+   "title": "'젠슨 황 불륜설' 킴벌리 파월…'CEO 직보' 임원 60명 중 1명",
+   "url": "https://n.news.naver.com/article/001/0016438230?ntype=RANKING"
+  },
+  {
+   "press": "연합뉴스",
+   "rank": 4,
+   "title": "\"인수위 연락없었다\" 양평고속道 핵심진술 뒤집혀…윗선 못밝히나",
+   "url": "https://n.news.naver.com/article/001/0016438319?ntype=RANKING"
+  },
+  {
+   "press": "연합뉴스",
+   "rank": 5,
+   "title": "금요일 늦은 오후 남부부터 비…토요일 전국 확대",
+   "url": "https://n.news.naver.com/article/001/0016439290?ntype=RANKING"
+  },
+  {
+   "press": "매일경제",
+   "rank": 1,
+   "title": "머리 말리는 데도 기술 입혔다…건조 시간 단축나선 샴푸",
+   "url": "https://n.news.naver.com/article/009/0005762913?ntype=RANKING"
+  },
+  {
+   "press": "매일경제",
+   "rank": 2,
+   "title": "‘국대 미녀’ 김태희, ‘살쪘다’는 외모 악플에 한 행동",
+   "url": "https://n.news.naver.com/article/009/0005762492?ntype=RANKING"
+  },
+  {
+   "press": "매일경제",
+   "rank": 3,
+   "title": "“젠슨 황 해임, 애플의 잡스 해고처럼 어리석어”…엔비디아 CEO 교체 논란",
+   "url": "https://n.news.naver.com/article/009/0005762759?ntype=RANKING"
+  },
+  {
+   "press": "매일경제",
+   "rank": 4,
+   "title": "“준우승자가 더 예쁘다”…‘외모 논란’에 미인대회 우승자의 첫마디",
+   "url": "https://n.news.naver.com/article/009/0005762805?ntype=RANKING"
+  },
+  {
+   "press": "매일경제",
+   "rank": 5,
+   "title": "“삼전닉스, 이렇게 예쁠 수가”…실적 호조 덕 내년 세수 10배 뛰는 지자체",
+   "url": "https://n.news.naver.com/article/009/0005762902?ntype=RANKING"
+  },
+  {
+   "press": "YTN",
+   "rank": 1,
+   "title": "[단독] \"엄마, 난 아직 17번의 여름도 보지 못했어\"...소녀의 마지막 편지",
+   "url": "https://n.news.naver.com/article/052/0002431896?ntype=RANKING"
+  },
+  {
+   "press": "YTN",
+   "rank": 2,
+   "title": "'李대통령 아들 병역면제' 허위글 쓴 이수정 2심도 벌금 300만원",
+   "url": "https://n.news.naver.com/article/052/0002431912?ntype=RANKING"
+  },
+  {
+   "press": "YTN",
+   "rank": 3,
+   "title": "평균 30점인데 100점?…세무사 수석 합격자 'AI 안경' 의혹",
+   "url": "https://n.news.naver.com/article/052/0002431765?ntype=RANKING"
+  },
+  {
+   "press": "YTN",
+   "rank": 4,
+   "title": "횡성 전기차 돌진 운전자 \"페달 오조작\" 인정...과실치사상 혐의 적용",
+   "url": "https://n.news.naver.com/article/052/0002431830?ntype=RANKING"
+  },
+  {
+   "press": "YTN",
+   "rank": 5,
+   "title": "왜 반도체 수출 규제를 풀었나...전방위 조사 예고",
+   "url": "https://n.news.naver.com/article/052/0002431962?ntype=RANKING"
+  },
+  {
+   "press": "머니투데이",
+   "rank": 1,
+   "title": "[단독]삼성·SK, 정부에 SOS…\"반도체 공장 짓는데 26만명 필요\"",
+   "url": "https://n.news.naver.com/article/008/0005440428?ntype=RANKING"
+  },
+  {
+   "press": "머니투데이",
+   "rank": 2,
+   "title": "무사 전역 아들에 '깜짝 이벤트'한 아빠, 주변 차들도 '빵빵'…무슨일?",
+   "url": "https://n.news.naver.com/article/008/0005440353?ntype=RANKING"
+  },
+  {
+   "press": "머니투데이",
+   "rank": 3,
+   "title": "\"독감 백신 있나요?\" 8개월 아기와 병원 뺑뺑이…11월에도 접종 대란",
+   "url": "https://n.news.naver.com/article/008/0005440439?ntype=RANKING"
+  },
+  {
+   "press": "머니투데이",
+   "rank": 4,
+   "title": "젠슨 황 빈자리에 5촌 조카 경쟁사 수장?...엔비디아 차기 CEO 후보는",
+   "url": "https://n.news.naver.com/article/008/0005440419?ntype=RANKING"
+  },
+  {
+   "press": "머니투데이",
+   "rank": 5,
+   "title": "\"엄마가 치매인데 아파트를 줬다고?\"…장남에게 넘어간 집, 되찾을 수 있나",
+   "url": "https://n.news.naver.com/article/008/0005440507?ntype=RANKING"
+  },
+  {
+   "press": "아시아경제",
+   "rank": 1,
+   "title": "중국인들 '우르르' 몰려와 다 쓸어가더니…한국 찾은 외국인들 돈 쓰는 곳 달라졌다",
+   "url": "https://n.news.naver.com/article/277/0005841458?ntype=RANKING"
+  },
+  {
+   "press": "아시아경제",
+   "rank": 2,
+   "title": "\"제발 고용해줘\"…해임 위기 '젠슨 황' 영입 요청에 머스크 \"영광일 것\"",
+   "url": "https://n.news.naver.com/article/277/0005841836?ntype=RANKING"
+  },
+  {
+   "press": "아시아경제",
+   "rank": 3,
+   "title": "\"물 들어올 때 노 저어야지\"…스카프리오 아저씨 '온라인 몰' 열자 우르르, 품절대란까지",
+   "url": "https://n.news.naver.com/article/277/0005841887?ntype=RANKING"
+  },
+  {
+   "press": "아시아경제",
+   "rank": 4,
+   "title": "\"집안에 있다면 당장 확인하라\" 사생활 노출 우려 터진 IP 카메라",
+   "url": "https://n.news.naver.com/article/277/0005841774?ntype=RANKING"
+  },
+  {
+   "press": "아시아경제",
+   "rank": 5,
+   "title": "젠슨 황 볼에 입 맞춘 그날…앨리스 황 수백만원대 '명품 원피스' 화제",
+   "url": "https://n.news.naver.com/article/277/0005841500?ntype=RANKING"
+  },
+  {
+   "press": "한국일보",
+   "rank": 1,
+   "title": "'젠슨 황 또 불륜' 엔비디아 임원 킴벌리 파월은 누구?",
+   "url": "https://n.news.naver.com/article/469/0000965233?ntype=RANKING"
+  },
+  {
+   "press": "한국일보",
+   "rank": 2,
+   "title": "[단독] \"타운하우스 살며 고급차 수시로 바뀌어\"… 성북구 살인 피의자 가족의 수상한 생활",
+   "url": "https://n.news.naver.com/article/469/0000965165?ntype=RANKING"
+  },
+  {
+   "press": "한국일보",
+   "rank": 3,
+   "title": "젠슨 황 불륜 인정 후 '행방 묘연' 앨리스 황… \"현재 베이징에 거주\"",
+   "url": "https://n.news.naver.com/article/469/0000965211?ntype=RANKING"
+  },
+  {
+   "press": "한국일보",
+   "rank": 4,
+   "title": "'160문제 중 오답 1개' 세무사 시험 수석… \"스마트 안경 사용?\" 의심까지",
+   "url": "https://n.news.naver.com/article/469/0000965265?ntype=RANKING"
+  },
+  {
+   "press": "한국일보",
+   "rank": 5,
+   "title": "오산 원룸서 온몸 비닐에 싸인 30대 남성 시신, 동료 신고로 발견",
+   "url": "https://n.news.naver.com/article/469/0000965232?ntype=RANKING"
+  },
+  {
+   "press": "헤럴드경제",
+   "rank": 1,
+   "title": "“배우 김승우가 2200만원 훔쳤다” 고소장 접수…“장난. 돌려줬다” vs “안 줬다”",
+   "url": "https://n.news.naver.com/article/016/0002722752?ntype=RANKING"
+  },
+  {
+   "press": "헤럴드경제",
+   "rank": 2,
+   "title": "“딸 둘의 아빠, 44세…사람 빼고 다 팔았다” 남대문 스카프 아저씨 라이브 켰다",
+   "url": "https://n.news.naver.com/article/016/0002722682?ntype=RANKING"
+  },
+  {
+   "press": "헤럴드경제",
+   "rank": 3,
+   "title": "[단독] 삼성전자 퇴사 3일 전 공용 PC로 국가핵심전략기술 빼돌렸다…산학협력까지 덮친 기술유출 [세상&]",
+   "url": "https://n.news.naver.com/article/016/0002722461?ntype=RANKING"
+  },
+  {
+   "press": "헤럴드경제",
+   "rank": 4,
+   "title": "“선수 투입합니다” 60억 챙기자 주식 다 던졌다…개미 피눈물 시세조종 주가조작단 검거[세상&]",
+   "url": "https://n.news.naver.com/article/016/0002722773?ntype=RANKING"
+  },
+  {
+   "press": "헤럴드경제",
+   "rank": 5,
+   "title": "‘중국간첩 의혹’ 젠슨황 불륜女, 2년간 대만 8번이나 방문…“심사 강화할 것”",
+   "url": "https://n.news.naver.com/article/016/0002722764?ntype=RANKING"
   },
   {
    "press": "세계일보",
@@ -1461,200 +1041,140 @@
   {
    "press": "세계일보",
    "rank": 3,
-   "title": "[속보] 李 대통령 “국내 자본시장은 여전히 저평가된 매력적인 투자 대상”",
-   "url": "https://n.news.naver.com/article/022/0004174676?ntype=RANKING"
+   "title": "[단독] '성북구 살해' 10대 실종신고, 피의자 父와 공유숙소 입실 7시간 지나서야 이뤄졌다",
+   "url": "https://n.news.naver.com/article/022/0004174691?ntype=RANKING"
   },
   {
    "press": "세계일보",
    "rank": 4,
-   "title": "골프공엔 왜 구멍이 300개나 있을까…알고 보면 놀라운 ‘딤플’의 비밀 [권준영의 머니볼]",
-   "url": "https://n.news.naver.com/article/022/0004174496?ntype=RANKING"
+   "title": "자도 자도 머리 멍한 이유…취침 전 삼킨 야식이 멈춰 세운 ‘뇌 청소’",
+   "url": "https://n.news.naver.com/article/022/0004174503?ntype=RANKING"
   },
   {
    "press": "세계일보",
    "rank": 5,
-   "title": "시흥 아파트서 일가족 3명 숨진 채 발견…경찰 수사",
-   "url": "https://n.news.naver.com/article/022/0004174598?ntype=RANKING"
+   "title": "[단독] ‘친명 보은의 장’ 논란 성남산업진흥재단, 이용철 대표 시절 임직원 70% 증가",
+   "url": "https://n.news.naver.com/article/022/0004174683?ntype=RANKING"
   },
   {
-   "press": "농민신문",
+   "press": "TV조선",
    "rank": 1,
-   "title": "“‘한정선’ 상하이 매장인줄”…상호부터 진열방식까지 베낀 중국",
-   "url": "https://n.news.naver.com/article/662/0000108300?ntype=RANKING"
+   "title": "장동혁, '한동훈 복당' 꺼낸 오세훈에 \"패륜·분열 정치 받아들이자는 건가\"",
+   "url": "https://n.news.naver.com/article/448/0000650620?ntype=RANKING"
   },
   {
-   "press": "농민신문",
+   "press": "TV조선",
    "rank": 2,
-   "title": "“추워도 안됩니다”…‘이것’ 입고 안전벨트하면 사고때 더 위험",
-   "url": "https://n.news.naver.com/article/662/0000108274?ntype=RANKING"
+   "title": "\"그땐 모두가 비웃었는데\"…젠슨황 불륜 6개월 전 알아챈 31세 투자자",
+   "url": "https://n.news.naver.com/article/448/0000650633?ntype=RANKING"
   },
   {
-   "press": "농민신문",
+   "press": "TV조선",
    "rank": 3,
-   "title": "“수험생, 얇은 옷 겹겹이”…6년 만에 ‘수능 한파’ 오나",
-   "url": "https://n.news.naver.com/article/662/0000108302?ntype=RANKING"
+   "title": "[단독] 이재명·김민석 만찬서 부동산 '공급 확대' 논의…종부세는 기존 방침 유지 기류",
+   "url": "https://n.news.naver.com/article/448/0000650634?ntype=RANKING"
   },
   {
-   "press": "농민신문",
+   "press": "TV조선",
    "rank": 4,
-   "title": "“‘췌장암’ 종양 없애고 다른 암도 억제”…새로운 항암제 후보물질 나왔다",
-   "url": "https://n.news.naver.com/article/662/0000108255?ntype=RANKING"
+   "title": "\"평균 30점인데 홀로 만점?\"…세무사 시험 수석 'AI 안경' 의혹",
+   "url": "https://n.news.naver.com/article/448/0000650606?ntype=RANKING"
   },
   {
-   "press": "농민신문",
+   "press": "TV조선",
    "rank": 5,
-   "title": "“단순 감기인 줄 알았다간”…사망원인 3위 폐렴의 경고 신호",
-   "url": "https://n.news.naver.com/article/662/0000108254?ntype=RANKING"
+   "title": "李대통령·이재용 빵 터졌다…여대생 '깜짝 발언' 뭐길래?",
+   "url": "https://n.news.naver.com/article/448/0000650662?ntype=RANKING"
   },
   {
-   "press": "파이낸셜뉴스",
+   "press": "MBC",
    "rank": 1,
-   "title": "\"7억 영끌해서 이자만 300만원\"…죽겠다던 '판교부부'의 반전, 13억→25억 됐다",
-   "url": "https://n.news.naver.com/article/014/0005603121?ntype=RANKING"
+   "title": "세무사 수석 합격자 AI 안경 의혹‥산업인력공단 \"확인 중\"",
+   "url": "https://n.news.naver.com/article/214/0001535200?ntype=RANKING"
   },
   {
-   "press": "파이낸셜뉴스",
+   "press": "MBC",
    "rank": 2,
-   "title": "\"애기 낳고 후덕해졌네\"…김태희, 외모 악플 이후 공개한 영상",
-   "url": "https://n.news.naver.com/article/014/0005603412?ntype=RANKING"
+   "title": "\"배터리!\" 외친 순간 '대폭발' 화재 전 과정 '홈캠 공개' 미국도 난리",
+   "url": "https://n.news.naver.com/article/214/0001535165?ntype=RANKING"
   },
   {
-   "press": "파이낸셜뉴스",
+   "press": "MBC",
    "rank": 3,
-   "title": "\"평균 30점 시험에 혼자 100점\"…세무사 수석합격자 'AI 안경 의혹'에 국세청 나섰다",
-   "url": "https://n.news.naver.com/article/014/0005603386?ntype=RANKING"
+   "title": "\"이러다 교수 파면\" 제자 걱정 호소도 '물거품'‥2심 역시 \"피선거권 박탈\"",
+   "url": "https://n.news.naver.com/article/214/0001535202?ntype=RANKING"
   },
   {
-   "press": "파이낸셜뉴스",
+   "press": "MBC",
    "rank": 4,
-   "title": "\"윗집 3시간째 쿵쿵거려요\"...화장실에 갇힌 할머니 구출한 소방관",
-   "url": "https://n.news.naver.com/article/014/0005603377?ntype=RANKING"
+   "title": "'사내 불륜' 추가 폭로‥오늘 해임 가능성",
+   "url": "https://n.news.naver.com/article/214/0001535141?ntype=RANKING"
   },
   {
-   "press": "파이낸셜뉴스",
+   "press": "MBC",
    "rank": 5,
-   "title": "아빠 출근한 뒤...시흥서 '엄마와 두 아들' 숨진 채 발견",
-   "url": "https://n.news.naver.com/article/014/0005603410?ntype=RANKING"
+   "title": "법원, 조성현에 \"시민들이 왜 국회 막았다고 보나\"",
+   "url": "https://n.news.naver.com/article/214/0001535190?ntype=RANKING"
   },
   {
-   "press": "데일리안",
+   "press": "한국경제",
    "rank": 1,
-   "title": "강민호 우승 공약 현실로…에버랜드, 삼성라이온즈 팬 2000명 초청",
-   "url": "https://n.news.naver.com/article/119/0003154453?ntype=RANKING"
+   "title": "이부진, 3년 전 '그 옷' 또 입었다…지수와 나란히 등장",
+   "url": "https://n.news.naver.com/article/015/0005353143?ntype=RANKING"
   },
   {
-   "press": "데일리안",
+   "press": "한국경제",
    "rank": 2,
-   "title": "젠슨 황, 앨리스 황 이어 엔비디아 임원과 불륜설 추가 제기…\"헬스케어 부사장·기혼女\"",
-   "url": "https://n.news.naver.com/article/119/0003154167?ntype=RANKING"
+   "title": "\"4500만원짜리 차에 이런 실수를\"…BYD 샀다가 '황당' [차이나 워치]",
+   "url": "https://n.news.naver.com/article/015/0005353185?ntype=RANKING"
   },
   {
-   "press": "데일리안",
+   "press": "한국경제",
    "rank": 3,
-   "title": "젠슨 황 결국 쫓겨나나…엔비디아 이사회, 해임 결정 회의 돌입",
-   "url": "https://n.news.naver.com/article/119/0003154171?ntype=RANKING"
+   "title": "남대문 스카프 아저씨, 또 일냈다…온라인몰 열자마자 '품절'",
+   "url": "https://n.news.naver.com/article/015/0005353118?ntype=RANKING"
   },
   {
-   "press": "데일리안",
+   "press": "한국경제",
    "rank": 4,
-   "title": "[현장] 삼성이 보여준 '상생'의 규모…임직원 11만명에 지역 상점 370곳까지",
-   "url": "https://n.news.naver.com/article/119/0003154444?ntype=RANKING"
+   "title": "'90만원→18만원' 반의 반값…\"그 돈이면 日 다녀올게요\" [이슈+]",
+   "url": "https://n.news.naver.com/article/015/0005353210?ntype=RANKING"
   },
   {
-   "press": "데일리안",
+   "press": "한국경제",
    "rank": 5,
-   "title": "\"미소만 지어도 남자들 홀렸다\"...젠슨 황도 홀린 앨리스 황의 과거",
-   "url": "https://n.news.naver.com/article/119/0003154211?ntype=RANKING"
+   "title": "\"내 아내가 젠슨 황 비서\"…불륜 알고도 입 다문 남편 정체",
+   "url": "https://n.news.naver.com/article/015/0005353238?ntype=RANKING"
   },
   {
-   "press": "SBS Biz",
+   "press": "이데일리",
    "rank": 1,
-   "title": "[셀럽의 한 수] 'AI 황제' 젠슨 황의 추락, 삼전닉스 오히려 호재?",
-   "url": "https://n.news.naver.com/article/374/0000543302?ntype=RANKING"
+   "title": "젠슨황 불륜 2.0…'혼외정사' 킴벌리 파월은 누구?",
+   "url": "https://n.news.naver.com/article/018/0006409008?ntype=RANKING"
   },
   {
-   "press": "SBS Biz",
+   "press": "이데일리",
    "rank": 2,
-   "title": "\"신분증 잃어버린 적 있으세요?\"…신종 피싱에 8.4억도 털렸다",
-   "url": "https://n.news.naver.com/article/374/0000543263?ntype=RANKING"
+   "title": "5억 팔찌·코트 740만원...젠슨황의 불륜녀 '명품' 옷장 떠들썩",
+   "url": "https://n.news.naver.com/article/018/0006408594?ntype=RANKING"
   },
   {
-   "press": "SBS Biz",
+   "press": "이데일리",
    "rank": 3,
-   "title": "李대통령 \"코스닥 육성·VC 혁신…韓 자본시장 여전히 저평가\"",
-   "url": "https://n.news.naver.com/article/374/0000543306?ntype=RANKING"
+   "title": "“7억 영끌로 산 아파트에 한숨 쉬더니”…판교 부부, 4년 뒤 반전?",
+   "url": "https://n.news.naver.com/article/018/0006408839?ntype=RANKING"
   },
   {
-   "press": "SBS Biz",
+   "press": "이데일리",
    "rank": 4,
-   "title": "WSJ \"엔비디아 이사회, 젠슨 황 해임 준비\"…NYT \"젠슨 황, 부하 임원과도 불륜",
-   "url": "https://n.news.naver.com/article/374/0000543237?ntype=RANKING"
+   "title": "\"공매도, 또 너냐?\"…'반토막' 삼전닉스 반등 확률 90% 까닭",
+   "url": "https://n.news.naver.com/article/018/0006408593?ntype=RANKING"
   },
   {
-   "press": "SBS Biz",
+   "press": "이데일리",
    "rank": 5,
-   "title": "[단독] '교육생은 공짜?'…인천공항보안, 573명 밀린 임금 받는다",
-   "url": "https://n.news.naver.com/article/374/0000543222?ntype=RANKING"
-  },
-  {
-   "press": "전자신문",
-   "rank": 1,
-   "title": "“정말 좋아했다”…카투사 복무 '벌크업 여진구' 근황 알린 의외의 인물",
-   "url": "https://n.news.naver.com/article/030/0003484946?ntype=RANKING"
-  },
-  {
-   "press": "전자신문",
-   "rank": 2,
-   "title": "영하 24도 '남극 마라톤' 도전한 로봇…결과는?",
-   "url": "https://n.news.naver.com/article/030/0003484777?ntype=RANKING"
-  },
-  {
-   "press": "전자신문",
-   "rank": 3,
-   "title": "“모두가 조롱하더니”…6개월 전 '젠슨 황 불륜' 경고한 30대 투자자는",
-   "url": "https://n.news.naver.com/article/030/0003484960?ntype=RANKING"
-  },
-  {
-   "press": "전자신문",
-   "rank": 4,
-   "title": "“이자만 월 325만원” 곡소리 냈던 판교부부, 4년 뒤 반전…13억 아파트, 25억 됐다",
-   "url": "https://n.news.naver.com/article/030/0003485049?ntype=RANKING"
-  },
-  {
-   "press": "전자신문",
-   "rank": 5,
-   "title": "에버랜드, 삼성라이온즈 우승 기념 팬 초청 행사…2000명과 'V9 데이트'",
-   "url": "https://n.news.naver.com/article/030/0003485060?ntype=RANKING"
-  },
-  {
-   "press": "강원일보",
-   "rank": 1,
-   "title": "시흥 아파트서 40대 어머니와 10대 두 아들 숨진 채 발견…경찰, 큰아들 범행 가능성 두고 수사",
-   "url": "https://n.news.naver.com/article/087/0001230392?ntype=RANKING"
-  },
-  {
-   "press": "강원일보",
-   "rank": 2,
-   "title": "“젠슨황, 엔비디아 여성 임원과도 혼외관계”…‘사내불륜’ 추가 폭로",
-   "url": "https://n.news.naver.com/article/087/0001230342?ntype=RANKING"
-  },
-  {
-   "press": "강원일보",
-   "rank": 3,
-   "title": "아들이 저지른 성범죄 피해 15세 소녀 만취 상태서 살해한 50대 계획범죄 정황⋯경찰, ‘조건 만남’ 미끼 금품 갈취 연루 여부 주목해 수사망 확대",
-   "url": "https://n.news.naver.com/article/087/0001230349?ntype=RANKING"
-  },
-  {
-   "press": "강원일보",
-   "rank": 4,
-   "title": "“테트라포드에 사람 빠졌다” 강릉 심곡리 해안서 50대 남성 심정지",
-   "url": "https://n.news.naver.com/article/087/0001230346?ntype=RANKING"
-  },
-  {
-   "press": "강원일보",
-   "rank": 5,
-   "title": "“아버지 손주들 잘 키울게요. 어머니와 행복하게 계세요. 사랑하고 고맙습니다”…뇌사 판정 후 장기기증으로 3명에 새 삶 선물한 60대",
-   "url": "https://n.news.naver.com/article/087/0001230390?ntype=RANKING"
+   "title": "이재명 “고졸도 명장 될 수 있나” 이재용 “20년 근무하면 누구나”",
+   "url": "https://n.news.naver.com/article/018/0006409029?ntype=RANKING"
   },
   {
    "press": "디지털타임스",
@@ -1671,32 +1191,542 @@
   {
    "press": "디지털타임스",
    "rank": 3,
-   "title": "‘쉼터 전전하다 피살’ 15세 여성…사건 전 실종신고 됐었다",
-   "url": "https://n.news.naver.com/article/029/0003058752?ntype=RANKING"
+   "title": "230L 봉투에 30대男 숨진 채 발견…오산 원룸서 생활, 경찰 수사",
+   "url": "https://n.news.naver.com/article/029/0003058822?ntype=RANKING"
   },
   {
    "press": "디지털타임스",
    "rank": 4,
-   "title": "“젠슨 황 쫓겨나면 데려가라” 제안에…머스크 “영광일 것” 즉답",
-   "url": "https://n.news.naver.com/article/029/0003058742?ntype=RANKING"
+   "title": "인천공항 거쳐 중국가던 미국인 가방에 실탄 19발·탄창…경찰 압수",
+   "url": "https://n.news.naver.com/article/029/0003058834?ntype=RANKING"
   },
   {
    "press": "디지털타임스",
    "rank": 5,
-   "title": "삼성전자, 화성사업장서 ‘2026 나눔의 날’ 개최…임직원 10.8만명 동참",
-   "url": "https://n.news.naver.com/article/029/0003058770?ntype=RANKING"
+   "title": "‘젠슨 황 불륜녀’ 황러, 2년간 대만 8번이나 방문한 까닭…“심사 강화”",
+   "url": "https://n.news.naver.com/article/029/0003058815?ntype=RANKING"
+  },
+  {
+   "press": "CJB청주방송",
+   "rank": 1,
+   "title": "[속보] 이 대통령 \"국내 자본시장, 여전히 저평가...고삐 조여야\"",
+   "url": "https://n.news.naver.com/article/655/0000033551?ntype=RANKING"
+  },
+  {
+   "press": "CJB청주방송",
+   "rank": 2,
+   "title": "집유 1년만에 또...제주서 만취女 성폭행 20대 '징역 5년'",
+   "url": "https://n.news.naver.com/article/655/0000033549?ntype=RANKING"
+  },
+  {
+   "press": "CJB청주방송",
+   "rank": 3,
+   "title": "\"젠슨 황, 직속 부하 임원과도 불륜 의혹\"…엔비디아, 해임 검토",
+   "url": "https://n.news.naver.com/article/655/0000033542?ntype=RANKING"
+  },
+  {
+   "press": "CJB청주방송",
+   "rank": 4,
+   "title": "\"이재명 아들 군면제\" 허위글…이수정 2심도 벌금300만원",
+   "url": "https://n.news.naver.com/article/655/0000033550?ntype=RANKING"
+  },
+  {
+   "press": "CJB청주방송",
+   "rank": 5,
+   "title": "법원, 세월호 유족 '보상금 지급결정 취소소송' 2심도 각하",
+   "url": "https://n.news.naver.com/article/655/0000033548?ntype=RANKING"
+  },
+  {
+   "press": "부산일보",
+   "rank": 1,
+   "title": "\"평균 30점인데 혼자 100점\"…세무사 수석합격 'AI 안경' 의혹 제기돼",
+   "url": "https://n.news.naver.com/article/082/0001406898?ntype=RANKING"
+  },
+  {
+   "press": "부산일보",
+   "rank": 2,
+   "title": "'70명 부상' 분당 연쇄추돌 버스 국과수 감정…운전자 회복 후 입건·조사 예정",
+   "url": "https://n.news.naver.com/article/082/0001406928?ntype=RANKING"
+  },
+  {
+   "press": "부산일보",
+   "rank": 3,
+   "title": "'中간첩 의혹' 젠슨 황 불륜 상대, 2년간 사업목적 8차례 대만 방문",
+   "url": "https://n.news.naver.com/article/082/0001406907?ntype=RANKING"
+  },
+  {
+   "press": "부산일보",
+   "rank": 4,
+   "title": "성범죄로 집유받고도 또… 술에 취한 여성 성폭행한 20대, 이번엔 실형",
+   "url": "https://n.news.naver.com/article/082/0001406900?ntype=RANKING"
+  },
+  {
+   "press": "부산일보",
+   "rank": 5,
+   "title": "北 해커와 공모해 도박사이트 국내 유통… 수익 70억 원 전달한 일당들 징역형",
+   "url": "https://n.news.naver.com/article/082/0001406921?ntype=RANKING"
+  },
+  {
+   "press": "아이뉴스24",
+   "rank": 1,
+   "title": "로리 황이 '김치 싸대기'를?…AI로 만든 '젠슨 황 불륜' 조롱 밈 확산",
+   "url": "https://n.news.naver.com/article/031/0001074554?ntype=RANKING"
+  },
+  {
+   "press": "아이뉴스24",
+   "rank": 2,
+   "title": "'간첩 의혹' 앨리스 황, 베이징 체류 확인⋯中 당국도 인지",
+   "url": "https://n.news.naver.com/article/031/0001074488?ntype=RANKING"
+  },
+  {
+   "press": "아이뉴스24",
+   "rank": 3,
+   "title": "\"저 살 수 있는 거죠?\"⋯몸과 함께 늙어가는 피, 골수성 백혈병의 치료법 [명의]",
+   "url": "https://n.news.naver.com/article/031/0001074527?ntype=RANKING"
+  },
+  {
+   "press": "아이뉴스24",
+   "rank": 4,
+   "title": "[속보] '김건희 성상납 의혹 제기' 나꼼수 김용민, 항소심도 벌금 700만원",
+   "url": "https://n.news.naver.com/article/031/0001074576?ntype=RANKING"
+  },
+  {
+   "press": "아이뉴스24",
+   "rank": 5,
+   "title": "'젠슨 황 두 번째 불륜 상대' 킴벌리 파월 부사장은 누구?",
+   "url": "https://n.news.naver.com/article/031/0001074510?ntype=RANKING"
+  },
+  {
+   "press": "블로터",
+   "rank": 1,
+   "title": "HMM, 베일 속 '부산 이주 희망자 모집'...파격적 경제보상 담았나",
+   "url": "https://n.news.naver.com/article/293/0000093150?ntype=RANKING"
+  },
+  {
+   "press": "블로터",
+   "rank": 2,
+   "title": "HMM, 주주환원 정책 손질…배당성향 30%로 일원화",
+   "url": "https://n.news.naver.com/article/293/0000093162?ntype=RANKING"
+  },
+  {
+   "press": "블로터",
+   "rank": 3,
+   "title": "[현대차 L프로젝트] 정의선 회장이 픽한 '루나', 포티투닷과 다른 길",
+   "url": "https://n.news.naver.com/article/293/0000093130?ntype=RANKING"
+  },
+  {
+   "press": "블로터",
+   "rank": 4,
+   "title": "네이버는 왜 2030년까지 1조원 들여 물류 자회사를 세울까",
+   "url": "https://n.news.naver.com/article/293/0000093159?ntype=RANKING"
+  },
+  {
+   "press": "블로터",
+   "rank": 5,
+   "title": "삼성생명, 3Q 누적 순익 2조6859억…50% 환원 로드맵 그린다",
+   "url": "https://n.news.naver.com/article/293/0000093164?ntype=RANKING"
+  },
+  {
+   "press": "시사저널",
+   "rank": 1,
+   "title": "AI 황제에서 '불륜의 제왕'으로…젠슨 황, 엔비디아서 쫓겨나나",
+   "url": "https://n.news.naver.com/article/586/0000142107?ntype=RANKING"
+  },
+  {
+   "press": "시사저널",
+   "rank": 2,
+   "title": "父 출근한 뒤 가족에게 무슨 일이…시흥서 모친·두 아들 일가족 사망",
+   "url": "https://n.news.naver.com/article/586/0000142147?ntype=RANKING"
+  },
+  {
+   "press": "시사저널",
+   "rank": 3,
+   "title": "디올 CEO 이대 학위 수여식…이부진·정의선·신동빈 등 총출동",
+   "url": "https://n.news.naver.com/article/586/0000142140?ntype=RANKING"
+  },
+  {
+   "press": "시사저널",
+   "rank": 4,
+   "title": "비행기값 빼고도 남는 '스시자로'…'비만약 원정대' 손익계산서",
+   "url": "https://n.news.naver.com/article/586/0000142151?ntype=RANKING"
+  },
+  {
+   "press": "시사저널",
+   "rank": 5,
+   "title": "오세훈, 국토부 또 직격…\"남산 케이블카 60년 독점의 뒷배\"",
+   "url": "https://n.news.naver.com/article/586/0000142159?ntype=RANKING"
+  },
+  {
+   "press": "문화일보",
+   "rank": 1,
+   "title": "[이슈]차기 대선후보? 1001명에 물은 결과 1위는…",
+   "url": "https://n.news.naver.com/article/021/0002832426?ntype=RANKING"
+  },
+  {
+   "press": "문화일보",
+   "rank": 2,
+   "title": "평균 30점 시험서 홀로 만점 “혹시 AI 안경?”…세무사 수석합격자 논란",
+   "url": "https://n.news.naver.com/article/021/0002832373?ntype=RANKING"
+  },
+  {
+   "press": "문화일보",
+   "rank": 3,
+   "title": "윗집 ‘쿵쿵’, 층간소음이 아니었다…독거노인의 구조 요청 신호",
+   "url": "https://n.news.naver.com/article/021/0002832374?ntype=RANKING"
+  },
+  {
+   "press": "문화일보",
+   "rank": 4,
+   "title": "‘조작 징계 폭로’ 한동훈 “장동혁, 용서 구하라” 장동혁 “당 흔드는 것”",
+   "url": "https://n.news.naver.com/article/021/0002832182?ntype=RANKING"
+  },
+  {
+   "press": "문화일보",
+   "rank": 5,
+   "title": "“이재명 아들 군면제” 허위글 이수정…2심도 피선거권 박탈형",
+   "url": "https://n.news.naver.com/article/021/0002832421?ntype=RANKING"
+  },
+  {
+   "press": "뉴스1",
+   "rank": 1,
+   "title": "[단독]\"12년 만의 우승에 가전 할인\"…삼성스토어, 13일부터 할인",
+   "url": "https://n.news.naver.com/article/421/0009286313?ntype=RANKING"
+  },
+  {
+   "press": "뉴스1",
+   "rank": 2,
+   "title": "\"평균 30점인데 100점\"…너무 잘 본 세무사 수석에 'AI 안경' 의혹 제기",
+   "url": "https://n.news.naver.com/article/421/0009285462?ntype=RANKING"
+  },
+  {
+   "press": "뉴스1",
+   "rank": 3,
+   "title": "아들이 성범죄, 동거녀가 성착취…'성북 10대 소녀' 살해男 범행 동기 미궁",
+   "url": "https://n.news.naver.com/article/421/0009286059?ntype=RANKING"
+  },
+  {
+   "press": "뉴스1",
+   "rank": 4,
+   "title": "'젠슨 황 없는 엔비디아' 위기감…AI 산업·뉴욕증시 덮치나",
+   "url": "https://n.news.naver.com/article/421/0009286443?ntype=RANKING"
+  },
+  {
+   "press": "뉴스1",
+   "rank": 5,
+   "title": "젠슨 황 후임은…예측시장 '벅 부사장' 1위, 이사회 '크레스 CFO' 거론",
+   "url": "https://n.news.naver.com/article/421/0009285874?ntype=RANKING"
+  },
+  {
+   "press": "조선비즈",
+   "rank": 1,
+   "title": "수석 합격자 ‘AI 안경’ 의혹에… 한국세무사회 “철저한 진상조사 촉구”",
+   "url": "https://n.news.naver.com/article/366/0001204357?ntype=RANKING"
+  },
+  {
+   "press": "조선비즈",
+   "rank": 2,
+   "title": "이재용, 李대통령과 오찬하며 “광주는 직접 챙기시니 더 빠를 것”",
+   "url": "https://n.news.naver.com/article/366/0001204400?ntype=RANKING"
+  },
+  {
+   "press": "조선비즈",
+   "rank": 3,
+   "title": "이부진은 ‘3년 전 그 재킷’, 지수는 ‘레이디 디올’… 디올 패션도 화제",
+   "url": "https://n.news.naver.com/article/366/0001204328?ntype=RANKING"
+  },
+  {
+   "press": "조선비즈",
+   "rank": 4,
+   "title": "남대문 스카프 아저씨, 온라인 판매 시작하자마자 품절",
+   "url": "https://n.news.naver.com/article/366/0001204394?ntype=RANKING"
+  },
+  {
+   "press": "조선비즈",
+   "rank": 5,
+   "title": "“엔비디아 이사회, ‘젠슨 황 해임’ 준비”… 삼성·SK, 공급 차질보다 대중 규제가 변수",
+   "url": "https://n.news.naver.com/article/366/0001204381?ntype=RANKING"
+  },
+  {
+   "press": "미디어오늘",
+   "rank": 1,
+   "title": "무죄 한상혁 \"윤석열 정권이 저를 물러나게 하려고 시작돼\"",
+   "url": "https://n.news.naver.com/article/006/0000138703?ntype=RANKING"
+  },
+  {
+   "press": "미디어오늘",
+   "rank": 2,
+   "title": "MBC 앵커, 한덕수 석방 임박 \"조희대 뭐 하는 걸까\" JTBC 앵커 \"책임 커\"",
+   "url": "https://n.news.naver.com/article/006/0000138706?ntype=RANKING"
+  },
+  {
+   "press": "미디어오늘",
+   "rank": 3,
+   "title": "\"한상혁 전 위원장 무죄, 이제 무리한 기소·면직 책임 물을 차례\"",
+   "url": "https://n.news.naver.com/article/006/0000138709?ntype=RANKING"
+  },
+  {
+   "press": "미디어오늘",
+   "rank": 4,
+   "title": "김태규, 방미통위원장에 \"MBC 왜 징계 않나\" 추궁…\"화장실 가는데 불쑥 질문\"",
+   "url": "https://n.news.naver.com/article/006/0000138707?ntype=RANKING"
+  },
+  {
+   "press": "미디어오늘",
+   "rank": 5,
+   "title": "한덕수 20일 석방? 한겨레 \"조희대, 이재명 사건은 전합 회부 9일 만에 파기환송\"",
+   "url": "https://n.news.naver.com/article/006/0000138682?ntype=RANKING"
+  },
+  {
+   "press": "채널A",
+   "rank": 1,
+   "title": "[속보]‘김승원 청탁의혹’ 브로커 양 모 씨에 징역 4년 구형",
+   "url": "https://n.news.naver.com/article/449/0000367302?ntype=RANKING"
+  },
+  {
+   "press": "채널A",
+   "rank": 2,
+   "title": "‘아동 학대’ 고소 당한 민속촌 귀신 프로그램, 결국 종료",
+   "url": "https://n.news.naver.com/article/449/0000367220?ntype=RANKING"
+  },
+  {
+   "press": "채널A",
+   "rank": 3,
+   "title": "‘김건희 성상납 의혹 제기’ 나꼼수 김용민, 항소심도 벌금형",
+   "url": "https://n.news.naver.com/article/449/0000367285?ntype=RANKING"
+  },
+  {
+   "press": "채널A",
+   "rank": 4,
+   "title": "“이재명 아들 군 면제” 허위글 이수정, 2심도 피선거권 박탈형",
+   "url": "https://n.news.naver.com/article/449/0000367286?ntype=RANKING"
+  },
+  {
+   "press": "채널A",
+   "rank": 5,
+   "title": "젠슨 황 ‘사내 불륜설’ 킴벌리 파월…“자녀 2명 둔 기혼자”",
+   "url": "https://n.news.naver.com/article/449/0000367287?ntype=RANKING"
+  },
+  {
+   "press": "MBN",
+   "rank": 1,
+   "title": "'젠슨 황 후임'으로 애플 칩 설계 주역 거론…\"어리석은 해임\" 여론도",
+   "url": "https://n.news.naver.com/article/057/0001977900?ntype=RANKING"
+  },
+  {
+   "press": "MBN",
+   "rank": 2,
+   "title": "\"AI 안경 쓴 거 아니냐\"…세무사 수석 '만점'에 현직자들도 '술렁'",
+   "url": "https://n.news.naver.com/article/057/0001977895?ntype=RANKING"
+  },
+  {
+   "press": "MBN",
+   "rank": 3,
+   "title": "오산 원룸서 대형 봉투에 담긴 30대 남성 시신 발견",
+   "url": "https://n.news.naver.com/article/057/0001977914?ntype=RANKING"
+  },
+  {
+   "press": "MBN",
+   "rank": 4,
+   "title": "이식 못 받은 아내 떠난 지 8개월…남편은 3명 살리고 곁으로",
+   "url": "https://n.news.naver.com/article/057/0001977909?ntype=RANKING"
+  },
+  {
+   "press": "MBN",
+   "rank": 5,
+   "title": "20대 미화원 사망에 \"누가 발판 타랬나\"…도의원 발언 논란",
+   "url": "https://n.news.naver.com/article/057/0001977861?ntype=RANKING"
+  },
+  {
+   "press": "신동아",
+   "rank": 1,
+   "title": "외도·경제난·은퇴…진짜 불행의 원인은 어디에 있나",
+   "url": "https://n.news.naver.com/article/262/0000019842?ntype=RANKING"
+  },
+  {
+   "press": "신동아",
+   "rank": 2,
+   "title": "오래 쓰고 싶은 소비자, 더 팔고 싶은 기업",
+   "url": "https://n.news.naver.com/article/262/0000019840?ntype=RANKING"
+  },
+  {
+   "press": "신동아",
+   "rank": 3,
+   "title": "‘천사들의 합창’ 그 도시, 700년 전 발밑엔 호수가 있었다",
+   "url": "https://n.news.naver.com/article/262/0000019839?ntype=RANKING"
+  },
+  {
+   "press": "신동아",
+   "rank": 4,
+   "title": "“생활 방식과 취향 저격…현대인 니즈도 함께 삶았다”",
+   "url": "https://n.news.naver.com/article/262/0000019841?ntype=RANKING"
+  },
+  {
+   "press": "신동아",
+   "rank": 5,
+   "title": "“국내 생산 라면, 검역 없이 中 간다”…식약처가 허문 비관세장벽",
+   "url": "https://n.news.naver.com/article/262/0000019838?ntype=RANKING"
+  },
+  {
+   "press": "비즈워치",
+   "rank": 1,
+   "title": "역대급 실적 쓴 'HMM'…글로벌 선사들 압도한 '수익성'",
+   "url": "https://n.news.naver.com/article/648/0000052576?ntype=RANKING"
+  },
+  {
+   "press": "비즈워치",
+   "rank": 2,
+   "title": "로또 20억? 30억? '디에이치 반포124' 12월 출격",
+   "url": "https://n.news.naver.com/article/648/0000052566?ntype=RANKING"
+  },
+  {
+   "press": "비즈워치",
+   "rank": 3,
+   "title": "반대매매 유예, 약일까 독일까…6년전 사례가 남긴 경고",
+   "url": "https://n.news.naver.com/article/648/0000052569?ntype=RANKING"
+  },
+  {
+   "press": "비즈워치",
+   "rank": 4,
+   "title": "[슬소생]양념치킨은 눅눅하다?…bhc는 달랐다",
+   "url": "https://n.news.naver.com/article/648/0000052540?ntype=RANKING"
+  },
+  {
+   "press": "비즈워치",
+   "rank": 5,
+   "title": "펄어비스, 3분기 매출 1015억원…검은사막의 힘",
+   "url": "https://n.news.naver.com/article/648/0000052578?ntype=RANKING"
+  },
+  {
+   "press": "뉴시스",
+   "rank": 1,
+   "title": "李, 삼성 온양캠퍼스 구내식당 오찬…이재용 \"광주는 대통령 챙기니 더 빠를 것\"",
+   "url": "https://n.news.naver.com/article/003/0014319311?ntype=RANKING"
+  },
+  {
+   "press": "뉴시스",
+   "rank": 2,
+   "title": "CNN \"엔비디아 이사회 진행 중, 젠슨 황 거취 논의\"…해임 관측도",
+   "url": "https://n.news.naver.com/article/003/0014318414?ntype=RANKING"
+  },
+  {
+   "press": "뉴시스",
+   "rank": 3,
+   "title": "\"손실 나도 버틴다\"…개미 3명 중 2명은 손절 대신 보유·물타기",
+   "url": "https://n.news.naver.com/article/003/0014319393?ntype=RANKING"
+  },
+  {
+   "press": "뉴시스",
+   "rank": 4,
+   "title": "'평균 99.38점' 역대급 고득점에…세무사시험 AI 안경 의혹 부상",
+   "url": "https://n.news.naver.com/article/003/0014317986?ntype=RANKING"
+  },
+  {
+   "press": "뉴시스",
+   "rank": 5,
+   "title": "젠슨 황 'LOVE x 3'의 재해석…'김치 싸대기'까지 AI 풍자 봇물(종합)",
+   "url": "https://n.news.naver.com/article/003/0014319291?ntype=RANKING"
+  },
+  {
+   "press": "전자신문",
+   "rank": 1,
+   "title": "“남장하고 여성들 사귀며 성관계까지”… '영국판 전청조' 결국",
+   "url": "https://n.news.naver.com/article/030/0003485169?ntype=RANKING"
+  },
+  {
+   "press": "전자신문",
+   "rank": 2,
+   "title": "WSJ “젠슨 황에 앨리스 황 소개한 건 남편…AI 칩 사업으로 연결",
+   "url": "https://n.news.naver.com/article/030/0003485185?ntype=RANKING"
+  },
+  {
+   "press": "전자신문",
+   "rank": 3,
+   "title": "“모두가 조롱하더니”…6개월 전 '젠슨 황 불륜' 경고한 30대 투자자는",
+   "url": "https://n.news.naver.com/article/030/0003484960?ntype=RANKING"
+  },
+  {
+   "press": "전자신문",
+   "rank": 4,
+   "title": "영하 24도 '남극 마라톤' 도전한 로봇…결과는?",
+   "url": "https://n.news.naver.com/article/030/0003484777?ntype=RANKING"
+  },
+  {
+   "press": "전자신문",
+   "rank": 5,
+   "title": "“정말 좋아했다”…카투사 복무 '벌크업 여진구' 근황 알린 의외의 인물",
+   "url": "https://n.news.naver.com/article/030/0003484946?ntype=RANKING"
+  },
+  {
+   "press": "코리아헤럴드",
+   "rank": 1,
+   "title": "Blackpink’s Lisa to unveil documentary online",
+   "url": "https://n.news.naver.com/article/044/0000292091?ntype=RANKING"
+  },
+  {
+   "press": "코리아헤럴드",
+   "rank": 2,
+   "title": "Lee to call for cooperation on energy supply risks at ASEAN, APEC summits",
+   "url": "https://n.news.naver.com/article/044/0000292096?ntype=RANKING"
+  },
+  {
+   "press": "코리아헤럴드",
+   "rank": 3,
+   "title": "‘Megaproject’ breaks ground at Samsung HBM plant",
+   "url": "https://n.news.naver.com/article/044/0000292121?ntype=RANKING"
+  },
+  {
+   "press": "코리아헤럴드",
+   "rank": 4,
+   "title": "From chimaek to scandal: Jensen Huang's star loses luster in Korea",
+   "url": "https://n.news.naver.com/article/044/0000292126?ntype=RANKING"
+  },
+  {
+   "press": "코리아헤럴드",
+   "rank": 5,
+   "title": "Lngshot named Spotify's latest Radar Korea artist",
+   "url": "https://n.news.naver.com/article/044/0000292098?ntype=RANKING"
+  },
+  {
+   "press": "데일리안",
+   "rank": 1,
+   "title": "젠슨 황 불륜 상대 남편, 두 사람 관계 알고도 2년간 묵인…반도체 사업까지 연결",
+   "url": "https://n.news.naver.com/article/119/0003154516?ntype=RANKING"
+  },
+  {
+   "press": "데일리안",
+   "rank": 2,
+   "title": "30년 우정 이부진의 남다른 디올 사랑...가격 봤더니",
+   "url": "https://n.news.naver.com/article/119/0003154566?ntype=RANKING"
+  },
+  {
+   "press": "데일리안",
+   "rank": 3,
+   "title": "\"6개월 전 이미 경고했다\"...젠슨 황 추문 예견한 31세 투자자",
+   "url": "https://n.news.naver.com/article/119/0003154499?ntype=RANKING"
+  },
+  {
+   "press": "데일리안",
+   "rank": 4,
+   "title": "황경성 \"장동혁, 이번주까지 사과하길…증거 명확히 줄테니 염려말라\"",
+   "url": "https://n.news.naver.com/article/119/0003154510?ntype=RANKING"
+  },
+  {
+   "press": "데일리안",
+   "rank": 5,
+   "title": "젠슨 황, 앨리스 황 이어 엔비디아 임원과 불륜설 추가 제기…\"헬스케어 부사장·기혼女\"",
+   "url": "https://n.news.naver.com/article/119/0003154167?ntype=RANKING"
   },
   {
    "press": "kbc광주방송",
    "rank": 1,
-   "title": "\"아내는 이식 기다리다 숨졌는데\"…남편은 3명에 새 생명 선물",
-   "url": "https://n.news.naver.com/article/660/0000121168?ntype=RANKING"
+   "title": "\"李대통령-김현지, 자식 나눈 사이?\" 막말 게시...전 창원시의원 '벌금형'",
+   "url": "https://n.news.naver.com/article/660/0000121207?ntype=RANKING"
   },
   {
    "press": "kbc광주방송",
    "rank": 2,
-   "title": "\"경찰이 꿈인데 면담 좀\"…지구대 찾아온 초등생들, 경찰의 반응은? [살맛나는 세상]",
-   "url": "https://n.news.naver.com/article/660/0000121176?ntype=RANKING"
+   "title": "\"아내는 이식 기다리다 숨졌는데\"…남편은 3명에 새 생명 선물",
+   "url": "https://n.news.naver.com/article/660/0000121168?ntype=RANKING"
   },
   {
    "press": "kbc광주방송",
@@ -1707,104 +1737,164 @@
   {
    "press": "kbc광주방송",
    "rank": 4,
-   "title": "\"불륜 의혹 또 터졌다\"…젠슨황 해임 검토하는 엔비디아",
-   "url": "https://n.news.naver.com/article/660/0000121139?ntype=RANKING"
+   "title": "\"경찰이 꿈인데 면담 좀\"…지구대 찾아온 초등생들, 경찰의 반응은? [살맛나는 세상]",
+   "url": "https://n.news.naver.com/article/660/0000121176?ntype=RANKING"
   },
   {
    "press": "kbc광주방송",
    "rank": 5,
-   "title": "아파트서 어머니와 10대 두 아들 숨진 채 발견…경찰 수사",
-   "url": "https://n.news.naver.com/article/660/0000121163?ntype=RANKING"
+   "title": "\"개 운반용 우리에 아기를…\" 생후 11개월 아들 생매장한 20대 아빠",
+   "url": "https://n.news.naver.com/article/660/0000121198?ntype=RANKING"
   },
   {
-   "press": "뉴시스",
+   "press": "강원도민일보",
    "rank": 1,
-   "title": "젠슨 황 'LOVE LOVE LOVE'…본처·두 불륜녀 향한 메시지였나 '조롱'",
-   "url": "https://n.news.naver.com/article/003/0014318281?ntype=RANKING"
+   "title": "[속보] 강릉 임도공사 중 굴삭기 추락…40대 작업자 숨져",
+   "url": "https://n.news.naver.com/article/654/0000210997?ntype=RANKING"
   },
   {
-   "press": "뉴시스",
+   "press": "강원도민일보",
    "rank": 2,
-   "title": "젠슨 황 해임 기로…30년 함께한 엔비디아 이사진 선택 주목",
-   "url": "https://n.news.naver.com/article/003/0014318544?ntype=RANKING"
+   "title": "[속보] \"이재명 두 아들 군 면제\" 허위 글 올린 이수정 항소심도 벌금 300만원",
+   "url": "https://n.news.naver.com/article/654/0000210954?ntype=RANKING"
   },
   {
-   "press": "뉴시스",
+   "press": "강원도민일보",
    "rank": 3,
-   "title": "'평균 99.38점' 역대급 고득점에…세무사시험 AI 안경 의혹 부상",
-   "url": "https://n.news.naver.com/article/003/0014317986?ntype=RANKING"
+   "title": "시흥 아파트서 40대 어머니와 10대 두 아들 숨진 채 발견",
+   "url": "https://n.news.naver.com/article/654/0000210898?ntype=RANKING"
   },
   {
-   "press": "뉴시스",
+   "press": "강원도민일보",
    "rank": 4,
-   "title": "CNN \"엔비디아 이사회 진행 중, 젠슨 황 거취 논의\"…해임 관측도",
-   "url": "https://n.news.naver.com/article/003/0014318414?ntype=RANKING"
+   "title": "\"'중국 스파이 의혹' 앨리스 황 남편, 아내와 젠슨 황 만남 주선\"",
+   "url": "https://n.news.naver.com/article/654/0000210981?ntype=RANKING"
   },
   {
-   "press": "뉴시스",
+   "press": "강원도민일보",
    "rank": 5,
-   "title": "'성북구 살해' 피해자, 쉼터 이용 중이었다…\"외출 상태서 피해\"",
-   "url": "https://n.news.naver.com/article/003/0014318131?ntype=RANKING"
+   "title": "분당 버스 연쇄추돌 부상자 70명으로…버스 국과수 감정",
+   "url": "https://n.news.naver.com/article/654/0000210982?ntype=RANKING"
   },
   {
-   "press": "코리아헤럴드",
+   "press": "경기일보",
    "rank": 1,
-   "title": "John Park’s agency to take action over unauthorized distribution of ‘McDonald’s Order Rap’",
-   "url": "https://n.news.naver.com/article/044/0000292078?ntype=RANKING"
+   "title": "오산 원룸서 대형 비닐봉투에 든 30대 남성 시신 발견",
+   "url": "https://n.news.naver.com/article/666/0000131820?ntype=RANKING"
   },
   {
-   "press": "코리아헤럴드",
+   "press": "경기일보",
    "rank": 2,
-   "title": "Six-term lawmaker says balancing Europe and Russia a 'dilemma' for Seoul",
-   "url": "https://n.news.naver.com/article/044/0000292074?ntype=RANKING"
+   "title": "‘평균 30점’ 시험서 혼자 100점 만점?…세무사 수석 합격생 ‘AI 안경’ 의혹",
+   "url": "https://n.news.naver.com/article/666/0000131780?ntype=RANKING"
   },
   {
-   "press": "코리아헤럴드",
+   "press": "경기일보",
    "rank": 3,
-   "title": "Lottery dream comes true as couple wins W2b",
-   "url": "https://n.news.naver.com/article/044/0000292063?ntype=RANKING"
+   "title": "주말까지 전국 비…6년 만에 영하권 ‘수능 한파’ 온다",
+   "url": "https://n.news.naver.com/article/666/0000131798?ntype=RANKING"
   },
   {
-   "press": "코리아헤럴드",
+   "press": "경기일보",
    "rank": 4,
-   "title": "Jisoo, NCT, Babymonster among Korean acts for Coachella 2027",
-   "url": "https://n.news.naver.com/article/044/0000292076?ntype=RANKING"
+   "title": "中 관광객, 서울 돌며 여성 신체 27차례 몰카…“한국 처음이라 몰랐다”",
+   "url": "https://n.news.naver.com/article/666/0000131825?ntype=RANKING"
   },
   {
-   "press": "코리아헤럴드",
+   "press": "경기일보",
    "rank": 5,
-   "title": "[Graphic News] S. Korea ranks 12th in global AI adoption",
-   "url": "https://n.news.naver.com/article/044/0000292081?ntype=RANKING"
+   "title": "장동혁 “국민 한겨울 계곡에 텐트 치고 살 판…민주, 이제 와 반기”",
+   "url": "https://n.news.naver.com/article/666/0000131793?ntype=RANKING"
   },
   {
-   "press": "오마이뉴스",
+   "press": "대전일보",
    "rank": 1,
-   "title": "아이가 유치원에서 써 온 편지, 쉽게 버리지 마세요",
-   "url": "https://n.news.naver.com/article/047/0002535582?ntype=RANKING"
+   "title": "이 대통령 \"국내 자본시장 여전히 저평가… 코스닥 육성 박차\"",
+   "url": "https://n.news.naver.com/article/656/0000192230?ntype=RANKING"
   },
   {
-   "press": "오마이뉴스",
+   "press": "대전일보",
    "rank": 2,
-   "title": "정청래 \"김민석 대화 피하지 않겠다... 사과부터 제대로\"",
-   "url": "https://n.news.naver.com/article/047/0002535615?ntype=RANKING"
+   "title": "올리브영·런던베이글 이어 '한정선'까지… 中 짝퉁 매장 논란",
+   "url": "https://n.news.naver.com/article/656/0000192242?ntype=RANKING"
   },
   {
-   "press": "오마이뉴스",
+   "press": "대전일보",
    "rank": 3,
-   "title": "버섯은 말려서, 잎채소는 물에 담가서... 냉장고 없이 삽니다",
-   "url": "https://n.news.naver.com/article/047/0002535626?ntype=RANKING"
+   "title": "\"이재명 아들 군 면제\" 허위글 이수정, 2심도 피선거권 박탈형",
+   "url": "https://n.news.naver.com/article/656/0000192231?ntype=RANKING"
   },
   {
-   "press": "오마이뉴스",
+   "press": "대전일보",
    "rank": 4,
-   "title": "몸 푸는 정청래, 어떤 깃발을 들까?",
-   "url": "https://n.news.naver.com/article/047/0002535588?ntype=RANKING"
+   "title": "'수능 한파' 온다… 충청권 수능당일 찬바람에 체감온도 '뚝'",
+   "url": "https://n.news.naver.com/article/656/0000192211?ntype=RANKING"
   },
   {
-   "press": "오마이뉴스",
+   "press": "대전일보",
    "rank": 5,
-   "title": "'국회 기자 비하' 최민희, 침묵하다가 남긴 말 \"찍고 있죠?\"",
-   "url": "https://n.news.naver.com/article/047/0002535456?ntype=RANKING"
+   "title": "장중 5450선 웃돌던 코스피 하락 전환… 코스닥도 700선 내줘",
+   "url": "https://n.news.naver.com/article/656/0000192234?ntype=RANKING"
+  },
+  {
+   "press": "SBS Biz",
+   "rank": 1,
+   "title": "운전대도·페달도 없다…테슬라 자율주행 전용차 한국 떴다",
+   "url": "https://n.news.naver.com/article/374/0000543333?ntype=RANKING"
+  },
+  {
+   "press": "SBS Biz",
+   "rank": 2,
+   "title": "[단독] '교육생은 공짜?'…인천공항보안, 573명 밀린 임금 받는다",
+   "url": "https://n.news.naver.com/article/374/0000543222?ntype=RANKING"
+  },
+  {
+   "press": "SBS Biz",
+   "rank": 3,
+   "title": "\"신분증 잃어버린 적 있으세요?\"…신종 피싱에 8.4억도 털렸다",
+   "url": "https://n.news.naver.com/article/374/0000543263?ntype=RANKING"
+  },
+  {
+   "press": "SBS Biz",
+   "rank": 4,
+   "title": "[셀럽의 한 수] 'AI 황제' 젠슨 황의 추락, 삼전닉스 오히려 호재?",
+   "url": "https://n.news.naver.com/article/374/0000543302?ntype=RANKING"
+  },
+  {
+   "press": "SBS Biz",
+   "rank": 5,
+   "title": "국민연금도 '젠슨황 스캔들' 불똥?…넉달새 4조 증발",
+   "url": "https://n.news.naver.com/article/374/0000543349?ntype=RANKING"
+  },
+  {
+   "press": "동행미디어 시대",
+   "rank": 1,
+   "title": "이재용 삼성전자 회장 \"온양캠, 최첨단 HBM 거점으로 변모\"",
+   "url": "https://n.news.naver.com/article/417/0001164107?ntype=RANKING"
+  },
+  {
+   "press": "동행미디어 시대",
+   "rank": 2,
+   "title": "추가 불륜 의혹에 젠슨 황 퇴진 위기…벼랑 끝 'AI 황태자'",
+   "url": "https://n.news.naver.com/article/417/0001164134?ntype=RANKING"
+  },
+  {
+   "press": "동행미디어 시대",
+   "rank": 3,
+   "title": "엔비디아 칩 24만장 중국 유입 의혹, 한국 GPU 목표와 맞먹어",
+   "url": "https://n.news.naver.com/article/417/0001164148?ntype=RANKING"
+  },
+  {
+   "press": "동행미디어 시대",
+   "rank": 4,
+   "title": "\"술자리 장난, 돌려줬다\"…김승우, 2200만원 절도 혐의 피소",
+   "url": "https://n.news.naver.com/article/417/0001164166?ntype=RANKING"
+  },
+  {
+   "press": "동행미디어 시대",
+   "rank": 5,
+   "title": "또 선넘은 중국…성수동 찹쌀떡 '한정선' 통째 베낀 '짝퉁 매장' 등장",
+   "url": "https://n.news.naver.com/article/417/0001164106?ntype=RANKING"
   },
   {
    "press": "시사IN",
@@ -1837,64 +1927,154 @@
    "url": "https://n.news.naver.com/article/308/0000038966?ntype=RANKING"
   },
   {
-   "press": "비즈워치",
+   "press": "한경비즈니스",
    "rank": 1,
-   "title": "[르포]\"뒤처지면 14년 뒤 입주…가장 먼저 '자이' 삽 뜰 것\"",
-   "url": "https://n.news.naver.com/article/648/0000052551?ntype=RANKING"
+   "title": "[속보]서울 아파트 92주째 상승",
+   "url": "https://n.news.naver.com/article/050/0000113174?ntype=RANKING"
   },
   {
-   "press": "비즈워치",
+   "press": "한경비즈니스",
    "rank": 2,
-   "title": "[슬소생]양념치킨은 눅눅하다?…bhc는 달랐다",
-   "url": "https://n.news.naver.com/article/648/0000052540?ntype=RANKING"
+   "title": "이재용 삼성 회장 \"온양 HBM 핵심거점으로\" 충청 메가프로젝트 '첫 삽'",
+   "url": "https://n.news.naver.com/article/050/0000113155?ntype=RANKING"
   },
   {
-   "press": "비즈워치",
+   "press": "한경비즈니스",
    "rank": 3,
-   "title": "폭락장에 장사 없었다…미래에셋증권, 사상 최대 실적 후 적자전환",
-   "url": "https://n.news.naver.com/article/648/0000052553?ntype=RANKING"
+   "title": "“안 삽니다” 개미들 증시 떠났나",
+   "url": "https://n.news.naver.com/article/050/0000113172?ntype=RANKING"
   },
   {
-   "press": "비즈워치",
+   "press": "한경비즈니스",
    "rank": 4,
-   "title": "로또 20억? 30억? '디에이치 반포124' 12월 출격",
-   "url": "https://n.news.naver.com/article/648/0000052566?ntype=RANKING"
+   "title": "“젠슨 황 영입할까” 머스크의 깜짝 제안",
+   "url": "https://n.news.naver.com/article/050/0000113158?ntype=RANKING"
   },
   {
-   "press": "비즈워치",
+   "press": "한경비즈니스",
    "rank": 5,
-   "title": "[다시 코스닥]③\"모르는데 어떻게 투자해요?\"...10곳 중 8곳 IR 공시 없어",
-   "url": "https://n.news.naver.com/article/648/0000052552?ntype=RANKING"
+   "title": "나라살림 적자, 8년만 최소",
+   "url": "https://n.news.naver.com/article/050/0000113153?ntype=RANKING"
   },
   {
-   "press": "프레시안",
+   "press": "대구MBC",
    "rank": 1,
-   "title": "[속보] 전재수, '정당' 고려 전국 단체장 지지도 1위…오세훈 크게 제쳤다",
-   "url": "https://n.news.naver.com/article/002/0002465587?ntype=RANKING"
+   "title": "'100리터라더니 1,000리터?' 대구 주유소 경유 유출···관로로 흘러들어",
+   "url": "https://n.news.naver.com/article/657/0000057386?ntype=RANKING"
   },
   {
-   "press": "프레시안",
+   "press": "대구MBC",
    "rank": 2,
-   "title": "러·우 ‘역대 최대’ 포로 교환 합의…4년 끈 전쟁, 종전 물꼬 트이나",
-   "url": "https://n.news.naver.com/article/002/0002465451?ntype=RANKING"
+   "title": "\"경북대도 선정해 주세요\" 경북대 총동창회, '서울대 10개 만들기' 추가 선정 국민 동의 청원 나서",
+   "url": "https://n.news.naver.com/article/657/0000057378?ntype=RANKING"
   },
   {
-   "press": "프레시안",
+   "press": "대구MBC",
    "rank": 3,
-   "title": "중간선거 참패에도 반성 없는 미 공화당…헤그세스 탄핵 막고 '강경파' 전면 배치[트럼프 2기]",
-   "url": "https://n.news.naver.com/article/002/0002465443?ntype=RANKING"
+   "title": "수출 두 자릿수 늘었지만···대구·경북 체감경기는 '싸늘'",
+   "url": "https://n.news.naver.com/article/657/0000057391?ntype=RANKING"
   },
   {
-   "press": "프레시안",
+   "press": "대구MBC",
    "rank": 4,
-   "title": "\"트럼프, '3개의 무덤'에 빠졌다…'괴물' 비서실장 임명은 민주당과 전쟁 선포\"[인터뷰]",
-   "url": "https://n.news.naver.com/article/002/0002465513?ntype=RANKING"
+   "title": "김민석 \"정청래 만남 노력···중진 권유로 신천지 조사 결과 전면 공개 안 해\"",
+   "url": "https://n.news.naver.com/article/657/0000057377?ntype=RANKING"
   },
   {
-   "press": "프레시안",
+   "press": "대구MBC",
    "rank": 5,
-   "title": "李대통령 \"메가프로젝트 첫 삽…주민들도 투자 결실 누려야\"",
-   "url": "https://n.news.naver.com/article/002/0002465576?ntype=RANKING"
+   "title": "정청래 \"김민석, 대화 전 사과부터 제대로 해라\"",
+   "url": "https://n.news.naver.com/article/657/0000057383?ntype=RANKING"
+  },
+  {
+   "press": "매경이코노미",
+   "rank": 1,
+   "title": "李대통령 “국내 자본시장 여전히 저평가…매력적인 투자 대상”",
+   "url": "https://n.news.naver.com/article/024/0000109590?ntype=RANKING"
+  },
+  {
+   "press": "매경이코노미",
+   "rank": 2,
+   "title": "“나도 8억 성과급”...SK하이닉스 학력무관 생산직 채용",
+   "url": "https://n.news.naver.com/article/024/0000109563?ntype=RANKING"
+  },
+  {
+   "press": "매경이코노미",
+   "rank": 3,
+   "title": "술 안 마시는 분위기에…하이트진로 4년 만에 희망퇴직",
+   "url": "https://n.news.naver.com/article/024/0000109561?ntype=RANKING"
+  },
+  {
+   "press": "매경이코노미",
+   "rank": 4,
+   "title": "JYP엔터 주가 ‘불기둥’...스키즈 효과 톡톡 [오늘, 이 종목]",
+   "url": "https://n.news.naver.com/article/024/0000109586?ntype=RANKING"
+  },
+  {
+   "press": "매경이코노미",
+   "rank": 5,
+   "title": "李대통령 지지율 44%...민주 35%·국힘 25% [NBS]",
+   "url": "https://n.news.naver.com/article/024/0000109579?ntype=RANKING"
+  },
+  {
+   "press": "헬스조선",
+   "rank": 1,
+   "title": "“아침마다 누룽지 끓여 먹었더니”… 당뇨병 환자 깜짝 놀랄 ‘혈당지수 72’의 반전",
+   "url": "https://n.news.naver.com/article/346/0000118768?ntype=RANKING"
+  },
+  {
+   "press": "헬스조선",
+   "rank": 2,
+   "title": "“무조건 살 빠진다” 31kg 감량 김빈우, 9년째 공복에 꼭 한 것… 뭐야?",
+   "url": "https://n.news.naver.com/article/346/0000118782?ntype=RANKING"
+  },
+  {
+   "press": "헬스조선",
+   "rank": 3,
+   "title": "“식후혈당 덜 오른다” 윤현숙이 빵보다 먼저 먹는 음식, 뭘까?",
+   "url": "https://n.news.naver.com/article/346/0000118789?ntype=RANKING"
+  },
+  {
+   "press": "헬스조선",
+   "rank": 4,
+   "title": "“탄 것 발라내고 살만 먹어라”… ‘숯덩이 고등어’ 내놓은 식당, 이게 맞나?",
+   "url": "https://n.news.naver.com/article/346/0000118794?ntype=RANKING"
+  },
+  {
+   "press": "헬스조선",
+   "rank": 5,
+   "title": "“관절 아픈 사람은 먹지 마라”… 학술지에 실린 ‘염증 악화 음식 3가지’",
+   "url": "https://n.news.naver.com/article/346/0000118767?ntype=RANKING"
+  },
+  {
+   "press": "농민신문",
+   "rank": 1,
+   "title": "“사육기간 줄여 가격 내렸다”…‘단기비육 한우고기’ 최대 반값 판매",
+   "url": "https://n.news.naver.com/article/662/0000108297?ntype=RANKING"
+  },
+  {
+   "press": "농민신문",
+   "rank": 2,
+   "title": "“‘한정선’ 상하이 매장인줄”…상호부터 진열방식까지 베낀 중국",
+   "url": "https://n.news.naver.com/article/662/0000108300?ntype=RANKING"
+  },
+  {
+   "press": "농민신문",
+   "rank": 3,
+   "title": "“수험생, 얇은 옷 겹겹이”…6년 만에 ‘수능 한파’ 오나",
+   "url": "https://n.news.naver.com/article/662/0000108302?ntype=RANKING"
+  },
+  {
+   "press": "농민신문",
+   "rank": 4,
+   "title": "“11월 중순부터 지급”…올해 기본형 공익직불금 2조3788억",
+   "url": "https://n.news.naver.com/article/662/0000108308?ntype=RANKING"
+  },
+  {
+   "press": "농민신문",
+   "rank": 5,
+   "title": "“난방 없는 숙소에 산다면?”…외국인 계절근로자, ‘1345’로 신고하세요",
+   "url": "https://n.news.naver.com/article/662/0000108304?ntype=RANKING"
   },
   {
    "press": "지디넷코리아",
@@ -1905,86 +2085,422 @@
   {
    "press": "지디넷코리아",
    "rank": 2,
-   "title": "‘배터리 최강’ 아이폰18 프로 맥스…상위권 애플 독식",
-   "url": "https://n.news.naver.com/article/092/0002445037?ntype=RANKING"
-  },
-  {
-   "press": "지디넷코리아",
-   "rank": 3,
-   "title": "[써보고서] 3시간 착용해도 귀가 편안해...20만원대 가성비 'JBL 라이브 780NC'",
-   "url": "https://n.news.naver.com/article/092/0002444887?ntype=RANKING"
-  },
-  {
-   "press": "지디넷코리아",
-   "rank": 4,
-   "title": "아이폰X 이후 최대 변화 오나…‘아이폰20 프로’ 신기능 총정리",
-   "url": "https://n.news.naver.com/article/092/0002444879?ntype=RANKING"
-  },
-  {
-   "press": "지디넷코리아",
-   "rank": 5,
    "title": "젠슨 황 해임 위기…차기 엔비디아 CEO 유력 후보는",
    "url": "https://n.news.naver.com/article/092/0002445058?ntype=RANKING"
   },
   {
-   "press": "아이뉴스24",
-   "rank": 1,
-   "title": "'젠슨 황 두 번째 불륜 상대' 킴벌리 파월 부사장은 누구?",
-   "url": "https://n.news.naver.com/article/031/0001074510?ntype=RANKING"
-  },
-  {
-   "press": "아이뉴스24",
-   "rank": 2,
-   "title": "[속보] '성북구 15세 소녀 살해' 50대男 구속영장 신청…계획범죄 정황",
-   "url": "https://n.news.naver.com/article/031/0001074494?ntype=RANKING"
-  },
-  {
-   "press": "아이뉴스24",
+   "press": "지디넷코리아",
    "rank": 3,
-   "title": "'간첩 의혹' 앨리스 황, 베이징 체류 확인⋯中 당국도 인지",
-   "url": "https://n.news.naver.com/article/031/0001074488?ntype=RANKING"
+   "title": "갤럭시S27 울트라 모형 유출…\"카메라 디자인 호불호 갈려\"",
+   "url": "https://n.news.naver.com/article/092/0002445067?ntype=RANKING"
   },
   {
-   "press": "아이뉴스24",
+   "press": "지디넷코리아",
    "rank": 4,
-   "title": "로리 황이 '김치 싸대기'를?…AI로 만든 '젠슨 황 불륜' 조롱 밈 확산",
-   "url": "https://n.news.naver.com/article/031/0001074554?ntype=RANKING"
+   "title": "中, AI칩 수급난에 eSSD '주문 축소'…삼성·SK, 美 공급 비중 늘린다",
+   "url": "https://n.news.naver.com/article/092/0002445055?ntype=RANKING"
   },
   {
-   "press": "아이뉴스24",
+   "press": "지디넷코리아",
    "rank": 5,
-   "title": "\"저 살 수 있는 거죠?\"⋯몸과 함께 늙어가는 피, 골수성 백혈병의 치료법 [명의]",
-   "url": "https://n.news.naver.com/article/031/0001074527?ntype=RANKING"
+   "title": "‘배터리 최강’ 아이폰18 프로 맥스…상위권 애플 독식",
+   "url": "https://n.news.naver.com/article/092/0002445037?ntype=RANKING"
   },
   {
-   "press": "신동아",
+   "press": "프레시안",
    "rank": 1,
-   "title": "“생활 방식과 취향 저격…현대인 니즈도 함께 삶았다”",
-   "url": "https://n.news.naver.com/article/262/0000019841?ntype=RANKING"
+   "title": "[속보] \"김건희 성상납 강력 의심\" 주장 '나꼼수' 김용민, 2심도 벌금 700만 원",
+   "url": "https://n.news.naver.com/article/002/0002465610?ntype=RANKING"
   },
   {
-   "press": "신동아",
+   "press": "프레시안",
    "rank": 2,
-   "title": "‘천사들의 합창’ 그 도시, 700년 전 발밑엔 호수가 있었다",
-   "url": "https://n.news.naver.com/article/262/0000019839?ntype=RANKING"
+   "title": "러·우 ‘역대 최대’ 포로 교환 합의…4년 끈 전쟁, 종전 물꼬 트이나",
+   "url": "https://n.news.naver.com/article/002/0002465451?ntype=RANKING"
   },
   {
-   "press": "신동아",
+   "press": "프레시안",
    "rank": 3,
-   "title": "“국내 생산 라면, 검역 없이 中 간다”…식약처가 허문 비관세장벽",
-   "url": "https://n.news.naver.com/article/262/0000019838?ntype=RANKING"
+   "title": "[속보] 전재수, '정당' 고려 전국 단체장 지지도 1위…오세훈 크게 제쳤다",
+   "url": "https://n.news.naver.com/article/002/0002465587?ntype=RANKING"
   },
   {
-   "press": "신동아",
+   "press": "프레시안",
    "rank": 4,
-   "title": "반도체 호황에 들뜬 삼성에 내린 이건희의 죽비",
-   "url": "https://n.news.naver.com/article/262/0000019836?ntype=RANKING"
+   "title": "\"트럼프, '3개의 무덤'에 빠졌다…'괴물' 비서실장 임명은 민주당과 전쟁 선포\"[인터뷰]",
+   "url": "https://n.news.naver.com/article/002/0002465513?ntype=RANKING"
   },
   {
-   "press": "신동아",
+   "press": "프레시안",
    "rank": 5,
-   "title": "오래 쓰고 싶은 소비자, 더 팔고 싶은 기업",
-   "url": "https://n.news.naver.com/article/262/0000019840?ntype=RANKING"
+   "title": "중간선거 참패에도 반성 없는 미 공화당…헤그세스 탄핵 막고 '강경파' 전면 배치[트럼프 2기]",
+   "url": "https://n.news.naver.com/article/002/0002465443?ntype=RANKING"
+  },
+  {
+   "press": "한겨레21",
+   "rank": 1,
+   "title": "웹툰을 만화에서 떼어놓는 선의",
+   "url": "https://n.news.naver.com/article/036/0000054443?ntype=RANKING"
+  },
+  {
+   "press": "한겨레21",
+   "rank": 2,
+   "title": "용인 반도체 국가산단… 닥치고 속도전, 처절한 민낯",
+   "url": "https://n.news.naver.com/article/036/0000054445?ntype=RANKING"
+  },
+  {
+   "press": "한겨레21",
+   "rank": 3,
+   "title": "무책임이 망가뜨린 공론장",
+   "url": "https://n.news.naver.com/article/036/0000054442?ntype=RANKING"
+  },
+  {
+   "press": "한겨레21",
+   "rank": 4,
+   "title": "넓고도 험한, 나의 글 쓰는 작업실",
+   "url": "https://n.news.naver.com/article/036/0000054444?ntype=RANKING"
+  },
+  {
+   "press": "한겨레21",
+   "rank": 5,
+   "title": "경찰 부실 수사, 무엇으로 견제할 것인가",
+   "url": "https://n.news.naver.com/article/036/0000054440?ntype=RANKING"
+  },
+  {
+   "press": "주간경향",
+   "rank": 1,
+   "title": "‘한국 30만원, 일본 10만원’···스시자로 오늘부터 국내 반입",
+   "url": "https://n.news.naver.com/article/033/0000053322?ntype=RANKING"
+  },
+  {
+   "press": "주간경향",
+   "rank": 2,
+   "title": "“가던 길 가시라”는 정청래에, 박지원 “계속 싸우자는 거냐”",
+   "url": "https://n.news.naver.com/article/033/0000053328?ntype=RANKING"
+  },
+  {
+   "press": "주간경향",
+   "rank": 3,
+   "title": "장동혁 “한동훈 당게 사건 패륜·여론조작···내가 있는 한 복당 1도 고려 안해”",
+   "url": "https://n.news.naver.com/article/033/0000053330?ntype=RANKING"
+  },
+  {
+   "press": "주간경향",
+   "rank": 4,
+   "title": "“엄마 말 안들으면 잡아간다”···민속촌 ‘귀신 참교육’ 15일 종료",
+   "url": "https://n.news.naver.com/article/033/0000053332?ntype=RANKING"
+  },
+  {
+   "press": "주간경향",
+   "rank": 5,
+   "title": "‘가짜 정보’ 못 골라낸 ‘1세대 프로파일러’ 이수정, 2심도 피선거권 상실형",
+   "url": "https://n.news.naver.com/article/033/0000053331?ntype=RANKING"
+  },
+  {
+   "press": "더팩트",
+   "rank": 1,
+   "title": "이재용 회장 \"온양, 최첨단 HBM 거점으로 변모 시키겠다\"",
+   "url": "https://n.news.naver.com/article/629/0000551249?ntype=RANKING"
+  },
+  {
+   "press": "더팩트",
+   "rank": 2,
+   "title": "이재명 땐 속전속결…'내란' 한덕수엔 느려진 대법원 시계",
+   "url": "https://n.news.naver.com/article/629/0000551424?ntype=RANKING"
+  },
+  {
+   "press": "더팩트",
+   "rank": 3,
+   "title": "'외국인·기관 팔자' 코스피 5340선 후퇴…코스닥 700선 붕괴",
+   "url": "https://n.news.naver.com/article/629/0000551375?ntype=RANKING"
+  },
+  {
+   "press": "더팩트",
+   "rank": 4,
+   "title": "\"존재 이유가 뭔가요?\"…코스닥 대책설 일축에 '금융당국 무용론'",
+   "url": "https://n.news.naver.com/article/629/0000551371?ntype=RANKING"
+  },
+  {
+   "press": "더팩트",
+   "rank": 5,
+   "title": "황경성 \"윤리위 징계 과정 외부 개입\"…최고위 출석 거부",
+   "url": "https://n.news.naver.com/article/629/0000551398?ntype=RANKING"
+  },
+  {
+   "press": "디지털데일리",
+   "rank": 1,
+   "title": "“찬물 끼얹은 젠슨 황”…코스피 0.61% 하락, 5300선 위태",
+   "url": "https://n.news.naver.com/article/138/0002248227?ntype=RANKING"
+  },
+  {
+   "press": "디지털데일리",
+   "rank": 2,
+   "title": "통합 진에어, 부산 제2허브 키운다…김해공항 국제선 33개로 확대",
+   "url": "https://n.news.naver.com/article/138/0002248320?ntype=RANKING"
+  },
+  {
+   "press": "디지털데일리",
+   "rank": 3,
+   "title": "“코스피 5800선에서 매수 신호?”…신영증권, 증시 공포에도 현금 보유 제시",
+   "url": "https://n.news.naver.com/article/138/0002248270?ntype=RANKING"
+  },
+  {
+   "press": "디지털데일리",
+   "rank": 4,
+   "title": "보릿고개 지나는 K-배터리 소재… '2028년 유럽' 바라보는 이유",
+   "url": "https://n.news.naver.com/article/138/0002248315?ntype=RANKING"
+  },
+  {
+   "press": "디지털데일리",
+   "rank": 5,
+   "title": "이재용 \"또 한 번의 도약\"…삼성전자, 온양 HBM 거점 구축에 46조원 투자",
+   "url": "https://n.news.naver.com/article/138/0002248310?ntype=RANKING"
+  },
+  {
+   "press": "뉴스타파",
+   "rank": 1,
+   "title": "‘햄버거 회동’ 등 8명 전원 무죄, 내란특검의 특별한 속앓이",
+   "url": "https://n.news.naver.com/article/607/0000003595?ntype=RANKING"
+  },
+  {
+   "press": "뉴스타파",
+   "rank": 2,
+   "title": "[주간 뉴스타파] 데이터 전문가들의 AI 뒷담화 '백수 개발자'",
+   "url": "https://n.news.naver.com/article/607/0000003598?ntype=RANKING"
+  },
+  {
+   "press": "뉴스타파",
+   "rank": 3,
+   "title": "'검찰범죄' 특검이 밝혀야 할 50가지 의혹(번외편) 막는 자가 범인이다",
+   "url": "https://n.news.naver.com/article/607/0000003597?ntype=RANKING"
+  },
+  {
+   "press": "뉴스타파",
+   "rank": 4,
+   "title": "[목격자들] 투명인간과 살아가는 법",
+   "url": "https://n.news.naver.com/article/607/0000003596?ntype=RANKING"
+  },
+  {
+   "press": "코리아중앙데일리",
+   "rank": 1,
+   "title": "One dead, two injured after EV crashes into Gangwon hair salon",
+   "url": "https://n.news.naver.com/article/640/0000096727?ntype=RANKING"
+  },
+  {
+   "press": "코리아중앙데일리",
+   "rank": 2,
+   "title": "Nvidia board reportedly preparing to oust Jensen Huang amid affair, espionage allegations",
+   "url": "https://n.news.naver.com/article/640/0000096744?ntype=RANKING"
+  },
+  {
+   "press": "코리아중앙데일리",
+   "rank": 3,
+   "title": "Korea considers allowing non-OB-GYN doctors to prescribe abortion pills",
+   "url": "https://n.news.naver.com/article/640/0000096736?ntype=RANKING"
+  },
+  {
+   "press": "코리아중앙데일리",
+   "rank": 4,
+   "title": "Three hours, 34 hospitals, 130 kilometers later, pregnant woman finally gets care in Seoul",
+   "url": "https://n.news.naver.com/article/640/0000096732?ntype=RANKING"
+  },
+  {
+   "press": "코리아중앙데일리",
+   "rank": 5,
+   "title": "SK Group's CEOs to convene to review AI push, align chip and energy businesses",
+   "url": "https://n.news.naver.com/article/640/0000096725?ntype=RANKING"
+  },
+  {
+   "press": "코메디닷컴",
+   "rank": 1,
+   "title": "‘위고비 실패’ 신동, 마운자로로 25kg 뺐다⋯무슨 차이길래?",
+   "url": "https://n.news.naver.com/article/296/0000107207?ntype=RANKING"
+  },
+  {
+   "press": "코메디닷컴",
+   "rank": 2,
+   "title": "49세 정가은 “어려 보이고 싶어”⋯시술 대신 선택한 ‘이 방법’은?",
+   "url": "https://n.news.naver.com/article/296/0000107231?ntype=RANKING"
+  },
+  {
+   "press": "코메디닷컴",
+   "rank": 3,
+   "title": "“혼날까 봐 일주일 숨겼다”… 7세 아이 식도에서 나온 건?",
+   "url": "https://n.news.naver.com/article/296/0000107236?ntype=RANKING"
+  },
+  {
+   "press": "코메디닷컴",
+   "rank": 4,
+   "title": "랄랄, 12kg 빼고 베일듯한 턱선 자랑…무조건 살 빠지는 방법 있다고?",
+   "url": "https://n.news.naver.com/article/296/0000107200?ntype=RANKING"
+  },
+  {
+   "press": "코메디닷컴",
+   "rank": 5,
+   "title": "“37세 아들이 집에만 있어”… 뒤치다꺼리하는 엄마의 심정은?",
+   "url": "https://n.news.naver.com/article/296/0000107228?ntype=RANKING"
+  },
+  {
+   "press": "일다",
+   "rank": 1,
+   "title": "언어라는 유적지에서 앤 카슨이 발굴한 단어들",
+   "url": "https://n.news.naver.com/article/007/0000008329?ntype=RANKING"
+  },
+  {
+   "press": "일다",
+   "rank": 2,
+   "title": "독일 ‘신원 비공개 출산’ 12년, 한국 보호출산제에 던지는 질문",
+   "url": "https://n.news.naver.com/article/007/0000008328?ntype=RANKING"
+  },
+  {
+   "press": "동아사이언스",
+   "rank": 1,
+   "title": "1년 반 걸리는 실험 30분 만에…구글 딥마인드, '알파게놈2' 공개",
+   "url": "https://n.news.naver.com/article/584/0000040123?ntype=RANKING"
+  },
+  {
+   "press": "동아사이언스",
+   "rank": 2,
+   "title": "차갑게 하면 왜 통증 줄까…뇌 속 '진통 회로' 찾았다",
+   "url": "https://n.news.naver.com/article/584/0000040119?ntype=RANKING"
+  },
+  {
+   "press": "동아사이언스",
+   "rank": 3,
+   "title": "석탄 캐던 정선 폐광에서 우주 미세중력 구현…스페이스린텍, '드롭타워' 기공식",
+   "url": "https://n.news.naver.com/article/584/0000040122?ntype=RANKING"
+  },
+  {
+   "press": "동아사이언스",
+   "rank": 4,
+   "title": "5톤 건설장비가 앞바퀴 2개만으로 주행·회전",
+   "url": "https://n.news.naver.com/article/584/0000040112?ntype=RANKING"
+  },
+  {
+   "press": "동아사이언스",
+   "rank": 5,
+   "title": "위고비·마운자로 해외서 사와도 된다…원정 처방 늘까",
+   "url": "https://n.news.naver.com/article/584/0000040115?ntype=RANKING"
+  },
+  {
+   "press": "더스쿠프",
+   "rank": 1,
+   "title": "망리단길에서 벌어진 일… 매번 달라지는 '골목길 재개발' 논쟁",
+   "url": "https://n.news.naver.com/article/665/0000008545?ntype=RANKING"
+  },
+  {
+   "press": "더스쿠프",
+   "rank": 2,
+   "title": "서울 집값 피해 경기도로… 그곳 집값마저 들썩인다",
+   "url": "https://n.news.naver.com/article/665/0000008549?ntype=RANKING"
+  },
+  {
+   "press": "더스쿠프",
+   "rank": 3,
+   "title": "젠슨 황, 불륜 의혹 또 터졌다…엔비디아 이사회 해임 준비설까지",
+   "url": "https://n.news.naver.com/article/665/0000008550?ntype=RANKING"
+  },
+  {
+   "press": "더스쿠프",
+   "rank": 4,
+   "title": "결국 \"빅스텝\"까지 거론됐다…금리 급등 신호탄일까",
+   "url": "https://n.news.naver.com/article/665/0000008546?ntype=RANKING"
+  },
+  {
+   "press": "더스쿠프",
+   "rank": 5,
+   "title": "신고도 하고 쉼터도 찾았지만…살해된 10대에 장관 \"무거운 책임\"",
+   "url": "https://n.news.naver.com/article/665/0000008547?ntype=RANKING"
+  },
+  {
+   "press": "주간조선",
+   "rank": 1,
+   "title": "이부진·지수에 정의선·신동빈까지…재계 총수들도 이화여대 몰려간 이유",
+   "url": "https://n.news.naver.com/article/053/0000062992?ntype=RANKING"
+  },
+  {
+   "press": "주간조선",
+   "rank": 2,
+   "title": "평균 30점인데 혼자 100점…세무사 시험 수석 'AI 안경' 의혹 부상",
+   "url": "https://n.news.naver.com/article/053/0000062987?ntype=RANKING"
+  },
+  {
+   "press": "주간조선",
+   "rank": 3,
+   "title": "\"CEO 불륜에 내 노후가 왜?\"…국민연금, 엔비디아 평가액 4조원 증발",
+   "url": "https://n.news.naver.com/article/053/0000062990?ntype=RANKING"
+  },
+  {
+   "press": "주간조선",
+   "rank": 4,
+   "title": "한국선 30만원, 일본선 5만9000원…일본 병원은 벌써 '한국어 홍보'",
+   "url": "https://n.news.naver.com/article/053/0000062988?ntype=RANKING"
+  },
+  {
+   "press": "주간조선",
+   "rank": 5,
+   "title": "시흥서 일가족 3명 숨진 채 발견…어머니·동생 흉기 상처, 한밤중 비명도",
+   "url": "https://n.news.naver.com/article/053/0000062993?ntype=RANKING"
+  },
+  {
+   "press": "이코노미스트",
+   "rank": 1,
+   "title": "\"아내는 비싼 골프 치던데\" 오열 정웅인에 여론 '싸늘'...요즘 이용료 얼마길래?",
+   "url": "https://n.news.naver.com/article/243/0000105564?ntype=RANKING"
+  },
+  {
+   "press": "이코노미스트",
+   "rank": 2,
+   "title": "“코스피 5000~1만 전망, 누가 못하나”…증권사 뒷북 전망에 수수료 ‘꼼수’까지",
+   "url": "https://n.news.naver.com/article/243/0000105600?ntype=RANKING"
+  },
+  {
+   "press": "이코노미스트",
+   "rank": 3,
+   "title": "[오늘의 삼전닉스] 젠슨 황 변수와 불확실성에도 삼성전자 '외인 베팅' 세졌다",
+   "url": "https://n.news.naver.com/article/243/0000105565?ntype=RANKING"
+  },
+  {
+   "press": "이코노미스트",
+   "rank": 4,
+   "title": "젠슨 황, 사내 불륜 추가 폭로 '해임 초읽기'...후임은 누구?",
+   "url": "https://n.news.naver.com/article/243/0000105543?ntype=RANKING"
+  },
+  {
+   "press": "이코노미스트",
+   "rank": 5,
+   "title": "李대통령과 삼성 이재용 또 만났다...140조 투자 충청 메가프로젝트 착공",
+   "url": "https://n.news.naver.com/article/243/0000105552?ntype=RANKING"
+  },
+  {
+   "press": "조세일보",
+   "rank": 1,
+   "title": "세무사 시험 수석 'AI 안경' 의혹 일파만파…공단 \"특이사항 없어\"",
+   "url": "https://n.news.naver.com/article/123/0002393950?ntype=RANKING"
+  },
+  {
+   "press": "조세일보",
+   "rank": 2,
+   "title": "삶은 달걀 vs 스크램블, 혈압엔 뭐가 나을까?",
+   "url": "https://n.news.naver.com/article/123/0002393943?ntype=RANKING"
+  },
+  {
+   "press": "조세일보",
+   "rank": 3,
+   "title": "\"전 범위 공부.. 매일 새벽 4시 기상, 백지 복습\" [제63회 세무사시험-수석]",
+   "url": "https://n.news.naver.com/article/123/0002393769?ntype=RANKING"
+  },
+  {
+   "press": "조세일보",
+   "rank": 4,
+   "title": "3311억 과징금 맞은 배민…이틀 만에 '수수료 공제 확대' 상생책 꺼내",
+   "url": "https://n.news.naver.com/article/123/0002393897?ntype=RANKING"
+  },
+  {
+   "press": "조세일보",
+   "rank": 5,
+   "title": "안덕수 국세청장 후보 '비거주 1주택' 논란…국세청 \"청문회서 설명\"",
+   "url": "https://n.news.naver.com/article/123/0002393947?ntype=RANKING"
   },
   {
    "press": "주간동아",
@@ -2017,648 +2533,6 @@
    "url": "https://n.news.naver.com/article/037/0000039133?ntype=RANKING"
   },
   {
-   "press": "더팩트",
-   "rank": 1,
-   "title": "이재용 회장 \"온양, 최첨단 HBM 거점으로 변모 시키겠다\"",
-   "url": "https://n.news.naver.com/article/629/0000551249?ntype=RANKING"
-  },
-  {
-   "press": "더팩트",
-   "rank": 2,
-   "title": "아르노 학위수여식에 재계 총수 집결…이부진, 디올백 들고 레드카펫",
-   "url": "https://n.news.naver.com/article/629/0000551293?ntype=RANKING"
-  },
-  {
-   "press": "더팩트",
-   "rank": 3,
-   "title": "[속보] 李 대통령 \"국내 자본시장 여전히 저평가…매력적 투자 대상\"",
-   "url": "https://n.news.naver.com/article/629/0000551341?ntype=RANKING"
-  },
-  {
-   "press": "더팩트",
-   "rank": 4,
-   "title": "실종 신고도 했는데…살해된 10대 소녀, 쉼터서 외출 중 참변",
-   "url": "https://n.news.naver.com/article/629/0000551349?ntype=RANKING"
-  },
-  {
-   "press": "더팩트",
-   "rank": 5,
-   "title": "\"괜히 추매한 듯\"…엔비디아 롤러코스터 주가에 개미 마음도 '출렁'",
-   "url": "https://n.news.naver.com/article/629/0000551267?ntype=RANKING"
-  },
-  {
-   "press": "미디어오늘",
-   "rank": 1,
-   "title": "무죄 한상혁 \"윤석열 정권이 저를 물러나게 하려고 시작돼\"",
-   "url": "https://n.news.naver.com/article/006/0000138703?ntype=RANKING"
-  },
-  {
-   "press": "미디어오늘",
-   "rank": 2,
-   "title": "김태규, 방미통위원장에 \"MBC 왜 징계 않나\" 추궁…\"화장실 가는데 불쑥 질문\"",
-   "url": "https://n.news.naver.com/article/006/0000138707?ntype=RANKING"
-  },
-  {
-   "press": "미디어오늘",
-   "rank": 3,
-   "title": "MBC 앵커, 한덕수 석방 임박 \"조희대 뭐 하는 걸까\" JTBC 앵커 \"책임 커\"",
-   "url": "https://n.news.naver.com/article/006/0000138706?ntype=RANKING"
-  },
-  {
-   "press": "미디어오늘",
-   "rank": 4,
-   "title": "김민석, 최민희 '하이에나떼' 기자 비하 사과…금태섭 \"사람이냐 생각도 들어\"",
-   "url": "https://n.news.naver.com/article/006/0000138702?ntype=RANKING"
-  },
-  {
-   "press": "미디어오늘",
-   "rank": 5,
-   "title": "한덕수 20일 석방? 한겨레 \"조희대, 이재명 사건은 전합 회부 9일 만에 파기환송\"",
-   "url": "https://n.news.naver.com/article/006/0000138682?ntype=RANKING"
-  },
-  {
-   "press": "동행미디어 시대",
-   "rank": 1,
-   "title": "추가 불륜 의혹에 젠슨 황 퇴진 위기…벼랑 끝 'AI 황태자'",
-   "url": "https://n.news.naver.com/article/417/0001164134?ntype=RANKING"
-  },
-  {
-   "press": "동행미디어 시대",
-   "rank": 2,
-   "title": "젠슨 황 후임으로 떠오른 이언 벅 부사장…쿠다 개발한 핵심 인물",
-   "url": "https://n.news.naver.com/article/417/0001164140?ntype=RANKING"
-  },
-  {
-   "press": "동행미디어 시대",
-   "rank": 3,
-   "title": "또 선넘은 중국…성수동 찹쌀떡 '한정선' 통째 베낀 '짝퉁 매장' 등장",
-   "url": "https://n.news.naver.com/article/417/0001164106?ntype=RANKING"
-  },
-  {
-   "press": "동행미디어 시대",
-   "rank": 4,
-   "title": "젠슨 황, 또 다른 불륜녀 있다…\"엔비디아 임원과 혼외관계\"",
-   "url": "https://n.news.naver.com/article/417/0001164063?ntype=RANKING"
-  },
-  {
-   "press": "동행미디어 시대",
-   "rank": 5,
-   "title": "이재용 삼성전자 회장 \"온양캠, 최첨단 HBM 거점으로 변모\"",
-   "url": "https://n.news.naver.com/article/417/0001164107?ntype=RANKING"
-  },
-  {
-   "press": "뉴스타파",
-   "rank": 1,
-   "title": "‘햄버거 회동’ 등 8명 전원 무죄, 내란특검의 특별한 속앓이",
-   "url": "https://n.news.naver.com/article/607/0000003595?ntype=RANKING"
-  },
-  {
-   "press": "뉴스타파",
-   "rank": 2,
-   "title": "'검찰범죄' 특검이 밝혀야 할 50가지 의혹(번외편) 막는 자가 범인이다",
-   "url": "https://n.news.naver.com/article/607/0000003597?ntype=RANKING"
-  },
-  {
-   "press": "뉴스타파",
-   "rank": 3,
-   "title": "‘중국 댓글 공작’ 카이스트 논문, ‘시드 계정’ 출처 거짓 표기",
-   "url": "https://n.news.naver.com/article/607/0000003594?ntype=RANKING"
-  },
-  {
-   "press": "뉴스타파",
-   "rank": 4,
-   "title": "[목격자들] 투명인간과 살아가는 법",
-   "url": "https://n.news.naver.com/article/607/0000003596?ntype=RANKING"
-  },
-  {
-   "press": "뉴스타파",
-   "rank": 5,
-   "title": "'중국 댓글 공작' 카이스트 논문, 국정원 발주 연구 용역에서 나왔다",
-   "url": "https://n.news.naver.com/article/607/0000003593?ntype=RANKING"
-  },
-  {
-   "press": "코메디닷컴",
-   "rank": 1,
-   "title": "‘위고비 실패’ 신동, 마운자로로 25kg 뺐다⋯무슨 차이길래?",
-   "url": "https://n.news.naver.com/article/296/0000107207?ntype=RANKING"
-  },
-  {
-   "press": "코메디닷컴",
-   "rank": 2,
-   "title": "49세 정가은 “어려 보이고 싶어”⋯시술 대신 선택한 ‘이 방법’은?",
-   "url": "https://n.news.naver.com/article/296/0000107231?ntype=RANKING"
-  },
-  {
-   "press": "코메디닷컴",
-   "rank": 3,
-   "title": "“37세 아들이 집에만 있어”… 뒤치다꺼리하는 엄마의 심정은?",
-   "url": "https://n.news.naver.com/article/296/0000107228?ntype=RANKING"
-  },
-  {
-   "press": "코메디닷컴",
-   "rank": 4,
-   "title": "랄랄, 12kg 빼고 베일듯한 턱선 자랑…무조건 살 빠지는 방법 있다고?",
-   "url": "https://n.news.naver.com/article/296/0000107200?ntype=RANKING"
-  },
-  {
-   "press": "코메디닷컴",
-   "rank": 5,
-   "title": "거미, 둘째 낳고 살 쏙 빠진 모습⋯“먹은 건 달걀 2개뿐” 괜찮을까?",
-   "url": "https://n.news.naver.com/article/296/0000107225?ntype=RANKING"
-  },
-  {
-   "press": "디지털데일리",
-   "rank": 1,
-   "title": "[헬스 & 라이프] 혹시 허리 둘레가?…만병의 근원 비만, 30·40 남성 ‘경고등’",
-   "url": "https://n.news.naver.com/article/138/0002248154?ntype=RANKING"
-  },
-  {
-   "press": "디지털데일리",
-   "rank": 2,
-   "title": "“찬물 끼얹은 젠슨 황”…코스피 0.61% 하락, 5300선 위태",
-   "url": "https://n.news.naver.com/article/138/0002248227?ntype=RANKING"
-  },
-  {
-   "press": "디지털데일리",
-   "rank": 3,
-   "title": "“PF는 잘 막았는데 신탁사가 아픈 손가락”…금정호號 신영증권, 자회사 리스크 시험대",
-   "url": "https://n.news.naver.com/article/138/0002248295?ntype=RANKING"
-  },
-  {
-   "press": "디지털데일리",
-   "rank": 4,
-   "title": "“코스피 5800선에서 매수 신호?”…신영증권, 증시 공포에도 현금 보유 제시",
-   "url": "https://n.news.naver.com/article/138/0002248270?ntype=RANKING"
-  },
-  {
-   "press": "디지털데일리",
-   "rank": 5,
-   "title": "\"AI 황제의 몰락\"…젠슨 황, 스파이 스캔들·사내 불륜에 축출 위기",
-   "url": "https://n.news.naver.com/article/138/0002248223?ntype=RANKING"
-  },
-  {
-   "press": "강원도민일보",
-   "rank": 1,
-   "title": "[속보] \"이재명 두 아들 군 면제\" 허위 글 올린 이수정 항소심도 벌금 300만원",
-   "url": "https://n.news.naver.com/article/654/0000210954?ntype=RANKING"
-  },
-  {
-   "press": "강원도민일보",
-   "rank": 2,
-   "title": "시흥 아파트서 40대 어머니와 10대 두 아들 숨진 채 발견",
-   "url": "https://n.news.naver.com/article/654/0000210898?ntype=RANKING"
-  },
-  {
-   "press": "강원도민일보",
-   "rank": 3,
-   "title": "주말까지 전국에 비…6년 만에 '수능한파' 전망",
-   "url": "https://n.news.naver.com/article/654/0000210941?ntype=RANKING"
-  },
-  {
-   "press": "강원도민일보",
-   "rank": 4,
-   "title": "[속보] '젠슨 황 불륜 상대' 의혹 앨리스 황, 중국 베이징 체류설",
-   "url": "https://n.news.naver.com/article/654/0000210916?ntype=RANKING"
-  },
-  {
-   "press": "강원도민일보",
-   "rank": 5,
-   "title": "[속보] 15세 소녀 살해 혐의 50대, 범행 전 흉기 구입…계획범죄 정황",
-   "url": "https://n.news.naver.com/article/654/0000210919?ntype=RANKING"
-  },
-  {
-   "press": "매경이코노미",
-   "rank": 1,
-   "title": "술 안 마시는 분위기에…하이트진로 4년 만에 희망퇴직",
-   "url": "https://n.news.naver.com/article/024/0000109561?ntype=RANKING"
-  },
-  {
-   "press": "매경이코노미",
-   "rank": 2,
-   "title": "시진핑 “대만 통일은 역사적 임무…양안 평화발전 노력해야”",
-   "url": "https://n.news.naver.com/article/024/0000109581?ntype=RANKING"
-  },
-  {
-   "press": "매경이코노미",
-   "rank": 3,
-   "title": "“나도 8억 성과급”...SK하이닉스 학력무관 생산직 채용",
-   "url": "https://n.news.naver.com/article/024/0000109563?ntype=RANKING"
-  },
-  {
-   "press": "매경이코노미",
-   "rank": 4,
-   "title": "안철수, 한동훈 복당론에 “물귀신 행태…차라리 창당하라”",
-   "url": "https://n.news.naver.com/article/024/0000109572?ntype=RANKING"
-  },
-  {
-   "press": "매경이코노미",
-   "rank": 5,
-   "title": "李대통령 지지율 44%...민주 35%·국힘 25% [NBS]",
-   "url": "https://n.news.naver.com/article/024/0000109579?ntype=RANKING"
-  },
-  {
-   "press": "전주MBC",
-   "rank": 1,
-   "title": "조작기소특검법..'잘된 일' 41%, '잘못된 일' 39% 팽팽",
-   "url": "https://n.news.naver.com/article/659/0000048661?ntype=RANKING"
-  },
-  {
-   "press": "전주MBC",
-   "rank": 2,
-   "title": "한동훈 복당 놓고.. 안철수 \"차라리 창당해라\" 오세훈 \"총선 승리 위해 필요\"",
-   "url": "https://n.news.naver.com/article/659/0000048657?ntype=RANKING"
-  },
-  {
-   "press": "전주MBC",
-   "rank": 3,
-   "title": "내장산 계곡에서 사진 찍던 60대 여성 추락.. 발목 골절",
-   "url": "https://n.news.naver.com/article/659/0000048643?ntype=RANKING"
-  },
-  {
-   "press": "전주MBC",
-   "rank": 4,
-   "title": "출구 없는 '전주시 재정난'.. 진짜 위기는 내년부터?",
-   "url": "https://n.news.naver.com/article/659/0000048639?ntype=RANKING"
-  },
-  {
-   "press": "전주MBC",
-   "rank": 5,
-   "title": "전주 중화산동 다가구주택 화재.. 비데에서 발화 추정",
-   "url": "https://n.news.naver.com/article/659/0000048644?ntype=RANKING"
-  },
-  {
-   "press": "CJB청주방송",
-   "rank": 1,
-   "title": "[속보] 법원, 세월호 유족 '보상금 지급결정 취소소송' 2심도 각하",
-   "url": "https://n.news.naver.com/article/655/0000033548?ntype=RANKING"
-  },
-  {
-   "press": "CJB청주방송",
-   "rank": 2,
-   "title": "'신천지 집단 입당 의혹'에 김민석 \"대화로 풀어야\"…정청래 \"당원에 사과부터\"",
-   "url": "https://n.news.naver.com/article/655/0000033546?ntype=RANKING"
-  },
-  {
-   "press": "CJB청주방송",
-   "rank": 3,
-   "title": "장동혁, 한동훈 복당론에 \"당 대표로 있는 한 1도 고려 안 해\"",
-   "url": "https://n.news.naver.com/article/655/0000033547?ntype=RANKING"
-  },
-  {
-   "press": "CJB청주방송",
-   "rank": 4,
-   "title": "\"젠슨 황, 직속 부하 임원과도 불륜 의혹\"…엔비디아, 해임 검토",
-   "url": "https://n.news.naver.com/article/655/0000033542?ntype=RANKING"
-  },
-  {
-   "press": "CJB청주방송",
-   "rank": 5,
-   "title": "이 대통령 \"충청·호남·영남 투자계획 차질없이 추진…끝까지 챙길 것\"",
-   "url": "https://n.news.naver.com/article/655/0000033544?ntype=RANKING"
-  },
-  {
-   "press": "이코노미스트",
-   "rank": 1,
-   "title": "\"아내는 비싼 골프 치던데\" 오열 정웅인에 여론 '싸늘'...요즘 이용료 얼마길래?",
-   "url": "https://n.news.naver.com/article/243/0000105564?ntype=RANKING"
-  },
-  {
-   "press": "이코노미스트",
-   "rank": 2,
-   "title": "'빚투' 증가 속 주식 손실에도 3명 중 2명 '보유·물타기'로 버틴다",
-   "url": "https://n.news.naver.com/article/243/0000105578?ntype=RANKING"
-  },
-  {
-   "press": "이코노미스트",
-   "rank": 3,
-   "title": "'손하트' 이부진 '기부' 정의선, 재벌들 학위식 보러 '우르르'...누구길래?",
-   "url": "https://n.news.naver.com/article/243/0000105577?ntype=RANKING"
-  },
-  {
-   "press": "이코노미스트",
-   "rank": 4,
-   "title": "李대통령과 삼성 이재용 또 만났다...140조 투자 충청 메가프로젝트 착공",
-   "url": "https://n.news.naver.com/article/243/0000105552?ntype=RANKING"
-  },
-  {
-   "press": "이코노미스트",
-   "rank": 5,
-   "title": "[오늘의 삼전닉스] 젠슨 황 변수와 불확실성에도 삼성전자 '외인 베팅' 세졌다",
-   "url": "https://n.news.naver.com/article/243/0000105565?ntype=RANKING"
-  },
-  {
-   "press": "더스쿠프",
-   "rank": 1,
-   "title": "망리단길에서 벌어진 일… 매번 달라지는 '골목길 재개발' 논쟁",
-   "url": "https://n.news.naver.com/article/665/0000008545?ntype=RANKING"
-  },
-  {
-   "press": "더스쿠프",
-   "rank": 2,
-   "title": "서울 집값 피해 경기도로… 그곳 집값마저 들썩인다",
-   "url": "https://n.news.naver.com/article/665/0000008549?ntype=RANKING"
-  },
-  {
-   "press": "더스쿠프",
-   "rank": 3,
-   "title": "젠슨 황, 불륜 의혹 또 터졌다…엔비디아 이사회 해임 준비설까지",
-   "url": "https://n.news.naver.com/article/665/0000008550?ntype=RANKING"
-  },
-  {
-   "press": "더스쿠프",
-   "rank": 4,
-   "title": "결국 \"빅스텝\"까지 거론됐다…금리 급등 신호탄일까",
-   "url": "https://n.news.naver.com/article/665/0000008546?ntype=RANKING"
-  },
-  {
-   "press": "더스쿠프",
-   "rank": 5,
-   "title": "\"1조6천억원 납부하세요\"…국채금리 담합에 역대급 과징금",
-   "url": "https://n.news.naver.com/article/665/0000008548?ntype=RANKING"
-  },
-  {
-   "press": "주간조선",
-   "rank": 1,
-   "title": "평균 30점인데 혼자 100점…세무사 시험 수석 'AI 안경' 의혹 부상",
-   "url": "https://n.news.naver.com/article/053/0000062987?ntype=RANKING"
-  },
-  {
-   "press": "주간조선",
-   "rank": 2,
-   "title": "한국선 30만원, 일본선 5만9000원…일본 병원은 벌써 '한국어 홍보'",
-   "url": "https://n.news.naver.com/article/053/0000062988?ntype=RANKING"
-  },
-  {
-   "press": "주간조선",
-   "rank": 3,
-   "title": "\"CEO 불륜에 내 노후가 왜?\"…국민연금, 엔비디아 평가액 4조원 증발",
-   "url": "https://n.news.naver.com/article/053/0000062990?ntype=RANKING"
-  },
-  {
-   "press": "주간조선",
-   "rank": 4,
-   "title": "청와대 생방송서 \"대통령 죄 없애려 특검\"…허은아 진땀 뺀 이유",
-   "url": "https://n.news.naver.com/article/053/0000062982?ntype=RANKING"
-  },
-  {
-   "press": "주간조선",
-   "rank": 5,
-   "title": "이부진·지수에 정의선·신동빈까지…재계 총수들도 이화여대 몰려간 이유",
-   "url": "https://n.news.naver.com/article/053/0000062992?ntype=RANKING"
-  },
-  {
-   "press": "동아사이언스",
-   "rank": 1,
-   "title": "\"비만은 질병 인식, 제약사 이익과 맞물려…빈곤 등 사회적 책임 가릴 수도\"",
-   "url": "https://n.news.naver.com/article/584/0000040121?ntype=RANKING"
-  },
-  {
-   "press": "동아사이언스",
-   "rank": 2,
-   "title": "치매에 걸리지 않는 '슈퍼 에이저'의 유전자 비밀",
-   "url": "https://n.news.naver.com/article/584/0000040104?ntype=RANKING"
-  },
-  {
-   "press": "동아사이언스",
-   "rank": 3,
-   "title": "위고비·마운자로 해외서 사와도 된다…원정 처방 늘까",
-   "url": "https://n.news.naver.com/article/584/0000040115?ntype=RANKING"
-  },
-  {
-   "press": "동아사이언스",
-   "rank": 4,
-   "title": "전립선암 키우는 두 단백질 붙여 무력화…\"치료 효과 1000배\"",
-   "url": "https://n.news.naver.com/article/584/0000040110?ntype=RANKING"
-  },
-  {
-   "press": "동아사이언스",
-   "rank": 5,
-   "title": "5톤 건설장비가 앞바퀴 2개만으로 주행·회전",
-   "url": "https://n.news.naver.com/article/584/0000040112?ntype=RANKING"
-  },
-  {
-   "press": "일다",
-   "rank": 1,
-   "title": "언어라는 유적지에서 앤 카슨이 발굴한 단어들",
-   "url": "https://n.news.naver.com/article/007/0000008329?ntype=RANKING"
-  },
-  {
-   "press": "일다",
-   "rank": 2,
-   "title": "독일 ‘신원 비공개 출산’ 12년, 한국 보호출산제에 던지는 질문",
-   "url": "https://n.news.naver.com/article/007/0000008328?ntype=RANKING"
-  },
-  {
-   "press": "주간경향",
-   "rank": 1,
-   "title": "‘한국 30만원, 일본 10만원’···스시자로 오늘부터 국내 반입",
-   "url": "https://n.news.naver.com/article/033/0000053322?ntype=RANKING"
-  },
-  {
-   "press": "주간경향",
-   "rank": 2,
-   "title": "“가던 길 가시라”는 정청래에, 박지원 “계속 싸우자는 거냐”",
-   "url": "https://n.news.naver.com/article/033/0000053328?ntype=RANKING"
-  },
-  {
-   "press": "주간경향",
-   "rank": 3,
-   "title": "이준석 “‘혼자 잘 났다고 떠드는 사람’ 빼고, 보수 연대 논의”",
-   "url": "https://n.news.naver.com/article/033/0000053326?ntype=RANKING"
-  },
-  {
-   "press": "주간경향",
-   "rank": 4,
-   "title": "젠슨 황 ‘사내 불륜’ 의혹도···엔비디아 이사회 이르면 오늘 해임 회의",
-   "url": "https://n.news.naver.com/article/033/0000053321?ntype=RANKING"
-  },
-  {
-   "press": "주간경향",
-   "rank": 5,
-   "title": "안철수 “한동훈, 물귀신 행태···차라리 창당하라”",
-   "url": "https://n.news.naver.com/article/033/0000053323?ntype=RANKING"
-  },
-  {
-   "press": "여성신문",
-   "rank": 1,
-   "title": "4대 그룹 이사회 ‘여성 의장’ 늘어난다… LG·SK 최다, 현대차 꼴찌",
-   "url": "https://n.news.naver.com/article/310/0000141640?ntype=RANKING"
-  },
-  {
-   "press": "여성신문",
-   "rank": 2,
-   "title": "‘성범죄 가해자’ 아버지가 10대 피해여성 살해… 원민경 장관 “반사회적 범죄, 엄히 다스려야”",
-   "url": "https://n.news.naver.com/article/310/0000141634?ntype=RANKING"
-  },
-  {
-   "press": "여성신문",
-   "rank": 3,
-   "title": "젠슨 황, 사내 불륜 의혹도 제기...\"엔비디아 이사회, 해임 준비\"",
-   "url": "https://n.news.naver.com/article/310/0000141649?ntype=RANKING"
-  },
-  {
-   "press": "여성신문",
-   "rank": 4,
-   "title": "‘일본 첫 여성 총리’ 다카이치 집권 1년… ‘유리천장’ 깨졌지만 성평등은 제자리",
-   "url": "https://n.news.naver.com/article/310/0000141653?ntype=RANKING"
-  },
-  {
-   "press": "여성신문",
-   "rank": 5,
-   "title": "박주민 ‘평등법’ 발의… 차별금지법 이번엔 국회 문턱 넘을까",
-   "url": "https://n.news.naver.com/article/310/0000141622?ntype=RANKING"
-  },
-  {
-   "press": "코리아중앙데일리",
-   "rank": 1,
-   "title": "One dead, two injured after EV crashes into Gangwon hair salon",
-   "url": "https://n.news.naver.com/article/640/0000096727?ntype=RANKING"
-  },
-  {
-   "press": "코리아중앙데일리",
-   "rank": 2,
-   "title": "Nvidia board reportedly preparing to oust Jensen Huang amid affair, espionage allegations",
-   "url": "https://n.news.naver.com/article/640/0000096744?ntype=RANKING"
-  },
-  {
-   "press": "코리아중앙데일리",
-   "rank": 3,
-   "title": "SK Group's CEOs to convene to review AI push, align chip and energy businesses",
-   "url": "https://n.news.naver.com/article/640/0000096725?ntype=RANKING"
-  },
-  {
-   "press": "코리아중앙데일리",
-   "rank": 4,
-   "title": "Off the sauce, in the sauna: Young Koreans shift spending toward well-being, health",
-   "url": "https://n.news.naver.com/article/640/0000096734?ntype=RANKING"
-  },
-  {
-   "press": "코리아중앙데일리",
-   "rank": 5,
-   "title": "Korea considers allowing non-OB-GYN doctors to prescribe abortion pills",
-   "url": "https://n.news.naver.com/article/640/0000096736?ntype=RANKING"
-  },
-  {
-   "press": "조세일보",
-   "rank": 1,
-   "title": "\"전 범위 공부.. 매일 새벽 4시 기상, 백지 복습\" [제63회 세무사시험-수석]",
-   "url": "https://n.news.naver.com/article/123/0002393769?ntype=RANKING"
-  },
-  {
-   "press": "조세일보",
-   "rank": 2,
-   "title": "삼성 2나노 공정 문 연다…정부, 8002억 들여 국산 AI칩 키운다",
-   "url": "https://n.news.naver.com/article/123/0002393931?ntype=RANKING"
-  },
-  {
-   "press": "조세일보",
-   "rank": 3,
-   "title": "네이버, 물류 자회사 세워 쿠팡에 도전장…2030년까지 '1조원' 투자",
-   "url": "https://n.news.naver.com/article/123/0002393927?ntype=RANKING"
-  },
-  {
-   "press": "조세일보",
-   "rank": 4,
-   "title": "이용철 논란 속 변협 \"과거 변론 이력으로 자질 문제 삼아선 안돼\"",
-   "url": "https://n.news.naver.com/article/123/0002393936?ntype=RANKING"
-  },
-  {
-   "press": "조세일보",
-   "rank": 5,
-   "title": "젠슨 황 외도에 뒤늦게 주목받는 공매도 보고서…어디까지 확인되었나 [마켓프리즘]",
-   "url": "https://n.news.naver.com/article/123/0002393921?ntype=RANKING"
-  },
-  {
-   "press": "기자협회보",
-   "rank": 1,
-   "title": "영정 없는 장례식장… 기사만 쓰고 돌아설 수 없었다",
-   "url": "https://n.news.naver.com/article/127/0000040050?ntype=RANKING"
-  },
-  {
-   "press": "기자협회보",
-   "rank": 2,
-   "title": "\"한상혁 등 무죄 판결, 수사·면직 밀어붙인 이들 책임 물어야\"",
-   "url": "https://n.news.naver.com/article/127/0000040054?ntype=RANKING"
-  },
-  {
-   "press": "기자협회보",
-   "rank": 3,
-   "title": "'TV조선 재승인 점수 조작' 한상혁 전 방통위원장 무죄",
-   "url": "https://n.news.naver.com/article/127/0000040052?ntype=RANKING"
-  },
-  {
-   "press": "기자협회보",
-   "rank": 4,
-   "title": "네이버 제휴심사 발표 임박… 각종 허위·낭설 주의보",
-   "url": "https://n.news.naver.com/article/127/0000040048?ntype=RANKING"
-  },
-  {
-   "press": "기자협회보",
-   "rank": 5,
-   "title": "'컬투쇼'도 '시선집중'도 하나의 앱으로 듣는다",
-   "url": "https://n.news.naver.com/article/127/0000040049?ntype=RANKING"
-  },
-  {
-   "press": "한경비즈니스",
-   "rank": 1,
-   "title": "“집값 꺾이나” 홍지선 하락기 시그널",
-   "url": "https://n.news.naver.com/article/050/0000113168?ntype=RANKING"
-  },
-  {
-   "press": "한경비즈니스",
-   "rank": 2,
-   "title": "이재용 삼성 회장 \"온양 HBM 핵심거점으로\" 충청 메가프로젝트 '첫 삽'",
-   "url": "https://n.news.naver.com/article/050/0000113155?ntype=RANKING"
-  },
-  {
-   "press": "한경비즈니스",
-   "rank": 3,
-   "title": "[속보]나라살림 적자, 8년만 최소",
-   "url": "https://n.news.naver.com/article/050/0000113153?ntype=RANKING"
-  },
-  {
-   "press": "한경비즈니스",
-   "rank": 4,
-   "title": "“젠슨 황 영입할까” 머스크의 깜짝 제안",
-   "url": "https://n.news.naver.com/article/050/0000113158?ntype=RANKING"
-  },
-  {
-   "press": "한경비즈니스",
-   "rank": 5,
-   "title": "“젠슨 황 CEO 해임 위기”",
-   "url": "https://n.news.naver.com/article/050/0000113139?ntype=RANKING"
-  },
-  {
-   "press": "JIBS",
-   "rank": 1,
-   "title": "“서울 지지율 34%, 여야 28% 동률”… 이 대통령 44%, 부동산 정책 평가 역전",
-   "url": "https://n.news.naver.com/article/661/0000086506?ntype=RANKING"
-  },
-  {
-   "press": "JIBS",
-   "rank": 2,
-   "title": "한동훈 복당 당내 갈등 두고 윤상현 \"두려운 것은 분열의 늪\"",
-   "url": "https://n.news.naver.com/article/661/0000086519?ntype=RANKING"
-  },
-  {
-   "press": "JIBS",
-   "rank": 3,
-   "title": "與 박희승, '조희대 탄핵' 요구 시민에 \"미친 거 아냐\".. 조국혁신당 \"내란 겪고도 그런 소리\"",
-   "url": "https://n.news.naver.com/article/661/0000086518?ntype=RANKING"
-  },
-  {
-   "press": "JIBS",
-   "rank": 4,
-   "title": "박민영 \"한동훈, 이재명·민주당이 양반으로 보일 지경.. 이 정도 밑바닥일 줄은\"",
-   "url": "https://n.news.naver.com/article/661/0000086517?ntype=RANKING"
-  },
-  {
-   "press": "JIBS",
-   "rank": 5,
-   "title": "“제주 오라는 건가, 말라는 건가”… 관광객 줄어드는데 비행기 좌석 11.8% 급감",
-   "url": "https://n.news.naver.com/article/661/0000086476?ntype=RANKING"
-  },
-  {
    "press": "월간 산",
    "rank": 1,
    "title": "스노클링하러 해외로? 등잔 밑에 별천지 있다 [한려수도·다도해국립공원]",
@@ -2679,44 +2553,164 @@
   {
    "press": "월간 산",
    "rank": 4,
-   "title": "울산바위 21점, 공룡 79점…GPX 파일 넣으면 난이도 계산 '척척' [산행난이도지수 개발]",
-   "url": "https://n.news.naver.com/article/094/0000013944?ntype=RANKING"
-  },
-  {
-   "press": "월간 산",
-   "rank": 5,
    "title": "몸무게의 10% 넘는 배낭 메면 부상 위험 커진다",
    "url": "https://n.news.naver.com/article/094/0000013940?ntype=RANKING"
   },
   {
+   "press": "월간 산",
+   "rank": 5,
+   "title": "울산바위 21점, 공룡 79점…GPX 파일 넣으면 난이도 계산 '척척' [산행난이도지수 개발]",
+   "url": "https://n.news.naver.com/article/094/0000013944?ntype=RANKING"
+  },
+  {
+   "press": "기자협회보",
+   "rank": 1,
+   "title": "\"삼성 라이온즈 V9 지면 구합니다\"… 신문 '품절' 대란",
+   "url": "https://n.news.naver.com/article/127/0000040055?ntype=RANKING"
+  },
+  {
+   "press": "기자협회보",
+   "rank": 2,
+   "title": "'TV조선 재승인 점수 조작' 한상혁 전 방통위원장 무죄",
+   "url": "https://n.news.naver.com/article/127/0000040052?ntype=RANKING"
+  },
+  {
+   "press": "기자협회보",
+   "rank": 3,
+   "title": "영정 없는 장례식장… 기사만 쓰고 돌아설 수 없었다",
+   "url": "https://n.news.naver.com/article/127/0000040050?ntype=RANKING"
+  },
+  {
+   "press": "기자협회보",
+   "rank": 4,
+   "title": "\"한상혁 등 무죄 판결, 수사·면직 밀어붙인 이들 책임 물어야\"",
+   "url": "https://n.news.naver.com/article/127/0000040054?ntype=RANKING"
+  },
+  {
+   "press": "기자협회보",
+   "rank": 5,
+   "title": "네이버 제휴심사 발표 임박… 각종 허위·낭설 주의보",
+   "url": "https://n.news.naver.com/article/127/0000040048?ntype=RANKING"
+  },
+  {
+   "press": "전주MBC",
+   "rank": 1,
+   "title": "李 대통령 'SNS 소통 줄여야' 51%, '계속해야' 42% [NBS]",
+   "url": "https://n.news.naver.com/article/659/0000048671?ntype=RANKING"
+  },
+  {
+   "press": "전주MBC",
+   "rank": 2,
+   "title": "'고창 선운산 단풍' 산 전체 물들여.. 주말 절정",
+   "url": "https://n.news.naver.com/article/659/0000048669?ntype=RANKING"
+  },
+  {
+   "press": "전주MBC",
+   "rank": 3,
+   "title": "내장산 계곡에서 사진 찍던 60대 여성 추락.. 발목 골절",
+   "url": "https://n.news.naver.com/article/659/0000048643?ntype=RANKING"
+  },
+  {
+   "press": "전주MBC",
+   "rank": 4,
+   "title": "한동훈 복당 놓고.. 안철수 \"차라리 창당해라\" 오세훈 \"총선 승리 위해 필요\"",
+   "url": "https://n.news.naver.com/article/659/0000048657?ntype=RANKING"
+  },
+  {
+   "press": "전주MBC",
+   "rank": 5,
+   "title": "전북도, 전주 망간 수돗물 수질 기준 적합해 보상 어려워",
+   "url": "https://n.news.naver.com/article/659/0000048659?ntype=RANKING"
+  },
+  {
    "press": "국제신문",
    "rank": 1,
+   "title": "[속보] 평균 30점대 과목서 나 홀로 만점…세무사 시험 수석 합격자 ‘AI 안경’ 의혹",
+   "url": "https://n.news.naver.com/article/658/0000161097?ntype=RANKING"
+  },
+  {
+   "press": "국제신문",
+   "rank": 2,
+   "title": "장동혁, 오세훈의 ‘韓 복당 필요’ 언급에 “패륜·분열정치 받아들이나”",
+   "url": "https://n.news.naver.com/article/658/0000161089?ntype=RANKING"
+  },
+  {
+   "press": "국제신문",
+   "rank": 3,
    "title": "[속보]젠슨 황 ‘두 번째 불륜설’ 엔비디아 고위 임원도 기혼자",
    "url": "https://n.news.naver.com/article/658/0000161077?ntype=RANKING"
   },
   {
    "press": "국제신문",
-   "rank": 2,
-   "title": "[속보]‘10대 살인’ 50대 남성 흉기 미리 구입…피해여성 조건만남 절도 동원 가능성도",
-   "url": "https://n.news.naver.com/article/658/0000161070?ntype=RANKING"
-  },
-  {
-   "press": "국제신문",
-   "rank": 3,
-   "title": "“엔비디아 이사회, 젠슨황 거취결정 회의” 불륜 시인사흘 만에 해임 수순",
-   "url": "https://n.news.naver.com/article/658/0000161062?ntype=RANKING"
-  },
-  {
-   "press": "국제신문",
    "rank": 4,
-   "title": "李 대통령 지지율 2%p 내린 44%…‘대통령 SNS 줄여야’ 51%",
-   "url": "https://n.news.naver.com/article/658/0000161068?ntype=RANKING"
+   "title": "“이재명 아들 군면제” 허위글 이수정 2심도 피선거권 박탈형",
+   "url": "https://n.news.naver.com/article/658/0000161086?ntype=RANKING"
   },
   {
    "press": "국제신문",
    "rank": 5,
-   "title": "광안리~해운대 해상택시로 10분…내년에 뜬다",
-   "url": "https://n.news.naver.com/article/658/0000161023?ntype=RANKING"
+   "title": "엔비디아, 젠슨 황 후임 물색…차기 CEO로 애플 스루지 거론",
+   "url": "https://n.news.naver.com/article/658/0000161084?ntype=RANKING"
+  },
+  {
+   "press": "여성신문",
+   "rank": 1,
+   "title": "‘성범죄 가해자’ 아버지가 10대 피해여성 살해… 원민경 장관 “반사회적 범죄, 엄히 다스려야”",
+   "url": "https://n.news.naver.com/article/310/0000141634?ntype=RANKING"
+  },
+  {
+   "press": "여성신문",
+   "rank": 2,
+   "title": "4대 그룹 이사회 ‘여성 의장’ 늘어난다… LG·SK 최다, 현대차 꼴찌",
+   "url": "https://n.news.naver.com/article/310/0000141640?ntype=RANKING"
+  },
+  {
+   "press": "여성신문",
+   "rank": 3,
+   "title": "[세계의 여성리더] 디올 첫 여성 CEO 델핀 아르노 “오늘의 창의적 인재가 내일의 리더”",
+   "url": "https://n.news.naver.com/article/310/0000141665?ntype=RANKING"
+  },
+  {
+   "press": "여성신문",
+   "rank": 4,
+   "title": "‘일본 첫 여성 총리’ 다카이치 집권 1년… ‘유리천장’ 깨졌지만 성평등은 제자리",
+   "url": "https://n.news.naver.com/article/310/0000141653?ntype=RANKING"
+  },
+  {
+   "press": "여성신문",
+   "rank": 5,
+   "title": "박주민 ‘평등법’ 발의… 차별금지법 이번엔 국회 문턱 넘을까",
+   "url": "https://n.news.naver.com/article/310/0000141622?ntype=RANKING"
+  },
+  {
+   "press": "JIBS",
+   "rank": 1,
+   "title": "\"돌고래 안목이, 방류 2시간도 안 돼 관광선박에 둘러싸여\"",
+   "url": "https://n.news.naver.com/article/661/0000086521?ntype=RANKING"
+  },
+  {
+   "press": "JIBS",
+   "rank": 2,
+   "title": "“서울 지지율 34%, 여야 28% 동률”… 이 대통령 44%, 부동산 정책 평가 역전",
+   "url": "https://n.news.naver.com/article/661/0000086506?ntype=RANKING"
+  },
+  {
+   "press": "JIBS",
+   "rank": 3,
+   "title": "與 박희승, '조희대 탄핵' 요구 시민에 \"미친 거 아냐\".. 조국혁신당 \"내란 겪고도 그런 소리\"",
+   "url": "https://n.news.naver.com/article/661/0000086518?ntype=RANKING"
+  },
+  {
+   "press": "JIBS",
+   "rank": 4,
+   "title": "한동훈 복당 당내 갈등 두고 윤상현 \"두려운 것은 분열의 늪\"",
+   "url": "https://n.news.naver.com/article/661/0000086519?ntype=RANKING"
+  },
+  {
+   "press": "JIBS",
+   "rank": 5,
+   "title": "“제주 오라는 건가, 말라는 건가”… 관광객 줄어드는데 비행기 좌석 11.8% 급감",
+   "url": "https://n.news.naver.com/article/661/0000086476?ntype=RANKING"
   },
   {
    "press": "중앙SUNDAY",
@@ -2727,14 +2721,8 @@
   {
    "press": "중앙SUNDAY",
    "rank": 2,
-   "title": "서초청년센터, 청년 취업 지원 성과 공개",
-   "url": "https://n.news.naver.com/article/353/0000057206?ntype=RANKING"
-  },
-  {
-   "press": "중앙SUNDAY",
-   "rank": 3,
-   "title": "엘칸토 슈즈 브랜드 ‘Deepp’, 신제품 출시",
-   "url": "https://n.news.naver.com/article/353/0000057203?ntype=RANKING"
+   "title": "“직원 0명이 하루 400명 상담”… AI가 일할수록 커지는 ‘전문가의 책임’",
+   "url": "https://n.news.naver.com/article/353/0000057207?ntype=RANKING"
   },
   {
    "press": "레이디경향",
@@ -2745,556 +2733,556 @@
   {
    "press": "레이디경향",
    "rank": 2,
-   "title": "“계란 노른자, 원래 노란색이 아니다?” 닭에게 쌀 먹였더니 생긴 일",
-   "url": "https://n.news.naver.com/article/145/0000024378?ntype=RANKING"
-  },
-  {
-   "press": "레이디경향",
-   "rank": 3,
    "title": "‘크랜베리 주스’ 매일 마시면 우리 몸에서일어나는 일",
    "url": "https://n.news.naver.com/article/145/0000024376?ntype=RANKING"
   },
   {
    "press": "레이디경향",
+   "rank": 3,
+   "title": "“계란 노른자, 원래 노란색이 아니다?” 닭에게 쌀 먹였더니 생긴 일",
+   "url": "https://n.news.naver.com/article/145/0000024378?ntype=RANKING"
+  },
+  {
+   "press": "레이디경향",
    "rank": 4,
-   "title": "추워지면 무릎에서 ‘딱딱’ 소리, 이거 관절염일까?",
-   "url": "https://n.news.naver.com/article/145/0000024372?ntype=RANKING"
+   "title": "장내 세균, 식이섬유 부족하면 장벽 갉아먹는다?…새 연구의 경고",
+   "url": "https://n.news.naver.com/article/145/0000024375?ntype=RANKING"
   },
   {
    "press": "레이디경향",
    "rank": 5,
-   "title": "“감 많이 먹으면 위에 돌 생긴다?”…체한 줄 알았는데 ‘위석’일 수도",
-   "url": "https://n.news.naver.com/article/145/0000024373?ntype=RANKING"
+   "title": "추워지면 무릎에서 ‘딱딱’ 소리, 이거 관절염일까?",
+   "url": "https://n.news.naver.com/article/145/0000024372?ntype=RANKING"
   }
  ],
  "naver_economy": [
   {
    "section": "경제",
-   "title": "삼성화재, 3분기 누적 순익 1.8조로 4.6%↑…車보험 흑자 흐름"
+   "title": "은행지주 이사회 ‘견제 실종’…제자·후원단체가 회장 연임 심사"
   },
   {
    "section": "경제",
-   "title": "DB손보, 3분기 영업익 40.1% 급증…\"보험손익 개선\""
+   "title": "산업장관 “체코 원전사업 신뢰 지킬 것…정부 관리 역할 강화하겠다”"
   },
   {
    "section": "경제",
-   "title": "진에어·에어서울·에어부산 합병 인가… 내년 3월 통합 LCC 출범"
+   "title": "HMM, 3분기 영업익 370%↑…순이익 30% 이상 주주환원"
   },
   {
    "section": "경제",
-   "title": "\"우리 집 다 보고 있었네\"…보안 구멍 뚫린 가정용 카메라"
+   "title": "국고채 입찰 3년반 짬짜미, 15곳에 1.6조 역대 최대 과징금"
   },
   {
    "section": "경제",
-   "title": "한국지역난방공사, ESG 평가 7년 연속 A등급…상장공기업 최고"
+   "title": "서울 아파트 92주째 올라…상승폭은 둔화"
   },
   {
    "section": "경제",
-   "title": "홍지선 국토장관 “재초환, 재산권 침해 종합 검토”…강남 3구 집값 하락세 진단"
+   "title": "한은 강연서 \"국가부채 '공짜' 아냐…저금리 영원하지 않아\""
   },
   {
    "section": "경제",
-   "title": "\"AI 해킹은 기계 속도, 방어는 제자리\"…'사이버 팬데믹' 우려 쏟아진 FISCON"
+   "title": "미래에셋, 3분기 4056억 순손실…적자 전환"
   },
   {
    "section": "경제",
-   "title": "카카오엔터 베리즈, KBO 우승 삼성라이온즈와 협업으로 ‘팬덤’ 생태계 확장"
+   "title": "도레이첨단소재, AI 수요 겨냥 MLCC 필름 13·14호기 준공"
   },
   {
    "section": "경제",
-   "title": "할인액에도 붙던 수수료…배민 개편, 다른 배달앱까지 번지나"
+   "title": "대한전선, ESG 평가 6년째 A등급"
   },
   {
    "section": "경제",
-   "title": "'금리 인상 우려' 달러·원 환율 상승 출발…1336.6원 개장"
+   "title": "박상원 금융보안원장 \"정보 유출 사고 송구…재발 방지 대책 마련\""
   },
   {
    "section": "경제",
-   "title": "‘젠슨 황 해임설’에 출렁인 코스피…외국인 3일째 ‘사자’에도 5340선 후퇴[투자360]"
+   "title": "美 '대중 칩 규제 3법' 속도… 삼성·SK에도 불똥 튀나 [젠슨 황 스캔들 파장 확산]"
   },
   {
    "section": "경제",
-   "title": "3분기 10대 증권사 순이익 83% 급감 1조 하회...과징금·평가손 여파"
+   "title": "경영 불확실성 커지는 엔비디아… 떨고 있는 ‘깐부 동맹’ [젠슨 황 스캔들 파장]"
   },
   {
    "section": "경제",
-   "title": "정부가 맡긴 업무 했는데 과징금 부메랑…업계 ‘부글부글’"
+   "title": "엔비디아 목표가 최대 60%↓…‘18조 보유’ 서학개미 비상"
   },
   {
    "section": "경제",
-   "title": "영풍 의결권 막은 주총 취소 판결에…고려아연 “대법 판단과 배치, 즉시 항소\""
+   "title": "젠슨 황 퇴진 가능성에 촉각… “단기 불확실성, 중장기 흐름은 불변”"
   },
   {
    "section": "경제",
-   "title": "삼성바이오에피스, 지주사 에피스홀딩스에 1000억원 배당"
+   "title": "정부 주도 석화 구조조정 난항…여수 1·2호 잇단 지연"
   },
   {
    "section": "경제",
-   "title": "설계도에 생산라인 밑그림…삼성 반도체 공사 '내국인' 뽑는 이유는"
+   "title": "본처와 두 불륜녀 “아!” 젠슨황의 ‘LOVE LOVE LOVE’"
   },
   {
    "section": "경제",
-   "title": "“닥치고 공급? 마을부터 지켜달라”…서리풀 2지구 주민들, 정부 속도전에 반발"
+   "title": "SK하이닉스 ‘AI 전력칩’ 생산 늘린다"
   },
   {
    "section": "경제",
-   "title": "AP위성 “자체 위성 띄워 데이터 판다”…플랫폼·서비스로 사업 확장"
+   "title": "\"내년 수도권 집값 3% 오를 것…세제 변화 변수\"(종합)"
   },
   {
    "section": "경제",
-   "title": "[단독] 재경부, 추미애 제안 ‘지방법인세’ 신설 반대"
+   "title": "10대 증권사, 3분기 1조도 못 벌었다…거래 위축·운용 부진·과징금 직격탄"
   },
   {
    "section": "경제",
-   "title": "엔화 소폭 강세에 달러 숨 고르기…원·달러 환율 1330원대 마감 [김혜란의 FX]"
+   "title": "삼성증권 \"IMA 대비 배당성향 50%로…외국인 통합계좌 확대\""
   },
   {
    "section": "경제",
-   "title": "반대매매 유예, 약일까 독일까…6년전 사례가 남긴 경고"
+   "title": "흔들리는 '깐부 동맹'…삼전닉스 HBM 공급 계획 차질 빚나"
   },
   {
    "section": "경제",
-   "title": "'상호주 방어' 제동 걸린 고려아연…최윤범 경영권 수성 다시 시험대"
+   "title": "“중국 업체들 못따라오게 하겠다”…LG디스플레이 ‘비밀병기’ 보니"
   },
   {
    "section": "경제",
-   "title": "물·전력 갖춰도 지을 사람이 없다…반도체 공사 인력 비상"
+   "title": "\"41% 반대해도 재개발 강행\"…효창동 주민들, 행정소송 제기"
   },
   {
    "section": "경제",
-   "title": "제이알 쇼크 이후 더 빠졌다…상장리츠 '신저가' 행진"
+   "title": "[단독] 나스닥은 분기마다 IR…코스닥 상장사는 투자만 받고 설명 뒷전"
   },
   {
    "section": "경제",
-   "title": "삼성전자 실적 좋은데 목표가 ‘뚝’, 왜? [오늘, 이 종목]"
+   "title": "'젠슨 황 리스크' 직격탄 맞았다…줄줄이 비명 쏟아진 종목"
   },
   {
    "section": "경제",
-   "title": "코어위브 호실적에 웃던 엘리스…젠슨 황 불확실성에 하락 반전"
+   "title": "엔비디아, 젠슨 황과 ‘헤어질 결심’?...차기 CEO 후보는 누구"
   },
   {
    "section": "경제",
-   "title": "삼전 0.9%↑·하닉 1.80%↓…외국인 7449억 매수·8720억 매도"
+   "title": "[단독] 코스닥 우량기업 '年 2회 IR' 의무화"
   },
   {
    "section": "경제",
-   "title": "한전 3분기 영업익 70.9% 급감…중동전쟁 여파에 2년 만에 적자"
+   "title": "메모리값 폭등에…스마트폰, 15년만에 10억대 아래로"
   },
   {
    "section": "경제",
-   "title": "'어닝 서프라이즈' JYP 16% 급등...엔터株 동반 강세"
+   "title": "이부진은 디올 재킷, 지수는 ‘레이디 디올’…디올 CEO ‘우정 패션’"
   },
   {
    "section": "경제",
-   "title": "[단독]삼성·SK, 정부에 SOS…\"반도체 공장 짓는데 26만명 필요\""
+   "title": "금융지주 퇴임 회장, 고액 특별공로금·고문료 못 받는다"
   }
  ],
  "naver_life": [
   {
    "section": "생활/문화",
-   "title": "K컬처 열풍에…방한 외국인 관광객 사상 첫 2000만명 돌파"
+   "title": "K웨이브의 힘…외국인 관광객 2000만 시대"
   },
   {
    "section": "생활/문화",
-   "title": "문체부, 미등록 대중문화예술기획업체 16곳 수사 의뢰"
+   "title": "임윤찬 ‘골드베르크 변주곡’, 애플뮤직 선정 올해의 클래식 앨범"
   },
   {
    "section": "생활/문화",
-   "title": "6년 만에 '수능 한파' 온다… 서울 아침 영하 1도, 한낮 5도 '꽁꽁'"
+   "title": "윤제림 시인 '스물다섯살을 반성함', 제28회 백석문학상 수상"
   },
   {
    "section": "생활/문화",
-   "title": "“우리 아이는 괜찮다” 믿었는데…정신건강 문제, 부모는 전혀 몰랐다"
+   "title": "문체부, 미등록 대중문화예술기획업 16곳 수사 의뢰"
   },
   {
    "section": "생활/문화",
-   "title": "[단독] 이마트24, 편의점 택배 ‘최저가’ 승부수"
+   "title": "내일 한낮 최고 20도 '쑥'…오후부턴 제주·전남서 가을비[내일날씨]"
   },
   {
    "section": "생활/문화",
-   "title": "임윤찬 다섯 번의 협연, '혼란과 염려'는 가고 음악이 남았다 [취재파일]"
+   "title": "국립현대미술관 “이대원 회고전 30만 명 관람…덕수궁관 역대 최다 기록”"
   },
   {
    "section": "생활/문화",
-   "title": "주말까지 전국 비…6년 만에 영하권 ‘수능 한파’ 온다"
+   "title": "“4.5kg 훅 빠져”…백지영, 다이어트 비결 ‘이 시간’에 금식하기"
   },
   {
    "section": "생활/문화",
-   "title": "[날씨] 내일도 큰 일교차 유의…흐리고 충청 이남 비"
+   "title": "“한 잔만 마셔도 췌장암 위험 55% 오른다”… 술 말고, 끊어야 할 음료"
   },
   {
    "section": "생활/문화",
-   "title": "국내 사망원인 3위 폐렴··· 위험 줄일 수 있는 방법은"
+   "title": "내일 한낮 20도 '포근'…출근길 짙은 안개, 퇴근길엔 비구름"
   },
   {
    "section": "생활/문화",
-   "title": "삶은 달걀 vs 스크램블, 혈압엔 뭐가 나을까?"
+   "title": "“고기 먹을 때 ‘이 부분’ 꼭 잘라내라”…나쁜 콜레스테롤 확 높이는 식습관 [헬시타임]"
   },
   {
    "section": "생활/문화",
-   "title": "Z세대 새로운 잇템 헤드폰…오래 쓰면 발생할 수 있는 위험은?"
+   "title": "사우나 자주 하면 치매 위험 최대 66% 낮아진다? 핀란드 연구 결과 살펴보니"
   },
   {
    "section": "생활/문화",
-   "title": "딸의 전화 한 통에 바뀐 아빠의 마음"
+   "title": "“암·치매 막는다” 92세 과학자, 매일 먹는 간식 세 가지"
   },
   {
    "section": "생활/문화",
-   "title": "황금올리브 vs 황금홀릭, 뿌링클 vs 뿌리즐링…'미투' 치킨게임"
+   "title": "안연고 품귀에 약국 뺑뺑이…낮은 약가에 생산·수입 끊겨"
   },
   {
    "section": "생활/문화",
-   "title": "“단백질·철분 풍부하다”… 이혜정이 시장서 사 먹은 ‘추억의 간식’ 번데기"
+   "title": "100곡 중 성공은 5곡…수억원 쏟아붓는 바이럴 전쟁 [마케팅의 세계]"
   },
   {
    "section": "생활/문화",
-   "title": "곽튜브 “학폭 가해자 4명 이름 말하려 했다”…신인상 무대서 마음 바뀐 이유"
+   "title": "전기차 충전기 8기면 얼마나 기다릴까…'워터' 초급속 충전소 가보니"
   },
   {
    "section": "생활/문화",
-   "title": "1932년 경성 모습 그린 ‘100일의 거짓말’…어디까지 진짜일까"
+   "title": "디올CEO 이화여대 뜬 날…삼성·현대·롯데家 총출동"
   },
   {
    "section": "생활/문화",
-   "title": "옆에서 숨만 쉬어도 좋은 사랑의 유통기한은 얼마일까"
+   "title": "\"값싼 마운자로 사자\"…日병원 몰린 한국인"
   },
   {
    "section": "생활/문화",
-   "title": "요즘 매트리스 “뒤집어 쓰면 안 돼요”… 오래 쓰려면 뒤집기보다 중요한 건?"
+   "title": "“콜레스테롤 걱정 덜고 먹어라”… 소·돼지보다 지방 적은 ‘말고기’ 효능"
   },
   {
    "section": "생활/문화",
-   "title": "젠슨 황만 그럴까…금실 좋은 원앙부부의 감춰진 사생활"
+   "title": "현대차 GBC에 루이비통 호텔 들어오나… 정의선이 디올 CEO 학위 수여식 간 이유는"
   },
   {
    "section": "생활/문화",
-   "title": "\"우승하면 에버랜드 데이트\" 현실로…삼성 라이온즈, 팬 2000명 쏜다"
+   "title": "[퇴근길 날씨] 밤사이 중부 짙은 안개…토요일, 전국에 비"
   },
   {
    "section": "생활/문화",
-   "title": "BMI로만 진단하면 8.6% 놓친다…'사망 위험' 더 잘 잡는 새 비만 기준 [매일비타민]"
+   "title": "[날씨] 내일 아침 쌀쌀·한낮 포근…충청 이남 비"
   },
   {
    "section": "생활/문화",
-   "title": "\"먹었나, 안 먹었나\"…배우 김정난도 헷갈린 갑상선암 수술 후 '아침 약' 어떻게 챙기나[헬스톡]"
+   "title": "스페인 '불'금술사가 빚어냈다…그을린 美食의 향연"
   },
   {
    "section": "생활/문화",
-   "title": "[날씨] 투어스 '신유'가 전하는 날씨...\"수능 D-7 응원해요!\""
+   "title": "\"김치맨\" 외쳐댄 관중과 충돌…박항서, 끝내 징계받았다"
   },
   {
    "section": "생활/문화",
-   "title": "3·1운동의 숨은 거목, 독립운동가 김세환 선생 집터를 가다"
+   "title": "30년 우정 이부진의 남다른 디올 사랑...가격 봤더니"
   },
   {
    "section": "생활/문화",
-   "title": "“닭 가슴살만 고집할 필요 없었네요”… 단백질 풍부한 의외의 부위 ‘똥집’"
+   "title": "“소주는 존재해서는 안될 술”…현직 간담췌외과 전문의가 경고한 이유"
   },
   {
    "section": "생활/문화",
-   "title": "\"저 살 수 있는 거죠?\"⋯몸과 함께 늙어가는 피, 골수성 백혈병의 치료법 [명의]"
+   "title": "11층에서 사람이 뛰어내리는데 아무도 말리지 않았다···고선웅 신작 ‘투신’"
   },
   {
    "section": "생활/문화",
-   "title": "한국 노선 탑승객 100만명 넘었다…홍콩익스프레스, 성수동에 첫 팝업"
+   "title": "“맥주 5000cc씩 마셨다” 장도연이 끊은 ‘혼술 습관’… 도수 낮아도 방심하면 위험"
   },
   {
    "section": "생활/문화",
-   "title": "‘이건희 전시’ 영국박물관 “반응 엄청나…한국과 수십년 협력 결과”"
+   "title": "“12kg 빠지고 기억상실까지” 황철순, ‘쯔쯔가무시’ 얼마나 위험하길래?"
   },
   {
    "section": "생활/문화",
-   "title": "'토성'을 직접 보다니, 천문대에 오길 잘했다"
+   "title": "BTS 돌아왔는데 주가는 왜…K팝 호황에도 엔터주 외면받은 이유"
   },
   {
    "section": "생활/문화",
-   "title": "[날씨] 한낮 온화, 큰 일교차 주의…중서부 공기 질 나쁨"
+   "title": "짧은 낮잠 자는 것도? 건강하게 오래 사는 습관 10가지"
   }
  ],
  "naver_society": [
   {
    "section": "사회",
-   "title": "서울서 여성 몰카 찍다 붙잡힌 중국인…\"한국 처음 와 무지했다\""
+   "title": "'김건희 성상납' 의혹 제기 김용민, 항소심도 벌금 700만 원"
   },
   {
    "section": "사회",
-   "title": "법원 \"고려아연, 영풍·MBK 의결권 제한한 주총 결의 취소해야\""
+   "title": "“100m를 5초에 뛴 꼴”...평균 30점 세법시험 만점, 세무사 수석 ‘AI 안경 의혹’"
   },
   {
    "section": "사회",
-   "title": "성북구 살해 피해 10대, 쉼터 이용 중 미복귀… “실종 신고했다”"
+   "title": "'아들 성범죄' 10대 피해자 살해...50대 긴급체포"
   },
   {
    "section": "사회",
-   "title": "일산병원, 로봇수술 3000례 달성…다빈치 SP 추가 도입"
+   "title": "해외서 구매한 위고비·마운자로, 12일부터 3개월분 반입 허용(종합)"
   },
   {
    "section": "사회",
-   "title": "\"말 안 들으면 잡아간다\"…민속촌 '귀신 훈육' 아동학대 논란에 종료"
+   "title": "‘이재명 아들 군 면제’ 허위 글 이수정, 2심도 벌금 300만원"
   },
   {
    "section": "사회",
-   "title": "\"울산문화관광재단, 전문성·효율성 위해 분리\"…2029년 하반기"
+   "title": "'<TV조선> 재승인 점수조작' 의혹 한상혁 전 방통위원장, 1심 무죄"
   },
   {
    "section": "사회",
-   "title": "남방큰돌고래 ‘안목이’ 4개월 만에 제주 바다로, 가족 찾을까"
+   "title": "'서강대교 회군' 조성현 첫 공판서 '공소기각' 주장...\"사람 없는 곳 가있으라 지시\""
   },
   {
    "section": "사회",
-   "title": "대포폰·해외 서버로 추적 피했지만… 800억 도박 조직 덜미"
+   "title": "샛길 없애고 ‘360도 전망대’…서울 남산, 2031년까지 생태·관광 거점으로"
   },
   {
    "section": "사회",
-   "title": "'TV조선 점수 수정사건' 피고인 6인 모두 무죄"
+   "title": "성북구 살해 피해 10대, 쉼터 이용 중 미복귀…“실종신고 조치”"
   },
   {
    "section": "사회",
-   "title": "전남광주 북구 아파트서 불...70대 경비원 심정지"
+   "title": "속초 대포항 국가 거점어항 선정…수산물류·해양관광 거점 육성"
   },
   {
    "section": "사회",
-   "title": "올해 세 번째 화재 발생에 구룡마을 주민 불안감…'음모론'도 퍼져 [데일리안이 간다 163]"
+   "title": "새길 로펌과 성남시…이용철 후보와 李대통령 인연들에 관심"
   },
   {
    "section": "사회",
-   "title": "퇴근길 꽉 막힌 도로 위 ‘생명의 길’이 열렸다…30분 만에 이뤄낸 기적의 사투"
+   "title": "평균 30점 과목서 100점... 세무사 시험 ‘AI 안경’ 의혹"
   },
   {
    "section": "사회",
-   "title": "영풍·MBK, 정기주총 결의 취소 1심 승소…고려아연 \"항소 예정\"(종합)"
+   "title": "지인에 맡긴 반려견이 '건강원 개소주' 됐다…주민들도 엄벌 진정"
   },
   {
    "section": "사회",
-   "title": "[단독]‘삼례 나라슈퍼 살인 누명’ 검사, 국가에 3억원 지급해야…법원 “진범 자백도 배척해 잘못”"
+   "title": "공소청, '성북 10대 여성 살해' 50대 남성 구속영장 청구"
   },
   {
    "section": "사회",
-   "title": "검찰미래위, 위례 등 3개 사건 재보완 보고서 검토…오늘 결론 나올까"
+   "title": "\"지갑에서 현금 2200만 원 빼갔다\" 절도 피소된 배우 김승우...교도소 복역 중인 지인과 진실공방"
   },
   {
    "section": "사회",
-   "title": "[단독]공소청 한달, 검사 125명 떠났다…지방 근무 저연차 이탈 '심각'"
+   "title": "\"간판도 포장도 똑같네\"...중국에 등장한 '짝퉁 한정선'"
   },
   {
    "section": "사회",
-   "title": "“죽여버리겠다” 협박에 욕설까지…민원 2026건 퍼부은 민원인, 결국 장관 나섰다"
+   "title": "[단독] 20대 지인에 심리적 지배?...수사 상황도 보고 정황"
   },
   {
    "section": "사회",
-   "title": "“밭 갈아엎은 날, 밤새 울었다”···쪽파값 폭락에 무너진 농심[현장]"
+   "title": "\"당일치기 비행기 값 뽑는다\"…비만약 '마운자로' 일본 원정 처방 확산에 오남용 우려"
   },
   {
    "section": "사회",
-   "title": "등기부등본 열람 수수료, 23일부터 400원 인상"
+   "title": "‘성유리 남편’ 프로골퍼 안성현, 코인 상장 청탁 무죄 확정"
   },
   {
    "section": "사회",
-   "title": "심야 비명소리 다음날 母-두 아들 숨진채 발견…곳곳 흉기 상처"
+   "title": "'추정 피해액 31억' 올공 철거 마지막날도 버티는 시위대"
   },
   {
    "section": "사회",
-   "title": "\"집집마다 벨 누르며 문 두드려\"…불길 속 주민 대피 돕던 70대 경비원 중태"
+   "title": "'무인양품'도 당했다… 고객 신용카드 정보 109만건 유출 가능성"
   },
   {
    "section": "사회",
-   "title": "2800억대 '면대약국' 운영 의혹 원불교재단, 1심서 무죄"
+   "title": "정치자금법 위반 홍준표 캠프 관계자 6명 기소…\"기소법정주의\"(종합)"
   },
   {
    "section": "사회",
-   "title": "\"퇴거 후 대책은?\"…동대구터미널 상인들, 2차 집회 예고"
+   "title": "발달장애 아들 일주일간 묶어둔 엄마…아이는 숨진 채 발견"
   },
   {
    "section": "사회",
-   "title": "“마운자로 사러 당일치기 일본 행”…예약 384칸 마감에 ‘스시자로 투어’도 등장"
+   "title": "‘16개월 딸 학대 사망’ 친모·계부에 무기징역 구형"
   },
   {
    "section": "사회",
-   "title": "\"그지 같은 스카프 언제 들어와유\"…남대문 스카프 아저씨 온라인몰 품절 대란"
+   "title": "한상혁 무죄에 \"尹정권 대대적인 수사와 기소 통해 범죄로 몰아가\""
   },
   {
    "section": "사회",
-   "title": "영풍·MBK, 고려아연 상대 '정기주총 결의 취소' 소송 승소"
+   "title": "李대통령 기소 위례사건 한달째 결론못낸 檢미래위…조사단과 이견?(종합)"
   },
   {
    "section": "사회",
-   "title": "동서발전·석유공사·항만공사 ‘삼중고’…울산, 통합 본사 유치 사활"
+   "title": "'연락두절' 30대 男, 원룸서 대형봉투 속 시신으로 발견…\"침입 흔적 無\""
   },
   {
    "section": "사회",
-   "title": "李대통령 장·차남 '군 면제' 허위글 올렸던 이수정…2심도 '피선거권 박탈형'"
+   "title": "‘인증샷’ 찍으려 해안동굴 들어갔나? 밀물에 갇힌 관광객들 ‘극적 구조’"
   },
   {
    "section": "사회",
-   "title": "3만 원 갈취 혐의가 강간살인으로... 그날밤의 진실 [김종성의 '히, 스토리']"
+   "title": "가정폭력 피해 쉼터 전전…범죄 노출 끝에 살해 당해"
   },
   {
    "section": "사회",
-   "title": "또 일낸 ‘남대문 스카프 아저씨’…온라인몰 열자마자 품절"
+   "title": "[AFTER 8NEWS] \"무섭다\" 호소에도 \"버텨라\" 예견된 비극?…'원당역' 지옥의 그날, 진실은?"
   }
  ],
  "nate_live_keywords": [
   {
    "rank": 1,
-   "keyword": "김승우 유흥주점 절도 혐의 피소"
+   "keyword": "젠슨 황 해임 검토 중"
   },
   {
    "rank": 2,
-   "keyword": "젠슨 황 엔비디아 위기"
+   "keyword": "폭설 김윤석 구교환 연기 쾌감 최고"
   },
   {
    "rank": 3,
-   "keyword": "에이티즈 산 꿈 같은 나날 보내고 있다"
+   "keyword": "김승우, 2200만원 절도 혐의 피소"
   },
   {
    "rank": 4,
-   "keyword": "한국, 호주에 7-8 패배"
+   "keyword": "한화생명 3분기 순익 8656억 증가"
   },
   {
    "rank": 5,
-   "keyword": "디올 CEO 학위식 재계 총출동"
+   "keyword": "여자축구, LA 올림픽 B조 대결"
   },
   {
    "rank": 6,
-   "keyword": "오세훈 시장, 대학생 만남"
+   "keyword": "가상자산업권 보안 대책회의"
   },
   {
    "rank": 7,
-   "keyword": "진에어 에어부산 합병 인가"
+   "keyword": "손지해의 미소 응원"
   },
   {
    "rank": 8,
-   "keyword": "사상 최초 2천만 외국인"
+   "keyword": "청탁 의혹 공판"
   },
   {
    "rank": 9,
-   "keyword": "건보공단 특사경 반대 궐기대회"
+   "keyword": "정점식-정순택 대주교 예방"
   },
   {
    "rank": 10,
-   "keyword": "3분기 순익 급증"
+   "keyword": "고려아연 주총 결의 취소"
   }
  ],
  "google_news_business": [
   {
-   "title": "‘젠슨 황 스캔들’ 불똥 튄 트럼프 정부…베선트·러트닉 백악관서 충돌 - 한겨레",
-   "pubDate": "Thu, 12 Nov 2026 04:21:00 GMT"
+   "title": "젠슨황 놓고 ‘경제 투톱’ 정면 충돌…결국 트럼프에 폭탄 투하? - 중앙일보",
+   "pubDate": "Thu, 12 Nov 2026 05:08:43 GMT"
   },
   {
-   "title": "李대통령, 이재용에 공개 감사…나란히 첫 삽 뜨며 '충청 투자 동행' - 연합인포맥스",
-   "pubDate": "Thu, 12 Nov 2026 04:36:00 GMT"
+   "title": "李, 충청서 메가프로젝트 4차 점검 \"23.6조 원 추가 투자\" - MBC 뉴스",
+   "pubDate": "Thu, 12 Nov 2026 05:43:52 GMT"
   },
   {
-   "title": "서울 성동·강동 아파트 가격 하락 전환…전체로는 상승폭 유지 - KBS 뉴스",
-   "pubDate": "Thu, 12 Nov 2026 05:02:00 GMT"
+   "title": "큰손 국민연금 거래기관 자리까지 위태…'국채 담합' PD사 수난 - 연합인포맥스",
+   "pubDate": "Thu, 12 Nov 2026 06:52:48 GMT"
   },
   {
-   "title": "이름·포장 다 베낀 ’한정선 짝퉁’...중국서 ’K 브랜드’ 또 모방 - 연합뉴스TV",
-   "pubDate": "Thu, 12 Nov 2026 02:45:00 GMT"
-  },
-  {
-   "title": "코스피, 사흘 연속 반등시도...코스닥은 '숨 고르기' - YTN",
-   "pubDate": "Thu, 12 Nov 2026 02:42:00 GMT"
-  },
-  {
-   "title": "KT, AI UX 디자인 시스템 'KDS 2.0' 구축 - 지디넷코리아",
-   "pubDate": "Thu, 12 Nov 2026 03:44:26 GMT"
-  },
-  {
-   "title": "네이버 3분기 매출 3조 4천724억 원 역대 최대‥영업이익 20.9% 감소 - MBC 뉴스",
-   "pubDate": "Thu, 12 Nov 2026 00:37:29 GMT"
+   "title": "“한정선 상해 1호점인 줄…” 한국 브랜드 통째로 베낀 중국 [잇슈#태그] - KBS 뉴스",
+   "pubDate": "Thu, 12 Nov 2026 03:25:00 GMT"
   },
   {
    "title": "금융보안원장 “해킹 사고 송구…재발 방지책 마련할 것” - KBS 뉴스",
    "pubDate": "Thu, 12 Nov 2026 05:30:00 GMT"
   },
   {
-   "title": "김장 재료 최대 50% 할인? '2026 코리아 수산 페스타'로 장바구니 부담 줄이기 - 대한민국 정책브리핑",
-   "pubDate": "Thu, 12 Nov 2026 06:56:15 GMT"
+   "title": "서울 아파트값 92주째 올랐지만… 강남3구 이어 성동·강동도 하락 전환 - 조선일보",
+   "pubDate": "Thu, 12 Nov 2026 05:08:49 GMT"
   },
   {
-   "title": "\"12월 연준 금리 동결 가능성 배제하지 않아야\" - 연합인포맥스",
-   "pubDate": "Thu, 12 Nov 2026 01:18:00 GMT"
+   "title": "코스피, 옵션 만기일 경계감에 개장 직후 하락전환 - 한국경제",
+   "pubDate": "Thu, 12 Nov 2026 00:22:46 GMT"
+  },
+  {
+   "title": "금융 당국 “가상자산 콜드월렛 비중 최대화·24시간 모니터링” - KBS 뉴스",
+   "pubDate": "Thu, 12 Nov 2026 07:39:00 GMT"
+  },
+  {
+   "title": "DB하이텍, 3분기 영업익 900억원… “전력반도체 수요에 가동률 사실상 100%” - Chosunbiz",
+   "pubDate": "Thu, 12 Nov 2026 02:54:00 GMT"
+  },
+  {
+   "title": "이부진은 ‘3년 전 그 재킷’, 지수는 ‘레이디 디올’… 디올 패션도 화제 - Chosunbiz",
+   "pubDate": "Thu, 12 Nov 2026 05:02:00 GMT"
+  },
+  {
+   "title": "JP모건 \"연준 인상 기대 이미 정점…에너지, 근원 물가 못 높여\" - 연합인포맥스",
+   "pubDate": "Thu, 12 Nov 2026 08:41:09 GMT"
+  },
+  {
+   "title": "김장 재료 최대 50% 할인? '2026 코리아 수산 페스타'로 장바구니 부담 줄이기 - 대한민국 정책브리핑",
+   "pubDate": "Thu, 12 Nov 2026 06:56:15 GMT"
   },
   {
    "title": "현대로템, ESG 종합평가 3년 연속 최상위 등급 'A+' - 연합인포맥스",
    "pubDate": "Thu, 12 Nov 2026 05:50:07 GMT"
   },
   {
+   "title": "규정 바꾸고 측근 앉히고‥금융지주 회장 '셀프 연임' 실태 확인 - MBC 뉴스",
+   "pubDate": "Thu, 12 Nov 2026 00:54:06 GMT"
+  },
+  {
+   "title": "韓증권시장서 외인 9개월째 순유출‥채권 넉 달 만에 매수 우위 - MBC 뉴스",
+   "pubDate": "Thu, 12 Nov 2026 05:16:23 GMT"
+  },
+  {
    "title": "코어위브 호실적에 AI·반도체주 반등…나스닥 1.6%↑ [뉴욕증시 브리핑] - 한국경제",
    "pubDate": "Wed, 11 Nov 2026 22:03:42 GMT"
   },
   {
-   "title": "앤트로픽 IPO에 공모물량 몇 배 투자 수요…역대 최대 상장 전망 - 연합뉴스",
-   "pubDate": "Wed, 11 Nov 2026 19:39:00 GMT"
+   "title": "반포현대 2.2억, 은마 4.6억…‘재초환 부담금’ 통지에 논란 재점화 - 한겨레",
+   "pubDate": "Thu, 12 Nov 2026 06:14:00 GMT"
   },
   {
-   "title": "국고채 입찰 담합한 은행·증권사에 ‘역대 최대’ 과징금 1조6266억원 부과 - 경향신문",
-   "pubDate": "Wed, 11 Nov 2026 07:55:00 GMT"
-  },
-  {
-   "title": "은행지주 CEO 연임 문턱 높인다…주총 의결요건 단계 강화 - 대한민국 정책브리핑",
-   "pubDate": "Thu, 12 Nov 2026 07:25:35 GMT"
-  },
-  {
-   "title": "1200억대 '릭시아나' 제네릭 쏟아졌다…약가·제품 차별화로 승부 - MEDI:GATE NEWS",
-   "pubDate": "Thu, 12 Nov 2026 00:27:00 GMT"
+   "title": "코스피, 오락가락 등락하다 0.6% 하락 마감…코스닥 1.2%↓ - KBS 뉴스",
+   "pubDate": "Thu, 12 Nov 2026 06:45:00 GMT"
   },
   {
    "title": "KDI “올해 소비, 유가 충격에 주춤…내년엔 반도체 효과로 개선” - KBS 뉴스",
-   "pubDate": "Thu, 12 Nov 2026 03:00:00 GMT"
-  },
-  {
-   "title": "세무사 시험 수석 ‘AI 안경’ 의혹에... 주관기관 “문제 여부 확인 중” - Chosunbiz",
-   "pubDate": "Thu, 12 Nov 2026 02:32:00 GMT"
-  },
-  {
-   "title": "진에어·에어부산·에어서울 합병 인가‥공정위도 기업결합 승인 - MBC 뉴스",
-   "pubDate": "Thu, 12 Nov 2026 06:26:11 GMT"
+   "pubDate": "Thu, 12 Nov 2026 03:02:00 GMT"
   },
   {
    "title": "대기업 무역흑자 4배 될 때…중견은 적자 전환, 중소는 적자 확대 - 한국무역협회-KITA.NET",
    "pubDate": "Thu, 12 Nov 2026 07:02:54 GMT"
   },
   {
+   "title": "1200억대 '릭시아나' 제네릭 쏟아졌다…약가·제품 차별화로 승부 - MEDI:GATE NEWS",
+   "pubDate": "Thu, 12 Nov 2026 00:27:00 GMT"
+  },
+  {
+   "title": "네이버, AI 팩토리 첫 수주…“내년 상반기부터 실적 반영” [정지은의 테크킥] - 한국경제",
+   "pubDate": "Thu, 12 Nov 2026 05:26:01 GMT"
+  },
+  {
+   "title": "진에어·에어부산·에어서울 합병 인가‥공정위도 기업결합 승인 - MBC 뉴스",
+   "pubDate": "Thu, 12 Nov 2026 06:26:11 GMT"
+  },
+  {
    "title": "국토부, 전세사기 피해 480건 추가 결정‥누적 4만 2,039명 - MBC 뉴스",
    "pubDate": "Thu, 12 Nov 2026 00:01:02 GMT"
-  },
-  {
-   "title": "[단독] 두산, SK실트론 인수 문턱 넘었다…6개국 기업결합심사 완료 - 한국경제",
-   "pubDate": "Thu, 12 Nov 2026 02:46:27 GMT"
-  },
-  {
-   "title": "자율주행차·로봇 등 탑재 AI칩 10종, 2030년까지 개발 - 대한민국 정책브리핑",
-   "pubDate": "Thu, 12 Nov 2026 07:18:45 GMT"
-  },
-  {
-   "title": "미국 브루클린서 3층 건물 붕괴…2명 사망·17명 부상 - KBS 뉴스",
-   "pubDate": "Thu, 12 Nov 2026 07:24:00 GMT"
   },
   {
    "title": "9월까지 나라살림 적자 32조, 8년만 최소…“반도체 호황 덕” - KBS 뉴스",
    "pubDate": "Thu, 12 Nov 2026 05:39:00 GMT"
   },
   {
-   "title": "\"드디어 시골 벗어났네요\"…세종시 공무원들 환호한 이유 [김익환의 부처 핸즈업] - 한국경제",
-   "pubDate": "Thu, 12 Nov 2026 00:55:07 GMT"
+   "title": "앤트로픽 IPO에 공모물량 몇 배 투자 수요…역대 최대 상장 전망 - 연합뉴스",
+   "pubDate": "Wed, 11 Nov 2026 19:39:00 GMT"
+  },
+  {
+   "title": "\"처음엔 혹평 쏟아졌는데\"…9년 만에 세계 1위 찍은 '한국 게임' - 한국경제",
+   "pubDate": "Thu, 12 Nov 2026 01:38:01 GMT"
+  },
+  {
+   "title": "미국 브루클린서 3층 건물 붕괴…14명 사상 - KBS 뉴스",
+   "pubDate": "Thu, 12 Nov 2026 00:38:00 GMT"
+  },
+  {
+   "title": "환율, 수출업체 달러매도 등에 보름 만에 1,320원대로 하락 - 한국무역협회-KITA.NET",
+   "pubDate": "Thu, 12 Nov 2026 07:50:19 GMT"
   },
   {
    "title": "식약처, 항암제·항생제 3종 국내 주문 제조…연내 공급 - KBS 뉴스",
    "pubDate": "Wed, 11 Nov 2026 23:43:00 GMT"
-  },
-  {
-   "title": "사라진 청년 일자리 94%는 AI 업종…빈자리는 50대가 채웠다 - 조선일보",
-   "pubDate": "Wed, 11 Nov 2026 23:19:00 GMT"
-  },
-  {
-   "title": "[환율 전망] 반도체 주도의 수출 호황, 여전히 풍부한 달러 - KB Think",
-   "pubDate": "Thu, 12 Nov 2026 06:49:34 GMT"
-  },
-  {
-   "title": "\"미 블랙리스트 중국 군연계 대학, 엔비디아 H200 구매\" - MBC 뉴스",
-   "pubDate": "Wed, 11 Nov 2026 07:52:49 GMT"
   }
  ],
  "google_news_top": [
@@ -3303,80 +3291,92 @@
    "pubDate": "Wed, 11 Nov 2026 22:29:00 GMT"
   },
   {
-   "title": "안철수 “한동훈 복당? 물귀신 행태…차라리 창당을” - 한겨레",
-   "pubDate": "Thu, 12 Nov 2026 00:35:00 GMT"
-  },
-  {
-   "title": "10대 살해한 50대…'아들 성범죄'에 '조건만남 절도'까지 복잡(종합) - 연합뉴스",
-   "pubDate": "Wed, 11 Nov 2026 11:42:49 GMT"
-  },
-  {
-   "title": "與지도부 \"조희대, 내란 지우기 나섰나... 재판지연, 한덕수 석방의 문\" - 조선일보",
-   "pubDate": "Thu, 12 Nov 2026 02:03:00 GMT"
-  },
-  {
-   "title": "법원, 조성현에 \"시민들이 왜 국회 막았다고 보나\" - MBC 뉴스",
-   "pubDate": "Thu, 12 Nov 2026 06:26:47 GMT"
-  },
-  {
-   "title": "이재용 \"온양, AI 반도체 심장 HBM 거점으로 탈바꿈\" - 뉴스핌",
-   "pubDate": "Thu, 12 Nov 2026 01:19:00 GMT"
-  },
-  {
    "title": "장동혁, 이용철에 이념 공세 \"이석기와 연결‥등골이 오싹\" - MBC 뉴스",
    "pubDate": "Thu, 12 Nov 2026 02:29:07 GMT"
+  },
+  {
+   "title": "성폭력 피해 10대 여성 피살…성평등장관 “공적체계서 지키지 못해” - 한겨레",
+   "pubDate": "Thu, 12 Nov 2026 01:42:00 GMT"
+  },
+  {
+   "title": "안철수 “한동훈 복당? 물귀신 행태…차라리 창당을” - 한겨레",
+   "pubDate": "Thu, 12 Nov 2026 00:35:00 GMT"
   },
   {
    "title": "'검찰범죄' 특검이 밝혀야 할 50가지 의혹(번외편) 막는 자가 범인이다 - 뉴스타파",
    "pubDate": "Thu, 12 Nov 2026 04:30:00 GMT"
   },
   {
-   "title": "남대문 스카프 아저씨, 또 일냈다…온라인몰 열자마자 '품절' - 한국경제",
-   "pubDate": "Thu, 12 Nov 2026 02:27:19 GMT"
+   "title": "6년 만에 ‘수능 한파’...다음 주 영하권 추위 - 조선일보",
+   "pubDate": "Thu, 12 Nov 2026 03:14:00 GMT"
   },
   {
-   "title": "“불난 집 확인하려다”…아파트 화재로 70대 경비원 심정지 - KBS 뉴스",
-   "pubDate": "Thu, 12 Nov 2026 02:08:00 GMT"
+   "title": "우원식, 한덕수 석방 관측에 “풀려난다면 국민들이 조희대 대법원의 책임 물을 것” - 경향신문",
+   "pubDate": "Thu, 12 Nov 2026 00:30:00 GMT"
   },
   {
-   "title": "수도권·충남권에 미세먼지…낮기온 14~21도 - KBS 뉴스",
-   "pubDate": "Wed, 11 Nov 2026 23:25:00 GMT"
-  },
-  {
-   "title": "칠곡군, 재선충병 인위적 확산 차단 - 데일리대구경북뉴스",
-   "pubDate": "Thu, 12 Nov 2026 06:19:21 GMT"
+   "title": "아동 학대 논란 부른 ’귀신 참교육’ 15일 종료 - 연합뉴스TV",
+   "pubDate": "Thu, 12 Nov 2026 02:29:00 GMT"
   },
   {
    "title": "김민석, 종부세 논란에 “부동산 정책 기본, 일관되는 게 좋다 정리” - 한겨레",
    "pubDate": "Wed, 11 Nov 2026 23:45:00 GMT"
   },
   {
-   "title": "특검, ‘보안점검 문서 허위작성’ 중앙선관위·용역업체 압수수색 - KBS 뉴스",
-   "pubDate": "Thu, 12 Nov 2026 01:49:00 GMT"
+   "title": "칠곡군, 재선충병 인위적 확산 차단 - 데일리대구경북뉴스",
+   "pubDate": "Thu, 12 Nov 2026 06:19:21 GMT"
   },
   {
-   "title": "아동 학대 고소당한 민속촌 '귀신 훈육' 프로그램 결국 종료 - YTN",
-   "pubDate": "Wed, 11 Nov 2026 23:15:00 GMT"
+   "title": "남대문 스카프 아저씨, 또 일냈다…온라인몰 열자마자 '품절' - 한국경제",
+   "pubDate": "Thu, 12 Nov 2026 02:27:19 GMT"
+  },
+  {
+   "title": "연간 방한 외국인 관광객 사상 최초 2천만 명 돌파 - MBC 뉴스",
+   "pubDate": "Thu, 12 Nov 2026 06:35:01 GMT"
+  },
+  {
+   "title": "강릉항서 구조된 남방큰돌고래 ‘안목이’ 제주 바다에 방류 - KBS 뉴스",
+   "pubDate": "Thu, 12 Nov 2026 03:41:00 GMT"
+  },
+  {
+   "title": "박충권, 정동영에 \"北동영\" 부르자 與 \"脫충권\" 맞불…고성 충돌 - 연합뉴스",
+   "pubDate": "Thu, 12 Nov 2026 04:58:32 GMT"
+  },
+  {
+   "title": "이 대통령 지지율 2%p 하락한 44%…민주 35%·국힘 25% [NBS] - 한겨레",
+   "pubDate": "Thu, 12 Nov 2026 02:48:00 GMT"
   },
   {
    "title": "李대통령, 16~19일 아세안, APEC 순방 - 조선일보",
    "pubDate": "Thu, 12 Nov 2026 00:41:00 GMT"
   },
   {
-   "title": "이 대통령 지지율 2%p 하락한 44%…대통령 SNS 소통 ‘줄여야 한다’ 51%[NBS] - 경향신문",
-   "pubDate": "Thu, 12 Nov 2026 02:26:00 GMT"
-  },
-  {
-   "title": "통일부 \"김정은 해군기지 방문, 조속한 완공 독려 차원\" - MBC 뉴스",
-   "pubDate": "Thu, 12 Nov 2026 03:20:40 GMT"
+   "title": "김종철 재산신고 20억으로 늘어…‘꼼수분양 의혹’ 재개발 지분 바로잡아 - 한겨레",
+   "pubDate": "Thu, 12 Nov 2026 06:26:00 GMT"
   },
   {
    "title": "차별금지법: 이름 바꾼 '평등법'…이번엔 국회 문턱 넘을 수 있을까 - BBC",
    "pubDate": "Thu, 12 Nov 2026 06:56:39 GMT"
   },
   {
-   "title": "박충권, 정동영 향해 \"북동영\" 부르자 與 \"탈충권\" 맞불 - MBC 뉴스",
-   "pubDate": "Thu, 12 Nov 2026 05:09:59 GMT"
+   "title": "통일부 \"김정은 해군기지 방문, 조속한 완공 독려 차원\" - MBC 뉴스",
+   "pubDate": "Thu, 12 Nov 2026 03:20:40 GMT"
+  },
+  {
+   "title": "이 대통령 “지방이 국가 경제 발전 주역돼야…재정적 뒷받침 필수” - KBS 뉴스",
+   "pubDate": "Thu, 12 Nov 2026 06:49:00 GMT"
+  },
+  {
+   "title": "“보안점수 30점을 100점으로 조작”…특검, 중앙선관위 압수수색 - KBS 뉴스",
+   "pubDate": "Thu, 12 Nov 2026 01:49:00 GMT"
+  },
+  {
+   "title": "법원, 조성현에 \"시민들이 왜 국회 막았다고 보나\" - MBC 뉴스",
+   "pubDate": "Thu, 12 Nov 2026 06:26:47 GMT"
+  },
+  {
+   "title": "경기도의회 국민의힘 “추, 지각 예산에 인건비 쪼개기…공직 사회 파괴” - KBS 뉴스",
+   "pubDate": "Thu, 12 Nov 2026 08:54:00 GMT"
   },
   {
    "title": "'TV조선 재승인 점수 조작 의혹' 한상혁 전 방통위원장 1심 무죄 - MBC 뉴스",
@@ -3387,36 +3387,24 @@
    "pubDate": "Thu, 12 Nov 2026 05:02:00 GMT"
   },
   {
-   "title": "강릉항서 구조된 남방큰돌고래 ‘안목이’ 제주 바다에 방류 - KBS 뉴스",
-   "pubDate": "Thu, 12 Nov 2026 03:41:00 GMT"
+   "title": "특사경법, 법안소위 통과 …복지부 “총괄관리” - 데일리메디",
+   "pubDate": "Wed, 11 Nov 2026 20:26:00 GMT"
   },
   {
    "title": "경기특사경, 영업 신고 제한지역 불법행위 14건 적발 - MBC 뉴스",
    "pubDate": "Thu, 12 Nov 2026 05:33:49 GMT"
   },
   {
-   "title": "연간 방한 외국인 관광객 사상 최초 2천만 명 돌파 - MBC 뉴스",
-   "pubDate": "Thu, 12 Nov 2026 06:35:01 GMT"
-  },
-  {
-   "title": "이 대통령 “지방이 국가 경제 발전 주역돼야…재정적 뒷받침 필수” - KBS 뉴스",
-   "pubDate": "Thu, 12 Nov 2026 06:49:00 GMT"
-  },
-  {
-   "title": "외부 침입도, 학대 신고도 없었는데···시흥 아파트서 어머니·두 아들 숨진 채 발견 - 경향신문",
-   "pubDate": "Thu, 12 Nov 2026 01:35:00 GMT"
-  },
-  {
    "title": "한덕수 석방 가능성에‥민주 \"좌시 않아\" 혁신당 \"즉각 탄핵\" - MBC 뉴스",
    "pubDate": "Thu, 12 Nov 2026 01:51:51 GMT"
   },
   {
-   "title": "분당 버스, 차량 32대 추돌 사고…부상자 70명까지 늘어 - 한겨레",
-   "pubDate": "Wed, 11 Nov 2026 10:23:00 GMT"
+   "title": "전국 58개 지역에 기상가뭄…속초 ‘심한 가뭄’ 전망 - KBS 뉴스",
+   "pubDate": "Thu, 12 Nov 2026 05:13:00 GMT"
   },
   {
-   "title": "국힘 윤리위원 “한동훈 징계 조작돼”…한 “장동혁 정치적 숙청 실체” - 한겨레",
-   "pubDate": "Thu, 12 Nov 2026 01:41:00 GMT"
+   "title": "‘美의회 입성’ 한국계 댄 고 “트럼프, 韓보다 北 선망하고 존중” - 동아일보",
+   "pubDate": "Thu, 12 Nov 2026 01:12:00 GMT"
   }
  ]
 }
