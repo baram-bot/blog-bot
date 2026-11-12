@@ -8,6 +8,10 @@ on:
       title:
         description: "구역 제목"
         default: "추천 꿀템"
+      price_min:
+        default: "5000"
+      price_max:
+        default: "80000"
 permissions:
   contents: write
 jobs:
@@ -22,6 +26,8 @@ jobs:
       - env:
           KEYWORDS: ${{ github.event.inputs.keywords }}
           TITLE: ${{ github.event.inputs.title }}
+          PRICE_MIN: ${{ github.event.inputs.price_min }}
+          PRICE_MAX: ${{ github.event.inputs.price_max }}
           COUPANG_ACCESS_KEY: ${{ secrets.COUPANG_ACCESS_KEY }}
           COUPANG_SECRET_KEY: ${{ secrets.COUPANG_SECRET_KEY }}
         run: python -u tools/ig_links_fill.py

@@ -57,7 +57,7 @@ def load_log():
 
 
 # ── 상품 고르기 ─────────────────────────────
-def pick(search, used):
+def pick(search, used, lo=5000, hi=80000):
     for kw in search[:2]:
         q = urllib.parse.urlencode({"keyword": kw, "limit": 10, "subId": ca.SUB})
         items = (ca._call("GET", f"{ca.BASE}/products/search?{q}") or {}).get("productData", [])
@@ -67,7 +67,7 @@ def pick(search, used):
         if not ok:
             print(f"[꿀템] '{kw}' 맞는 상품 없음")
             continue
-        ok.sort(key=lambda p: (not (5000 <= (p.get("productPrice") or 0) <= 80000), not p.get("isRocket"), p.get("rank", 99)))
+        ok.sort(key=lambda p: (not (lo <= (p.get("productPrice") or 0) <= hi), not p.get("isRocket"), p.get("rank", 99)))
         p = ok[0]
         link = p["productUrl"]
         try:
@@ -332,14 +332,17 @@ EXTRA = os.path.join(ROOT, "data", "ig_links_extra.json")
 
 
 def write_page(items):
-    extra = json.load(open(EXTRA, encoding="utf-8")) if os.path.exists(EXTRA) else {"title": "", "items": []}
-    erows = "".join(
-        f'<a class="it" href="{html.escape(x["link"])}" rel="nofollow sponsored noopener" target="_blank">'
-        f'<span class="no" style="font-size:20px">★</span><img src="{html.escape(x["image"])}" alt="" loading="lazy">'
-        f'<span class="nm">{html.escape(short_name(x["name"], 40))}<small>{html.escape(x.get("kw", ""))}</small></span></a>'
-        for x in extra.get("items", []))
-    if erows:
-        erows = f'<h2 style="font-size:19px;margin:26px 0 10px">{html.escape(extra.get("title") or "추천 꿀템")}</h2>' + erows
+    extra = json.load(open(EXTRA, encoding="utf-8")) if os.path.exists(EXTRA) else {}
+    sections = extra.get("sections") or ([{"title": extra.get("title"), "items": extra.get("items", [])}] if extra.get("items") else [])
+    erows = ""
+    for sec in sections:
+        r = "".join(
+            f'<a class="it" href="{html.escape(x["link"])}" rel="nofollow sponsored noopener" target="_blank">'
+            f'<span class="no" style="font-size:20px">★</span><img src="{html.escape(x["image"])}" alt="" loading="lazy">'
+            f'<span class="nm">{html.escape(short_name(x["name"], 40))}<small>{html.escape(x.get("kw", ""))}</small></span></a>'
+            for x in sec.get("items", []))
+        if r:
+            erows += f'<h2 style="font-size:19px;margin:26px 0 10px">{html.escape(sec.get("title") or "추천 꿀템")}</h2>' + r
     rows = "".join(
         f'<a class="it" href="{html.escape(x["link"])}" rel="nofollow sponsored noopener" target="_blank">'
         f'<span class="no">{x["no"]}</span><img src="{html.escape(x["image"])}" alt="" loading="lazy">'

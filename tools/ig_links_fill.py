@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""링크 모음 페이지에 영상 없이 '추천 꿀템'을 미리 채운다.
+"""PRICE_MIN·PRICE_MAX 로 가격대 지정 가능(기본 5천~8만). 링크 모음 페이지에 영상 없이 '추천 꿀템'을 미리 채운다.
 KEYWORDS="문풍지,가습기,..." TITLE="❄️ 겨울 필수 꿀템" → 검색어마다 쿠팡 상품 1개(5천~8만 원·로켓 우선)."""
 import json
 import os
@@ -14,7 +14,7 @@ used = {x["id"] for x in pr.load_log()["items"]}
 items = []
 for kw in kws:
     try:
-        p = pr.pick([kw], used)
+        p = pr.pick([kw], used, int(os.environ.get("PRICE_MIN") or 5000), int(os.environ.get("PRICE_MAX") or 80000))
     except Exception as e:  # noqa: BLE001
         print(f"[추천] {kw} 실패: {e}")
         p = None
@@ -22,8 +22,11 @@ for kw in kws:
         used.add(p["id"])
         items.append({"kw": kw, "id": p["id"], "name": p["name"], "link": p["link"], "image": p["image"], "price": p["price"]})
     time.sleep(1.5)  # 검색 API 한도 보호
-json.dump({"title": os.environ.get("TITLE") or "추천 꿀템", "items": items}, open(pr.EXTRA, "w", encoding="utf-8"),
-          ensure_ascii=False, indent=2)
+old = json.load(open(pr.EXTRA, encoding="utf-8")) if os.path.exists(pr.EXTRA) else {}
+secs = old.get("sections") or ([{"title": old.get("title"), "items": old.get("items", [])}] if old.get("items") else [])
+title = os.environ.get("TITLE") or "추천 꿀템"
+secs = [x for x in secs if x.get("title") != title] + [{"title": title, "items": items}]  # 같은 제목 구역은 새로 교체
+json.dump({"sections": secs}, open(pr.EXTRA, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 pr.write_page(pr.load_log()["items"])
 pr.push("링크 페이지 추천 꿀템 채우기 [skip ci]", pr.EXTRA, pr.PAGE)
 print(f"[추천] {len(items)}개 채움: " + ", ".join(f"{x['kw']}→{x['name'][:20]}({x['price']})" for x in items))
