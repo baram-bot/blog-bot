@@ -121,17 +121,24 @@ def main():
     for f in files[:1]:  # 하루 1편
         name = os.path.splitext(os.path.basename(f))[0]
         spec = json.load(open(f, encoding="utf-8"))
-        prods = products(spec["keyword"])
-        if not prods:
-            raise RuntimeError(f"상품을 못 찾음: {spec['keyword']}")
-        open(os.path.join(OUT, name + ".html"), "w", encoding="utf-8").write(page(spec, article(spec, prods)))
+        if spec.get("no_products"):  # 링크 없는 정보 글(블로그 점수 쌓기용)
+            tags = " ".join("#" + t.lstrip("#").replace(" ", "") for t in spec.get("tags", []))
+            body = spec.get("intro", "") + spec.get("guide", "") + spec.get("faq", "") + spec.get("outro", "") + \
+                (f"<p>{html.escape(tags)}</p>" if tags else "")
+            prods = []
+        else:
+            prods = products(spec["keyword"])
+            if not prods:
+                raise RuntimeError(f"상품을 못 찾음: {spec['keyword']}")
+            body = article(spec, prods)
+        open(os.path.join(OUT, name + ".html"), "w", encoding="utf-8").write(page(spec, body))
         shutil.move(f, os.path.join(DONE, os.path.basename(f)))
         made.append((name, spec["title"]))
         print(f"[네이버] {spec['title']} → {BASE}{name}.html ({len(prods)}개 상품)")
     pr.push("네이버 붙여넣기 글 [skip ci]", OUT, Q, DONE)
     time.sleep(60)  # 깃허브 페이지 반영 대기
     for name, title in made:
-        tg(f"📝 오늘의 네이버 블로그 글이 준비됐어요\n{title}\n\n{BASE}{name}.html\n\n① 제목 복사 → ② 본문 복사 → 네이버에 붙여넣고 발행만 눌러 주세요.")
+        tg(f"📝 오늘의 네이버 블로그 글이 준비됐어요 (꿀템 노트 아이디로 올려 주세요)\n{title}\n\n{BASE}{name}.html\n\n① 제목 복사 → ② 본문 복사 → 네이버에 붙여넣고 발행만 눌러 주세요.")
     return 0
 
 
