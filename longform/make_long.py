@@ -277,6 +277,43 @@ def radio_base(title, path):
     return path
 
 
+SCENE_STYLE = ("cinematic still from a Korean family drama, realistic photo, warm film lighting, "
+               "shallow depth of field, no text, no letters, no watermark, ")
+
+
+def scene_base(title, prompt, path, seed):
+    """장면 그림(AI) 위에 채널 띠·제목을 얹은 배경. 그림을 못 만들면 None(라디오 화면을 씀)."""
+    raw = path + ".raw.jpg"
+    if not ms.cloudflare_image(SCENE_STYLE + prompt, raw, seed):
+        return None
+    try:
+        ph = Image.open(raw).convert("RGB")
+        r = max(W / ph.width, H / ph.height)
+        ph = ph.resize((int(ph.width * r) + 1, int(ph.height * r) + 1), Image.LANCZOS)
+        ph = ph.crop(((ph.width - W) // 2, (ph.height - H) // 2, (ph.width - W) // 2 + W, (ph.height - H) // 2 + H))
+        d = ImageDraw.Draw(ph, "RGBA")
+        for y in range(0, 230):  # 위쪽 어둡게(제목 잘 보이게)
+            d.line([(0, y), (W, y)], fill=(0, 0, 0, int(170 * (1 - y / 230))))
+        for y in range(780, H):  # 아래쪽 어둡게(자막 잘 보이게)
+            d.line([(0, y), (W, y)], fill=(0, 0, 0, int(200 * (y - 780) / (H - 780))))
+        f_b = ms.font(44)
+        tw = d.textlength(CHANNEL_BAND, font=f_b)
+        d.rounded_rectangle([(W - tw) / 2 - 30, 18, (W + tw) / 2 + 30, 82], radius=30, fill=(58, 36, 20, 230))
+        d.text(((W - tw) / 2, 26), CHANNEL_BAND, font=f_b, fill=GOLD)
+        t = ms.clean_title(title)
+        size = 76
+        while size > 40 and d.textlength(t, font=ms.font(size)) > 1700:
+            size -= 4
+        _center(d, t, ms.font(size), 100, CREAM, stroke=max(3, size // 17))
+        if ms.AD_BADGE[0]:
+            ms.ad_badge(d, x=40, y=170, size=52)
+        ph.save(path)
+        return path
+    except Exception as e:  # noqa: BLE001
+        print(f"[장면 그림] 실패: {e}")
+        return None
+
+
 def radio_overlay(chapter, sub, path, speaker=""):
     """아래 자막 띠(라디오 아래 갈색 칸) + 왼쪽 위 장 제목."""
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
@@ -433,7 +470,27 @@ def build_radio(script, items, voice, out):
         list(ex.map(_do, jobs))
     ms.tts_pro.active()  # 도중에 고품질 음성이 끊겼으면 여기서 ProFailed → 처음부터 다시
     print(f"[음성] {len(jobs)}문장 완료")
-    clips = [radio_scene(i, ch, sents, base, voice) for i, ch, sents in plan]
+    # 장면 그림: 장(chapter)마다 2장을 만들어 장면마다 번갈아 쓴다(무료 하루 한도 안에서 약 26장)
+    prompts = {c["title"]: (c.get("image_prompts") or ([c["image_prompt"]] if c.get("image_prompt") else []))
+               for c in script.get("chapters", [])}
+    fallback = script.get("thumbnail_prompt") or "elderly korean woman in a cozy traditional home, emotional moment"
+    bases, made = {}, 0
+    for k, c in enumerate(script.get("chapters", [])):
+        ps = (prompts.get(c["title"]) or [fallback + ", " + v for v in ("indoor scene", "close-up of a meaningful object")])[:2]
+        for n, pmt in enumerate(ps):
+            b = scene_base(script["title"], pmt, os.path.join(WORK, f"sb{k}_{n}.png"), seed=1000 + k * 10 + n)
+            if b:
+                bases.setdefault(c["title"], []).append(b)
+                made += 1
+    print(f"[장면 그림] {made}장")
+    count = {}
+    def base_for(ch):
+        lst = bases.get(ch)
+        if not lst:
+            return base
+        count[ch] = count.get(ch, 0) + 1
+        return lst[count[ch] % len(lst)]
+    clips = [radio_scene(i, ch, sents, base_for(ch), voice) for i, ch, sents in plan]
     lst = os.path.join(WORK, "list.txt")
     with open(lst, "w") as fh:
         fh.writelines(f"file '{c}'\n" for c in clips)
