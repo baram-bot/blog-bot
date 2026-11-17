@@ -1,0 +1,33 @@
+name: yt-fix
+# 영상 손보기(삭제 없음): 중복 영상 비공개, 제목 고치기
+on:
+  workflow_dispatch:
+    inputs:
+      ch: {description: "senior / econ / kids", default: "econ"}
+      private_ids: {description: "비공개로 돌릴 영상 ID(쉼표)", default: ""}
+      retitle_id: {description: "제목 바꿀 영상 ID", default: ""}
+      new_title: {description: "새 제목", default: ""}
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q requests
+      - env:
+          CH: ${{ inputs.ch }}
+          S1: ${{ secrets.YT_CLIENT_SECRET }}
+          T1: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          S2: ${{ secrets.YT_ECON_CLIENT_SECRET }}
+          T2: ${{ secrets.YT_ECON_REFRESH_TOKEN }}
+          S3: ${{ secrets.YT_KIDS_CLIENT_SECRET }}
+          T3: ${{ secrets.YT_KIDS_REFRESH_TOKEN }}
+          PRIVATE_IDS: ${{ inputs.private_ids }}
+          RETITLE_ID: ${{ inputs.retitle_id }}
+          NEW_TITLE: ${{ inputs.new_title }}
+        run: |
+          case "$CH" in
+            senior) export YT_CLIENT_ID=247650144997-6bqc20isrbqi12fcsani6joed6jrvff5.apps.googleusercontent.com YT_CLIENT_SECRET="$S1" YOUTUBE_REFRESH_TOKEN="$T1";;
+            econ) export YT_CLIENT_ID=480498053335-1t1f61lpgpcne9e895hfs98r7qvickpj.apps.googleusercontent.com YT_CLIENT_SECRET="$S2" YOUTUBE_REFRESH_TOKEN="$T2";;
+            kids) export YT_CLIENT_ID=106566243572-9l2f41lloc7c9nei86hu8rema4n6k0kd.apps.googleusercontent.com YT_CLIENT_SECRET="$S3" YOUTUBE_REFRESH_TOKEN="$T3";;
+          esac
+          python -u tools/yt_fix.py

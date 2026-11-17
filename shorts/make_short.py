@@ -682,6 +682,24 @@ def yt_access_token():
     return tok
 
 
+def yt_find_same_title(tok, title):
+    """최근 업로드 20개 중 제목이 같은 영상 (id, 공개상태). 확인 실패 시 None(업로드는 계속)."""
+    try:
+        h = {"Authorization": f"Bearer {tok}"}
+        api = "https://www.googleapis.com/youtube/v3"
+        ch = requests.get(f"{api}/channels", params={"part": "contentDetails", "mine": "true"}, headers=h, timeout=30).json()
+        up = ch["items"][0]["contentDetails"]["relatedPlaylists"]["uploads"]
+        items = requests.get(f"{api}/playlistItems", params={"part": "snippet,status", "playlistId": up, "maxResults": 20},
+                             headers=h, timeout=30).json().get("items", [])
+        norm = lambda s: re.sub(r"\s+", "", (s or "").lower().replace("#shorts", ""))  # noqa: E731
+        for it in items:
+            if norm(it["snippet"].get("title")) == norm(title):
+                return it["snippet"]["resourceId"]["videoId"], (it.get("status") or {}).get("privacyStatus", "")
+    except Exception as e:  # noqa: BLE001
+        print(f"[유튜브] 중복 확인 실패(업로드 계속): {e}")
+    return None
+
+
 def yt_upload(video, title, desc, tags, privacy=None, shorts=True):
     """유튜브에 바로 올림. 구글 심사 전에는 유튜브가 자동으로 비공개 처리함."""
     tok = yt_access_token()
@@ -704,6 +722,10 @@ def yt_upload(video, title, desc, tags, privacy=None, shorts=True):
         "status": {"privacyStatus": privacy or os.environ.get("YT_PRIVACY", "public"),
                    "selfDeclaredMadeForKids": False},
     }
+    dup = yt_find_same_title(tok, meta["snippet"]["title"])
+    if dup:  # 지난 실행이 기록만 못 남기고 끝난 경우: 같은 영상을 다시 올리지 않음
+        print(f"[유튜브] 같은 제목 영상이 이미 있음 → 다시 올리지 않음: {dup[0]}")
+        return dup
     size = os.path.getsize(video)
     r = requests.post(
         "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status",
