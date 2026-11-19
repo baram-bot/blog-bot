@@ -700,7 +700,7 @@ def yt_find_same_title(tok, title):
     return None
 
 
-def yt_upload(video, title, desc, tags, privacy=None, shorts=True):
+def yt_upload(video, title, desc, tags, privacy=None, shorts=True, publish_at=None):
     """유튜브에 바로 올림. 구글 심사 전에는 유튜브가 자동으로 비공개 처리함."""
     tok = yt_access_token()
     if not tok:
@@ -722,6 +722,9 @@ def yt_upload(video, title, desc, tags, privacy=None, shorts=True):
         "status": {"privacyStatus": privacy or os.environ.get("YT_PRIVACY", "public"),
                    "selfDeclaredMadeForKids": False},
     }
+    if publish_at:  # 예약 공개: 비공개로 올리고 지정 시각에 유튜브가 자동 공개
+        meta["status"]["privacyStatus"] = "private"
+        meta["status"]["publishAt"] = publish_at
     dup = yt_find_same_title(tok, meta["snippet"]["title"])
     if dup:  # 지난 실행이 기록만 못 남기고 끝난 경우: 같은 영상을 다시 올리지 않음
         print(f"[유튜브] 같은 제목 영상이 이미 있음 → 다시 올리지 않음: {dup[0]}")

@@ -573,7 +573,17 @@ def main():
             if pair and pair.get("yt_id"):
                 desc = desc.replace(script.get("description", ""), script.get("description", "")
                                     + f"\n\n🎬 1분 요약 쇼츠: https://youtube.com/shorts/{pair['yt_id']}", 1)
-            yt = ms.yt_upload(video, script["title"], desc, script.get("tags", []), script.get("privacy"), shorts=False)
+            pub = (script.get("publish_at") or "").strip()
+            if not pub and os.environ.get("LONG_SCHEDULE_NEXT_DAY") == "1":  # 예고편 쇼츠용: 다음 날 오전 10시 예약 공개
+                import datetime as _dt
+                kst = _dt.timezone(_dt.timedelta(hours=9))
+                d = _dt.datetime.now(kst).date() + _dt.timedelta(days=1)
+                pub = _dt.datetime(d.year, d.month, d.day, 10, 0, tzinfo=kst).astimezone(_dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+            if pub:
+                script["publish_at"] = pub
+                print(f"[예약 공개] {pub} (UTC)")
+            yt = ms.yt_upload(video, script["title"], desc, script.get("tags", []), script.get("privacy"), shorts=False,
+                              publish_at=pub or None)
             thumb = os.path.join(OUT, f"{name}.jpg")
             if script.get("style") != "scenery":
                 if not drama_thumbnail(script, thumb):
@@ -585,7 +595,7 @@ def main():
             if yt:
                 vid, privacy = yt
                 ok = set_thumbnail(vid, thumb)
-                msg += f"\n✅ 유튜브 {'공개' if privacy == 'public' else privacy}로 올라갔어요" + ("" if ok else "\n(썸네일 자동 설정 실패 — 스튜디오에서 첨부 이미지로 바꿔 주세요)")
+                msg += (f"\n⏰ 내일 오전 10시 예약 공개로 올려 두었어요" if pub else f"\n✅ 유튜브 {'공개' if privacy == 'public' else privacy}로 올라갔어요") + ("" if ok else "\n(썸네일 자동 설정 실패 — 스튜디오에서 첨부 이미지로 바꿔 주세요)")
                 if product:
                     msg += f"\n🛒 {product[1]}"
                 markup = json.dumps({"inline_keyboard": [[{"text": "▶ 영상 보기", "url": f"https://youtu.be/{vid}"}],
