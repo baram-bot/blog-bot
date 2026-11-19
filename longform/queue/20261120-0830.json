@@ -1,0 +1,1823 @@
+{
+  "title": "3억 들고 사라진 사기꾼의 정체",
+  "voice": "ko-KR-SunHiNeural",
+  "category": "⑥ 사기·떼인 돈과 통쾌한 역전(노인을 노린 사기꾼·가짜 투자)",
+  "twists": [
+    "돈의 진짜 주인: 아들 통장에 들어온 이천만 원은 공범 몫이 아니라, 사기꾼 준호가 할머니께 돌려보낸 할머니 몫이었다(사서함 214)",
+    "정체 반전: 사라진 사기꾼 준호는 1996년 겨울 할머니가 공짜 국밥을 먹여 키운 아이, 할아버지가 손목시계를 채워 준 한준호였다",
+    "가해자·피해자 뒤바뀜: 김장 날 아들을 범인으로 몰던 경로당 최만석 회장이 마을 안의 '사장님'—카세트테이프 속 '됐지, 됐어' 목소리와 손자 명의 계좌 2억 9천만 원"
+  ],
+  "thumbnail_text": "범인은 마을 안에 있었다",
+  "thumbnail_sub": "경로당 3억 사기 사건",
+  "thumbnail_prompt": "Dramatic scene of a shocked elderly korean woman in a padded vest on the right, clutching an old cassette radio, an angry old man glaring behind her, cinematic light",
+  "ending": "통쾌한",
+  "from_short": "",
+  "chapters": [
+    {
+      "title": "1장. 김장 날의 고함",
+      "image_prompts": [
+        "Korean village senior center yard in early winter, rows of salted napa cabbages in large red rubber basins, steam rising, elderly hands in rubber gloves",
+        "Back view of an elderly korean woman in a padded vest standing frozen in a crowded yard, a smartphone glowing in a middle-aged man's hand beside her"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "김장하던 경로당 마당에서, 고무장갑을 낀 손들이 한꺼번에 멈췄습니다. 그 손들이 가리킨 곳에 박순례 할머니의 아들이 서 있었습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "자네 아들이 데려온 놈이야! 우리 마을 노인네들 돈 삼억 이천만 원, 그놈이 들고 날랐다고!"
+            },
+            {
+              "who": "narrator",
+              "text": "고함을 지른 사람은 경로당 최만석 회장이었습니다. 마을에서 가장 점잖고, 가장 믿음직하다는 어른이었지요."
+            },
+            {
+              "who": "narrator",
+              "text": "사라진 청년의 이름은 강준호. 일 년 동안 이 마을에서 손주 노릇을 하던 스물아홉 살 청년이었습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "그 청년은 누구였을까요. 그리고 그 돈은 지금 어디에 있을까요. 이 일의 진실은 이야기 마지막에 밝혀집니다."
+            },
+            {
+              "who": "narrator",
+              "text": "마을 어르신 열한 집이 그 청년 하나를 믿고, 평생 모은 돈을 맡겼던 터였습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "십일월 말, 충청도 읍내 장터 뒤편 경로당. 절인 배추에서 짠 물이 뚝뚝 떨어지고, 가마솥에서는 돼지고기 삶는 김이 올라왔습니다."
+            },
+            {
+              "who": "woman",
+              "text": "회장님, 목소리 좀 낮추세요. 민수가 무슨 죄가 있다고 그래요."
+            },
+            {
+              "who": "narrator",
+              "text": "경로당 총무 김말순 씨가 말렸지만, 만석 회장의 얼굴은 이미 시뻘겠습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "죄가 없어? 준호 그놈 처음 경로당에 데려온 게 누구야. 민수 자네 아닌가."
+            },
+            {
+              "who": "son",
+              "text": "회장님, 저도 모르는 일입니다. 저도 어제부터 준호랑 연락이 안 돼요."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "순례 할머니는 손에 쥔 고춧가루 양념을 내려놓지도 못했습니다. 빨간 양념이 고무장갑 손끝에서 뚝뚝 떨어졌습니다. 일흔두 해 인생에서 이렇게 많은 눈이 자기를 쏘아본 건 처음이었습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "회장님, 우리 민수도 그 아이를 믿은 죄밖에 없어요. 나도 우리 국밥집 보증금 칠천만 원을 넣었어요."
+            },
+            {
+              "who": "grandpa",
+              "text": "그러니까 더 수상하다는 거지. 엄마 돈까지 넣게 해 놓고, 아들은 뒤로 뭘 받았는지 누가 알아."
+            },
+            {
+              "who": "narrator",
+              "text": "그때였습니다. 민수 점퍼 주머니에서 휴대폰이 짧게 울렸습니다. 딩동, 은행 알림 소리였지요."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "옆에 있던 손녀 하은이가 무심코 화면을 들여다보았습니다. 그리고 얼굴이 하얗게 질렸습니다."
+            },
+            {
+              "who": "young_woman",
+              "text": "아빠, 이게 뭐예요? 강준호 님이 이천만 원을 입금했다고 떠 있어요."
+            },
+            {
+              "who": "narrator",
+              "text": "마당이 쥐 죽은 듯 조용해졌습니다. 가마솥 끓는 소리만 보글보글 들렸습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "봐라. 내 말이 맞지. 됐지, 됐어. 이제 다들 알겠지."
+            },
+            {
+              "who": "son",
+              "text": "아니에요, 어머니. 저도 이 돈 처음 봐요. 정말이에요."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "순례 할머니는 아들의 얼굴을 바라보았습니다. 마흔여덟 살 아들의 눈이 어릴 적 거짓말하던 그 눈인지, 아닌지 알 수가 없었습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "민수야. 엄마 눈 보고 말해. 너, 그 아이랑 무슨 약속 했니."
+            },
+            {
+              "who": "son",
+              "text": "엄마까지 저를 의심하세요?"
+            },
+            {
+              "who": "narrator",
+              "text": "아들의 그 한마디가 김장 날 찬바람보다 더 시리게 할머니 가슴을 파고들었습니다. 그런데 이 이천만 원에는, 아무도 상상하지 못한 사연이 숨어 있었습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2장. 장터에 온 청년",
+      "image_prompts": [
+        "Old korean market street on a rainy autumn afternoon, a small gukbap restaurant with steam rising from a large black iron pot near the entrance",
+        "Close up of an old men's wristwatch with a cracked glass and a worn leather strap resting on a wooden restaurant table beside a bowl of rice soup"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그 청년을 처음 만난 날로 돌아가 볼까요. 꼭 일 년 전, 늦가을 비가 추적추적 내리던 장날 오후였습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "순례 할머니는 장터 끝에서 사십 년째 국밥집을 하고 있었습니다. 가게 이름도 없이, 다들 그냥 순례네 국밥집이라고 불렀지요."
+            },
+            {
+              "who": "narrator",
+              "text": "그날 오후 네 시 십 분쯤, 우산도 없이 젖은 청년 하나가 문을 밀고 들어왔습니다."
+            },
+            {
+              "who": "young_man",
+              "text": "할머니, 국밥 한 그릇 되나요? 순대 많이 넣어서요."
+            },
+            {
+              "who": "grandma",
+              "text": "되고말고. 아이고, 비를 쫄딱 맞았네. 수건부터 받아요."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "청년은 국밥을 한 숟가락 뜨더니, 한참을 말없이 그릇만 내려다보았습니다. 뜨거운 김 사이로 눈가가 붉어 보였습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "왜, 맛이 이상해요? 간이 세면 국물 더 줄게요."
+            },
+            {
+              "who": "young_man",
+              "text": "아니요. 어릴 때 먹던 맛이랑 똑같아서요. 할머니, 이 가게 오래 하셨지요?"
+            },
+            {
+              "who": "grandma",
+              "text": "사십 년 됐지요. 우리 영감 살아 있을 때부터 했으니까."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "할머니 눈에 청년 손목이 들어왔습니다. 유리가 금 간 낡은 손목시계였는데, 바늘이 네 시 십 분에 멈춰 있었습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "젊은 사람이 시계가 멈췄네. 고쳐서 차지 그래요."
+            },
+            {
+              "who": "young_man",
+              "text": "일부러 안 고쳤어요. 이 시간이 저한테는 제일 좋은 시간이라서요."
+            },
+            {
+              "who": "narrator",
+              "text": "할머니는 그 말이 조금 이상하다고 생각했지만, 더 묻지 않았습니다. 그 시계가 어디서 왔는지 알게 되는 건, 아주 나중의 일이었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그 뒤로 청년은 장날마다 찾아왔습니다. 이름은 강준호, 서울에서 금융 일을 하다 공기 좋은 데서 쉬러 왔다고 했습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "어느 날은 장터 할머니들 휴대폰 글씨를 크게 키워 주고, 어느 날은 경로당 형광등을 갈아 주었습니다."
+            },
+            {
+              "who": "woman",
+              "text": "순례 언니, 저 총각 참 싹싹하지요. 우리 손주보다 낫다니까."
+            },
+            {
+              "who": "grandma",
+              "text": "그러게 말이야. 요즘 저런 젊은이가 어디 있어."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "준호가 가장 좋아한 건 국밥집 구석의 낡은 카세트 라디오였습니다. 할머니 영감이 결혼 십 주년에 사 준, 삼십 년 넘은 물건이었지요."
+            },
+            {
+              "who": "young_man",
+              "text": "할머니, 이 라디오 아직 테이프 돌아가요? 요즘은 이런 거 귀한데."
+            },
+            {
+              "who": "grandma",
+              "text": "돌아가지. 우리 영감이 부르던 노래 테이프도 있어. 가끔 틀어 놓고 장사해요."
+            },
+            {
+              "who": "young_man",
+              "text": "그럼 이거 오래오래 쓰세요. 절대 버리지 마시고요."
+            },
+            {
+              "who": "narrator",
+              "text": "준호는 그 말을 할 때 웃고 있었지만, 눈은 웃지 않았습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그 무렵 준호를 경로당에 처음 데려간 사람이 바로 아들 민수였습니다. 국밥집 일을 도우러 내려왔다가 준호와 형, 동생 하며 친해졌거든요."
+            },
+            {
+              "who": "son",
+              "text": "어머니, 준호 저 친구 서울에서 큰 회사 다녔대요. 아는 것도 많고요."
+            },
+            {
+              "who": "grandma",
+              "text": "너는 남 칭찬 그만하고 네 빚이나 걱정해라."
+            },
+            {
+              "who": "narrator",
+              "text": "그 말에 민수는 고개를 숙였습니다. 사업이 망한 뒤 진 빚이 아직 육천만 원 남아 있었습니다. 이 빚이, 나중에 모든 의심의 씨앗이 됩니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3장. 회장님의 권유",
+      "image_prompts": [
+        "Inside a warm korean village senior center with a heated floor, elderly people sitting in a circle on cushions, tea cups and tangerines on a low table",
+        "A rural korean apple orchard in late autumn with bare branches, a shiny new white pickup truck parked beside an old wooden storage shed"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그해 봄, 경로당에 처음으로 돈 이야기가 나왔습니다. 말을 꺼낸 사람은 뜻밖에도 최만석 회장이었습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "다들 들어 봐요. 준호가 그러는데, 서울에 좋은 데가 있대. 은행 이자보다 몇 배는 준다더라고."
+            },
+            {
+              "who": "woman",
+              "text": "회장님, 그런 말 듣고 돈 날린 사람이 한둘이 아니에요."
+            },
+            {
+              "who": "grandpa",
+              "text": "그러니까 내가 먼저 넣었지. 나 오천만 원 넣고 석 달 만에 이자 백오십만 원 받았어. 됐지, 됐어. 내 눈으로 봤다니까."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "회장님이 직접 받았다는 말에, 경로당 공기가 달라졌습니다. 점잖은 회장님이 거짓말할 리 없다고 다들 믿었으니까요."
+            },
+            {
+              "who": "grandpa",
+              "text": "대신 조건이 하나 있어요. 돈은 다 경로당 계좌로 먼저 모아요. 그래야 내가 한꺼번에 관리하지."
+            },
+            {
+              "who": "grandma",
+              "text": "회장님, 왜 굳이 경로당 계좌로 보내요? 각자 넣으면 되잖아요."
+            },
+            {
+              "who": "grandpa",
+              "text": "노인네들이 은행 일을 어떻게 일일이 해. 내가 대신 해 주겠다는 거지. 내가 이 마을 회장 몇 년째인 줄 알아요?"
+            },
+            {
+              "who": "narrator",
+              "text": "그 자리에서 회장님은 경로당 통장을 꺼내 흔들어 보였습니다. 순례 할머니는 그 대답이 어딘가 개운치 않았습니다. 하지만 더 따지는 사람은 아무도 없었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그 뒤로 한 집, 두 집, 경로당 계좌로 돈이 모였습니다. 그 무렵 회장님은 과수원 옆에 새 트럭을 한 대 들였습니다. 하얀 차체가 반짝반짝 빛났지요."
+            },
+            {
+              "who": "grandpa",
+              "text": "올해 사과값을 잘 받아서 큰맘 먹고 샀어요. 다 열심히 산 덕이지."
+            },
+            {
+              "who": "narrator",
+              "text": "그런데 이상했습니다. 그해 여름, 이 마을 과수원은 우박을 맞아 사과가 절반도 남지 않았거든요. 할머니는 그 말을 그냥 흘려들었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그날 저녁, 국밥집에 며느리 서지연이 찾아왔습니다. 읍내 농협 창구에서 십오 년째 일하는 며느리였지요."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "어머님, 경로당에서 돈 모은다는 얘기 들었어요. 어머님은 절대 넣지 마세요."
+            },
+            {
+              "who": "grandma",
+              "text": "너는 왜 시어미 돈 일에 그렇게 나서니. 내 돈 내가 알아서 한다."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "어머님 돈이니까 드리는 말씀이에요. 그 계좌로는 보내지 마세요. 제가 더는 말씀 못 드려요."
+            },
+            {
+              "who": "grandma",
+              "text": "말 못 할 거면 처음부터 하지를 말던가."
+            },
+            {
+              "who": "narrator",
+              "text": "며느리는 입술을 깨물더니 그대로 돌아섰습니다. 할머니는 며느리가 시어머니를 무시한다고만 생각했습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "결국 할머니 마음을 움직인 건 아들의 빚이었습니다. 빚 독촉 전화가 하루에도 몇 번씩 걸려 왔거든요."
+            },
+            {
+              "who": "son",
+              "text": "어머니, 이자만 받아도 제 빚 금방 갚아요. 하은이 대학원 등록금도 해결되고요."
+            },
+            {
+              "who": "grandma",
+              "text": "이 보증금은 국밥집 목숨줄이다. 이걸 빼면 가게 문 닫는 거야."
+            },
+            {
+              "who": "son",
+              "text": "회장님도 넣으셨잖아요. 준호는 우리 식구나 다름없고요."
+            },
+            {
+              "who": "narrator",
+              "text": "그 주 금요일, 순례 할머니는 떨리는 손으로 보증금 칠천만 원을 경로당 계좌로 보냈습니다. 그리고 넉 달 뒤, 준호의 전화기가 꺼졌습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4장. 아들의 통장",
+      "image_prompts": [
+        "A quiet rural korean police station interview room with a metal desk, a paper cup of instant coffee and a closed bank passbook under fluorescent light",
+        "Side view of a middle-aged korean man sitting with his head lowered on a bench in a dim hallway, an elderly woman's hand resting on his shoulder"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "김장 다음 날 아침, 읍내 파출소. 민수는 형사 앞에 앉아 있었고, 순례 할머니는 복도 의자에서 손을 모으고 있었습니다."
+            },
+            {
+              "who": "man",
+              "text": "정민수 씨, 강준호 씨가 보낸 이천만 원. 무슨 돈인지 설명해 주시지요."
+            },
+            {
+              "who": "son",
+              "text": "형사님, 저도 몰라요. 어제 김장하다가 알림 보고 처음 알았어요."
+            },
+            {
+              "who": "man",
+              "text": "그런데 그 돈 들어오기 일주일 전에, 강준호 씨랑 통화를 세 번 하셨던데요."
+            },
+            {
+              "who": "narrator",
+              "text": "오 형사의 말에 민수의 얼굴이 굳었습니다. 복도에서 그 소리를 들은 할머니의 가슴이 쿵 내려앉았습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "son",
+              "text": "그건, 준호가 먼저 전화했어요. 형님, 혹시 무슨 일 생기면 할머니 꼭 지켜 달라고요."
+            },
+            {
+              "who": "man",
+              "text": "무슨 일이 생길 줄 알았다는 말씀이네요."
+            },
+            {
+              "who": "son",
+              "text": "저는 그냥 술 먹고 하는 소린 줄 알았어요. 정말이에요."
+            },
+            {
+              "who": "narrator",
+              "text": "형사는 말없이 수첩에 무언가를 적었습니다. 볼펜 긁히는 소리가 유난히 크게 들렸습니다. 그때 민수가 무언가 생각난 듯 휴대폰을 꺼냈습니다. 입금 알림을 다시 눌러 보더니, 손가락이 멈췄습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "son",
+              "text": "형사님, 여기 입금 메모가 있어요. 어제는 경황이 없어서 못 봤어요."
+            },
+            {
+              "who": "man",
+              "text": "읽어 보세요."
+            },
+            {
+              "who": "son",
+              "text": "형님, 이건 할머니 몫입니다. 사서함 이백십사."
+            },
+            {
+              "who": "narrator",
+              "text": "짧은 한 줄이었습니다. 그런데 그 한 줄이 모든 걸 뒤집었습니다. 아들은 공범이 아니라, 무언가를 전해 받은 심부름꾼이었던 겁니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "사기꾼이 도망치면서, 피해자의 아들에게 돈을 보냈다. 그것도 할머니 몫이라는 말과 함께. 오 형사도 펜을 내려놓았습니다."
+            },
+            {
+              "who": "man",
+              "text": "이상하네요. 돈을 들고 튄 사람이 왜 돈을 돌려줍니까."
+            },
+            {
+              "who": "grandma",
+              "text": "형사님, 내가 좀 들어가도 될까요. 그 아이가 나한테 남긴 말이라면, 내가 들어야겠어요."
+            },
+            {
+              "who": "narrator",
+              "text": "할머니는 아들 옆에 앉아 휴대폰 화면을 한참 들여다보았습니다. 할머니 몫, 이라는 글자가 자꾸만 눈에 밟혔습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "grandma",
+              "text": "민수야, 엄마가 어제 너를 의심했다. 미안하다."
+            },
+            {
+              "who": "son",
+              "text": "아니에요, 어머니. 저 같아도 그랬을 거예요. 제가 빚만 없었어도."
+            },
+            {
+              "who": "grandma",
+              "text": "됐다. 이제 그 사서함이 뭔지부터 알아보자."
+            },
+            {
+              "who": "man",
+              "text": "사서함 이백십사. 읍내 우체국 사서함일 가능성이 큽니다. 다만 열쇠가 없으면 저희도 영장부터 받아야 해요."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "파출소를 나서는데, 저만치 주차장에 하얀 트럭 한 대가 서 있었습니다. 최만석 회장의 새 트럭이었습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "순례 씨, 민수 괜찮은가? 내가 어제는 너무 흥분했어. 미안하네."
+            },
+            {
+              "who": "grandma",
+              "text": "회장님이 여긴 어쩐 일이세요?"
+            },
+            {
+              "who": "grandpa",
+              "text": "나도 피해자 아닌가. 진술하러 왔지. 그놈 전화기 꺼진 지 열흘째야. 이제 못 잡아."
+            },
+            {
+              "who": "narrator",
+              "text": "열흘째. 할머니는 그 숫자가 이상하게 귀에 걸렸습니다. 준호 전화가 꺼진 걸 마을 사람들이 안 건, 고작 사흘 전이었거든요."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5장. 사서함 이백십사",
+      "image_prompts": [
+        "Rows of old brass post office boxes in a small korean town post office, morning light through a window, a small key in an elderly hand",
+        "A plastic side dish container opened on a restaurant counter revealing a small brass key wrapped in a folded handkerchief, steam in the background"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "열쇠는 뜻밖의 곳에서 나왔습니다. 그날 밤 국밥집 냉장고 정리를 하던 할머니 손에, 낯선 반찬통 하나가 잡혔습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "이게 누구 반찬통이야. 우리 집 거 아닌데."
+            },
+            {
+              "who": "narrator",
+              "text": "뚜껑에는 준호 글씨로 짧게 적혀 있었습니다. 할머니 깍두기 또 주세요. 준호가 사라지기 전날 맡기고 간 통이었지요."
+            },
+            {
+              "who": "narrator",
+              "text": "뚜껑을 열자, 깍두기 대신 손수건에 싼 작은 놋쇠 열쇠가 들어 있었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "할머니는 그 열쇠를 밤새 손에 쥐고 잤습니다. 쇠붙이가 손바닥 온기에 미지근해질 때까지요. 다음 날 아침, 할머니와 손녀 하은이는 문 열자마자 읍내 우체국으로 갔습니다. 벽 한쪽에 오래된 사서함들이 줄지어 있었습니다."
+            },
+            {
+              "who": "young_woman",
+              "text": "할머니, 이백십사 번이에요. 여기요."
+            },
+            {
+              "who": "grandma",
+              "text": "손이 떨려서 못 하겠다. 네가 열어 봐라."
+            },
+            {
+              "who": "narrator",
+              "text": "열쇠가 딸깍 돌아갔습니다. 안에는 누런 서류 봉투 하나뿐이었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "봉투 안에서 나온 건 빛바랜 사진 한 장과, 반으로 접은 편지였습니다."
+            },
+            {
+              "who": "young_woman",
+              "text": "할머니, 이거 할머니 국밥집 아니에요? 간판도 없는 옛날 가게요."
+            },
+            {
+              "who": "grandma",
+              "text": "맞다. 우리 가게 처음 모습이다. 저기 서 있는 게 우리 영감이고."
+            },
+            {
+              "who": "narrator",
+              "text": "사진 속 가게 앞에는 젊은 순례 할머니와 남편, 그리고 깡마른 남자아이 하나가 서 있었습니다. 사진 뒷면에는 천구백구십육년 겨울이라고 적혀 있었지요."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "grandma",
+              "text": "이 아이는 누구지. 어디서 많이 본 얼굴인데."
+            },
+            {
+              "who": "young_woman",
+              "text": "할머니, 편지도 읽어 볼게요."
+            },
+            {
+              "who": "young_woman",
+              "text": "할머니는 저를 모르시겠지요. 저는 할머니께 갚을 게 너무 많은 사람입니다. 그런데 오히려 할머니께 몹쓸 짓을 하고 말았습니다."
+            },
+            {
+              "who": "young_woman",
+              "text": "진실은 할머니 라디오 속에 있습니다. 그 테이프만 있으면, 할머니 돈을 가져간 진짜 사람을 찾을 수 있습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "편지는 거기서 끝나 있었습니다. 이름도, 날짜도 없었습니다. 다만 글씨 끝이 번져 있었습니다. 쓰다가 눈물이 떨어진 자국 같았습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "grandma",
+              "text": "라디오. 우리 가게 카세트 라디오 말이구나."
+            },
+            {
+              "who": "young_woman",
+              "text": "할머니, 그 라디오 지금 가게에 있어요?"
+            },
+            {
+              "who": "narrator",
+              "text": "할머니 얼굴이 하얗게 질렸습니다. 그 라디오는 이미 가게에 없었습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "지난주에 최 회장님이 와서, 경로당에 노래 틀게 기증해 달라고 가져가셨다."
+            },
+            {
+              "who": "young_woman",
+              "text": "회장님이요? 하필 그 라디오를요?"
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "둘은 우체국 앞 계단에 한참 앉아 있었습니다. 찬바람에 낙엽이 발밑으로 굴러왔습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "하은아, 회장님은 이 마을에서 제일 믿을 만한 분이다. 괜히 남 의심하면 못쓴다."
+            },
+            {
+              "who": "young_woman",
+              "text": "할머니, 저도 그렇게 믿고 싶어요. 그런데 이상한 게 너무 많아요."
+            },
+            {
+              "who": "narrator",
+              "text": "할머니는 대답하지 않았습니다. 다만 사진 속 깡마른 아이의 얼굴을, 오래오래 들여다보았습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6장. 며느리의 침묵",
+      "image_prompts": [
+        "A small korean apartment kitchen at night, a middle-aged woman's hands gripping the edge of a sink, a cold cup of barley tea on the counter",
+        "Two korean women seen from behind sitting at opposite ends of a low dining table in a dim living room, a folded bank statement between them"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그날 저녁, 아들네 아파트 거실에 고성이 터졌습니다. 시어머니와 며느리가 처음으로 정면으로 마주 앉은 날이었습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "너는 알고 있었지. 그 계좌에 돈 보내지 말라고 했을 때, 뭔가 알고 있었던 거지."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "어머님, 제가 말씀드릴 수 있는 건 거기까지였어요."
+            },
+            {
+              "who": "grandma",
+              "text": "거기까지라니. 시어미가 평생 모은 돈이 날아갔다. 그런데도 할 말이 그거냐."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "며느리 지연은 고개를 숙인 채 한참 말이 없었습니다. 손에 쥔 보리차 컵이 달달 떨렸습니다."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "어머님, 저는 농협 직원이에요. 창구에서 본 남의 돈 이야기는 가족한테도 말하면 안 돼요. 그게 법이에요."
+            },
+            {
+              "who": "son",
+              "text": "여보, 그럼 당신 뭘 봤다는 거야. 지금 우리 집이 쑥대밭인데."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "당신까지 그러지 마. 나도 밤마다 잠을 못 잤어."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "할머니는 그제야 며느리 얼굴을 제대로 보았습니다. 눈 밑이 거뭇하고, 볼이 쑥 들어가 있었습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "지연아. 내가 그동안 너를 오해한 거냐."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "어머님이 저를 차갑다고 생각하시는 거 알았어요. 그래도 그렇게라도 말리고 싶었어요."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "지금은 이것만 말씀드릴게요. 어머님, 그 돈이 마지막에 어디로 갔는지는 경찰이 정식으로 물으면 저희 농협이 답할 수 있어요."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "할머니는 그 말뜻을 곱씹었습니다. 경찰이 정식으로 물으면. 그러니까 그 돈이 서울 어딘가로 사라진 게 아니라, 확인할 수 있는 곳에 있다는 뜻이었습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "그럼 그 돈이 아직 어딘가에 있을 수도 있다는 말이냐."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "어머님, 그건 제가 대답할 수 없어요. 대신 오 형사님께 꼭 말씀하세요. 경로당 계좌부터 보시라고요."
+            },
+            {
+              "who": "son",
+              "text": "경로당 계좌. 그거 회장님이 관리하는 거잖아."
+            },
+            {
+              "who": "narrator",
+              "text": "거실이 조용해졌습니다. 아무도 다음 말을 하지 않았습니다. 벽시계 초침 소리만 똑딱똑딱 거실을 채웠습니다. 할머니는 김장 날 회장님이 제일 먼저 민수를 가리키던 손가락을 떠올렸습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "밤이 깊어 할머니가 일어서자, 며느리가 현관까지 따라 나왔습니다. 그리고 시어머니 손에 목도리를 둘러 주었습니다."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "어머님, 밤바람 차요. 이거 하고 가세요."
+            },
+            {
+              "who": "grandma",
+              "text": "너, 이 목도리 언제 샀니."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "작년 겨울에요. 어머님 드리려고 샀는데, 사이가 이래서 못 드렸어요."
+            },
+            {
+              "who": "narrator",
+              "text": "할머니는 대답 대신 며느리 손을 꼭 잡았습니다. 십오 년 만에 처음 잡아 보는, 며느리의 차가운 손이었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "집으로 돌아가는 길, 할머니 휴대폰이 울렸습니다. 발신 번호가 뜨지 않는 전화였습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "여보세요. 누구세요."
+            },
+            {
+              "who": "narrator",
+              "text": "수화기 너머에서는 아무 말도 들리지 않았습니다. 다만 아주 희미하게, 누군가 숨죽여 우는 소리가 들렸습니다. 그리고 전화는 뚝 끊겼습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "7장. 그해 겨울의 아이",
+      "image_prompts": [
+        "A tiny old korean rice soup restaurant in the 1990s on a snowy winter afternoon, warm yellow light inside, a small boy's worn sneakers by the door",
+        "An elderly korean man's hands fastening an old leather wristwatch onto a thin child's wrist beside a steaming bowl of soup, nostalgic film photo look"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그날 밤, 할머니는 잠을 이루지 못했습니다. 사진 속 깡마른 아이 얼굴이 자꾸만 눈앞에 떠올랐지요. 그러다 문득, 아주 오래된 겨울 하나가 떠올랐습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "그해 겨울로 돌아가 볼까요. 천구백구십육년, 눈이 유난히 많이 내리던 겨울이었습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "국밥집 문 앞에 매일 같은 시간, 오후 네 시 십 분이면 아홉 살쯤 된 남자아이 하나가 서 있었습니다. 학교 끝나고 집에 가는 길이었지요."
+            },
+            {
+              "who": "grandma",
+              "text": "얘야, 거기 서서 뭐 하니. 춥다, 들어와."
+            },
+            {
+              "who": "child",
+              "text": "아니에요. 냄새만 맡고 갈게요. 돈이 없어요."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "젊은 순례 할머니는 아이 손을 끌어 난로 옆에 앉혔습니다. 아이 손등은 트고 갈라져 있었습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "돈은 나중에 커서 갚으면 돼. 오늘은 그냥 먹어."
+            },
+            {
+              "who": "child",
+              "text": "진짜요? 그럼 꼭 갚을게요. 이름 적어 두세요."
+            },
+            {
+              "who": "grandma",
+              "text": "그래, 이름이 뭔데."
+            },
+            {
+              "who": "child",
+              "text": "한준호요. 엄마가 아파서 병원에 있어요. 아빠는 없고요."
+            },
+            {
+              "who": "narrator",
+              "text": "아이는 국밥 한 그릇을 국물 한 방울 남기지 않고 비웠습니다. 그리고 그날부터 매일 네 시 십 분이면 국밥집 문을 열었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "할머니의 남편 정 영감도 그 아이를 무척 아꼈습니다. 말수 적은 사람이었는데, 아이가 오면 꼭 순대를 한 접시 더 썰어 주었지요."
+            },
+            {
+              "who": "child",
+              "text": "할머니, 할아버지는 왜 맨날 시계를 보세요?"
+            },
+            {
+              "who": "grandma",
+              "text": "네가 올 시간 기다리는 거야. 네 시 십 분 되면 국 데우라고 나한테 눈짓을 하신다."
+            },
+            {
+              "who": "child",
+              "text": "그럼 저도 시계 있으면 좋겠다. 늦지 않게요."
+            },
+            {
+              "who": "narrator",
+              "text": "아이의 그 말을, 정 영감은 가만히 듣고 있었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "섣달그믐 날이었습니다. 정 영감이 자기 손목에서 가죽 시계를 풀어, 아이 손목에 채워 주었습니다. 결혼할 때 장인어른이 사 준, 영감이 제일 아끼던 시계였지요."
+            },
+            {
+              "who": "grandma",
+              "text": "영감, 그건 당신 제일 아끼는 거잖아요."
+            },
+            {
+              "who": "narrator",
+              "text": "영감은 그저 웃으며 아이 머리를 쓰다듬었습니다. 그리고 딱 한마디만 했다고, 할머니는 기억했습니다. 사내는 약속 시간을 지키는 거다."
+            },
+            {
+              "who": "child",
+              "text": "할아버지, 저 이거 평생 찰게요. 나중에 꼭 갚으러 올게요."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그런데 이듬해 봄, 아이는 더 이상 오지 않았습니다. 엄마가 세상을 떠나고, 먼 친척 집으로 갔다는 소문만 들려왔습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "영감, 그 아이 어디서 밥이나 제대로 먹고 다닐까요."
+            },
+            {
+              "who": "narrator",
+              "text": "그 뒤로 영감은 몇 해를 더 살다 갔지만, 네 시 십 분이 되면 늘 문 쪽을 바라보았습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "할머니는 이불을 걷어차고 벌떡 일어나 앉았습니다. 국밥집 비 오던 날, 젖은 청년 손목에 있던 금 간 시계. 네 시 십 분에 멈춘 바늘."
+            },
+            {
+              "who": "grandma",
+              "text": "일부러 안 고쳤다고 했지. 이 시간이 제일 좋은 시간이라고."
+            },
+            {
+              "who": "narrator",
+              "text": "할머니 손이 떨렸습니다. 그 시계는 바로 이십구 년 전, 영감이 그 아이에게 채워 준 시계였습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "준호야. 네가, 그 아이였구나."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "8장. 공중전화의 목소리",
+      "image_prompts": [
+        "An old public telephone booth on a dark rural korean roadside at night, a single streetlight, frost on the glass, empty country road",
+        "Back view of an elderly korean woman holding a phone to her ear in a dark restaurant kitchen, only a small stove light glowing"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "다음 날 새벽 다섯 시, 국밥집 전화가 울렸습니다. 육수를 올리던 할머니가 앞치마에 손을 닦고 수화기를 들었습니다."
+            },
+            {
+              "who": "young_man",
+              "text": "할머니. 저예요. 준호요."
+            },
+            {
+              "who": "grandma",
+              "text": "준호야. 너 지금 어디니. 밥은 먹었니."
+            },
+            {
+              "who": "narrator",
+              "text": "할머니 입에서 제일 먼저 나온 말은, 원망도 욕도 아니었습니다. 밥은 먹었느냐는 말이었지요. 수화기 너머에서 청년이 한참을 울었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "young_man",
+              "text": "할머니, 저 같은 놈한테 왜 밥 얘기를 하세요. 저 할머니 돈 가져간 놈이에요."
+            },
+            {
+              "who": "grandma",
+              "text": "사진 봤다. 편지도 봤어. 네가 그해 겨울 그 아이지. 한준호."
+            },
+            {
+              "who": "young_man",
+              "text": "알아보셨네요. 할아버지 시계 보시고요."
+            },
+            {
+              "who": "grandma",
+              "text": "그래. 그 시계를 차고, 어떻게 이런 짓을 할 수 있었니."
+            },
+            {
+              "who": "narrator",
+              "text": "긴 침묵이 흘렀습니다. 수화기 너머로 찬바람 소리가 휘휘 들렸습니다. 시골길 공중전화인 것 같았습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "young_man",
+              "text": "할머니, 저는 서울에서 나쁜 사람들 밑에서 일했어요. 시골 어르신들 돈을 모아 오는 일이요. 그게 제 일이었어요."
+            },
+            {
+              "who": "young_man",
+              "text": "일 년 전에 위에서 이 마을로 가라고 했어요. 이 마을 안에 일을 도와줄 사람이 이미 있다고요."
+            },
+            {
+              "who": "grandma",
+              "text": "이 마을 안에. 그게 무슨 소리냐."
+            },
+            {
+              "who": "young_man",
+              "text": "저는 그 사람을 사장님이라고만 불렀어요. 얼굴은 알지만, 제 입으로 말하면 할머니가 안 믿으실 거예요."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "young_man",
+              "text": "그런데 장터에 와서 할머니 국밥집을 본 순간, 다리가 풀렸어요. 이십구 년 전 그 가게가 그대로 있었어요."
+            },
+            {
+              "who": "young_man",
+              "text": "그만두고 싶었어요. 그런데 사장님이 그랬어요. 네가 빠지면 순례네 국밥집부터 넣겠다고요."
+            },
+            {
+              "who": "grandma",
+              "text": "그래서 우리 가게 보증금까지 들어간 거냐."
+            },
+            {
+              "who": "young_man",
+              "text": "막으려고 했는데 못 막았어요. 그래서 제 몫 받은 이천만 원을 민수 형님한테 보냈어요. 그거라도 할머니께 돌려 드리려고요."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "할머니는 부뚜막 모서리를 꽉 붙잡았습니다. 이천만 원은 공범의 몫이 아니었습니다. 사기꾼이 할머니에게 돌려보낸, 할머니 자신의 돈이었습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "준호야, 지금이라도 경찰서 가자. 할미가 같이 가 줄게."
+            },
+            {
+              "who": "young_man",
+              "text": "갈 거예요. 근데 제가 먼저 잡히면, 사장님은 저 혼자 한 일로 덮어 버려요. 증거가 있어야 해요."
+            },
+            {
+              "who": "grandma",
+              "text": "그 증거가 라디오 속 테이프냐."
+            },
+            {
+              "who": "young_man",
+              "text": "네. 할머니 라디오로 몰래 녹음했어요. 사장님 목소리가 다 들어 있어요. 테이프는 덱이 아니라, 건전지 넣는 칸 안에 숨겼어요."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그 순간, 수화기 너머로 동전 떨어지는 소리가 들렸습니다. 통화 시간이 다 된 것이었습니다."
+            },
+            {
+              "who": "young_man",
+              "text": "할머니, 사장님은 이 마을 안에 있어요. 할머니가 매일 보는 사람이에요. 조심하세요."
+            },
+            {
+              "who": "grandma",
+              "text": "준호야, 누군데. 이름만 말해."
+            },
+            {
+              "who": "narrator",
+              "text": "뚜, 뚜, 뚜. 전화는 끊겼습니다. 할머니가 매일 보는 사람. 그 말이 국밥 끓는 소리보다 크게, 할머니 귀에서 울렸습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "9장. 의심의 화살",
+      "image_prompts": [
+        "A modest korean village house living room with a brand new upright piano against the wall, afternoon sunlight, an old woman's cardigan on a chair",
+        "Two elderly korean people seen from a distance across a restaurant table, one sliding a folded document toward the other, cups of barley tea between them"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "할머니가 매일 보는 사람. 그날부터 할머니 눈에는 모든 사람이 다르게 보였습니다. 그리고 의심의 화살이 가장 먼저 향한 곳은, 뜻밖의 사람이었습니다."
+            },
+            {
+              "who": "young_woman",
+              "text": "할머니, 말순 할머니 댁에 새 피아노 들어왔대요. 현금으로 샀대요."
+            },
+            {
+              "who": "grandma",
+              "text": "말순이가? 경로당 총무가?"
+            },
+            {
+              "who": "young_woman",
+              "text": "경로당 통장 도장도 말순 할머니가 갖고 계시잖아요. 이상하지 않아요?"
+            },
+            {
+              "who": "narrator",
+              "text": "할머니 가슴이 덜컥 내려앉았습니다. 말순은 삼십 년을 언니, 동생 하며 지낸 사이였습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그날 오후, 할머니는 귤 한 봉지를 들고 말순네 집에 갔습니다. 거실 한쪽에 까만 피아노가 반짝이고 있었습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "말순아, 피아노가 참 곱다. 손녀 주려고 샀니."
+            },
+            {
+              "who": "woman",
+              "text": "언니, 소문 들었구나. 나도 다 알아. 다들 나를 의심하는 거."
+            },
+            {
+              "who": "grandma",
+              "text": "의심한다기보다, 내가 지금 아무것도 모르겠어서 그래."
+            },
+            {
+              "who": "woman",
+              "text": "언니, 이거 우리 영감 무릎 수술하고 받은 보험금으로 산 거야. 서류 다 있어. 보여 줄까?"
+            },
+            {
+              "who": "narrator",
+              "text": "말순은 서랍에서 보험금 지급 서류를 꺼내 보여 주었습니다. 날짜도 금액도 또렷했습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "woman",
+              "text": "그리고 언니, 경로당 통장 도장 말이야. 나 그거 석 달 전에 회장님한테 뺏겼어."
+            },
+            {
+              "who": "grandma",
+              "text": "뺏겼다니."
+            },
+            {
+              "who": "woman",
+              "text": "회장님이 투자 일은 본인이 다 하겠다고, 도장 내놓으라고 했어. 나는 총무라도 이름뿐이야."
+            },
+            {
+              "who": "narrator",
+              "text": "할머니는 귤 봉지를 쥔 손에 힘이 들어갔습니다. 도장은 말순이 아니라, 회장님 손에 있었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그날 저녁, 최만석 회장이 국밥집을 찾아왔습니다. 손에는 서류 봉투 하나가 들려 있었습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "순례 씨, 내가 밤새 고민했어. 마을 사람들 돈은 누군가 갚아야 하지 않겠나."
+            },
+            {
+              "who": "grandma",
+              "text": "그래서요, 회장님."
+            },
+            {
+              "who": "grandpa",
+              "text": "이 국밥집, 내가 일억에 사 줄게. 그 돈으로 마을 사람들 조금씩이라도 갚아. 그래야 민수도 산다."
+            },
+            {
+              "who": "narrator",
+              "text": "봉투 안에는 이미 도장 찍을 자리만 비워 둔 매매 계약서가 들어 있었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "grandma",
+              "text": "사십 년 장사한 가게를 일억에요."
+            },
+            {
+              "who": "grandpa",
+              "text": "지금 이 상황에 누가 이 가게를 사겠어. 내가 순례 씨 도와주는 거야. 됐지, 됐어. 내일 마을 회의 때 다들 앞에서 도장 찍자고."
+            },
+            {
+              "who": "narrator",
+              "text": "회장님은 일어서다 말고, 가게 구석 빈자리를 힐끗 보았습니다. 라디오가 있던 자리였습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "아 참, 그 라디오 말이야. 틀어 보니 고장이 났더라고. 경로당 창고에 내놨어. 내일 아침 폐기물 차가 가져갈 거야."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "회장님이 나간 뒤, 할머니는 한참을 빈자리만 바라보았습니다. 고장 났다는 라디오. 내일 아침이면 사라질 라디오."
+            },
+            {
+              "who": "grandma",
+              "text": "틀어 봤다고 했지. 무엇을 찾으려고 틀어 봤을까."
+            },
+            {
+              "who": "narrator",
+              "text": "할머니는 손녀에게 전화를 걸었습니다. 시계는 밤 아홉 시를 넘기고 있었고, 폐기물 차는 아침 일곱 시에 온다고 했습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "10장. 버려진 라디오",
+      "image_prompts": [
+        "A pile of discarded household items beside a rural korean senior center storage shed at dawn, an old silver cassette radio on top covered in frost",
+        "Close up of an elderly woman's wrinkled fingers opening the battery cover of an old cassette radio, revealing a small hidden audio cassette tape"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "새벽 여섯 시, 아직 해도 뜨기 전이었습니다. 할머니와 손녀 하은이, 그리고 며느리 지연이 경로당 창고 앞에 섰습니다."
+            },
+            {
+              "who": "young_woman",
+              "text": "할머니, 저기요. 폐가구 더미 맨 위에 있어요."
+            },
+            {
+              "who": "narrator",
+              "text": "서리를 하얗게 뒤집어쓴 은색 카세트 라디오가, 부서진 의자 위에 놓여 있었습니다. 영감이 결혼 십 주년에 사 준 바로 그 라디오였지요."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "어머님, 이거 어머님 물건 맞으시죠. 어머님 거니까 어머님이 가져가시는 거예요."
+            },
+            {
+              "who": "grandma",
+              "text": "맞다. 우리 영감이 사 준 거다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "할머니가 라디오를 품에 안았습니다. 그런데 테이프 넣는 칸 뚜껑이 억지로 비틀려 부서져 있었습니다."
+            },
+            {
+              "who": "young_woman",
+              "text": "할머니, 누가 여길 뜯어 봤어요. 안에 아무것도 없어요."
+            },
+            {
+              "who": "grandma",
+              "text": "회장님이 틀어 봤다는 게 이거였구나. 테이프를 찾으려고."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "그럼 이미 가져간 거 아니에요?"
+            },
+            {
+              "who": "narrator",
+              "text": "세 사람의 얼굴이 하얗게 굳었습니다. 그때 할머니가 준호의 마지막 말을 떠올렸습니다. 덱이 아니라, 건전지 넣는 칸."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "할머니는 라디오를 뒤집었습니다. 꽁꽁 언 손가락으로 건전지 뚜껑을 밀자, 딸깍 소리와 함께 뚜껑이 열렸습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "건전지 대신, 검은 테이프 하나가 비닐에 싸여 꼭 끼워져 있었습니다."
+            },
+            {
+              "who": "young_woman",
+              "text": "할머니, 있어요. 여기 있어요."
+            },
+            {
+              "who": "grandma",
+              "text": "준호야. 고맙다, 고맙다."
+            },
+            {
+              "who": "narrator",
+              "text": "할머니는 테이프를 가슴에 꼭 안았습니다. 서리 낀 창고 앞에서, 세 여자가 서로 손을 맞잡았습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "집으로 돌아와 보니 테이프 끝이 조금 엉켜 있었습니다. 하은이가 연필을 구멍에 끼워 한 바퀴씩 천천히 감았습니다."
+            },
+            {
+              "who": "young_woman",
+              "text": "할머니, 이거 지금 들어 볼까요?"
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "잠깐만. 이건 증거야. 우리끼리 먼저 틀었다가 무슨 일 생기면 안 돼. 오 형사님께 먼저 연락드려야 해."
+            },
+            {
+              "who": "grandma",
+              "text": "지연이 말이 맞다. 할미도 듣고 싶다만, 참자."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "한 시간 뒤, 오 형사가 국밥집으로 왔습니다. 형사는 테이프와 사서함 편지를 살펴보더니 고개를 끄덕였습니다."
+            },
+            {
+              "who": "man",
+              "text": "어머님, 이 테이프는 저희가 원본 그대로 보관하겠습니다. 그리고 따님, 아니 며느님이 일러 주신 대로 경로당 계좌 자료도 정식으로 요청해 두었습니다."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "형사님, 그 자료는 저희 농협에서 오늘 안에 나갈 거예요. 저는 손대지 않았어요. 절차대로요."
+            },
+            {
+              "who": "man",
+              "text": "잘하셨습니다. 그리고 오늘 아침에 또 하나 소식이 있어요. 한준호 씨가 서울 경찰서에 제 발로 걸어 들어왔답니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "할머니는 부뚜막에 손을 짚었습니다. 그 아이가, 약속을 지켰습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "형사님, 내일 경로당에서 마을 회의가 있어요. 회장님이 다들 보는 앞에서 내 가게 계약서에 도장을 찍으라고 했어요."
+            },
+            {
+              "who": "man",
+              "text": "그럼 그 자리에서 들려 드리지요. 사본으로요. 마을 어르신들 모두 진실을 들으셔야 하니까요."
+            },
+            {
+              "who": "narrator",
+              "text": "그날 밤, 할머니는 영감 사진 앞에 앉아 낮게 말했습니다. 여보, 내일이에요. 사십 년 가게를 지키는 날이에요."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "11장. 마을 회의",
+      "image_prompts": [
+        "A crowded korean village senior center hall in winter, elderly villagers seated on the floor facing a low table with a document and a red ink pad",
+        "Side view of an elderly korean woman sitting upright and calm, holding an old silver cassette radio on her lap, tense faces blurred around her"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "다음 날 오후 세 시, 경로당 큰방. 돈을 잃은 열한 집 어르신들이 빽빽이 모여 앉았습니다. 방바닥은 뜨거웠지만, 공기는 얼음장 같았습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "다들 모였으니 시작합시다. 우리가 잃은 돈이 삼억 이천만 원이에요. 이걸 그냥 두고 볼 수는 없지 않습니까."
+            },
+            {
+              "who": "woman",
+              "text": "회장님, 그래서 어쩌자는 거예요."
+            },
+            {
+              "who": "grandpa",
+              "text": "순례 씨가 고맙게도 가게를 내놓기로 했어요. 그 돈으로 조금씩이라도 나눠 갖자고요."
+            },
+            {
+              "who": "narrator",
+              "text": "방 안이 술렁였습니다. 누군가는 고개를 끄덕였고, 누군가는 순례 할머니를 안쓰럽게 바라보았습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "회장님이 상 위에 매매 계약서를 펼치고 빨간 인주를 꺼냈습니다. 일억이라는 숫자가 또렷이 적혀 있었습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "순례 씨, 여기 도장만 찍으면 돼. 다 마을 위해서 하는 일이야."
+            },
+            {
+              "who": "son",
+              "text": "회장님, 잠깐만요. 사십 년 된 가게를 일억이요. 그건 거저 가져가시는 거예요."
+            },
+            {
+              "who": "grandpa",
+              "text": "민수 자네는 할 말 없지 않나. 그놈한테 이천만 원 받은 사람이."
+            },
+            {
+              "who": "narrator",
+              "text": "어르신들 눈이 일제히 민수에게 쏠렸습니다. 민수는 주먹을 쥐었다 폈다, 끝내 고개를 떨구었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "grandma",
+              "text": "회장님, 그 이천만 원은 준호가 나한테 돌려보낸 돈이에요. 오 형사님도 알아요."
+            },
+            {
+              "who": "grandpa",
+              "text": "사기꾼 놈이 왜 돈을 돌려보내. 말이 되는 소릴 해야지."
+            },
+            {
+              "who": "grandma",
+              "text": "그 아이가 왜 돌려보냈는지, 오늘 다 같이 들어 보면 알 거예요."
+            },
+            {
+              "who": "grandpa",
+              "text": "들어 보다니, 뭘."
+            },
+            {
+              "who": "narrator",
+              "text": "회장님의 눈썹이 꿈틀했습니다. 그 순간, 할머니는 무릎 위 보자기를 천천히 풀었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "보자기 안에서 은색 카세트 라디오가 나왔습니다. 부서진 뚜껑은 하은이가 투명 테이프로 감아 놓았지요."
+            },
+            {
+              "who": "woman",
+              "text": "어머, 그거 언니네 가게 라디오 아니야? 회장님이 고장 나서 버렸다던."
+            },
+            {
+              "who": "grandma",
+              "text": "버린 걸 내가 주워 왔어요. 우리 영감이 사 준 거라서요."
+            },
+            {
+              "who": "grandpa",
+              "text": "순례 씨, 지금 노래 들을 때가 아니야. 어르신들 다 바쁜 사람들이야."
+            },
+            {
+              "who": "grandma",
+              "text": "회장님, 계약서에 도장 찍기 전에, 노래 한 곡만 들읍시다. 우리 영감이 좋아하던 노래예요."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "할머니는 하은이가 준비한 테이프를 꺼냈습니다. 경찰이 원본을 그대로 옮겨 준 사본이었습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "회장님 얼굴에서 핏기가 가셨습니다. 이마에 땀방울이 맺혔고, 손에 쥔 인주 뚜껑이 바닥으로 굴렀습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "순례 씨, 그거 뭐야. 그거 어디서 났어."
+            },
+            {
+              "who": "grandma",
+              "text": "회장님이 틀어 보셨다면서요. 그럼 아실 텐데요. 뭐가 들어 있는지."
+            },
+            {
+              "who": "narrator",
+              "text": "회장님은 대답하지 못했습니다. 방 안의 어르신들은 그 침묵의 뜻을 아직 몰랐습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그때 경로당 문이 드르륵 열렸습니다. 오 형사와 며느리 지연이 들어와 문 앞에 조용히 섰습니다."
+            },
+            {
+              "who": "man",
+              "text": "계속하십시오, 어머님. 저희는 들으러 왔습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "형사 양반이 마을 회의에 웬일이오."
+            },
+            {
+              "who": "man",
+              "text": "저도 피해 신고를 받은 사람이니까요. 들어 보시지요, 회장님."
+            },
+            {
+              "who": "narrator",
+              "text": "할머니가 재생 버튼을 꾹 눌렀습니다. 철컥, 테이프가 돌아가기 시작했습니다. 그리고 지지직거리는 잡음 사이로, 누군가의 목소리가 흘러나왔습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "12장. 테이프 속 목소리",
+      "image_prompts": [
+        "An old silver cassette radio on a wooden floor in a quiet village hall, the tape reels turning, elderly hands frozen in the background",
+        "Back view of an elderly korean man in a dark padded jacket standing alone by a window, a police officer waiting at the open door in winter light"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "테이프에서 먼저 흘러나온 건 국밥집 그릇 부딪히는 소리, 그리고 준호의 목소리였습니다. 녹음 날짜를 또박또박 말하고 있었지요."
+            },
+            {
+              "who": "young_man",
+              "text": "올해 사월 십일, 밤 열 시. 순례네 국밥집 안입니다. 사장님이 오셨습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "잠시 뒤, 다른 목소리가 들렸습니다. 낮고 느릿한, 이 방에 앉은 모든 사람이 매일 듣던 목소리였습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "됐지, 됐어. 순례네 국밥집까지 넣으면 삼억은 넘는다. 돈은 경로당 계좌로 먼저 받아. 도장은 내가 갖고 있으니까."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "방 안이 얼어붙었습니다. 누구 하나 숨소리도 내지 않았습니다. 테이프는 무심하게 계속 돌아갔습니다."
+            },
+            {
+              "who": "young_man",
+              "text": "사장님, 순례 할머니는 빼 주세요. 그분은 안 됩니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "네가 뭔데 빼라 마라야. 네가 빠지면 그 국밥집부터 넣는다. 그리고 내 오천만 원은 바로 돌려줘. 이자 받았다고 소문을 내야 노인네들이 넣지."
+            },
+            {
+              "who": "narrator",
+              "text": "회장님이 처음 넣었다는 오천만 원. 석 달 만에 받았다던 이자 백오십만 원. 그 모든 게, 마을 사람들 눈앞에서 벌인 연극이었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "woman",
+              "text": "회장님. 지금 저거, 회장님 목소리 맞지요."
+            },
+            {
+              "who": "grandpa",
+              "text": "아니야. 저건 만든 거야. 요즘은 목소리도 기계로 다 만든다잖아."
+            },
+            {
+              "who": "narrator",
+              "text": "그 말이 끝나기도 전에, 테이프 속 목소리가 다시 말했습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "사과값 잘 받았다고 하면 돼. 트럭 한 대쯤 뽑아도 아무도 몰라. 됐지, 됐어."
+            },
+            {
+              "who": "narrator",
+              "text": "어르신 몇 분이 동시에 고개를 돌렸습니다. 그해 여름 우박에 마을 사과가 절반도 안 남았던 걸, 이 방 사람들은 다 알고 있었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "man",
+              "text": "회장님, 테이프만 있는 게 아닙니다. 오늘 오전에 경로당 계좌 거래 내역이 정식으로 나왔습니다."
+            },
+            {
+              "who": "man",
+              "text": "마을 어르신들이 보낸 돈 가운데 이억 구천만 원이, 회장님 손자 이름으로 된 계좌로 옮겨졌습니다. 지금 그 계좌는 묶여 있습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "그건, 그건 내가 잠깐 맡아 둔 거야."
+            },
+            {
+              "who": "man",
+              "text": "그리고 하얀 트럭을 산 날짜와, 그 계좌에서 돈이 빠져나간 날짜가 같습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "회장님 손에서 계약서가 툭 떨어졌습니다. 일억이라고 적힌 숫자가 방바닥에 엎어졌습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "grandma",
+              "text": "회장님, 하나만 물어볼게요. 준호 전화가 꺼진 지 열흘째라고 하셨지요. 우리는 사흘 전에야 알았는데."
+            },
+            {
+              "who": "grandpa",
+              "text": "그건."
+            },
+            {
+              "who": "grandma",
+              "text": "그 아이가 언제 사라질지, 회장님은 처음부터 아셨던 거예요. 그 아이한테 다 덮어씌우려고요."
+            },
+            {
+              "who": "narrator",
+              "text": "회장님은 끝내 아무 말도 하지 못했습니다. 김장 날 민수에게 손가락질하던 그 목소리는, 이제 어디에도 없었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "man",
+              "text": "최만석 씨, 같이 가셔야겠습니다. 한준호 씨도 오늘 아침 모든 걸 진술했습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "회장님은 형사를 따라 천천히 일어섰습니다. 문을 나서기 전, 그가 돌아보았지만 누구 하나 눈을 마주쳐 주지 않았습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "문이 닫히고, 방 안에는 테이프 끝나는 철컥 소리만 남았습니다. 그리고 그 침묵을 깬 건 말순 할머니의 울음이었습니다."
+            },
+            {
+              "who": "woman",
+              "text": "언니, 미안해. 우리가 언니를 의심했어. 민수를 의심했어."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "13장. 네 시 십 분",
+      "image_prompts": [
+        "A small korean rice soup restaurant reopening on a clear winter morning, steam pouring from a big iron pot, an old cassette radio on a shelf",
+        "An elderly korean woman's hands placing a repaired old leather wristwatch beside a stainless steel lunch box on a visiting room table, soft light"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그 뒤의 일은 빠르게 흘러갔습니다. 손자 이름으로 묶여 있던 이억 구천만 원은 법원 절차를 거쳐 열한 집에 고스란히 돌아갔습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "모자란 돈은 회장님의 하얀 트럭과 과수원 땅을 팔아 메웠습니다. 사과값 잘 받았다던 그 트럭이, 결국 마을 사람들 빚을 갚은 셈이었지요."
+            },
+            {
+              "who": "narrator",
+              "text": "최만석 씨는 재판에 넘겨졌고, 경로당 회장 자리에서도 물러났습니다. 마을 게시판에는 새 회장 선거 날짜가 붙었습니다."
+            },
+            {
+              "who": "woman",
+              "text": "언니, 새 회장은 언니가 해. 다들 그러자고 했어."
+            },
+            {
+              "who": "grandma",
+              "text": "나는 국밥이나 끓일란다. 총무는 계속 네가 해라. 이번엔 도장도 네가 꼭 쥐고 있고."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "국밥집 보증금 칠천만 원도 제자리로 돌아왔습니다. 준호가 보낸 이천만 원은 아직 민수 통장에 손도 안 댄 채 그대로 있었지요."
+            },
+            {
+              "who": "son",
+              "text": "어머니, 그 이천만 원은 다른 어르신들 몫 갚는 데 보태요. 저는 제 빚, 제 힘으로 갚을게요."
+            },
+            {
+              "who": "grandma",
+              "text": "네가 그런 말을 다 하는구나."
+            },
+            {
+              "who": "son",
+              "text": "국밥집 일 제대로 배우려고요. 새벽 육수부터 제가 끓일게요."
+            },
+            {
+              "who": "narrator",
+              "text": "그날 할머니는 아들 손에 처음으로 가게 열쇠를 쥐여 주었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "며느리 지연은 그 주말, 시어머니와 나란히 국밥집 부엌에 섰습니다. 십오 년 만에 처음 함께 김치를 담그는 날이었습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "지연아, 그동안 내가 너를 너무 몰랐다. 미안하다."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "어머님, 저도 말을 너무 아꼈어요. 다음부터는 무서워도 말씀드릴게요."
+            },
+            {
+              "who": "grandma",
+              "text": "그래. 이 집 식구끼리는 그러자. 무서운 말일수록 먼저 하자."
+            },
+            {
+              "who": "young_woman",
+              "text": "할머니, 엄마, 둘이 그렇게 웃으니까 이상해요. 좋은 쪽으로요."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "한 달 뒤, 할머니는 보온 도시락에 국밥을 담아 구치소 면회실을 찾았습니다. 유리창 너머에 준호가 앉아 있었습니다."
+            },
+            {
+              "who": "young_man",
+              "text": "할머니, 여기까지 오시면 어떡해요. 저 같은 놈을."
+            },
+            {
+              "who": "grandma",
+              "text": "너 같은 놈이 아니라, 우리 영감이 시계 채워 준 아이다. 잘못한 만큼 벌 받고 나와. 그게 사내가 약속 지키는 거다."
+            },
+            {
+              "who": "narrator",
+              "text": "할머니는 보자기에서 손목시계를 꺼내 보여 주었습니다. 장터 시계방에서 금 간 유리를 갈고, 멈춘 바늘을 다시 돌려 놓은 시계였습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "young_man",
+              "text": "할머니, 시계가 가요. 바늘이 움직여요."
+            },
+            {
+              "who": "grandma",
+              "text": "이제 네 시 십 분에 멈춰 있지 말아라. 나오면 이 시계 차고 우리 가게로 와. 순대 썰 사람이 필요하다."
+            },
+            {
+              "who": "young_man",
+              "text": "꼭 갈게요. 이번엔 진짜 갚으러 갈게요. 평생 갚을게요."
+            },
+            {
+              "who": "narrator",
+              "text": "준호는 유리창에 이마를 대고 한참을 울었습니다. 할머니도 손바닥을 유리에 가만히 맞대었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "이듬해 봄, 장날 오후. 순례네 국밥집에는 다시 김이 뭉게뭉게 피어올랐습니다. 선반 위 카세트 라디오에서는 영감이 좋아하던 노래가 흘러나왔지요."
+            },
+            {
+              "who": "narrator",
+              "text": "사람을 속여 쌓은 돈은 한 달도 못 가 무너졌고, 국밥 한 그릇으로 맺은 약속은 이십구 년을 버텨 할머니를 지켰습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "그리고 오후 네 시 십 분이 되면, 할머니는 지금도 문 쪽을 한 번씩 바라봅니다. 그 시간에 올 사람이 있다는 걸, 이제는 아니까요."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "outro": "오늘 사연도 끝까지 들어 주셔서 고맙습니다. 구독과 좋아요 눌러 주시면 다음에도 더 좋은 사연으로 찾아뵙겠습니다.",
+  "description": "김장하던 경로당 마당, 마을 어르신 열한 집의 돈 삼억 이천만 원이 '손주 같던' 청년과 함께 사라졌습니다.\n회장님은 할머니 아들을 범인으로 지목하고, 그 순간 아들 통장에 사기꾼이 보낸 이천만 원이 찍힙니다.\n우체국 사서함 이백십사 번, 네 시 십 분에 멈춘 낡은 손목시계, 그리고 버려진 카세트 라디오.\n사십 년 국밥집을 지키려는 할머니가 마을 회의에서 재생 버튼을 누르는 순간, 모든 것이 뒤집힙니다.\n\n여러분이라면 가장 믿던 이웃이 의심스러울 때 어떻게 하시겠어요? 댓글로 들려주세요.\n구독과 좋아요는 큰 힘이 됩니다 🙏\n※ 이 영상은 사연을 바탕으로 각색했으며, AI 이미지와 AI 음성을 사용했습니다.",
+  "tags": [
+    "사연",
+    "반전사연",
+    "사이다사연",
+    "사기꾼참교육",
+    "사기사연",
+    "감동사연",
+    "시골사연",
+    "오디오북",
+    "시니어오디오북",
+    "사연라디오",
+    "라디오드라마",
+    "잠잘때듣는사연",
+    "1시간사연",
+    "노후"
+  ],
+  "coupang": {
+    "search": "카세트 라디오 플레이어",
+    "url": "https://link.coupang.com/a/ie26k4dtHo",
+    "keywords": [
+      "라디오",
+      "카세트",
+      "추억",
+      "음악"
+    ],
+    "reason": "사연의 결정적 증거가 할아버지가 사 준 낡은 카세트 라디오 속 테이프라서 휴대용 라디오와 자연스럽게 이어짐"
+  }
+}
