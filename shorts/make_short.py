@@ -691,7 +691,7 @@ def yt_find_same_title(tok, title):
         up = ch["items"][0]["contentDetails"]["relatedPlaylists"]["uploads"]
         items = requests.get(f"{api}/playlistItems", params={"part": "snippet,status", "playlistId": up, "maxResults": 20},
                              headers=h, timeout=30).json().get("items", [])
-        norm = lambda s: re.sub(r"\s+", "", (s or "").lower().replace("#shorts", ""))  # noqa: E731
+        norm = lambda s: re.sub(r"\s+", "", (s or "").lower())  # noqa: E731  ('#shorts' 유무까지 같아야 중복: 롱폼과 같은 제목의 예고편 쇼츠는 따로 올림)
         for it in items:
             if norm(it["snippet"].get("title")) == norm(title):
                 return it["snippet"]["resourceId"]["videoId"], (it.get("status") or {}).get("privacyStatus", "")

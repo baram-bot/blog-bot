@@ -114,6 +114,9 @@ def _main():
     today = datetime.now(timezone(timedelta(hours=9))).strftime("%Y-%m-%d")
     ok, fail = [], []
     for sid, (lid, title) in todo.items():
+        if sid == lid:  # 쇼츠 기록이 롱폼 ID로 잘못 남은 경우: 건너뜀
+            print(f"[건너뜀] {sid}: 쇼츠와 롱폼 ID가 같음")
+            continue
         try:
             title = title or long_title(tok, lid)
             comment(tok, sid, lid, title)
@@ -132,7 +135,7 @@ def _main():
     if fail:
         msg += ("\n\n" if msg else "") + "⚠️ 댓글 실패\n" + "\n".join(fail)[:600]
         if any("insufficient" in f.lower() or "403" in f for f in fail):
-            msg += "\n\n유튜브 연결 권한에 '댓글 쓰기'가 없어서 생긴 문제예요. 연결을 다시 해야 해요."
+            msg += "\n\n(영상이 아직 비공개·예약 공개 상태면 댓글을 못 달아요. 공개된 뒤 자동으로 다시 시도해요.)"
     try:
         ms.tg("sendMessage", data={"chat_id": ms.chat_id(), "text": msg})
     except Exception as e:  # noqa: BLE001
