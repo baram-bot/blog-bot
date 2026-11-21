@@ -1,0 +1,1762 @@
+{
+  "title": "칠순날 틀어진 새엄마의 녹음 파일",
+  "voice": "ko-KR-InJoonNeural",
+  "category": "⑪ 재혼·새 가족과의 갈등(칠순 잔치의 택시 블랙박스, 새엄마의 이삿짐 상자, 고향 사과 과수원)",
+  "twists": [
+    "착한 사람의 이중생활: 늘 중재하던 맏아들 진우는 2년째 회사를 안 다니며 도서관에 출근했고, 아버지 인감으로 과수원에 근저당 2억을 잡혔다(하은의 한마디, 등기 서류)",
+    "숨겨진 편지·가계부: 창고 속 상자는 돌아가신 엄마 순임이 단짝 정숙에게 맡긴 것—새엄마가 '빼돌린' 1억 2천은 자기 칼국숫집 판 돈 8천까지 보태 진우의 빚 2억을 몰래 갚은 돈이었다",
+    "이미 알고 있었던 사람·숨겨진 녹음: 말없던 아버지 덕만이 처음부터 다 알고 블랙박스를 딸에게 쥐여 준 장본인—녹음기 속 진우의 2억은 진희 남편 성태의 공장을 살린 돈이었고, 과수원은 가계약 닷새 전에 이미 새엄마 이름으로 넘어가 있었다"
+  ],
+  "thumbnail_text": "새엄마가 빼돌린 1억 2천",
+  "thumbnail_sub": "칠순 잔치의 블랙박스",
+  "thumbnail_prompt": "Dramatic scene of a shocked elderly korean woman in a pink hanbok on the right side, an angry middle-aged daughter holding up a phone beside her, banquet hall, cinematic light",
+  "ending": "따뜻한",
+  "from_short": "",
+  "chapters": [
+    {
+      "title": "1장. 칠순날의 녹음",
+      "image_prompts": [
+        "A korean banquet hall for a seventieth birthday party, round tables with rice cakes and fruit towers, guests frozen in silence, warm yellow lights",
+        "Close-up of an elderly man's wrinkled hand slowly setting down a silver spoon beside a bowl of seaweed soup on a white tablecloth"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "칠순 잔칫상 앞에서, 딸이 휴대전화를 마이크에 갖다 댔습니다. 그리고 재생 버튼을 눌렀습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "조금만 참아. 그 영감 과수원이 내 이름으로 넘어오면, 그때 다 정리하고 너한테 갈게."
+            },
+            {
+              "who": "grandma",
+              "text": "일억 이천은 벌써 보냈어. 아무도 몰라."
+            },
+            {
+              "who": "narrator",
+              "text": "잔치 식당 안이 얼어붙었습니다. 스피커에서 흘러나온 목소리는 칠순을 맞은 오덕만 할아버지의 아내, 한정숙 씨의 목소리였습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "칠 년 전, 이 집에 새어머니로 들어온 사람이었지요. 하얀 식탁보 위로 떡 접시들이 덩그러니 남았습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "그 목소리 속 너는 누구였을까요. 일억 이천만 원은 어디로 갔을까요. 이 일의 진실은 이야기 마지막에 밝혀집니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "휴대전화를 든 사람은 둘째 딸 오진희였습니다. 마흔셋, 단발머리에 입술이 하얗게 질려 있었습니다."
+            },
+            {
+              "who": "daughter",
+              "text": "여러분, 들으셨죠. 이게 택시 블랙박스에 남은 소리예요. 지난달, 읍내 가는 택시 안에서요."
+            },
+            {
+              "who": "daughter",
+              "text": "그리고 이건 아버지 통장 이체 내역입니다. 받는 사람 서준혁. 이 사람 친아들이에요."
+            },
+            {
+              "who": "narrator",
+              "text": "진희가 흔든 종이가 형광등 아래에서 바르르 떨렸습니다. 손님들 사이에서 수군거림이 번졌습니다."
+            },
+            {
+              "who": "woman",
+              "text": "아이고, 저게 무슨 소리고. 칠 년을 같이 산 사람이 우째 저라노."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "정숙 씨는 꽃분홍 한복 차림 그대로 서 있었습니다. 떡을 나르던 쟁반이 손에서 기울었습니다."
+            },
+            {
+              "who": "daughter",
+              "text": "칠 년 동안 우리 아버지 옆에서 노린 게 이거였어요? 과수원이요?"
+            },
+            {
+              "who": "grandma",
+              "text": "진희야. 변명은 안 하마. 다만 열흘만, 열흘만 기다려 다오."
+            },
+            {
+              "who": "daughter",
+              "text": "열흘이요? 열흘 뒤에 또 얼마를 빼돌리시려고요."
+            },
+            {
+              "who": "grandma",
+              "text": "열흘 뒤에도 내가 도둑으로 보이거든, 그때는 이 집에서 내 발로 나가마. 약속하마."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "모두의 눈이 할아버지에게 쏠렸습니다. 일흔 평생 사과나무만 키운, 손마디가 옹이처럼 굵은 분이었습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "그런데 할아버지는 놀라지 않았습니다. 미역국 앞에 은수저를 가만히 내려놓을 뿐이었지요."
+            },
+            {
+              "who": "narrator",
+              "text": "진희는 그 순간 이상한 것을 보았습니다. 아버지의 눈이 아주 잠깐, 문간에 선 택시 기사 김봉구 씨에게 머물렀다가 돌아온 것입니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "잔치는 여기까지 합시다. 오신 분들, 미안합니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "큰아들 오진우가 서둘러 일어나 손님들에게 고개를 숙였습니다. 마흔여섯, 늘 집안의 중재자 노릇을 하던 맏이였습니다."
+            },
+            {
+              "who": "son",
+              "text": "진희야, 그만해. 아버지 칠순 날 이게 뭐냐. 집에 가서 조용히 얘기하자."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "아가씨 말이 틀린 건 아니잖아요, 여보. 일억이 넘는 돈이에요."
+            },
+            {
+              "who": "narrator",
+              "text": "맏며느리 박미라가 남편 소매를 잡아끌었습니다. 그 옆에서 열한 살 손녀 하은이가 울상이 되어 할머니 치마폭을 붙들었습니다."
+            },
+            {
+              "who": "grandchild",
+              "text": "할머니, 할머니 나쁜 사람 아니지? 그렇지?"
+            },
+            {
+              "who": "narrator",
+              "text": "정숙 씨는 대답 대신 손녀 머리만 쓰다듬었습니다. 그날 밤 진희는 창고 구석의 이삿짐 상자 하나를 떠올렸습니다. 칠 년 동안 단 한 번도 열린 적 없는 상자였습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2장. 칠 년 전 그 상자",
+      "image_prompts": [
+        "A small rural korean farmhouse at the edge of an apple orchard in late autumn, moving boxes stacked by a wooden porch, misty mountains behind",
+        "Elderly woman's hands peeling a red apple in one long ribbon beside a child's small hands on a low wooden table, soft afternoon light"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그해 봄으로 돌아가 볼까요. 칠 년 전, 사과꽃이 막 지던 사월이었습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "경상북도 산골 솔티마을, 오덕만 할아버지의 사과 과수원 앞에 작은 트럭 한 대가 섰습니다. 짐이라고는 옷 보따리 몇 개와 노끈으로 칭칭 묶은 상자 하나가 전부였습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "아내 순임 씨를 먼저 보내고 삼 년. 할아버지는 쉰아홉 살 한정숙 씨와 조용히 혼인신고를 했습니다. 잔치도 없었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "daughter",
+              "text": "아버지, 엄마 가신 지 삼 년밖에 안 됐어요. 어떻게 그 방에 딴 사람을 들여요."
+            },
+            {
+              "who": "grandpa",
+              "text": "진희야. 저 사람, 아무것도 바라고 온 사람 아니다."
+            },
+            {
+              "who": "daughter",
+              "text": "아무것도 안 바라는 사람이 왜 과수원 딸린 홀아비한테 시집을 와요."
+            },
+            {
+              "who": "narrator",
+              "text": "진희가 이토록 날을 세운 데는 이유가 있었습니다. 십 년 전, 어머니가 병원에 계실 때였지요."
+            },
+            {
+              "who": "narrator",
+              "text": "병원 일층 찻집에서 진희는 아버지가 낯선 여자와 마주 앉아 있는 걸 보았습니다. 여자는 손수건으로 눈가를 누르고 있었습니다. 그 여자가 바로 정숙 씨였습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "정숙 씨는 들어오던 날부터 상자 하나를 창고 맨 안쪽에 넣어 두었습니다."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "어머님, 이 상자는 안 푸세요? 제가 정리해 드릴까요?"
+            },
+            {
+              "who": "grandma",
+              "text": "아니다, 미라야. 그건 그냥 둬라. 손대지 마라."
+            },
+            {
+              "who": "narrator",
+              "text": "그 목소리가 평소와 달리 단단해서, 맏며느리 미라는 다시는 묻지 못했습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "정숙 씨는 말수가 적었습니다. 대신 새벽마다 보온병에 보리차를 가득 끓여 과수원으로 나갔습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "영감, 손 시리지요. 이거 한 모금 드세요."
+            },
+            {
+              "who": "grandpa",
+              "text": "당신 손이 더 차구먼. 먼저 마시소."
+            },
+            {
+              "who": "narrator",
+              "text": "김이 모락모락 나는 보온병 뚜껑을 둘이 번갈아 쥐고 서 있는 모습을, 마을 사람들은 사과나무 사이로 보곤 했습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "손녀 하은이는 처음부터 새 할머니를 따랐습니다. 정숙 씨는 사과 한 알을 끊김 없이 한 줄로 깎는 재주가 있었거든요."
+            },
+            {
+              "who": "grandchild",
+              "text": "할머니, 또 해 줘. 이번엔 안 끊어지게!"
+            },
+            {
+              "who": "grandma",
+              "text": "끊어지면 어떠냐. 끊어진 데서 다시 이어 깎으면 되지."
+            },
+            {
+              "who": "narrator",
+              "text": "그 말을 지나가던 진희가 들었습니다."
+            },
+            {
+              "who": "daughter",
+              "text": "하은아, 들어가. 숙제해야지."
+            },
+            {
+              "who": "grandma",
+              "text": "진희야, 사과 하나 깎아 줄까. 올해 첫 홍로다."
+            },
+            {
+              "who": "daughter",
+              "text": "됐어요. 저는 엄마가 깎아 준 사과만 먹어요."
+            },
+            {
+              "who": "narrator",
+              "text": "진희는 뒤도 돌아보지 않고 마당을 가로질러 갔습니다. 정숙 씨 손에서 긴 사과 껍질이 툭 끊어졌습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그 무렵 할아버지에게는 새 버릇이 하나 생겼습니다. 작업복 가슴 주머니에 손가락만 한 녹음기를 꽂고 다니는 것이었지요."
+            },
+            {
+              "who": "grandpa",
+              "text": "눈이 침침해서 농사 일지를 못 쓰겠어. 말로 남겨 두는 거다."
+            },
+            {
+              "who": "narrator",
+              "text": "그리고 작년 봄, 진희네 집에도 일이 하나 있었습니다. 남편 강성태의 작은 부품 공장이 부도 직전에서 거짓말처럼 숨통이 트인 것입니다."
+            },
+            {
+              "who": "daughter",
+              "text": "여보, 은행에서 대출이 나왔다고? 그렇게 안 된다더니."
+            },
+            {
+              "who": "son_in_law",
+              "text": "어, 어. 운이 좋았지 뭐. 너는 신경 쓰지 마."
+            },
+            {
+              "who": "narrator",
+              "text": "남편은 그 말을 하며 진희의 눈을 피했습니다. 진희는 그때 그 눈빛을 대수롭지 않게 넘겼습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3장. 수요일의 택시",
+      "image_prompts": [
+        "A cold korean farmhouse living room at night, family members sitting apart on a heated floor, an unopened envelope on a low table, tense mood",
+        "A yellow rural taxi parked on a frosty country road beside bare apple trees at dawn, a small dashboard camera glowing on the windshield"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "잔치 다음 날 저녁, 과수원 집 안방. 장작 난로가 타닥타닥 소리를 냈지만 방 안 공기는 얼음장 같았습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "창밖에는 그해 첫눈이 희끗희끗 날리기 시작했습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "정숙 씨는 부엌에 있었고, 할아버지는 아랫목에 말없이 앉아 있었습니다. 먼저 입을 연 사람은 큰아들 진우였습니다."
+            },
+            {
+              "who": "son",
+              "text": "아버지, 감정 상하실 일 아닙니다. 차분하게 정리하자는 겁니다."
+            },
+            {
+              "who": "son",
+              "text": "과수원 명의, 지금 미리 정리해 두시죠. 새어머니 앞으로 넘어가면 우리 형제는 아무 말도 못 합니다."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "아버님, 그이 앞으로 증여해 두시면 저희가 끝까지 모실게요."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "할아버지가 진우를 오래 바라보았습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "진우야. 작년 봄에 네가 내 인감도장 가져갔었지. 건강보험 서류 뗀다고."
+            },
+            {
+              "who": "son",
+              "text": "네? 아, 네. 그때 바로 돌려드렸잖아요."
+            },
+            {
+              "who": "grandpa",
+              "text": "그랬지. 돌려줬지."
+            },
+            {
+              "who": "narrator",
+              "text": "그 말뿐이었습니다. 진희는 그 대화가 어딘가 이상하다고 느꼈지만, 무엇이 이상한지는 알 수 없었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그때 마당에서 개가 짖었습니다. 대문 앞에 서른여섯 살 젊은 남자가 서류 봉투를 들고 서 있었습니다. 정숙 씨의 친아들, 서준혁이었습니다."
+            },
+            {
+              "who": "daughter",
+              "text": "당신이 서준혁 씨죠? 우리 아버지 돈 일억 이천, 당신 통장으로 들어갔어요."
+            },
+            {
+              "who": "young_man",
+              "text": "누님, 그 돈 제가 쓴 거 아닙니다. 어머니가 아직 말하지 말라고 하셨어요."
+            },
+            {
+              "who": "daughter",
+              "text": "누님이라고 부르지 마세요. 그 봉투는 또 뭐예요. 과수원 서류예요?"
+            },
+            {
+              "who": "young_man",
+              "text": "열흘만 기다려 주세요. 저도 그 말밖에 못 드립니다."
+            },
+            {
+              "who": "narrator",
+              "text": "준혁은 봉투를 가슴에 꼭 끌어안고, 정숙 씨에게 눈짓만 한 번 하고 돌아섰습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "이튿날, 진희는 읍내 택시 승강장으로 갔습니다. 블랙박스 영상을 건네준 사람, 김봉구 기사를 만나기 위해서였지요."
+            },
+            {
+              "who": "daughter",
+              "text": "기사님, 그 영상 주셔서 고마워요. 그런데 그분이 읍내에 자주 가셨나요?"
+            },
+            {
+              "who": "man",
+              "text": "매주 수요일 아침이요. 늘 같은 데 내려 드렸어요. 군청 앞 법무사 사무실이요."
+            },
+            {
+              "who": "daughter",
+              "text": "법무사 사무실이요? 거기를 왜요."
+            },
+            {
+              "who": "man",
+              "text": "그건 모르지요. 늘 보온병 하나 꼭 안고 타셨어요. 영감님 드릴 보리차라고."
+            },
+            {
+              "who": "narrator",
+              "text": "김 기사는 예순 줄의 마을 토박이였습니다. 이 동네 어르신들 병원 길, 장 보러 가는 길을 이십 년 넘게 실어 나른 사람이었지요."
+            },
+            {
+              "who": "narrator",
+              "text": "그런 그가 이상하게 말을 아끼는 눈치였습니다. 진희가 영상 이야기를 더 꺼내려 하자, 그는 서둘러 손님을 태우러 가 버렸습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그날 밤 진희는 아버지 방문 앞에 섰습니다."
+            },
+            {
+              "who": "daughter",
+              "text": "아버지, 왜 아무 말씀도 안 하세요. 아버지 돈이잖아요."
+            },
+            {
+              "who": "grandpa",
+              "text": "진희야. 나는 지금 아무 말도 못 한다. 네 눈으로 직접 알아봐라."
+            },
+            {
+              "who": "grandpa",
+              "text": "네가 직접 본 것만 믿어라. 남이 한 말 말고."
+            },
+            {
+              "who": "narrator",
+              "text": "문이 닫혔습니다. 그런데 그다음 날, 진희에게 전혀 엉뚱한 곳에서 첫 번째 진실이 날아왔습니다. 열한 살 하은이의 입에서였습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4장. 도서관의 아빠",
+      "image_prompts": [
+        "A quiet public library reading room on a weekday morning, a middle-aged man in a dark suit sitting alone by the window, seen from far behind",
+        "A property registry document and a pair of reading glasses on a government office counter, cold fluorescent light, a woman's hand gripping the paper"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "토요일 오후, 진희는 조카 하은이와 과수원 둑길을 걷고 있었습니다. 마른 사과 잎이 발밑에서 바스락거렸습니다."
+            },
+            {
+              "who": "grandchild",
+              "text": "고모, 할머니 이제 우리 집에서 나가?"
+            },
+            {
+              "who": "daughter",
+              "text": "그건 할머니가 하기 나름이지. 하은이는 걱정 마."
+            },
+            {
+              "who": "grandchild",
+              "text": "근데 고모, 우리 아빠도 거짓말해. 근데 아빠는 아무도 안 혼내."
+            },
+            {
+              "who": "narrator",
+              "text": "진희가 걸음을 멈췄습니다."
+            },
+            {
+              "who": "daughter",
+              "text": "아빠가 무슨 거짓말을 해?"
+            },
+            {
+              "who": "grandchild",
+              "text": "아빠 회사 안 다녀. 맨날 양복 입고 나가서 시립 도서관 가. 내가 학교 현장학습 갔을 때 봤어."
+            },
+            {
+              "who": "grandchild",
+              "text": "아빠가 엄마한테도 말하지 말랬어. 고모도 비밀이야."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "월요일 아침, 진희는 읍내 등기소 창구 앞에 섰습니다. 과수원 땅 서류를 떼어 보기 위해서였지요."
+            },
+            {
+              "who": "narrator",
+              "text": "종이를 받아 든 진희의 손끝이 하얗게 질렸습니다."
+            },
+            {
+              "who": "daughter",
+              "text": "이게, 이게 뭐예요. 근저당 이억 원? 작년 삼월이요?"
+            },
+            {
+              "who": "narrator",
+              "text": "돈을 빌린 사람, 채무자 칸에는 또박또박 세 글자가 적혀 있었습니다. 오진우. 큰오빠의 이름이었습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "작년 봄. 오빠가 건강보험 서류를 뗀다며 아버지 인감도장을 가져갔던 바로 그 무렵이었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "진희는 그 길로 서울행 버스를 탔습니다. 저녁 일곱 시, 오빠는 정말로 시립 도서관 열람실 창가에 앉아 있었습니다. 넥타이까지 반듯하게 맨 채로요."
+            },
+            {
+              "who": "daughter",
+              "text": "오빠. 회사, 언제 그만뒀어."
+            },
+            {
+              "who": "son",
+              "text": "진희야, 네가 여길 어떻게."
+            },
+            {
+              "who": "daughter",
+              "text": "언제 그만뒀냐고. 그리고 과수원 근저당 이억은 또 뭐야."
+            },
+            {
+              "who": "narrator",
+              "text": "진우의 어깨가 무너지듯 내려앉았습니다."
+            },
+            {
+              "who": "son",
+              "text": "이 년 됐다. 구조조정에 밀려서. 미라한텐 아직 말 못 했어."
+            },
+            {
+              "who": "son",
+              "text": "퇴직금으로 가맹점을 하나 냈다가 일 년 만에 접었다. 빚이 삼억이 넘었어."
+            },
+            {
+              "who": "narrator",
+              "text": "진우는 말을 하면서도 진희의 눈을 보지 못했습니다. 탁자 위에 올린 두 손을 자꾸만 비비고 있었지요."
+            },
+            {
+              "who": "daughter",
+              "text": "오빠, 지금 그 말 정말이야? 나 보고 다시 말해 봐."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "daughter",
+              "text": "그래서 아버지 인감으로 과수원을 담보 잡혔어? 아버지 몰래?"
+            },
+            {
+              "who": "son",
+              "text": "갚으려고 했어. 정말로. 매달 이자는 꼬박꼬박 넣었다."
+            },
+            {
+              "who": "daughter",
+              "text": "그래서 그날 아버지한테 과수원을 오빠 앞으로 넘기라고 한 거야? 새어머니 핑계 대고?"
+            },
+            {
+              "who": "narrator",
+              "text": "진우는 대답하지 못했습니다. 열람실 시계 초침 소리만 똑딱똑딱 크게 들렸습니다."
+            },
+            {
+              "who": "son",
+              "text": "진희야, 아버지한테만은 말하지 마라. 부탁이다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "진희는 도서관을 나와 찬바람 부는 계단에 주저앉았습니다. 새어머니가 도둑인 줄만 알았는데, 큰오빠까지."
+            },
+            {
+              "who": "narrator",
+              "text": "그런데 집에 돌아와 등기 서류를 다시 펼쳤을 때, 진희는 맨 아래 한 줄을 그제야 보았습니다."
+            },
+            {
+              "who": "daughter",
+              "text": "근저당 말소. 지난달 이십일 일?"
+            },
+            {
+              "who": "narrator",
+              "text": "이억 원의 빚이 지난달 한꺼번에 갚아져 있었던 것입니다. 오빠는 이자만 겨우 내고 있었다고 했습니다."
+            },
+            {
+              "who": "daughter",
+              "text": "그럼 이 이억은, 대체 누가 갚은 거야."
+            },
+            {
+              "who": "narrator",
+              "text": "그리고 그 날짜는, 새어머니가 아버지 통장에서 일억 이천만 원을 보낸 바로 그다음 날이었습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5장. 집을 나간 새엄마",
+      "image_prompts": [
+        "A dim rural korean kitchen at night, a steaming stainless thermos and two cups on a wooden table, an old woman's silhouette by the window",
+        "An elderly woman in a padded coat walking away down a frosty village road at dawn carrying a cloth bundle, bare apple trees on both sides"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그날 밤, 진희는 부엌 불빛을 따라 들어갔습니다. 정숙 씨가 혼자 내일 새벽에 쓸 보리차를 끓이고 있었습니다."
+            },
+            {
+              "who": "daughter",
+              "text": "과수원 근저당 이억. 지난달에 누가 다 갚았더라고요. 아버지 통장에서 일억 이천이 나간 바로 다음 날에요."
+            },
+            {
+              "who": "daughter",
+              "text": "그 돈으로 무슨 거래를 하신 거예요. 오빠 빚을 갚아 주고, 대신 과수원을 받기로 하셨어요?"
+            },
+            {
+              "who": "narrator",
+              "text": "정숙 씨는 국자를 내려놓고 한참 창밖을 보았습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "진희야. 너는 네 오빠 일을 어디까지 아니."
+            },
+            {
+              "who": "daughter",
+              "text": "지금 제가 묻고 있잖아요."
+            },
+            {
+              "who": "grandma",
+              "text": "그럼 됐다. 열흘 다 안 됐다. 기다려라."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "이튿날 아침, 일이 터졌습니다. 맏며느리 미라가 창고에서 노끈 묶인 상자를 질질 끌고 나온 것입니다."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "어머님, 이 안에 뭐가 들었는지 이제 좀 봐야겠어요. 아버님 통장 사본이라도 들었을지 누가 알아요."
+            },
+            {
+              "who": "grandma",
+              "text": "미라야, 그건 손대지 마라 했다."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "칠 년을 감추셨잖아요. 떳떳하면 여세요."
+            },
+            {
+              "who": "narrator",
+              "text": "정숙 씨가 상자 위에 두 손을 얹었습니다. 그 손이 떨리고 있었습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "이 상자는 내 것이 아니다. 열 사람은 따로 있다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그날 오후, 정숙 씨는 보따리 하나를 쌌습니다. 상자는 창고 제자리에 그대로 둔 채였습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "영감, 나 준혁이한테 며칠 가 있을게요. 보리차는 보온병에 넉넉히 넣어 놨어요."
+            },
+            {
+              "who": "grandpa",
+              "text": "그래. 조금만 참으소. 금방이다."
+            },
+            {
+              "who": "narrator",
+              "text": "진희는 마루 끝에서 그 말을 들었습니다. 조금만 참으라니. 블랙박스 속 새어머니의 말과 똑같은 말이었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "저녁에는 진희의 남편 강성태가 대구에서 올라왔습니다. 진희는 남편에게 오빠의 근저당 이야기를 털어놓았습니다."
+            },
+            {
+              "who": "daughter",
+              "text": "오빠가 이억을 빌렸대. 작년 삼월에. 가맹점 빚이라는데, 나는 오빠가 가게 냈다는 소리 한 번도 못 들었어."
+            },
+            {
+              "who": "narrator",
+              "text": "그 순간, 성태 손에 들린 찻잔이 덜컥 소리를 냈습니다. 뜨거운 보리차가 바지에 쏟아졌지만, 성태는 뜨거운 줄도 몰랐습니다."
+            },
+            {
+              "who": "son_in_law",
+              "text": "처남이, 처남이 그렇게 말했어? 가맹점이라고?"
+            },
+            {
+              "who": "daughter",
+              "text": "왜 그래, 당신. 뭐 아는 거 있어?"
+            },
+            {
+              "who": "son_in_law",
+              "text": "아니야, 아무것도. 손 좀 씻고 올게."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그날 밤 자정 무렵, 진희는 물을 마시러 나왔다가 아버지 방에서 새어 나오는 낮은 목소리를 들었습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "할아버지가 혼자 녹음기에 대고 말하고 있었습니다. 문틈으로 녹음기 빨간 불빛이 깜빡였습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "십이월 팔일. 정숙이가 준혁이한테 갔다. 진우는 아직 말을 안 한다. 진희는 오늘 성태 얼굴을 봤다."
+            },
+            {
+              "who": "grandpa",
+              "text": "이제 일주일 남았다. 순임아, 조금만 더 기다려 다오."
+            },
+            {
+              "who": "narrator",
+              "text": "진희는 숨을 멈췄습니다. 아버지가 돌아가신 엄마 이름을 부르고 있었습니다. 칠 년 동안 아버지 입에서 한 번도 나오지 않던 이름이었습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "진희는 발소리를 죽이고 방으로 돌아갔습니다. 그 작은 녹음기 안에 무엇이 들어 있는지, 그때는 미처 알지 못했습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6장. 폐교된 분교",
+      "image_prompts": [
+        "An abandoned small korean rural elementary school in winter, a rusted iron gate, a dry playground and an old ginkgo tree, gray sky",
+        "An old black and white class photo of two young girls in school uniforms pinned on a cracked classroom wall, dust floating in window light"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "이튿날 새벽, 진희는 창고에 들어가 그 상자를 다시 보았습니다. 열지는 않았습니다. 대신 노끈에 매달린 낡은 나무 이름표를 손전등으로 비췄지요."
+            },
+            {
+              "who": "narrator",
+              "text": "이름표에는 빛바랜 붓글씨가 남아 있었습니다. 은골분교 졸업 기념, 천구백육십칠 년."
+            },
+            {
+              "who": "daughter",
+              "text": "은골이면, 엄마 고향이잖아."
+            },
+            {
+              "who": "narrator",
+              "text": "진희는 그 길로 차를 몰았습니다. 산길로 한 시간 반, 어머니가 태어나 자란 은골마을이었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "은골분교는 이십 년 전에 문을 닫았습니다. 녹슨 철문 너머 운동장에는 마른 은행잎만 뒹굴었습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "교실 한 칸은 마을 쉼터가 되어 있었고, 난로 옆에 낯익은 할머니 한 분이 앉아 있었습니다. 칠순 잔치에 오셨던 김영순 할머니였습니다."
+            },
+            {
+              "who": "woman",
+              "text": "아이고, 순임이 딸 아이가. 니가 여기까지 웬일이고."
+            },
+            {
+              "who": "daughter",
+              "text": "할머니, 혹시 한정숙이라는 분 아세요? 이 학교 다녔다던데요."
+            },
+            {
+              "who": "woman",
+              "text": "알다마다. 정숙이 하고 니 엄마 순임이, 이 학교 단짝이었다. 둘이 떨어져 있는 꼴을 못 봤다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "영순 할머니가 교실 벽을 가리켰습니다. 금 간 벽에 졸업 사진 한 장이 압정으로 꽂혀 있었습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "단발머리 여자아이 둘이 손을 꼭 잡고 웃고 있었습니다. 왼쪽 아이는 어머니였습니다. 그리고 오른쪽 아이의 눈매는, 칠순 잔칫날 쟁반을 들고 떨던 그 눈매였습니다."
+            },
+            {
+              "who": "daughter",
+              "text": "그런데 왜, 왜 아무도 저한테 말을 안 했어요. 엄마도, 아버지도."
+            },
+            {
+              "who": "woman",
+              "text": "정숙이가 말하지 말라 캤다. 친구 남편한테 들어간 여자라고, 니가 더 서운해할 거라꼬."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "영순 할머니는 난로에 장작을 하나 더 밀어 넣었습니다. 타닥, 불꽃이 튀었습니다."
+            },
+            {
+              "who": "woman",
+              "text": "정숙이는 일찍 남편 잃고 대구서 칼국숫집을 삼십 년 했다. 아들 하나 혼자 키워 법무사 사무실에 넣었지."
+            },
+            {
+              "who": "woman",
+              "text": "그런데 십 년 전에, 니 엄마가 아프다는 소리 듣고 정숙이가 가게 문 닫고 병원으로 달려갔다."
+            },
+            {
+              "who": "daughter",
+              "text": "병원이요?"
+            },
+            {
+              "who": "woman",
+              "text": "그래. 니 엄마가 정숙이를 불렀다. 나 가고 나면 우리 영감하고 애들 좀 들여다봐 달라꼬."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "진희의 머릿속에서 십 년 전 병원 찻집 장면이 다시 펼쳐졌습니다. 아버지 앞에서 손수건으로 눈가를 누르던 여자."
+            },
+            {
+              "who": "narrator",
+              "text": "그 여자는 아버지와 몰래 만난 사람이 아니었습니다. 어머니의 부탁을 받고, 어머니의 남편에게 그 부탁을 전하러 온 사람이었습니다."
+            },
+            {
+              "who": "daughter",
+              "text": "그럼 아버지는 그때부터 다 아셨던 거예요?"
+            },
+            {
+              "who": "woman",
+              "text": "그건 내도 모르지. 다만 하나는 안다. 순임이가 눈 감기 전에, 정숙이한테 상자를 하나 맡겼다 카더라."
+            },
+            {
+              "who": "woman",
+              "text": "딸이 엄마를 제일 보고 싶어 할 때 열어 보라꼬."
+            },
+            {
+              "who": "woman",
+              "text": "그라고 니 아부지 말이다. 지난봄에 혼자 여기 왔었다. 이 사진 앞에 한참을 서 있다가, 녹음기에 뭐라 뭐라 하고 갔다."
+            },
+            {
+              "who": "narrator",
+              "text": "진희는 쉼터 문을 박차고 나왔습니다. 창고 안 그 상자는, 새어머니의 것이 아니었습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "7장. 창고 속 상자",
+      "image_prompts": [
+        "An old cardboard moving box tied with faded twine on the dusty floor of a farm storage shed at night, lit by a single hanging bulb",
+        "Inside an opened box, a bundle of handwritten letters, a worn household ledger and stacks of receipts tied with a rubber band, warm lamp light"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "은골에서 돌아온 밤, 진희는 창고 전등을 켰습니다. 알전구 하나가 그네처럼 흔들리며 상자 위를 비췄습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "그때 뒤에서 작은 발소리가 났습니다. 잠옷 위에 패딩을 걸친 하은이였습니다."
+            },
+            {
+              "who": "grandchild",
+              "text": "고모, 그거 할머니 상자지? 열면 할머니가 슬퍼할 텐데."
+            },
+            {
+              "who": "daughter",
+              "text": "하은아. 이건 할머니 상자가 아니래. 고모 엄마가, 고모한테 남긴 상자래."
+            },
+            {
+              "who": "grandchild",
+              "text": "그럼 고모가 열어도 되는 거네. 내가 불 비춰 줄게."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "칠 년 묵은 노끈은 손으로 당기자 힘없이 끊어졌습니다. 뚜껑을 열자 오래된 종이 냄새와 함께 희미한 비누 냄새가 났습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "어머니가 쓰던 바로 그 비누 냄새였습니다. 진희는 저도 모르게 입을 틀어막았습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "맨 위에는 어머니가 뜨다 만 회색 털목도리가 있었습니다. 대바늘이 아직 꽂힌 채였지요."
+            },
+            {
+              "who": "narrator",
+              "text": "그 아래에 고무줄로 묶은 편지 묶음, 손때 묻은 가계부 한 권, 그리고 영수증 뭉치가 있었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "편지 묶음은 잠시 내려두었습니다. 그걸 먼저 읽으면 아무것도 못 할 것 같았거든요."
+            },
+            {
+              "who": "narrator",
+              "text": "가계부를 펼친 진희의 눈이 커졌습니다. 첫 장 날짜는 칠 년 전 사월. 정숙 씨 글씨였습니다."
+            },
+            {
+              "who": "daughter",
+              "text": "사과 농약값 삼십만 원, 영감 겨울 내의 사만 원, 하은이 운동화 삼만 원."
+            },
+            {
+              "who": "daughter",
+              "text": "칠 년 치가 다 있어. 아버지 돈 한 푼 쓴 것까지, 전부 적어 놨어."
+            },
+            {
+              "who": "narrator",
+              "text": "맨 앞장 안쪽에는 한 줄이 따로 적혀 있었습니다."
+            },
+            {
+              "who": "daughter",
+              "text": "이 집 돈은 내 돈이 아니다. 순임이 돈이고, 순임이 새끼들 돈이다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그때 창고 문이 벌컥 열렸습니다. 찬바람과 함께 들어선 사람은 큰오빠 진우였습니다."
+            },
+            {
+              "who": "son",
+              "text": "진희야, 그 상자 이리 줘. 그거 증거물이야. 내가 가지고 있을게."
+            },
+            {
+              "who": "daughter",
+              "text": "오빠가 왜. 오빠가 왜 이 상자를 가져가."
+            },
+            {
+              "who": "son",
+              "text": "새어머니가 우리 집 돈을 어떻게 했는지 내가 따져야 할 거 아냐."
+            },
+            {
+              "who": "narrator",
+              "text": "진우의 눈은 가계부가 아니라 영수증 뭉치에 꽂혀 있었습니다. 맨 위 영수증에 농협 글씨가 보였기 때문입니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "진우가 상자 쪽으로 손을 뻗었습니다. 그 앞을 작은 몸이 막아섰습니다."
+            },
+            {
+              "who": "grandchild",
+              "text": "아빠, 하지 마. 이거 고모 엄마가 고모한테 준 거래."
+            },
+            {
+              "who": "grandchild",
+              "text": "아빠 또 거짓말하려고 그러지. 도서관 가면서 회사 간다고 한 것처럼."
+            },
+            {
+              "who": "narrator",
+              "text": "진우의 손이 허공에서 멈췄습니다. 열한 살 딸의 눈을 똑바로 보지 못했습니다."
+            },
+            {
+              "who": "son",
+              "text": "하은아, 아빠는."
+            },
+            {
+              "who": "narrator",
+              "text": "진우는 끝내 말을 맺지 못하고 창고를 나갔습니다. 문밖에서 아내 미라가 하얗게 질린 얼굴로 서 있었습니다. 미라도 하은이의 말을 다 들은 것입니다."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "여보, 회사를 안 다녔다고요? 이 년 동안 매일 아침 내가 싸 준 도시락은요?"
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "진희는 떨리는 손으로 편지 묶음을 풀었습니다. 맨 위 봉투에, 어머니의 반듯한 글씨가 있었습니다."
+            },
+            {
+              "who": "daughter",
+              "text": "사랑하는 내 딸 진희에게. 그리고 내 오랜 동무 정숙이에게."
+            },
+            {
+              "who": "narrator",
+              "text": "봉투 안에서 편지지 석 장과 함께, 사진 한 장이 미끄러져 나왔습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "8장. 엄마의 편지",
+      "image_prompts": [
+        "A faded handwritten letter in Korean-style stationery resting on a gray knitted scarf with bamboo needles, soft yellow bulb light in a shed",
+        "An old photograph of two middle-aged women holding hands beside a hospital bed by a window, slightly blurred, nostalgic warm tones"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "사진 속에는 병원 침대에 기대앉은 어머니와, 그 손을 꼭 잡은 정숙 씨가 있었습니다. 침대 발치에는 굳은 얼굴의 아버지가 서 있었습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "진희는 편지를 펼쳤습니다. 그리고 십 년 만에, 어머니의 목소리가 들려오는 것 같았습니다."
+            },
+            {
+              "who": "mother",
+              "text": "정숙아. 내가 너한테 몹쓸 부탁을 한다. 나 가고 나면 우리 영감 좀 들여다봐 다오."
+            },
+            {
+              "who": "mother",
+              "text": "그 양반 말 한마디 없이 속으로만 끓이는 사람이다. 혼자 두면 과수원에서 밥도 안 먹고 해를 넘길 거다."
+            },
+            {
+              "who": "mother",
+              "text": "진우는 마음이 여려서, 어려운 일이 생기면 혼자 끌어안고 숨길 아이다. 네가 눈여겨봐 다오."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "진희의 손이 떨렸습니다. 편지는 이어졌습니다."
+            },
+            {
+              "who": "mother",
+              "text": "그리고 우리 진희. 그 애는 나를 닮아 정도 깊고 고집도 세다. 처음엔 너를 많이 미워할 거다."
+            },
+            {
+              "who": "mother",
+              "text": "정숙아, 진희가 너를 미워하거든 그건 나를 너무 사랑해서 그런 거니, 서운해하지 마라."
+            },
+            {
+              "who": "mother",
+              "text": "진희야. 이 편지를 읽고 있다면, 엄마가 제일 보고 싶은 날이겠지. 엄마 대신 정숙이 손 한 번만 잡아 다오."
+            },
+            {
+              "who": "narrator",
+              "text": "창고 바닥에 눈물 한 방울이 떨어졌습니다. 하은이가 말없이 고모의 등을 쓸었습니다."
+            },
+            {
+              "who": "grandchild",
+              "text": "고모, 울어도 돼. 할머니도 맨날 창고 와서 울었어."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "진희는 눈물을 훔치고 가계부 마지막 장을 넘겼습니다. 이번 가을의 날짜들이었습니다."
+            },
+            {
+              "who": "daughter",
+              "text": "십일월 이십일. 영감 통장에서 일억 이천, 준혁이 통장으로. 준혁이가 법무사 사무실 통해 농협 근저당 이억 상환."
+            },
+            {
+              "who": "daughter",
+              "text": "모자라는 팔천은 내 칼국숫집 판 돈으로 보탬. 진우가 모르게. 아이들이 모르게."
+            },
+            {
+              "who": "narrator",
+              "text": "진희는 영수증 뭉치를 넘겼습니다. 농협 상환 영수증, 근저당 말소 접수증, 법무사 수수료 영수증까지. 날짜가 가계부와 하나하나 맞아떨어졌습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "칠순 잔칫날 틀었던 그 소리가 머릿속에서 다시 울렸습니다. 일억 이천은 벌써 보냈어. 아무도 몰라."
+            },
+            {
+              "who": "narrator",
+              "text": "그건 훔친 돈이 아니었습니다. 큰오빠가 아버지 몰래 잡힌 빚을, 새어머니가 자기 돈까지 보태 몰래 갚아 준 돈이었습니다."
+            },
+            {
+              "who": "daughter",
+              "text": "그런데 나는, 그 앞에서 그걸 도둑질이라고. 사람들 다 보는 데서."
+            },
+            {
+              "who": "narrator",
+              "text": "가계부 맨 마지막 줄은 열흘 전 날짜였습니다."
+            },
+            {
+              "who": "daughter",
+              "text": "진우가 과수원을 개발회사 박 사장한테 팔기로 가계약했다. 계약금 오천. 잔금은 십이월 십오일."
+            },
+            {
+              "who": "daughter",
+              "text": "과수원 명의를 내 앞으로 돌려놔야 진우가 더는 손을 못 댄다. 일이 끝나면 아이들 앞으로 돌려주고, 나는 떠난다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "진희는 상자를 끌어안고 마당으로 뛰쳐나왔습니다. 산등성이 너머로 동이 트고 있었습니다."
+            },
+            {
+              "who": "daughter",
+              "text": "나는 떠난다니. 이건 무슨 말이야. 어디로 떠난다는 거야."
+            },
+            {
+              "who": "narrator",
+              "text": "진희는 시동을 걸었습니다. 읍내 준혁의 원룸까지는 삼십 분. 잔금 날까지는 닷새가 남아 있었습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "그런데 진희가 미처 모르는 것이 있었습니다. 이 모든 일을 처음부터 지켜보고 있던 사람이, 이 집에 따로 있었다는 것을요."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "9장. 너한테 갈게",
+      "image_prompts": [
+        "A small cramped studio apartment in a rural korean town at early morning, a folded cloth bundle by the door and a steaming thermos on a low table",
+        "Two women's hands clasped together on a worn wooden table, an old household ledger beside them, pale winter morning light through a window"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "읍내 시장 뒤편, 삼 층짜리 낡은 건물 꼭대기 원룸. 진희가 문을 두드리자 안에서 기침 소리가 났습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "문을 연 사람은 정숙 씨였습니다. 머리도 빗지 못한 채였지요. 진희 품에 안긴 상자를 보자, 정숙 씨의 얼굴이 하얘졌습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "열었구나. 결국 네가 열었구나."
+            },
+            {
+              "who": "daughter",
+              "text": "엄마 편지, 읽었어요. 가계부도, 영수증도 다 봤어요."
+            },
+            {
+              "who": "narrator",
+              "text": "두 사람은 한참 아무 말도 하지 못했습니다. 작은 방 안에 보온병 뚜껑 여는 소리만 났습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "daughter",
+              "text": "하나만 물을게요. 블랙박스 속 그 말이요. 다 정리하고 너한테 갈게. 그 너는 누구예요."
+            },
+            {
+              "who": "grandma",
+              "text": "준혁이다. 그날 택시에서 준혁이랑 통화했다."
+            },
+            {
+              "who": "grandma",
+              "text": "과수원이 내 이름으로 넘어오면 진우가 더는 손을 못 댄다. 그러고 나서 하은이랑 너희 아이들 앞으로 돌려주고, 나는 대구 준혁이한테 가려고 했다."
+            },
+            {
+              "who": "daughter",
+              "text": "왜요. 왜 떠나세요. 아무 잘못도 안 하셨잖아요."
+            },
+            {
+              "who": "grandma",
+              "text": "내가 있으면 이 집이 자꾸 싸운다. 너는 나만 보면 엄마 생각에 아프고. 순임이 부탁은 이걸로 다 들어줬다 싶었다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "daughter",
+              "text": "그럼 칠순 날, 제가 그 소리를 틀었을 때 왜 아무 말 안 하셨어요. 한마디만 하셨으면 됐잖아요."
+            },
+            {
+              "who": "grandma",
+              "text": "내가 말하면, 진우가 사람들 앞에서 무너진다. 네 오빠 빚 이야기를 손님들 앞에서 하라고?"
+            },
+            {
+              "who": "grandma",
+              "text": "진우는 제 입으로 말해야 한다. 그래야 다시 일어선다. 순임이가 그랬다. 그 애는 마음이 여리다고."
+            },
+            {
+              "who": "narrator",
+              "text": "진희는 정숙 씨 앞에 무릎을 꿇고 앉았습니다. 그리고 편지 속 어머니 말대로, 새어머니의 손을 처음으로 잡았습니다. 거칠고 차가운 손이었습니다."
+            },
+            {
+              "who": "daughter",
+              "text": "죄송해요. 사람들 앞에서 도둑이라고 했어요. 제가요."
+            },
+            {
+              "who": "grandma",
+              "text": "됐다. 끊어진 데서 다시 이으면 된다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그때 출근 준비를 하던 준혁이 넥타이를 매며 나왔습니다."
+            },
+            {
+              "who": "young_man",
+              "text": "그런데 누님, 하나 이상한 게 있어요. 그 블랙박스요, 누가 누님한테 줬어요?"
+            },
+            {
+              "who": "daughter",
+              "text": "김봉구 기사님이요. 일부러 찾아오셨더라고요."
+            },
+            {
+              "who": "young_man",
+              "text": "기사님이 손님 통화를 왜 굳이 찾아 들어 보고, 그걸 왜 가족한테 가져다줬을까요. 그것도 칠순 사흘 전에요."
+            },
+            {
+              "who": "grandma",
+              "text": "그리고 진희야, 명의를 돌리는 건 영감이 해 줘야 하는 일인데, 영감이 아직 대답을 안 했다. 그래서 나도 애가 탄다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "진희는 그 자리에서 김 기사에게 전화를 걸었습니다. 신호음이 한참 가고 나서야 김 기사가 받았습니다."
+            },
+            {
+              "who": "daughter",
+              "text": "기사님, 솔직하게 말씀해 주세요. 그 블랙박스, 어떻게 저한테 오게 된 거예요."
+            },
+            {
+              "who": "man",
+              "text": "진희 씨, 미안합니다. 그거 제가 찾아낸 게 아니에요."
+            },
+            {
+              "who": "man",
+              "text": "영감님이 시키셨어요. 칠순 사흘 전에 영감님이 택시를 타시더니, 지난달 수요일 영상을 찾아 달라고 하셨어요."
+            },
+            {
+              "who": "man",
+              "text": "그러고는 이걸 진희한테 갖다주라고. 내가 시켰다는 말은 열흘 동안 절대 하지 말라고요."
+            },
+            {
+              "who": "narrator",
+              "text": "휴대전화를 쥔 진희의 손에서 힘이 빠졌습니다. 새어머니를 도둑으로 몰게 만든 그 소리를, 아버지가 직접 딸에게 쥐여 준 것이었습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "10장. 잔금 날의 손님",
+      "image_prompts": [
+        "A black sedan parked on a frozen dirt road beside a winter apple orchard, a man in a long coat holding a document folder, seen from behind",
+        "A rural korean farmhouse living room with family members kneeling around a low table, a small voice recorder placed in the center, tense winter light"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "닷새 뒤, 십이월 십오일 아침. 과수원 앞 농로에 검은 승용차 한 대가 먼지를 일으키며 들어섰습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "차에서 내린 사람은 개발회사 박 사장이었습니다. 긴 외투에 서류철을 끼고, 서리 내린 사과나무들을 둘러보는 눈빛이 벌써 땅값을 세고 있었습니다."
+            },
+            {
+              "who": "father",
+              "text": "오진우 씨, 오늘이 잔금 날입니다. 등기 서류 준비되셨지요?"
+            },
+            {
+              "who": "son",
+              "text": "사장님, 죄송합니다. 조금만, 조금만 시간을 주십시오."
+            },
+            {
+              "who": "father",
+              "text": "시간이요? 계약금 오천 받아 가실 때는 그런 말씀 없으셨잖아요. 계약이 깨지면 배액으로 물어 주셔야 합니다. 일억이요."
+            },
+            {
+              "who": "father",
+              "text": "어르신 인감 찍힌 위임장까지 받아 둔 계약입니다. 이제 와서 없던 일로는 못 합니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "마루 끝에 선 맏며느리 미라가 남편 팔을 붙잡았습니다. 지난 닷새 동안 부부는 서로 말 한마디 섞지 않았습니다."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "여보, 계약금 오천은 어디 있어요. 그것도 다 써 버렸어요?"
+            },
+            {
+              "who": "son",
+              "text": "이자 갚는 데 썼어. 과수원 팔면 다 정리될 줄 알았어."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "아버님 과수원을, 아버님 모르게요? 당신 정말 내가 알던 사람 맞아요?"
+            },
+            {
+              "who": "narrator",
+              "text": "진우는 고개를 숙였습니다. 마당 감나무 가지에서 까치 한 마리가 푸드덕 날아올랐습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그때 대문 쪽에서 낡은 승합차 한 대가 멈춰 섰습니다. 운전석에서 준혁이 내리고, 뒷문이 열렸습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "먼저 내린 사람은 진희였습니다. 그리고 진희는 뒤를 돌아 손을 내밀었습니다. 그 손을 잡고 정숙 씨가 천천히 내려섰습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "마당에 있던 사람들 모두가 그 손을 보았습니다. 열흘 전 잔칫상 앞에서 새어머니를 도둑이라 부르던 그 딸의 손이었습니다."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "아가씨, 지금 그 손은."
+            },
+            {
+              "who": "daughter",
+              "text": "언니, 나중에 다 말할게요. 오늘은 들어야 할 이야기가 따로 있어요."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "진희의 남편 성태도 대구에서 첫차를 타고 와 있었습니다. 진희가 새벽에 전화를 걸어 꼭 오라고 한 것이었지요."
+            },
+            {
+              "who": "narrator",
+              "text": "성태는 마루 기둥 옆에 서서 처남 진우와 눈이 마주치자, 둘 다 동시에 고개를 돌렸습니다."
+            },
+            {
+              "who": "son_in_law",
+              "text": "진희야, 무슨 일인데 나까지 부른 거야."
+            },
+            {
+              "who": "daughter",
+              "text": "당신도 들어야 할 것 같아서. 아니, 당신이 제일 먼저 들어야 할 것 같아서."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "방 안에서는 미라가 끓여 둔 보리차 주전자가 혼자 칙칙 소리를 내고 있었습니다. 아무도 그 불을 끄러 가지 않았습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "그때 과수원 쪽에서 장화 소리가 저벅저벅 들려왔습니다. 할아버지였습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "작업복 차림에 정숙 씨의 보온병을 들고 있었고, 가슴 주머니에는 손가락만 한 녹음기가 꽂혀 있었습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "다 왔구먼. 다 들어와 앉아라. 박 사장도 들어오소. 밖은 춥소."
+            },
+            {
+              "who": "father",
+              "text": "어르신, 저는 잔금 받으러 온 사람입니다. 길게 앉아 있을 일이 아닙니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "잔금 이야기는 이걸 듣고 나서 하소. 오래 안 걸리오."
+            },
+            {
+              "who": "narrator",
+              "text": "아랫목에 둘러앉은 가족들 한가운데, 할아버지가 녹음기를 내려놓았습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "그리고 일흔 해 굳은살 박인 손가락이, 재생 버튼 위에 천천히 얹혔습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "11장. 녹음기의 목소리",
+      "image_prompts": [
+        "Close-up of an old man's weathered finger pressing a button on a small silver voice recorder resting on a low wooden table, a red light glowing",
+        "Side view of a middle-aged korean man covering his face with both hands in a warm farmhouse room, family members blurred in the background"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "딸깍. 지지직거리는 잡음 사이로 바람 소리가 들렸습니다. 과수원 마당의 바람 소리였습니다. 그리고 남자 목소리가 흘러나왔습니다."
+            },
+            {
+              "who": "son",
+              "text": "매형, 걱정 마요. 아버지 과수원 담보로 이억 만들었어요. 내일 공장 계좌로 바로 넣을게요."
+            },
+            {
+              "who": "son",
+              "text": "진희한테는 절대 말하지 마요. 공장 넘어간 거 알면 걔 못 버텨요. 걔 자존심에 매형 얼굴 못 봐요."
+            },
+            {
+              "who": "grandpa",
+              "text": "작년 삼월 십사일. 진우가 마당에서 성태하고 통화를 한다. 나는 창고 뒤에서 들었다."
+            },
+            {
+              "who": "narrator",
+              "text": "녹음 속 할아버지의 낮은 목소리를 끝으로 기계가 멈췄습니다. 방 안이 숨소리 하나 없이 조용해졌습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "진희가 천천히 고개를 돌렸습니다. 남편 성태의 얼굴이 잿빛이 되어 있었습니다."
+            },
+            {
+              "who": "daughter",
+              "text": "당신. 작년 봄에 은행 대출 나왔다는 거, 그게 오빠 돈이었어?"
+            },
+            {
+              "who": "son_in_law",
+              "text": "미안하다, 진희야. 공장이 부도 나기 사흘 전이었어. 은행은 다 거절했고, 처남이 먼저 연락을 해 왔어."
+            },
+            {
+              "who": "son_in_law",
+              "text": "나는 매달 조금씩 처남한테 갚고 있었어. 그런데 그게 이자에도 못 미쳤어."
+            },
+            {
+              "who": "daughter",
+              "text": "그럼 가맹점은? 오빠, 가맹점 빚 삼억이라며."
+            },
+            {
+              "who": "son",
+              "text": "가맹점 같은 건 없었다. 회사에서 밀려난 건 맞아. 근데 그 돈은 네 공장으로 갔다. 너한테 그 말을 어떻게 하냐."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "진희는 입을 막았습니다. 새어머니가 훔쳤다고 믿었던 돈, 큰오빠가 날렸다고 믿었던 돈. 그 모든 돈의 끝에 자기 집 공장이 있었습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "할아버지가 녹음기를 들어 다른 날짜를 틀었습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "십일월 십구일. 정숙이한테 내 통장을 줬다. 진우 빚, 아무도 모르게 갚아 달라 했다. 정숙이는 제 돈을 보태겠다고 한다. 말려도 안 듣는다."
+            },
+            {
+              "who": "grandma",
+              "text": "영감. 그럼 당신, 처음부터."
+            },
+            {
+              "who": "grandpa",
+              "text": "그래. 처음부터 다 알았다. 진우가 인감 가져가던 날부터. 박 사장하고 가계약한 것도 알았다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "daughter",
+              "text": "그럼 아버지. 그 블랙박스는요. 왜 저한테 주셨어요. 저는 그걸로 사람들 앞에서."
+            },
+            {
+              "who": "grandpa",
+              "text": "정숙이는 끝까지 아이들한테 말하지 말라 했다. 진우 체면, 성태 체면 지켜 주자고."
+            },
+            {
+              "who": "grandpa",
+              "text": "그러면 저 사람은 평생 도둑 소리 듣고, 제 발로 이 집을 나간다. 나는 그걸 못 본다."
+            },
+            {
+              "who": "grandpa",
+              "text": "진희야. 너는 남이 하는 말은 안 믿는 아이다. 네 발로 은골에 가고, 네 손으로 그 상자를 열어야 했다. 순임이가 그 상자를 너한테 남겼으니까."
+            },
+            {
+              "who": "narrator",
+              "text": "할아버지 목소리가 처음으로 갈라졌습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "순임이 편지를 네가 읽어야, 너는 저 사람을 엄마 친구로 다시 볼 거라 생각했다. 잔칫날 너를 아프게 한 건, 이 아비 죄다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "정숙 씨가 할아버지 팔을 탁 쳤습니다. 눈물 고인 눈으로요."
+            },
+            {
+              "who": "grandma",
+              "text": "이 영감이 정말. 나한테까지 감쪽같이 숨겼어요?"
+            },
+            {
+              "who": "grandpa",
+              "text": "당신은 거짓말을 못 하는 사람 아닌가. 당신이 알면 다 티가 났을 거요."
+            },
+            {
+              "who": "narrator",
+              "text": "그때 박 사장이 헛기침을 하며 서류철을 탁 내려놓았습니다."
+            },
+            {
+              "who": "father",
+              "text": "어르신, 집안 사정은 딱하지만 계약은 계약입니다. 위임장에 어르신 인감이 찍혀 있어요."
+            },
+            {
+              "who": "narrator",
+              "text": "할아버지가 작업복 안주머니에서 접힌 종이 한 장을 꺼냈습니다. 그 종이를 본 정숙 씨가 숨을 들이켰습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "12장. 사과꽃 피는 봄",
+      "image_prompts": [
+        "A korean apple orchard in full white spring blossom on a sunny April morning, a large family seen from far away gathering under the trees",
+        "Close-up of an elderly woman's hands holding a long unbroken red apple peel ribbon above a plate, a child's hand reaching toward it, bright spring light"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "할아버지가 펼친 종이는 과수원 등기 서류였습니다. 소유자 칸에 적힌 이름은 한정숙. 날짜는 십일월 이십오일이었습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "박 사장. 진우가 당신하고 가계약한 날이 십일월 삼십일 아니오. 그 닷새 전에 이 땅 주인은 벌써 바뀌어 있었소."
+            },
+            {
+              "who": "father",
+              "text": "아니, 그럼 이 위임장은."
+            },
+            {
+              "who": "grandpa",
+              "text": "주인도 아닌 사람 이름으로 받은 위임장이오. 이 땅은 팔 사람이 없소."
+            },
+            {
+              "who": "grandma",
+              "text": "영감, 내 이름으로요? 나는 당신이 대답을 안 해서 애만 태웠는데."
+            },
+            {
+              "who": "young_man",
+              "text": "어머니, 열흘만 기다려 달라는 말은 어머니만 한 게 아니었어요. 서류는 제가 맡아 처리했습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "박 사장의 얼굴이 붉어졌다 하얘졌습니다."
+            },
+            {
+              "who": "father",
+              "text": "그럼 내 계약금 오천은 어떻게 할 겁니까."
+            },
+            {
+              "who": "narrator",
+              "text": "그때 성태가 일어섰습니다. 그리고 안주머니에서 통장 하나를 꺼내 상 위에 올려놓았습니다."
+            },
+            {
+              "who": "son_in_law",
+              "text": "그 오천은 제가 돌려드리겠습니다. 이번 달 공장 납품 대금이 들어왔습니다. 처남이 저 살리느라 진 빚, 이제 제가 갚을 차례입니다."
+            },
+            {
+              "who": "narrator",
+              "text": "박 사장은 한참 통장을 노려보다가, 서류철을 챙겨 들고 말없이 대문을 나섰습니다. 검은 승용차가 농로 먼지 속으로 사라졌습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "정숙 씨가 등기 서류를 접어 할아버지 앞으로 밀었습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "이건 순임이 새끼들 몫이요. 나는 이제 준혁이한테 갈랍니다. 약속한 열흘이 다 됐어요."
+            },
+            {
+              "who": "narrator",
+              "text": "그 순간, 진희가 정숙 씨 앞에 무릎을 꿇었습니다. 그리고 두 손을 꼭 잡았습니다."
+            },
+            {
+              "who": "daughter",
+              "text": "어머니. 가지 마세요."
+            },
+            {
+              "who": "narrator",
+              "text": "칠 년 만에 처음 불린 이름이었습니다. 정숙 씨의 어깨가 들썩이기 시작했습니다."
+            },
+            {
+              "who": "daughter",
+              "text": "엄마가 편지에 그랬어요. 엄마 대신 어머니 손 잡아 드리라고. 이제야 잡아요. 너무 늦었죠."
+            },
+            {
+              "who": "grandma",
+              "text": "늦기는. 끊어진 데서 다시 이으면 된다 했잖니."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "진우도 고개를 숙였습니다."
+            },
+            {
+              "who": "son",
+              "text": "어머니, 저 때문에 칼국숫집 판 돈까지. 다시 일자리 구해서 한 푼도 빠짐없이 갚겠습니다."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "어머님, 상자 끌어낸 거 용서해 주세요. 제가 제일 부끄러워요."
+            },
+            {
+              "who": "grandchild",
+              "text": "할머니, 이제 우리 집에 계속 있는 거지? 그렇지?"
+            },
+            {
+              "who": "narrator",
+              "text": "할아버지가 녹음기를 집어 들고 빨간 버튼을 눌렀습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "십이월 십오일. 정숙이가 집에 왔다. 순임아, 이제 됐다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "이듬해 사월, 솔티마을 과수원에 사과꽃이 하얗게 피었습니다. 진우는 농협 영농 지도사로 새 일을 시작했고, 주말마다 과수원 일을 거들었습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "성태는 공장 일을 마치면 진희와 함께 대구에서 내려와, 처남과 나란히 가지치기를 했습니다. 두 사람 사이에 이제 숨길 것은 없었습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "사과나무 아래에서 가족사진을 다시 찍었습니다. 잔칫날 엉망이 된 칠순 사진 대신이었지요. 정숙 씨 목에는 진희가 마저 떠 준 회색 목도리가 걸려 있었습니다."
+            },
+            {
+              "who": "grandchild",
+              "text": "할머니, 사과 껍질 또 끊어졌어!"
+            },
+            {
+              "who": "grandma",
+              "text": "괜찮다. 끊어진 데서 다시 이어 깎으면 되지."
+            },
+            {
+              "who": "narrator",
+              "text": "보온병 보리차가 한 바퀴 돌았습니다. 끊어진 줄 알았던 가족이, 사과꽃 아래에서 다시 한 줄로 이어지고 있었습니다."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "outro": "오늘 사연도 끝까지 들어 주셔서 고맙습니다. 구독과 좋아요 눌러 주시면 다음에도 마음 울리는 사연으로 찾아뵙겠습니다.",
+  "description": "아버지 칠순 잔칫날, 딸이 마이크에 대고 틀어 버린 택시 블랙박스 속 새엄마의 목소리.\n\"과수원이 내 이름으로 넘어오면, 다 정리하고 너한테 갈게. 일억 이천은 벌써 보냈어.\"\n칠 년 전 노끈으로 묶은 상자 하나만 들고 시집온 새엄마는 변명 대신 \"열흘만 기다려 달라\"고 합니다.\n그리고 늘 집안을 달래던 큰오빠의 이상한 출근길, 폐교된 분교에 걸린 졸업 사진 한 장, 아버지 가슴 주머니의 작은 녹음기가 모든 것을 뒤집기 시작합니다.\n\n여러분이라면 재혼한 부모님의 새 배우자를 어떻게 대하시겠어요? 댓글로 들려주세요.\n구독과 좋아요는 큰 힘이 됩니다 🙏\n※ 이 영상은 사연을 바탕으로 각색했으며, AI 이미지와 AI 음성을 사용했습니다.",
+  "tags": [
+    "사연",
+    "반전사연",
+    "감동사연",
+    "재혼사연",
+    "새엄마사연",
+    "가족사연",
+    "칠순사연",
+    "오디오북",
+    "시니어오디오북",
+    "사연라디오",
+    "라디오드라마",
+    "잠잘때듣는사연",
+    "1시간사연",
+    "노후"
+  ],
+  "coupang": {
+    "search": "보온 텀블러",
+    "url": "https://link.coupang.com/a/ie25dKstHM",
+    "keywords": [
+      "보온병",
+      "텀블러",
+      "차",
+      "겨울"
+    ],
+    "reason": "새엄마가 칠 년 동안 새벽마다 보리차를 끓여 과수원으로 들고 나간 보온병이 사연 곳곳에 등장해 보온 텀블러와 자연스럽게 이어짐"
+  }
+}
