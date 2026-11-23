@@ -1,0 +1,1770 @@
+{
+  "title": "치매 엄마 1억 8천, 막내딸의 비밀",
+  "voice": "ko-KR-SunHiNeural",
+  "category": "⑫ 요양원·간병을 둘러싼 형제 갈등(곶감 덕장, 재봉틀 서랍 속 일기와 월급봉투, 읍내 사진관 노인, 새마을금고 통장 첫 장)",
+  "twists": [
+    "가해자·피해자 뒤바뀜: 막내가 빼돌렸다던 어머니 돈은, 고함지른 장남 동철 자신의 아들 준에게 매달 250만 원씩 가고 있었다(우체국 송금 영수증)",
+    "정체 반전: 어머니 돈을 챙긴 사기꾼으로 몰린 사진관 강 영감은 1975년 이 집 밥을 먹고 자란 구두닦이 소년—정신 맑을 때 어머니가 직접 공증해 둔 법원 후견인이었다",
+    "돈의 진짜 주인·숨겨진 일기: 통장 첫 장 '2022.11.3 입금 1억 8천, 입금자 최미숙'—어머니 통장엔 처음부터 32만 원뿐, 빠져나간 돈도 감나무 밭도 모두 막내의 땀이었고, 영감에게 간 9천은 어머니가 막내 노후용으로 막내 이름 적금에 도로 모아 둔 돈이었다"
+  ],
+  "thumbnail_text": "1억 8천 진짜 주인은",
+  "thumbnail_sub": "형제가 몰랐던 엄마 통장",
+  "thumbnail_prompt": "A shocked Korean man in his fifties holding an old bank passbook with trembling hands, a tearful middle-aged woman behind him, rural house at dusk, subjects on the right side",
+  "ending": "따뜻한",
+  "from_short": "",
+  "chapters": [
+    {
+      "title": "1장. 덕장 아래 고함",
+      "image_prompts": [
+        "Korean rural courtyard in late autumn with rows of peeled orange persimmons hanging from wooden drying racks, scattered bank papers on the frozen ground, cold morning light",
+        "An elderly Korean woman's wrinkled hands holding a half-peeled persimmon on a wooden porch, a thin red string with a small brass key hanging at her chest, side view"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "주홍빛 곶감이 줄줄이 매달린 덕장 아래로, 종이 뭉치가 날아와 흩어졌습니다. 은행 거래내역이었습니다."
+            },
+            {
+              "who": "son",
+              "text": "일억 팔천이다. 사 년 동안 어머니 통장에서 빠져나간 돈이 일억 팔천이라고. 미숙아, 간병한다더니 이걸 다 빼 갔냐."
+            },
+            {
+              "who": "daughter",
+              "text": "내가 뺀 거 맞아. 매달, 내 손으로 뺐어."
+            },
+            {
+              "who": "narrator",
+              "text": "그때 툇마루에서 감을 깎던 어머니가 고개를 들었습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "동철아. 그 돈, 니네 집으로 다 갔다."
+            },
+            {
+              "who": "narrator",
+              "text": "그 돈은 정말 어디로 갔을까요. 이 일의 진실은 이야기 마지막에 모두 밝혀집니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "고함을 지른 사람은 쉰일곱 살 장남 최동철이었습니다. 서울에서 인테리어 회사를 하는, 이 집안의 자랑이었지요."
+            },
+            {
+              "who": "narrator",
+              "text": "마당 한가운데 선 막내딸 최미숙은 마흔여덟. 감물 든 앞치마를 두른 채, 굳은살 박인 손끝만 만지작거렸습니다."
+            },
+            {
+              "who": "son",
+              "text": "어머니, 또 엉뚱한 말씀이세요. 우리 집에 무슨 돈이 왔다고요."
+            },
+            {
+              "who": "grandma",
+              "text": "그라고 저 뒷산 감나무 밭은, 미숙이가 사 온 거여. 니 것도 동수 것도 아니여."
+            },
+            {
+              "who": "narrator",
+              "text": "할머니는 그 말만 남기고 다시 감을 깎았습니다. 목에 건 빨간 실 끝에서 작은 놋쇠 열쇠 하나가 달랑거렸습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "man",
+              "text": "형님, 어머니 말씀은 마음에 두지 마세요. 요즘은 아침저녁으로 오락가락하시잖아요."
+            },
+            {
+              "who": "narrator",
+              "text": "둘째 최동수가 안경을 고쳐 쓰며 말했습니다. 부산 구청에서 정년을 앞둔, 늘 형 편에 서는 사람이었습니다."
+            },
+            {
+              "who": "man",
+              "text": "미숙아, 간병비로 썼으면 썼다고 해. 영수증만 보여 주면 되잖아."
+            },
+            {
+              "who": "daughter",
+              "text": "영수증은 없어. 그리고 어디에 썼는지는, 지금은 말 못 해."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "부엌 쪽에서 큰며느리 고영란이 걸어 나왔습니다. 쉰넷, 서울 말씨에 늘 단정한 사람이었지요."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "아가씨, 말 못 하는 돈이 일억 팔천이에요? 그거 아가씨 돈 아니고 어머님 돈이에요."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "우리가 오늘 내려온 건 따지러 온 게 아니에요. 어머님, 이제 좋은 요양원으로 모시자고 온 거예요."
+            },
+            {
+              "who": "narrator",
+              "text": "영란이 가방에서 서류 봉투를 꺼냈습니다. 영동읍에 새로 생긴 요양원 입소 신청서였습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "daughter",
+              "text": "엄마는 이 집에서 안 나가. 내가 있는 한은 안 나가."
+            },
+            {
+              "who": "son",
+              "text": "네가 뭔데 그래. 장남은 나야. 어머니 일은 내가 정해."
+            },
+            {
+              "who": "narrator",
+              "text": "동철의 목소리가 덕장 기둥에 부딪혀 울렸습니다. 매달린 곶감들이 바람에 가늘게 흔들렸습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "담 너머로 이웃 옥자 아주머니가 고개를 내밀었다가, 혀를 차며 들어갔습니다."
+            },
+            {
+              "who": "woman",
+              "text": "아이고, 또 시작이네. 사 년 동안 코빼기도 안 비치더니, 돈 얘기 나오니 다 모였구먼."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그날 밤, 미숙은 어머니 방에 이불을 깔아 드렸습니다. 할머니는 머리맡의 돋보기를 챙기고는 목에 건 열쇠를 꼭 쥐었습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "미숙아. 이 열쇠는 아무한테도 주지 마라. 니 오래비들한테도."
+            },
+            {
+              "who": "daughter",
+              "text": "알아요, 엄마. 걱정 말고 주무세요."
+            },
+            {
+              "who": "narrator",
+              "text": "장지문 밖 마루에 선 동철은 그 말을 다 들었습니다. 그리고 휴대전화를 꺼내 누군가에게 짧은 문자를 보냈습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "그 문자 한 줄이, 이 집안을 통째로 뒤흔들게 됩니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2장. 열여덟 살의 겨울",
+      "image_prompts": [
+        "A snowy Korean mountain village in the 1990s at dusk, a small tile-roofed house with warm light in the paper windows and a bare persimmon tree in the yard",
+        "A young woman seen from behind carrying an old travel bag at a quiet rural bus stop in falling snow, a long empty road ahead"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "동철이 보낸 문자는 단 두 줄이었습니다. 이번 주 안에 정리합니다. 계약금 받은 건 걱정 마십시오."
+            },
+            {
+              "who": "narrator",
+              "text": "받는 사람은 영동에 리조트를 짓겠다는 개발 회사 대표였습니다. 동철은 이미 한 달 전, 뒷산 감나무 밭 삼천 평을 육억에 팔기로 가계약을 해 둔 것이었습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "어머니 도장도, 동생들 동의도 없이 말이지요. 이야기를 잘 따라오시려면, 그해 겨울로 잠시 돌아가 봐야 합니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "1996년 겨울, 감골마을. 세 남매의 아버지 최만복 씨가 쉰셋의 나이에 병으로 세상을 떠났습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "읍내 초등학교 선생님이던 아버지는 병원비로 빚을 많이 남겼습니다. 장례 다음 날, 빚쟁이들이 마당에 들어섰습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "걱정 마시유. 뒷산 감나무 밭 팔아서라도, 우리 양반 빚은 한 푼도 안 떼먹을 거유."
+            },
+            {
+              "who": "narrator",
+              "text": "그 겨울, 아버지가 손수 심은 감나무 밭은 남의 손에 넘어갔습니다. 어머니는 밤마다 재봉틀을 돌려 삯바느질을 했습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그때 장남 동철은 서울에서 대학원을 다니고 있었고, 둘째 동수는 공무원 시험을 준비하고 있었습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "막내 미숙은 열여덟, 고3이었습니다. 담임 선생님이 사범대에 꼭 가라고 원서까지 챙겨 준 아이였지요."
+            },
+            {
+              "who": "daughter",
+              "text": "엄마, 나 대학 안 갈래. 구미 공장에 기숙사 있대. 내가 돈 벌게."
+            },
+            {
+              "who": "grandma",
+              "text": "안 된다. 니 아부지가 니만은 선생 시키겠다고 했어."
+            },
+            {
+              "who": "daughter",
+              "text": "오빠들이 먼저야. 오빠들 자리 잡으면, 나는 그때 가도 돼."
+            },
+            {
+              "who": "narrator",
+              "text": "눈 내리는 버스 정류장에서, 미숙은 낡은 가방 하나만 들고 떠났습니다. 그 뒤로 그 아이가 대학 이야기를 꺼낸 적은 한 번도 없었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "세월이 흘렀습니다. 동철은 회사를 차렸고, 동수는 구청 공무원이 되었습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "미숙은 공장을 나와 대구에서 작은 국숫집을 했고, 결혼했다가 혼자가 되었습니다. 오빠들은 막내의 손에 박인 굳은살을 한 번도 눈여겨보지 않았습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "그리고 사 년 전, 2022년 가을. 어머니가 아궁이 불을 켜 둔 채 마을 길을 헤매다 발견되었습니다. 치매 진단이 내려졌습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그해 추석, 세 남매가 대청마루에 둘러앉았습니다."
+            },
+            {
+              "who": "son",
+              "text": "나는 회사 때문에 서울을 못 떠나. 대신 매달 오십만 원씩 보낼게."
+            },
+            {
+              "who": "man",
+              "text": "나도 그렇게 할게. 부산에서 오가기도 멀고."
+            },
+            {
+              "who": "daughter",
+              "text": "그럼 내가 내려올게. 국숫집 정리하면 돼."
+            },
+            {
+              "who": "son",
+              "text": "그래, 미숙이 네가 혼자니까 제일 낫겠다. 고맙다."
+            },
+            {
+              "who": "narrator",
+              "text": "그 고맙다는 말이 마지막이었습니다. 오빠들의 오십만 원은 반년 만에 끊겼습니다. 그리고 지금, 그 오빠들이 막내를 도둑으로 부르고 있었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "다음 날 아침, 영란은 남편 가방을 정리하다가 접힌 종이 한 장을 발견했습니다. 붉은 도장이 찍힌 감나무 밭 가계약서였습니다."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "여보, 이게 뭐예요. 계약금 오백만 원은 벌써 받은 거예요?"
+            },
+            {
+              "who": "son",
+              "text": "쉿, 조용히 해. 어머니 요양원 들어가시면 그 땅 어차피 팔아야 돼. 미리 해 둔 것뿐이야."
+            },
+            {
+              "who": "narrator",
+              "text": "영란은 종이를 도로 접었습니다. 그리고 그날부터, 막내 시누이의 발걸음을 유심히 지켜보기 시작했습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3장. 장날의 수상한 봉투",
+      "image_prompts": [
+        "A busy rural Korean five-day market street in late November, stalls of dried persimmons and cabbages, steam rising from food carts, people seen from behind",
+        "An old small-town photo studio storefront with a dusty display window full of faded family portraits, an elderly man's hand receiving a white envelope at the door"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "닷새마다 서는 영동 읍내 장날이었습니다. 미숙은 아침 일찍 어머니 점심을 차려 두고, 장바구니를 들고 집을 나섰습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "영란은 둘째 시동생 동수를 불렀습니다. 동수는 연가를 내고 아직 마을에 머물고 있었지요."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "도련님, 아가씨 따라가 봐요. 장날마다 꼭 혼자 나간대요. 옥자 아주머니가 그러던데요."
+            },
+            {
+              "who": "man",
+              "text": "형수님, 그래도 동생을 미행하는 건 좀."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "일억 팔천이에요, 도련님. 도련님 몫도 있는 돈이라고요."
+            },
+            {
+              "who": "narrator",
+              "text": "동수는 한숨을 쉬며 점퍼를 걸쳤습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "마당을 나서는 동수의 등 뒤로, 옥자 아주머니가 빨래를 널다 말고 혀를 찼습니다."
+            },
+            {
+              "who": "woman",
+              "text": "동생 뒤를 밟는 오래비라니. 세상 참 별일이여."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "장터는 사람들로 북적였습니다. 곶감 상자, 배추 더미, 어묵 국물 냄새가 뒤섞여 코끝을 찔렀습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "미숙은 장을 보지 않았습니다. 시장 골목 끝, 간판 글씨가 반쯤 지워진 오래된 사진관으로 곧장 들어갔습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "동수는 맞은편 국밥집 창가에서 그 모습을 지켜보았습니다. 사진관 문 앞에 하얀 머리의 노인이 나와 섰습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "왔능가. 사모님은 요새 좀 어떠신가."
+            },
+            {
+              "who": "daughter",
+              "text": "어제는 저를 알아보셨어요. 이번 달 거예요, 아저씨."
+            },
+            {
+              "who": "narrator",
+              "text": "미숙이 하얀 봉투를 내밀었습니다. 노인은 봉투를 받아 품에 넣고, 고개를 깊이 숙였습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "동수는 떨리는 손으로 휴대전화를 들어 그 장면을 찍었습니다. 그리고 형에게 사진을 보냈습니다."
+            },
+            {
+              "who": "man",
+              "text": "형님, 미숙이가 읍내 사진관 영감한테 돈 봉투를 줬어요. 사모님이라고 부르는 걸 보니 어머니를 아는 사람 같아요."
+            },
+            {
+              "who": "son",
+              "text": "사진관? 그 영감 이름 알아봐. 노인네들 등쳐 먹는 사람 아니냐."
+            },
+            {
+              "who": "narrator",
+              "text": "국밥집 주인 말로는, 노인의 이름은 강정식. 십 년 전 어디선가 흘러들어와 사진관을 하는, 말수 적은 홀아비라고 했습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그 시각, 집에서는 할머니가 마루에 앉아 동철의 얼굴을 한참 들여다보고 있었습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "여보, 언제 왔시유. 학교는 파했슈?"
+            },
+            {
+              "who": "son",
+              "text": "어머니, 저 동철이에요. 아버지 아니고요."
+            },
+            {
+              "who": "grandma",
+              "text": "아, 동철이구나. 니가 아부지를 똑 닮았어. 근데 니 아부지는 거짓말은 안 했는디."
+            },
+            {
+              "who": "son",
+              "text": "제가 무슨 거짓말을 했다고 그러세요."
+            },
+            {
+              "who": "narrator",
+              "text": "할머니는 대답 대신 돋보기를 쓰고, 동철의 손을 오래 쓰다듬었습니다. 그리고 엉뚱한 말을 했습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "감나무 밭은 미숙이가 사 온 거여. 공장에서 십 년을 벌어서. 니는 몰러."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "동철은 피식 웃었습니다. 감나무 밭은 아버지가 돌아가신 해에 팔렸다가, 어머니가 다시 사들인 걸로 알고 있었으니까요."
+            },
+            {
+              "who": "son",
+              "text": "어머니도 참. 미숙이가 그 큰돈이 어디 있다고요."
+            },
+            {
+              "who": "narrator",
+              "text": "그날 저녁, 동수가 돌아와 사진을 내밀었습니다. 동철은 화면을 확대해 노인의 얼굴을 노려보았습니다."
+            },
+            {
+              "who": "son",
+              "text": "이 영감이구먼. 어머니 돈이 여기로 새고 있었어."
+            },
+            {
+              "who": "narrator",
+              "text": "그런데 바로 그때, 마루 끝에 놓인 미숙의 장바구니에서 얇은 종이 한 장이 미끄러져 나왔습니다. 우체국 송금 영수증이었습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4장. 송금 영수증의 이름",
+      "image_prompts": [
+        "A thin post office remittance receipt lying on a worn wooden floor of a Korean traditional house, a woven shopping basket tipped over beside it, dim evening light",
+        "A middle-aged Korean man seen from the side under a single hanging bulb, staring at a small paper in his trembling hand, persimmons hanging outside the window"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "동철이 영수증을 집어 들었습니다. 영동우체국 소인이 찍힌, 이달 초의 송금 영수증이었습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "보낸 금액은 이백오십만 원. 그리고 받는 사람 칸에 적힌 이름을 읽는 순간, 동철의 얼굴에서 핏기가 싹 가셨습니다."
+            },
+            {
+              "who": "son",
+              "text": "최준."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "뭐라고요? 준이요? 우리 준이요?"
+            },
+            {
+              "who": "narrator",
+              "text": "최준. 스물여섯 살, 동철과 영란의 외아들이었습니다. 서울에서 대학원을 다니고 있다고 알고 있던 바로 그 아들이었지요."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "첫 번째 반전이었습니다. 막내가 빼돌렸다던 돈이, 고함지른 장남 자신의 아들에게 가고 있었던 것입니다."
+            },
+            {
+              "who": "son",
+              "text": "미숙아, 이게 뭐야. 네가 왜 준이한테 돈을 보내."
+            },
+            {
+              "who": "daughter",
+              "text": "그거, 왜 내 장바구니를 뒤져."
+            },
+            {
+              "who": "son",
+              "text": "묻는 말에 대답해. 언제부터야. 얼마야."
+            },
+            {
+              "who": "daughter",
+              "text": "삼 년 됐어. 매달 이백오십. 다 합치면 구천만 원쯤."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "구천만 원이요? 아니, 그 애가 왜요. 우리가 생활비 다 보내 주는데."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "미숙은 입술을 꾹 다물었습니다. 영란이 다급하게 아들에게 전화를 걸었습니다. 신호만 가다가 끊겼습니다."
+            },
+            {
+              "who": "daughter",
+              "text": "준이가 말하지 말아 달라고 했어. 저 사정은 저한테 직접 들어."
+            },
+            {
+              "who": "son",
+              "text": "지금 장난하냐. 어머니 돈으로 네 마음대로 조카한테 퍼 주고, 사진관 영감한테 봉투 주고."
+            },
+            {
+              "who": "man",
+              "text": "형님, 잠깐만요. 그럼 처음 어머니가 하신 말씀, 그 돈 니네 집으로 다 갔다는 거."
+            },
+            {
+              "who": "narrator",
+              "text": "동수의 말에 모두가 입을 닫았습니다. 치매 노인의 헛소리로 넘겼던 그 한마디가, 사실이었던 겁니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "방 안에서 할머니의 목소리가 들려왔습니다. 잠결인지, 또렷한 정신인지 알 수 없는 목소리였습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "준이 그놈, 밥은 먹고 다니냐. 미숙아, 이번 달 거 보냈냐."
+            },
+            {
+              "who": "daughter",
+              "text": "네, 엄마. 보냈어요. 주무세요."
+            },
+            {
+              "who": "narrator",
+              "text": "동철은 그 자리에 털썩 주저앉았습니다. 어머니가 손자에게 돈을 보내고 있었고, 그 심부름을 막내가 해 왔던 것입니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그런데 동수는 계산기를 두드리고 있었습니다. 구청에서 삼십 년 장부를 본 사람의 습관이었지요."
+            },
+            {
+              "who": "man",
+              "text": "형님, 이상해요. 사 년간 빠져나간 돈이 일억 팔천이에요. 준이한테 간 게 구천이면, 나머지 구천은요."
+            },
+            {
+              "who": "son",
+              "text": "사진관 영감이다. 그 영감한테 간 거야."
+            },
+            {
+              "who": "man",
+              "text": "매달 봉투로 줬다면 말이 되네요. 그것도 어머니 돈으로요."
+            },
+            {
+              "who": "narrator",
+              "text": "동철의 눈빛이 다시 날카로워졌습니다. 아들 일은 아들 일이고, 나머지 구천만 원은 반드시 찾아내야 했습니다."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "여보, 그 영감부터 알아봐요. 어머님 같은 분들 노리는 사람들, 요즘 뉴스에 얼마나 많이 나와요."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그날 밤, 동철은 차 열쇠를 집어 들었습니다."
+            },
+            {
+              "who": "son",
+              "text": "서울 갔다 올게. 준이 놈부터 만나야겠어."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "여보, 나도 같이 가요."
+            },
+            {
+              "who": "narrator",
+              "text": "헤드라이트가 어두운 마을 길을 가르며 멀어졌습니다. 그 뒤로 미숙은 어머니 방 앞에 오래 서 있었습니다."
+            },
+            {
+              "who": "daughter",
+              "text": "엄마, 이제 시작이에요. 엄마가 숨겨 둔 거, 오빠들이 다 알게 될 거예요."
+            },
+            {
+              "who": "narrator",
+              "text": "어머니가 숨겨 둔 것. 그것은 구천만 원보다 훨씬 무거운 것이었습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5장. 새벽 물류센터",
+      "image_prompts": [
+        "A huge logistics warehouse at dawn in the outskirts of Seoul, a young man in a work vest seen from behind pushing a cart of cardboard boxes under cold fluorescent lights",
+        "A middle-aged Korean couple standing by a parked car in a frosty early morning parking lot, their breath visible, a warehouse gate in the distance"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "새벽 다섯 시, 경기도의 한 물류센터 앞이었습니다. 밤샘 근무를 마친 사람들이 줄지어 문을 나섰습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "그 틈에 형광 조끼를 입은 청년 하나가 있었습니다. 동철과 영란은 차 안에서 그 얼굴을 알아보고 숨을 멈췄습니다."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "준아. 우리 준이 맞지."
+            },
+            {
+              "who": "young_man",
+              "text": "엄마? 아빠? 여기를 어떻게."
+            },
+            {
+              "who": "narrator",
+              "text": "준은 뒷걸음질을 쳤습니다. 손등은 상자 모서리에 긁혀 벌겋게 터 있었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "son",
+              "text": "대학원은. 너 지금 대학원 다닌다고 하지 않았냐."
+            },
+            {
+              "who": "young_man",
+              "text": "삼 년 전에 그만뒀어요. 죄송해요, 아빠."
+            },
+            {
+              "who": "son",
+              "text": "그만뒀으면 그만뒀다고 말을 해야지. 그리고 할머니 돈은 왜 받았어."
+            },
+            {
+              "who": "narrator",
+              "text": "준은 한참을 땅만 내려다보았습니다. 찬 바람에 입김이 하얗게 흩어졌습니다."
+            },
+            {
+              "who": "young_man",
+              "text": "삼 년 전에, 전세 보증금을 못 돌려받았어요. 대출로 낸 돈이었어요. 구천만 원."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "집주인이 연락을 끊었고, 같은 건물 세입자들이 모두 같은 일을 당했다고 했습니다. 소송은 아직도 끝나지 않았습니다."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "그런 일이 있었으면 엄마 아빠한테 말을 했어야지."
+            },
+            {
+              "who": "young_man",
+              "text": "아빠가 늘 그러셨잖아요. 최씨 집안 장남의 장남은 남한테 아쉬운 소리 하는 거 아니라고."
+            },
+            {
+              "who": "young_man",
+              "text": "무서웠어요. 아빠가 실망하실까 봐. 그래서 할머니한테 전화했어요. 그냥 목소리만 듣고 싶어서요."
+            },
+            {
+              "who": "narrator",
+              "text": "동철은 아무 말도 못 했습니다. 그 말은 동철이 아들에게 수없이 했던 말이었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "young_man",
+              "text": "할머니가 그날 그러셨어요. 니 애비한테는 말하지 마라, 할미가 알아서 하마."
+            },
+            {
+              "who": "young_man",
+              "text": "그다음 달부터 고모가 매달 이백오십씩 보내 주셨어요. 대출 이자랑 원금 갚으라고요. 이제 다 갚았어요."
+            },
+            {
+              "who": "son",
+              "text": "다 갚았다고. 그 돈을 할머니가 다."
+            },
+            {
+              "who": "young_man",
+              "text": "고모가 그러셨어요. 그 돈은 갚을 필요 없다고. 원래 갈 데로 가는 돈이라고요."
+            },
+            {
+              "who": "narrator",
+              "text": "원래 갈 데로 가는 돈. 동철은 그 말이 이상하게 귀에 걸렸습니다. 하지만 그 뜻을 깨닫기까지는 아직 시간이 더 필요했습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "영란이 아들을 끌어안고 울었습니다. 동철은 차 문에 기대어 담배 대신 주머니 속 가계약서를 만지작거렸습니다."
+            },
+            {
+              "who": "son",
+              "text": "준아, 미안하다. 아빠가 몰랐다."
+            },
+            {
+              "who": "young_man",
+              "text": "아빠, 고모한테 너무 뭐라 하지 마세요. 고모는 사 년 동안 할머니 기저귀 갈면서 한 번도 우는 소리 안 했어요."
+            },
+            {
+              "who": "son",
+              "text": "그래도, 나머지 구천은 어디로 갔는지 알아야겠다. 사진관 영감한테 간 돈 말이다."
+            },
+            {
+              "who": "young_man",
+              "text": "사진관이요? 저는 그건 모르는데요."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "내려가는 고속도로에서, 동철의 휴대전화가 울렸습니다. 감나무 밭을 사겠다던 개발 회사 대표였습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "대표의 목소리는 차가웠습니다. 서류를 떼 보니 어머님 일로 법원에 뭔가 걸려 있다, 안 되면 계약금은 두 배로 물어내셔야 한다는 것이었습니다."
+            },
+            {
+              "who": "son",
+              "text": "법원이요? 대표님, 그게 무슨 말씀이세요. 우리 어머니가 법원에 무슨 일이 있다고요."
+            },
+            {
+              "who": "narrator",
+              "text": "전화는 그대로 끊겼습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "동철은 핸들을 꽉 움켜쥐었습니다. 오백만 원은 이미 회사 밀린 월세로 써 버린 뒤였습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6장. 사진관의 노인",
+      "image_prompts": [
+        "Inside an old Korean small-town photo studio, wooden camera on a tripod, a faded painted backdrop, black and white family portraits on the walls, winter light through dusty glass",
+        "An elderly man in a grey cardigan seen from behind, standing at a shop window and looking at a faded 1990s family portrait of five people in front of a persimmon tree"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "이튿날 장터 골목. 동철과 동수, 그리고 영란이 사진관 유리문을 거칠게 밀고 들어섰습니다. 문에 달린 종이 요란하게 울렸습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "안은 오래된 약품 냄새와 석유난로 냄새로 가득했습니다. 나무 삼각대 위에 낡은 사진기 한 대가 서 있었습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "어서 오시오. 사진 찍으러 오셨소?"
+            },
+            {
+              "who": "son",
+              "text": "강정식 씨 맞으시죠. 최만복 선생 큰아들 최동철입니다."
+            },
+            {
+              "who": "narrator",
+              "text": "노인의 손이 아주 잠깐 멈칫했습니다. 그리고 천천히 돋보기를 벗었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "grandpa",
+              "text": "선생님 큰아드님이 이리 컸구먼. 어릴 적 얼굴이 그대로요."
+            },
+            {
+              "who": "son",
+              "text": "인사는 됐습니다. 우리 막내가 장날마다 여기 봉투를 갖다준 거 압니다. 어머니 돈이지요."
+            },
+            {
+              "who": "grandpa",
+              "text": "그 일이라면, 내가 할 말이 없소."
+            },
+            {
+              "who": "man",
+              "text": "할 말이 없다니요. 사 년 동안 구천만 원 가까운 돈입니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "사모님 허락 없이는, 단 한 마디도 할 수 없소. 그게 사모님하고 나하고 한 약속이오."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "daughter_in_law",
+              "text": "어르신, 지금 저희 어머님 치매세요. 그런 분하고 무슨 약속을 해요."
+            },
+            {
+              "who": "grandpa",
+              "text": "정신 맑으실 때 하신 약속이오. 그분은 맑으실 때 누구보다 맑은 분이오."
+            },
+            {
+              "who": "son",
+              "text": "좋습니다. 그럼 경찰서에서 말씀하시죠. 치매 노인 돈 받아 챙긴 걸로 고소하겠습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "노인은 화를 내지 않았습니다. 그저 진열장 쪽으로 천천히 고개를 돌렸을 뿐이었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "동수가 그 시선을 따라갔습니다. 빛바랜 진열장 한가운데, 액자 하나가 걸려 있었습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "감나무 아래 다섯 식구가 선 사진이었습니다. 양복 입은 아버지, 한복 입은 어머니, 다 큰 두 아들과 교복 차림의 막내딸. 사진 귀퉁이에 1995년 가을이라고 적혀 있었습니다."
+            },
+            {
+              "who": "man",
+              "text": "형님, 저 사진. 우리 집 사진이에요. 아버지 돌아가시기 전 해에 찍은 거."
+            },
+            {
+              "who": "son",
+              "text": "저게 왜 여기 걸려 있어. 우리 집에도 없는 사진이."
+            },
+            {
+              "who": "grandpa",
+              "text": "그 사진을 찍은 사람이 나요. 선생님께 드린 마지막 선물이었지."
+            },
+            {
+              "who": "narrator",
+              "text": "노인의 목소리가 처음으로 떨렸습니다. 동수는 사진 속 막내의 단발머리를 한참 바라보았습니다. 열일곱, 웃는 얼굴이었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "동철은 순간 말문이 막혔습니다. 하지만 이내 고개를 세게 저었습니다. 돈 앞에서 옛정은 쉽게 믿을 게 못 되었습니다."
+            },
+            {
+              "who": "son",
+              "text": "사진 한 장으로 넘어갈 일이 아닙니다. 그리고 어머니 일은 이제 제가 결정합니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "결정이라니, 무얼 말이오."
+            },
+            {
+              "who": "son",
+              "text": "내일 어머니 요양원에 모십니다. 그리고 감나무 밭도 정리할 겁니다."
+            },
+            {
+              "who": "narrator",
+              "text": "노인의 얼굴이 처음으로 굳었습니다. 쥐고 있던 돋보기가 진열장 유리에 딱 소리를 냈습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "그 밭은 못 파시오. 내가 살아 있는 동안은."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "사진관을 나서며 영란이 남편 팔을 붙잡았습니다."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "여보, 요양원은 아가씨랑 얘기하고 정하는 게."
+            },
+            {
+              "who": "son",
+              "text": "미숙이 내일 보건소에 어머니 약 타러 간대. 그때 모시고 가면 돼. 장남이 보호자야."
+            },
+            {
+              "who": "narrator",
+              "text": "동수는 아무 말 없이 뒤를 따랐습니다. 그는 삼 년 전 막내에게서 걸려 온 전화 한 통을 떠올리고 있었습니다. 아무에게도 말하지 않은 전화였습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "7장. 요양원 가는 길",
+      "image_prompts": [
+        "A car driving along a narrow winding country road between bare persimmon orchards on a grey late autumn morning, seen from far behind",
+        "The bright clean lobby of a modern Korean nursing home, an elderly woman in a knitted cardigan sitting stiffly on a sofa with a small cloth bundle on her lap, seen from the side"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "다음 날 아침, 미숙의 낡은 경차가 보건소 쪽으로 사라지자, 동철은 어머니 방문을 열었습니다."
+            },
+            {
+              "who": "son",
+              "text": "어머니, 바람 쐬러 가요. 읍내에 맛있는 거 사 드릴게요."
+            },
+            {
+              "who": "grandma",
+              "text": "미숙이는. 미숙이 없이는 안 간다."
+            },
+            {
+              "who": "son",
+              "text": "미숙이도 이따 그리로 온대요. 얼른 옷 입으세요."
+            },
+            {
+              "who": "narrator",
+              "text": "할머니는 한참을 망설이다가, 재봉틀 위에 놓인 돋보기를 보자기에 싸서 품에 안았습니다. 목에 건 열쇠도 꼭 쥐고서요."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "차는 감나무 밭 사이 좁은 길을 굽이굽이 내려갔습니다. 할머니는 창밖만 바라보았습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "저 밭, 저 감나무. 저거 니 아부지가 심은 거여."
+            },
+            {
+              "who": "son",
+              "text": "알아요, 어머니."
+            },
+            {
+              "who": "grandma",
+              "text": "모르지. 니는 몰러. 저 나무 다시 찾아온 게 누군지."
+            },
+            {
+              "who": "narrator",
+              "text": "동철은 대답하지 않았습니다. 뒷자리의 영란은 손수건을 만지작거리며 창밖으로 고개를 돌렸습니다."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "여보, 어머님이 저렇게 싫어하시는데, 꼭 오늘이어야 해요?"
+            },
+            {
+              "who": "son",
+              "text": "오늘 안 하면 못 해. 미숙이 있으면 절대 못 모셔 가."
+            },
+            {
+              "who": "narrator",
+              "text": "영란은 입을 다물었습니다. 백미러 속 시어머니는 돋보기 보자기를 아기처럼 끌어안고 있었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "같은 시각, 보건소 대기실에서 미숙의 휴대전화가 울렸습니다. 옥자 아주머니였습니다."
+            },
+            {
+              "who": "woman",
+              "text": "미숙아, 큰일 났다. 니 오래비가 어머니를 차에 태워 갔어. 짐 보따리까지 챙기는 걸 내가 봤어."
+            },
+            {
+              "who": "daughter",
+              "text": "어디로요. 아주머니, 어디로 간다고 했어요."
+            },
+            {
+              "who": "woman",
+              "text": "읍내 새로 생긴 요양원이라고 하던디. 얼른 가 봐라."
+            },
+            {
+              "who": "narrator",
+              "text": "미숙은 약 봉투를 움켜쥔 채 뛰쳐나갔습니다. 그리고 차에 오르기 전, 전화번호 하나를 눌렀습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "요양원 로비는 지나치게 밝고 깨끗했습니다. 소독약 냄새 속에서 할머니는 보따리를 무릎에 얹고 꼿꼿이 앉아 있었습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "동철은 입소 상담 창구로 갔습니다. 젊은 사회복지사가 서류를 넘기며 컴퓨터 화면을 확인했습니다."
+            },
+            {
+              "who": "young_woman",
+              "text": "보호자 되시죠. 장남 최동철 님. 그런데 잠시만요, 확인할 게 하나 있습니다."
+            },
+            {
+              "who": "son",
+              "text": "무슨 확인이요. 서류는 다 가져왔습니다."
+            },
+            {
+              "who": "young_woman",
+              "text": "어르신 앞으로 법원에 등록된 후견 계약이 있으세요. 거주지를 옮기시는 건 후견인 동의가 있어야 합니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "동철은 무슨 말인지 알아듣지 못했습니다. 영란도, 동수도 서로 얼굴만 쳐다보았습니다."
+            },
+            {
+              "who": "son",
+              "text": "후견인이요? 아들이 셋이나 있는데, 무슨 후견인이요."
+            },
+            {
+              "who": "young_woman",
+              "text": "어르신께서 정신이 맑으실 때 직접 공증을 받아서 맺으신 계약이에요. 2023년 삼월로 되어 있네요."
+            },
+            {
+              "who": "man",
+              "text": "형님, 그거 어머니가 스스로 정해 두신 거예요. 자식이 아니라, 다른 사람을요."
+            },
+            {
+              "who": "son",
+              "text": "그래서 그게 누구냐고요. 이름이 뭡니까."
+            },
+            {
+              "who": "narrator",
+              "text": "사회복지사가 화면 속 이름을 천천히 읽었습니다."
+            },
+            {
+              "who": "young_woman",
+              "text": "후견인, 강정식 님입니다."
+            },
+            {
+              "who": "narrator",
+              "text": "그 순간 로비 유리문이 열리고, 회색 카디건을 입은 노인이 숨을 몰아쉬며 들어섰습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "8장. 구두닦이 소년",
+      "image_prompts": [
+        "A Korean country schoolteacher's home kitchen in the 1970s at night, a young mother's hands sewing a small boy's school uniform on an old black sewing machine under a dim lamp",
+        "A thin boy in an oversized school uniform seen from behind, sitting at a low wooden dining table with a bowl of rice and soup in a warm humble room, 1970s Korea"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "노인은 곧장 할머니 앞으로 가서 무릎을 꿇었습니다. 그리고 보따리를 쥔 할머니의 손을 두 손으로 감쌌습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "사모님, 정식이 왔습니다. 놀라셨지요."
+            },
+            {
+              "who": "grandma",
+              "text": "정식이 왔냐. 니 밥은 먹었냐."
+            },
+            {
+              "who": "narrator",
+              "text": "할머니가 그 이름을 또렷하게 불렀습니다. 아들 이름도 헷갈리던 분이었습니다."
+            },
+            {
+              "who": "son",
+              "text": "이게 대체 어떻게 된 겁니까. 당신이 뭔데 우리 어머니 후견인입니까."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "두 번째 반전이었습니다. 노인은 천천히 일어나, 동철을 똑바로 보았습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "1975년 겨울이었소. 나는 열 살, 영동역 앞에서 구두를 닦던 고아였소."
+            },
+            {
+              "who": "grandpa",
+              "text": "한겨울에 맨발로 떨고 있는데, 웬 선생님 한 분이 내 손을 잡고 집으로 데려가셨소. 그분이 최만복 선생님이오."
+            },
+            {
+              "who": "narrator",
+              "text": "그해 겨울로 잠시 돌아가 볼까요. 감골마을 작은 집 부엌에서, 젊은 새댁 순례 씨가 소년에게 더운 밥을 퍼 주었습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "많이 먹어라. 우리 집 애들 먹는 거 니도 똑같이 먹는 거여."
+            },
+            {
+              "who": "grandpa",
+              "text": "그 밥 한 그릇이 내 인생을 바꿨소. 그 뒤로 나는 평생 남의 것을 탐한 적이 없소."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "grandpa",
+              "text": "사모님은 밤새 재봉틀을 돌려 내 교복을 지어 주셨소. 선생님은 중학교 등록금을 몰래 내 주셨고."
+            },
+            {
+              "who": "grandpa",
+              "text": "그렇게 삼 년을 이 집 밥을 먹었소. 둘째 도련님 기저귀도 내가 갈았지요. 기억은 못 하시겠지만."
+            },
+            {
+              "who": "narrator",
+              "text": "동철은 입을 벌린 채 서 있었습니다. 어릴 적 아랫목에 함께 자던 형이 하나 있었다는 이야기를, 어머니에게 얼핏 들은 기억이 났습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "서울에 가서 사진 일을 배웠소. 1995년 가을, 그 은혜 갚는다고 내려와 찍어 드린 게 그 가족사진이오."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "노인은 품에서 누런 서류 봉투를 꺼냈습니다. 공증 사무소의 도장이 찍힌 계약서 사본이었습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "2023년 봄, 사모님이 사진관에 찾아오셨소. 정신이 맑은 날이었지. 내 손을 잡고 이러셨소."
+            },
+            {
+              "who": "grandma",
+              "text": "정식아. 내가 정신 놓으면, 내 몸 갈 데하고 감나무 밭은 니가 지켜 다오. 내 새끼들이 못 지킬 것 같어."
+            },
+            {
+              "who": "narrator",
+              "text": "녹음기도 아닌데, 그날의 목소리가 지금 이 로비에서 그대로 흘러나왔습니다. 할머니가 그 말을 다시 한 것입니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "동수가 고개를 떨구었습니다. 영란은 입을 막고 돌아섰습니다. 동철만이 여전히 주먹을 쥐고 있었습니다."
+            },
+            {
+              "who": "son",
+              "text": "좋습니다. 은혜는 알겠어요. 그럼 그 봉투 돈은요. 어머니 돈 구천만 원은 어디 갔습니까."
+            },
+            {
+              "who": "grandpa",
+              "text": "단 한 푼도 안 썼소. 은행에 고스란히 있소."
+            },
+            {
+              "who": "son",
+              "text": "그게 어머니 돈이면 당장 돌려주시지요. 우리 집안 돈입니다."
+            },
+            {
+              "who": "narrator",
+              "text": "노인이 처음으로 쓴웃음을 지었습니다. 그리고 동철이 평생 잊지 못할 말을 했습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "그 돈이 어머니 돈이라고, 누가 그럽디까."
+            },
+            {
+              "who": "narrator",
+              "text": "그때 로비 문이 다시 열렸습니다. 약 봉투를 움켜쥔 미숙이 숨을 헐떡이며 서 있었습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "9장. 재봉틀 서랍",
+      "image_prompts": [
+        "An old black cast-iron sewing machine on a wooden cabinet in a Korean country room, its small drawer half open revealing worn notebooks and a reading glasses case, evening lamplight",
+        "An elderly woman's hand passing a small brass key on a red string into a middle-aged man's open palm, close-up, warm dim light of a traditional room"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그날 저녁, 할머니는 다시 감골 집 안방에 앉아 있었습니다. 요양원 서류는 동철의 손에서 구겨진 채 쓰레기통에 들어갔습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "방 안에 모두가 모였습니다. 세 남매와 큰며느리, 그리고 문지방 가까이 무릎을 꿇은 강 영감까지."
+            },
+            {
+              "who": "daughter",
+              "text": "아저씨, 이제 그만 말씀하셔도 돼요. 엄마 일은 제가 오빠들한테 직접 할게요."
+            },
+            {
+              "who": "grandpa",
+              "text": "아니다, 미숙아. 그 돈 얘기는 너도 다 모른다. 사모님이 너한테도 감추신 게 있어."
+            },
+            {
+              "who": "narrator",
+              "text": "미숙이 놀란 눈으로 노인을 보았습니다. 매달 봉투를 건네던 미숙조차, 그 돈의 끝을 몰랐던 것입니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그때, 구석에 앉아 있던 동수가 갑자기 입을 열었습니다. 떨리는 목소리였습니다."
+            },
+            {
+              "who": "man",
+              "text": "형님, 저 고백할 게 있어요. 삼 년 전에 미숙이한테서 전화가 왔었어요."
+            },
+            {
+              "who": "man",
+              "text": "준이 일로 돈이 급하다고, 오빠가 반만 보태 달라고요. 저는 주식으로 날린 돈이 있어서 없다고 했어요."
+            },
+            {
+              "who": "man",
+              "text": "그리고 형님한테는 말 안 했어요. 말하면 저도 내야 할 것 같아서요. 미안하다, 미숙아."
+            },
+            {
+              "who": "narrator",
+              "text": "동철이 동생을 돌아보았습니다. 이 방에서 모르는 척하고 있던 사람이, 하나 더 있었던 겁니다."
+            },
+            {
+              "who": "daughter",
+              "text": "됐어, 작은오빠. 오빠도 힘들었잖아."
+            },
+            {
+              "who": "narrator",
+              "text": "미숙의 대답은 짧았습니다. 원망 한 마디 없는 그 대답이, 동수에게는 어떤 꾸중보다 아프게 들렸습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그 순간, 할머니가 몸을 일으켰습니다. 저녁 해가 창호지에 붉게 번지는 시간, 할머니의 눈빛이 맑아지는 시간이었습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "동철아, 이리 와라."
+            },
+            {
+              "who": "son",
+              "text": "네, 어머니."
+            },
+            {
+              "who": "narrator",
+              "text": "할머니는 목에 건 빨간 실을 풀었습니다. 놋쇠 열쇠가 동철의 손바닥 위에 떨어졌습니다. 아직 체온이 남아 있었습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "저 재봉틀 서랍 열어 봐라. 니 눈으로 봐야 니가 믿지."
+            },
+            {
+              "who": "daughter",
+              "text": "엄마, 안 돼요. 그건 엄마가 오빠들한테는 절대 보이지 말라고 했잖아요."
+            },
+            {
+              "who": "grandma",
+              "text": "이제 보여 줘야 혀. 내가 더 잊어버리기 전에."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "사십 년 넘은 검은 재봉틀이었습니다. 미숙의 교복도, 정식의 교복도, 세 남매의 설빔도 모두 이 재봉틀에서 나왔지요."
+            },
+            {
+              "who": "narrator",
+              "text": "열쇠가 딸깍 돌아갔습니다. 서랍 안에는 손때 묻은 공책 네 권과, 귀퉁이가 닳은 새마을금고 통장 하나, 그리고 노끈으로 묶은 누런 봉투가 들어 있었습니다."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "어머님, 이게 다 뭐예요."
+            },
+            {
+              "who": "grandma",
+              "text": "내 일기여. 정신 놓기 시작하고부터 썼어. 돋보기 끼고, 날마다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "동철이 첫 번째 공책을 펼쳤습니다. 삐뚤빼뚤한 연필 글씨가 빼곡했습니다. 첫 장 맨 위에 한 줄이 크게 적혀 있었습니다."
+            },
+            {
+              "who": "son",
+              "text": "내가 다 잊어버려도, 이 공책은 잊지 마라."
+            },
+            {
+              "who": "narrator",
+              "text": "동철의 목소리가 갈라졌습니다. 그는 공책을 넘기다가, 노끈으로 묶은 봉투 위에 적힌 글자를 보고 손을 멈추었습니다."
+            },
+            {
+              "who": "son",
+              "text": "1996년, 감나무 밭. 미숙이 월급봉투."
+            },
+            {
+              "who": "narrator",
+              "text": "봉투 안에는 서른 해 묵은 누런 월급봉투들이 차곡차곡 들어 있었습니다. 맨 위 봉투에 찍힌 회사 이름은, 구미의 한 섬유 공장이었습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "10장. 서른 해의 월급봉투",
+      "image_prompts": [
+        "A stack of yellowed old pay envelopes tied with twine on a low wooden table, beside an open handwritten notebook and a pair of reading glasses, soft lamp light",
+        "Rows of women workers seen from far behind at long weaving machines in a 1990s Korean factory, white thread spools, hazy light through high windows"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "동철은 월급봉투 하나를 꺼냈습니다. 1997년 삼월. 지급액 오십삼만 원. 봉투 뒤에는 어머니 글씨가 적혀 있었습니다."
+            },
+            {
+              "who": "son",
+              "text": "미숙이 첫 월급. 저는 오만 원만 쓰고 다 보냈다. 이 돈은 손대지 않는다."
+            },
+            {
+              "who": "narrator",
+              "text": "다음 봉투도, 그다음 봉투도 마찬가지였습니다. 열 해 동안 백이십 장이 넘는 봉투에 같은 글씨가 적혀 있었습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "1996년 겨울로 다시 돌아가 볼까요. 구미의 섬유 공장 기숙사, 열여덟 살 미숙은 밤마다 실밥 묻은 손으로 편지를 썼습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "daughter",
+              "text": "엄마, 이번 달 거 보내요. 나는 기숙사 밥 먹으니까 돈 쓸 데가 없어. 그거 모아서 아부지 감나무 밭 다시 사 와."
+            },
+            {
+              "who": "grandma",
+              "text": "미숙아, 니 손 다 망가진다. 이제 그만 보내라. 니 대학 갈 돈 모아야지."
+            },
+            {
+              "who": "daughter",
+              "text": "오빠들한테는 말하지 마. 오빠들 기죽어. 작은오빠 시험 붙을 때까지만 할게."
+            },
+            {
+              "who": "narrator",
+              "text": "그 편지들도 봉투 사이에 끼워져 있었습니다. 영란이 한 장을 읽다가 그만 고개를 돌렸습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "그 시절 사모님 편지가 서울 내 사진관으로 왔었소. 한 장 가득 미숙이 자랑뿐이었지."
+            },
+            {
+              "who": "grandpa",
+              "text": "공장에서 반장이 됐다고, 그래도 대학 얘기만 하면 웃고 만다고. 그 대목에서 글씨가 번져 있었소."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "동철은 두 번째 공책을 펼쳤습니다. 할머니가 정신이 맑던 날 옛일을 떠올리며 적은 대목이었습니다."
+            },
+            {
+              "who": "son",
+              "text": "2006년 가을. 미숙이 십 년 모은 돈으로 감나무 밭을 도로 샀다. 사천만 원. 미숙이가 엄마 이름으로 하란다. 아부지 밭이니까."
+            },
+            {
+              "who": "son",
+              "text": "동철이랑 동수는 내가 삯바느질로 산 줄 안다. 그렇게 두라고, 미숙이가 그랬다."
+            },
+            {
+              "who": "narrator",
+              "text": "동철은 공책을 내려놓았습니다. 칠 년 전 그 땅을 팔자고 처음 말을 꺼낸 사람도, 한 달 전 몰래 가계약서에 도장을 찍은 사람도 동철 자신이었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "grandma",
+              "text": "거봐라. 내가 몇 번을 말했냐. 그 밭은 미숙이가 사 온 거라고."
+            },
+            {
+              "who": "son",
+              "text": "어머니, 저는 그게 치매 때문에 하시는 말씀인 줄만."
+            },
+            {
+              "who": "grandma",
+              "text": "치매가 들어도, 제 새끼가 흘린 땀은 안 잊어버려지더라."
+            },
+            {
+              "who": "narrator",
+              "text": "방 안이 조용해졌습니다. 마당 덕장에서 곶감들이 바람에 부딪히는 소리만 사락사락 들렸습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "동수가 떨리는 손으로 세 번째 공책을 넘겼습니다. 2022년 가을, 어머니가 치매 진단을 받던 무렵이었습니다."
+            },
+            {
+              "who": "man",
+              "text": "이건 제가 읽을게요. 2022년 십일월 삼일."
+            },
+            {
+              "who": "narrator",
+              "text": "동수가 한 줄을 읽고는 숨을 들이켰습니다. 그리고 미숙을 돌아보았습니다."
+            },
+            {
+              "who": "man",
+              "text": "미숙이가 국숫집 판 돈을 내 통장에 넣었다. 오래비들한테는 절대 말하지 말란다."
+            },
+            {
+              "who": "daughter",
+              "text": "작은오빠, 그만 읽어. 그건 안 돼."
+            },
+            {
+              "who": "narrator",
+              "text": "미숙이 공책을 빼앗으려 손을 뻗었습니다. 하지만 동철이 먼저, 서랍 속 낡은 새마을금고 통장을 집어 들었습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "11장. 통장 첫 장의 이름",
+      "image_prompts": [
+        "Close-up of an old worn Korean bank passbook opened to its first page on a wooden floor, a middle-aged man's trembling finger resting on a printed line, dim lamp light",
+        "A middle-aged Korean woman seen from the side sitting on the floor of a traditional room, her face lowered, an elderly woman's hand resting gently on her shoulder"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "동철은 통장을 펼치기 전에, 주머니에서 구겨진 거래내역 종이를 꺼냈습니다. 마당에 내던졌던 바로 그 종이였습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "종이 맨 위에는 조회 기간이 찍혀 있었습니다. 2022년 십이월 일일부터. 그는 그 날짜를 단 한 번도 눈여겨보지 않았습니다."
+            },
+            {
+              "who": "son",
+              "text": "나는 빠져나간 돈만 봤어. 그 전에 뭐가 들어왔는지는, 보지도 않았어."
+            },
+            {
+              "who": "narrator",
+              "text": "그리고 통장의 첫 장을 넘겼습니다. 방 안의 모든 숨소리가 멎었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "결정적인 반전이었습니다. 동철이 한 글자 한 글자, 인쇄된 줄을 소리 내어 읽었습니다."
+            },
+            {
+              "who": "son",
+              "text": "2022년 십일월 삼일. 입금. 일억 팔천만 원."
+            },
+            {
+              "who": "son",
+              "text": "입금자, 최미숙."
+            },
+            {
+              "who": "narrator",
+              "text": "그 위 칸에 찍힌 잔액은 삼십이만 원이었습니다. 어머니 통장에는 처음부터 돈이 없었던 것입니다."
+            },
+            {
+              "who": "narrator",
+              "text": "사 년 동안 빠져나간 일억 팔천만 원은 어머니 돈이 아니었습니다. 도둑이라 불린 막내가, 국숫집을 팔아 넣어 둔 제 돈이었습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "man",
+              "text": "미숙아, 너. 그럼 준이한테 간 구천도."
+            },
+            {
+              "who": "daughter",
+              "text": "엄마 돈이라고 해야 준이가 받지. 고모 돈이라고 하면 그 애가 받았겠어."
+            },
+            {
+              "who": "daughter",
+              "text": "오빠들도 마찬가지야. 엄마가 엄마 돈으로 손주 도왔다고 해야, 오빠들 마음이 편하잖아."
+            },
+            {
+              "who": "narrator",
+              "text": "영란이 무너지듯 주저앉았습니다. 자기 아들의 빚을 갚아 준 사람을, 자기 입으로 도둑이라 불렀던 것입니다."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "아가씨. 내가, 내가 무슨 말을 했던 거야."
+            },
+            {
+              "who": "man",
+              "text": "그럼 너는. 국숫집도 팔고, 그 돈도 다 내놓고, 너 앞으로는 뭘로 살려고 그랬어."
+            },
+            {
+              "who": "daughter",
+              "text": "엄마 옆에 있잖아. 그럼 된 거야, 작은오빠."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그때 강 영감이 품에서 통장 하나를 더 꺼냈습니다. 미숙에게 내민 그 통장의 이름 칸에는, 최미숙이라고 적혀 있었습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "미숙아, 니가 장날마다 갖다준 봉투. 사모님이 나한테 빚 갚는 거라고 하셨지."
+            },
+            {
+              "who": "grandpa",
+              "text": "아니다. 사모님은 나한테 갚을 빚이 없으셔. 그 돈은 전부 니 이름으로 적금을 들었다. 구천만 원, 이자까지 고스란히 있다."
+            },
+            {
+              "who": "grandma",
+              "text": "반은 미숙이 늙어서 쓰라고 도로 모았어. 니가 다 퍼 주고 나면, 니는 뭘로 사냐."
+            },
+            {
+              "who": "daughter",
+              "text": "엄마. 엄마는 그걸 다 알고 있었어? 정신 없는 척하면서, 다?"
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "grandma",
+              "text": "다 잊어버려도, 그건 안 잊어버리려고 날마다 적었다. 미숙이 손에 박인 굳은살, 그거 하나는."
+            },
+            {
+              "who": "narrator",
+              "text": "미숙이 그제야 무너졌습니다. 서른 해 동안 한 번도 울지 않던 막내가 어머니 무릎에 얼굴을 묻었습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "동철은 통장을 쥔 채 꼼짝도 하지 못했습니다. 감나무 밭도, 일억 팔천도, 아들의 빚을 갚은 돈도, 모두 막내의 땀이었습니다."
+            },
+            {
+              "who": "son",
+              "text": "미숙아."
+            },
+            {
+              "who": "narrator",
+              "text": "장남의 입에서 나온 것은 그 이름 하나뿐이었습니다. 다음 말이 나오기까지, 아주 긴 침묵이 흘렀습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "12장. 감나무 아래 사진",
+      "image_prompts": [
+        "A Korean family of several generations standing together under a persimmon tree heavy with orange fruit in a rural yard, seen from far behind, golden winter afternoon light",
+        "An old wooden tripod camera set up in a country courtyard facing drying racks of persimmons, soft sunlight, a hand-written care schedule paper pinned on a nearby door"
+      ],
+      "scenes": [
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "동철은 그 자리에서 무릎을 꿇었습니다. 쉰일곱 장남이 막내 앞에 고개를 숙인 것은, 태어나 처음이었습니다."
+            },
+            {
+              "who": "son",
+              "text": "미숙아, 오빠가 잘못했다. 너를 도둑이라 불렀다. 네 땀으로 산 땅을, 내가 팔아먹으려 했다."
+            },
+            {
+              "who": "daughter",
+              "text": "오빠, 일어나. 엄마 보는 앞에서 이러지 마."
+            },
+            {
+              "who": "son",
+              "text": "아니다. 이건 꼭 해야 해. 그 가계약, 내일 내가 가서 깨고 오마. 위약금은 내 차를 팔아서라도 물게."
+            },
+            {
+              "who": "narrator",
+              "text": "다음 날, 동철은 정말로 개발 회사 사무실을 찾아가 계약을 물렀습니다. 받은 돈의 두 배, 천만 원을 제 손으로 갚고서요."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그 주말, 냉장고 문에 종이 한 장이 붙었습니다. 동수가 구청 장부 쓰듯 반듯하게 적은 간병 당번표였습니다."
+            },
+            {
+              "who": "man",
+              "text": "첫째 주랑 셋째 주는 큰형님네, 둘째 주는 제가 내려올게요. 정년 퇴직하면 아예 매주 올 겁니다."
+            },
+            {
+              "who": "daughter_in_law",
+              "text": "아가씨, 이제 장날에는 나랑 같이 가요. 어머님 좋아하시는 찹쌀떡도 사고요."
+            },
+            {
+              "who": "narrator",
+              "text": "영란이 미숙의 손을 잡았습니다. 처음으로 그 손의 굳은살을 손끝으로 만져 보았습니다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "한 달 뒤, 준이 고향 집에 내려왔습니다. 손에는 흰 봉투 하나가 들려 있었습니다."
+            },
+            {
+              "who": "young_man",
+              "text": "고모, 이거 물류센터 이번 달 월급이에요. 앞으로 매달 조금씩 갚을게요."
+            },
+            {
+              "who": "daughter",
+              "text": "안 갚아도 된다니까. 원래 갈 데로 간 돈이야."
+            },
+            {
+              "who": "young_man",
+              "text": "그러니까 이번엔 원래 갈 데로 돌려드리는 거예요. 고모한테요."
+            },
+            {
+              "who": "narrator",
+              "text": "미숙은 끝내 봉투를 받지 않았습니다. 대신 그 돈으로 할머니 새 돋보기를 사 오라고 했지요."
+            },
+            {
+              "who": "grandma",
+              "text": "우리 준이가 사 온 돋보기여. 이걸로 보니 공책 글씨가 훤하다."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "그리고 또 하나의 소식이 있었습니다. 마흔여덟 미숙이, 서른 해 미뤄 둔 원서를 냈습니다. 방송통신대학 교육학과였습니다."
+            },
+            {
+              "who": "grandma",
+              "text": "니 아부지가 니만은 선생 시킨다고 했어. 이제야 그 말 지키는구먼."
+            },
+            {
+              "who": "daughter",
+              "text": "엄마, 나 공부하는 동안 엄마가 내 이름 잊어버리면 안 돼요."
+            },
+            {
+              "who": "grandma",
+              "text": "안 잊어. 공책에 적어 놨다. 미숙이 대학생 됐다고."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "눈발이 날리던 십이월 어느 날, 강 영감이 낡은 나무 사진기를 들고 감골 집 마당에 섰습니다. 덕장 가득 곶감이 달게 말라 가고 있었습니다."
+            },
+            {
+              "who": "grandpa",
+              "text": "자, 다들 감나무 아래로 서시오. 서른한 해 만에 다시 찍는 가족사진이오."
+            },
+            {
+              "who": "grandpa",
+              "text": "사모님은 가운데, 미숙이는 사모님 옆에. 오늘은 막내가 가운데요."
+            },
+            {
+              "who": "narrator",
+              "text": "할머니가 셔터 소리 직전, 한 사람 한 사람의 이름을 불렀습니다. 동철아, 동수야, 영란아, 준아, 정식아. 그리고 미숙아."
+            },
+            {
+              "who": "grandma",
+              "text": "다 왔네. 우리 식구 다 왔어."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "who": "narrator",
+              "text": "곶감은 찬 바람을 오래 맞아야 단맛이 듭니다. 이 집 막내의 서른 해가 꼭 그랬습니다."
+            },
+            {
+              "who": "narrator",
+              "text": "그날 찍은 사진은 지금 읍내 사진관 진열장, 1995년 가족사진 바로 옆에 나란히 걸려 있습니다. 가운데 선 사람의 손이 유난히 따뜻해 보이는 사진입니다."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "outro": "오늘 사연도 끝까지 들어 주셔서 고맙습니다. 구독과 좋아요 눌러 주시면 다음에도 마음 울리는 사연으로 찾아뵙겠습니다.",
+  "description": "곶감 덕장 아래로 날아든 은행 거래내역. \"사 년 동안 어머니 통장에서 1억 8천이 빠져나갔다!\"\n치매 어머니를 홀로 간병해 온 막내딸 미숙은 \"내가 뺀 거 맞아\"라는 말만 남기고 입을 닫습니다.\n장남은 어머니를 요양원에 보내고 감나무 밭을 팔려 하고, 막내는 장날마다 읍내 사진관 노인에게 봉투를 건넵니다.\n그리고 치매 어머니가 목에 걸고 놓지 않는 놋쇠 열쇠 하나, 재봉틀 서랍 속에 30년 동안 감춰진 것은 무엇일까요.\n\n여러분 집에서는 부모님 간병, 형제끼리 어떻게 나누고 계신가요? 댓글로 들려주세요.\n구독과 좋아요는 큰 힘이 됩니다 🙏\n※ 이 영상은 사연을 바탕으로 각색했으며, AI 이미지와 AI 음성을 사용했습니다.",
+  "tags": [
+    "사연",
+    "반전사연",
+    "감동사연",
+    "간병사연",
+    "형제갈등",
+    "치매어머니",
+    "가족사연",
+    "눈물사연",
+    "오디오북",
+    "시니어오디오북",
+    "사연라디오",
+    "라디오드라마",
+    "잠잘때듣는사연",
+    "1시간사연"
+  ],
+  "coupang": {
+    "search": "노안 돋보기 안경",
+    "url": "https://link.coupang.com/a/ie24Gy2kuW",
+    "keywords": [
+      "돋보기",
+      "노안",
+      "일기",
+      "독서"
+    ],
+    "reason": "치매 어머니가 날마다 돋보기를 끼고 일기를 쓰고, 손자가 새 돋보기를 사 오는 장면이 사연 곳곳에 나와 노안 돋보기와 자연스럽게 이어짐"
+  }
+}
