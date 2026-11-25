@@ -1,0 +1,25 @@
+name: blog-audit
+# 블로그 점검(글 목록·중복) / 임시보관 되돌리기 — 삭제 없음
+on:
+  workflow_dispatch:
+    inputs:
+      blog: {description: "econ / nohu / kids", default: "econ"}
+      mode: {description: "list / revert", default: "list"}
+      ids: {description: "임시보관할 글 ID(쉼표)", default: ""}
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    env:
+      GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+      GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+      GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+      BLOGGER_BLOG_ID: ${{ secrets.BLOGGER_BLOG_ID }}
+      BLOG: ${{ inputs.blog }}
+      MODE: ${{ inputs.mode }}
+      REVERT_IDS: ${{ inputs.ids }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -u tools/blog_audit.py
